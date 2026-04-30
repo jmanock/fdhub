@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Florida Deals Hub favicon">
+  <rect width="64" height="64" rx="16" fill="#08233f"/>
+  <circle cx="21" cy="21" r="10" fill="#f7bd2a"/>
+  <path d="M9 42c9-8 18 7 28-1 7-6 11-8 18-4v10H9z" fill="#087fb5"/>
+  <path d="M13 46c8-5 15 4 24-2 7-5 12-5 18-1v7H13z" fill="#dff5f8"/>
+  <path d="M34 17h15l6 6v17H34z" fill="#ffffff"/>
+  <path d="M49 17v7h7" fill="#eadcc7"/>
+  <circle cx="43" cy="29" r="3" fill="#ef715d"/>
+  <path d="M39 37h12" stroke="#08233f" stroke-width="4" stroke-linecap="round"/>
+</svg>
