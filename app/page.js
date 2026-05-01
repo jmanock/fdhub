@@ -1,61 +1,7 @@
-import NewsletterForm from "./components/NewsletterForm";
-
-const sites = {
-  flights: "https://flightdealsflorida.org",
-  hotels: "https://hoteldealsflorida.org",
-  cruises: "https://cruisedealsflorida.org",
-  local: "https://localdealsflorida.org"
-};
-
-const nav = [
-  ["Flights", sites.flights],
-  ["Hotels", sites.hotels],
-  ["Cruises", sites.cruises],
-  ["Local Deals", sites.local]
-];
-
-const pillars = [
-  {
-    title: "Florida Flight Deals",
-    copy: "Cheap flights in and out of Orlando, Miami, Tampa, Fort Lauderdale, and Jacksonville.",
-    button: "View Flight Deals",
-    href: sites.flights,
-    badge: "FLY",
-    image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80",
-    alt: "Airplane wing above clouds for Florida flight deals"
-  },
-  {
-    title: "Florida Hotel Deals",
-    copy: "Beach resorts, family stays, weekend getaways, and staycation deals.",
-    button: "View Hotel Deals",
-    href: sites.hotels,
-    badge: "STAY",
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
-    alt: "Resort pool and palms for Florida hotel deals"
-  },
-  {
-    title: "Florida Cruise Deals",
-    copy: "Bahamas, Caribbean, weekend, and family cruise deals from Florida ports.",
-    button: "View Cruise Deals",
-    href: sites.cruises,
-    badge: "SAIL",
-    image:
-      "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=900&q=80",
-    alt: "Cruise ship at sea for Florida cruise deals"
-  },
-  {
-    title: "Local Deals Florida",
-    copy: "Restaurants, events, attractions, family fun, and hidden local savings.",
-    button: "View Local Deals",
-    href: sites.local,
-    badge: "LOCAL",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
-    alt: "Sunny Florida beach for local deals and weekend getaways"
-  }
-];
+import NewsletterSection from "./components/NewsletterSection";
+import SiteFooter from "./components/SiteFooter";
+import SiteHeader from "./components/SiteHeader";
+import { pillars, popularPages, sites } from "./lib/network";
 
 const trust = [
   ["Curated Florida Deals", "A focused network built around travel, savings, and things to do across the state."],
@@ -74,28 +20,7 @@ const previews = [
 export default function Home() {
   return (
     <>
-      <header className="site-header">
-        <a className="brand" href="/" aria-label="Florida Deals Hub home">
-          <span className="brand-mark">FDH</span>
-          <span>
-            <strong>Florida Deals Hub</strong>
-            <small>Official network home</small>
-          </span>
-        </a>
-        <nav className="network-nav" aria-label="Florida Deals network">
-          {nav.map(([label, href]) => (
-            <a key={label} href={href}>
-              {label}
-            </a>
-          ))}
-          <a className="active" href="/">
-            Florida Deals Hub
-          </a>
-        </nav>
-        <a className="header-cta" href="#newsletter">
-          Get Alerts
-        </a>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero section-pad">
@@ -179,42 +104,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="newsletter section-pad" id="newsletter" aria-labelledby="newsletter-title">
-          <div className="newsletter-panel">
-            <div>
-              <p className="eyebrow">Free alerts</p>
-              <h2 id="newsletter-title">Get the Best Florida Deals Delivered</h2>
-              <p>
-                Join free alerts for flights, hotels, cruises, local deals, and weekend getaways.
-              </p>
-            </div>
-            <NewsletterForm />
+        <section className="popular-searches section-pad" aria-labelledby="popular-title">
+          <div className="section-heading compact">
+            <p className="eyebrow">Popular searches</p>
+            <h2 id="popular-title">Popular Florida Deal Searches</h2>
+          </div>
+          <div className="popular-link-grid">
+            {popularPages.map(([label, href]) => (
+              <a href={href} key={href}>
+                {label}
+              </a>
+            ))}
           </div>
         </section>
+
+        <NewsletterSection />
       </main>
 
-      <footer className="site-footer">
-        <div>
-          <a className="brand footer-brand" href="/">
-            <span className="brand-mark">FDH</span>
-            <span>
-              <strong>Florida Deals Hub</strong>
-              <small>Flights, stays, cruises, and local savings.</small>
-            </span>
-          </a>
-        </div>
-        <nav aria-label="Footer">
-          <a href={sites.flights}>Flight Deals</a>
-          <a href={sites.hotels}>Hotel Deals</a>
-          <a href={sites.cruises}>Cruise Deals</a>
-          <a href={sites.local}>Local Deals</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-          <a href="/sitemap.xml">Sitemap</a>
-        </nav>
-      </footer>
+      <SiteFooter />
     </>
   );
 }
