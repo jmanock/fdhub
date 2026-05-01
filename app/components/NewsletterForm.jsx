@@ -1,14 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import { trackNewsletterSignupStarted, trackNewsletterSignupSuccess } from "../lib/analytics";
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
+  const [hasStarted, setHasStarted] = useState(false);
+
+  function handleSignupStarted() {
+    if (hasStarted) {
+      return;
+    }
+
+    setHasStarted(true);
+    trackNewsletterSignupStarted();
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
+    handleSignupStarted();
     setStatus("loading");
     setMessage("");
 
@@ -32,6 +44,8 @@ export default function NewsletterForm() {
 
       setStatus("success");
       setEmail("");
+      setHasStarted(false);
+      trackNewsletterSignupSuccess();
       setMessage("You're on the list. Fresh Florida deals are headed your way.");
     } catch (error) {
       setStatus("error");
@@ -48,7 +62,11 @@ export default function NewsletterForm() {
         id="newsletter-email"
         type="email"
         value={email}
-        onChange={(event) => setEmail(event.target.value)}
+        onFocus={handleSignupStarted}
+        onChange={(event) => {
+          handleSignupStarted();
+          setEmail(event.target.value);
+        }}
         placeholder="you@example.com"
         required
       />

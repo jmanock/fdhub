@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "lint": "eslint .",
     "build": "next build",
     "start": "next start"
   },
@@ -17,6 +18,7 @@
     "postcss": "^8.5.12"
   },
   "devDependencies": {
-    "eslint": "latest"
+    "eslint": "latest",
+    "eslint-config-next": "^16.2.4"
   }
 }
