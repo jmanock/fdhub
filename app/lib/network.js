@@ -74,6 +74,11 @@ export const popularPages = [
   ["Florida Deal Alerts", "/florida-deal-alerts"]
 ];
 
+export const lastUpdatedLabel = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  year: "numeric"
+}).format(new Date());
+
 export const landingPages = [
   {
     slug: "florida-travel-deals",
@@ -295,3 +300,69 @@ export const landingPages = [
 
 export const landingPageMap = Object.fromEntries(landingPages.map((page) => [page.slug, page]));
 
+export function getIntroParagraphs(page) {
+  return [
+    page.intro,
+    `${page.h1} are easier to research when flights, hotels, cruises, and local experiences are separated into focused sources. Florida Deals Hub keeps those paths connected so visitors can compare the right category without sorting through an unrelated feed.`,
+    "Use the cards below to move into the best niche site for your trip, weekend, staycation, or local plan. Deals, prices, dates, and availability may change, so check current offers before booking or buying."
+  ];
+}
+
+export function getFaqs(page) {
+  return [
+    {
+      question: `What is the best way to find ${page.h1.toLowerCase()}?`,
+      answer:
+        "Start by choosing the category that matches your plan: flights, hotels, cruises, or local experiences. Florida Deals Hub points you to focused pages where current deal sources are easier to review."
+    },
+    {
+      question: "Are Florida deals updated regularly?",
+      answer:
+        "The network is built to route visitors toward current deal sources and featured Florida savings. Offers can change quickly, so it is best to check the linked niche site before making plans."
+    },
+    {
+      question: "Do Florida deal prices and availability change?",
+      answer:
+        "Yes. Flight fares, hotel rates, cruise offers, event prices, restaurant specials, and attraction deals may change based on dates, demand, restrictions, and provider availability."
+    },
+    {
+      question: "Which Florida Deals site should I use first?",
+      answer:
+        "Use Florida Flight Deals for airfare, Florida Hotel Deals for stays, Florida Cruise Deals for sailings from Florida ports, and Local Deals Florida for restaurants, events, attractions, and things to do."
+    }
+  ];
+}
+
+export function getRelatedSearchLinks(page) {
+  const hubLinks = page.related
+    .map((slug) => landingPageMap[slug])
+    .filter(Boolean)
+    .slice(0, 4)
+    .map((related) => ({
+      label: related.h1,
+      href: `/${related.slug}`
+    }));
+
+  return [
+    ...hubLinks,
+    { label: "Florida flight deals", href: sites.flights },
+    { label: "Florida hotel deals", href: sites.hotels },
+    { label: "Florida cruise deals", href: sites.cruises },
+    { label: "local Florida deals", href: sites.local }
+  ];
+}
+
+export function getBreadcrumbs(page) {
+  if (page.slug === "florida-travel-deals") {
+    return [
+      { label: "Home", href: "/" },
+      { label: page.h1, href: `/${page.slug}` }
+    ];
+  }
+
+  return [
+    { label: "Home", href: "/" },
+    { label: "Florida Travel Deals", href: "/florida-travel-deals" },
+    { label: page.h1, href: `/${page.slug}` }
+  ];
+}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { sites } from "../lib/network";
+import { popularPages, sites } from "../lib/network";
 
 export default function SiteFooter() {
   return (
@@ -13,17 +13,26 @@ export default function SiteFooter() {
           </span>
         </Link>
       </div>
-      <nav aria-label="Footer">
-        <a href={sites.flights}>Flight Deals</a>
-        <a href={sites.hotels}>Hotel Deals</a>
-        <a href={sites.cruises}>Cruise Deals</a>
-        <a href={sites.local}>Local Deals</a>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/privacy">Privacy</Link>
-        <Link href="/terms">Terms</Link>
-        <a href="/sitemap.xml">Sitemap</a>
-      </nav>
+      <div className="footer-links">
+        <nav aria-label="Footer">
+          <a href={sites.flights}>Flight Deals</a>
+          <a href={sites.hotels}>Hotel Deals</a>
+          <a href={sites.cruises}>Cruise Deals</a>
+          <a href={sites.local}>Local Deals</a>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+          <a href="/sitemap.xml">Sitemap</a>
+        </nav>
+        <nav className="footer-popular" aria-label="Popular Florida deal searches">
+          {popularPages.map(([label, href]) => (
+            <Link href={href} key={href}>
+              {label}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </footer>
   );
 }

@@ -1,8 +1,20 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import NewsletterSection from "../components/NewsletterSection";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
-import { baseUrl, landingPageMap, landingPages, pillars } from "../lib/network";
+import {
+  baseUrl,
+  getBreadcrumbs,
+  getFaqs,
+  getIntroParagraphs,
+  getRelatedSearchLinks,
+  landingPageMap,
+  landingPages,
+  lastUpdatedLabel,
+  pillars
+} from "../lib/network";
 
 export function generateStaticParams() {
   return landingPages.map((page) => ({ slug: page.slug }));
@@ -56,7 +68,49 @@ export default async function LandingPage({ params }) {
     notFound();
   }
 
-  const relatedPages = page.related.map((slug) => landingPageMap[slug]).filter(Boolean);
+  const breadcrumbs = getBreadcrumbs(page);
+  const faqs = getFaqs(page);
+  const introParagraphs = getIntroParagraphs(page);
+  const relatedSearchLinks = getRelatedSearchLinks(page);
+  const pageUrl = `${baseUrl}/${page.slug}`;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.label,
+      item: `${baseUrl}${crumb.href === "/" ? "" : crumb.href}`
+    }))
+  };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  };
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${page.h1} deal preview links`,
+    url: pageUrl,
+    itemListElement: page.previews.map(([label, copy, href], index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        name: label,
+        description: copy,
+        url: href
+      }
+    }))
+  };
 
   return (
     <>
@@ -64,9 +118,22 @@ export default async function LandingPage({ params }) {
       <main>
         <section className="landing-hero section-pad">
           <div className="landing-copy">
+            <nav className="breadcrumbs" aria-label="Breadcrumb">
+              {breadcrumbs.map((crumb, index) => (
+                <span key={crumb.href}>
+                  {index > 0 ? <span aria-hidden="true">/</span> : null}
+                  {index === breadcrumbs.length - 1 ? (
+                    <span aria-current="page">{crumb.label}</span>
+                  ) : (
+                    <Link href={crumb.href}>{crumb.label}</Link>
+                  )}
+                </span>
+              ))}
+            </nav>
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.h1}</h1>
-            <p className="hero-subhead">{page.intro}</p>
+            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
+            <p className="hero-subhead">{introParagraphs[0]}</p>
             <div className="hero-actions" aria-label={`${page.h1} network links`}>
               <a href={pillars[0].href}>{pillars[0].anchor}</a>
               <a href={pillars[1].href}>{pillars[1].anchor}</a>
@@ -75,7 +142,15 @@ export default async function LandingPage({ params }) {
             </div>
           </div>
           <div className="landing-visual">
-            <img src={pillars[1].image} alt={page.alt} />
+            <img
+              src={pillars[1].image}
+              alt={page.alt}
+              width="900"
+              height="720"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
             <div className="landing-badges" aria-label="Florida Deals Hub categories">
               {pillars.map((pillar) => (
                 <a href={pillar.href} key={pillar.key}>
@@ -91,11 +166,12 @@ export default async function LandingPage({ params }) {
           <div className="content-card">
             <p className="eyebrow">Florida Deals Hub guide</p>
             <h2 id="guide-title">Start with the right deal source</h2>
+            {introParagraphs.slice(1).map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
             <p>
               Florida Deals Hub is the network front door. Use this page to decide whether your
-              search belongs on the flight, hotel, cruise, or local deals site. Current offers,
-              prices, dates, and availability may change, so always check the linked source before
-              making plans.
+              search belongs on the flight, hotel, cruise, or local deals site.
             </p>
           </div>
         </section>
@@ -109,7 +185,14 @@ export default async function LandingPage({ params }) {
             {pillars.map((pillar) => (
               <article className="pillar-card" key={pillar.key}>
                 <div className="pillar-image">
-                  <img src={pillar.image} alt={pillar.alt} />
+                  <img
+                    src={pillar.image}
+                    alt={pillar.alt}
+                    width="900"
+                    height="620"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span>{pillar.badge}</span>
                 </div>
                 <div className="pillar-body">
@@ -141,13 +224,28 @@ export default async function LandingPage({ params }) {
         <section className="related-pages section-pad" aria-labelledby="related-title">
           <div className="section-heading compact">
             <p className="eyebrow">Keep exploring</p>
-            <h2 id="related-title">Related Florida deal pages</h2>
+            <h2 id="related-title">Related Florida Deal Searches</h2>
           </div>
           <div className="popular-link-grid">
-            {relatedPages.map((related) => (
-              <a href={`/${related.slug}`} key={related.slug}>
-                {related.h1}
+            {relatedSearchLinks.map((related) => (
+              <a href={related.href} key={related.href}>
+                {related.label}
               </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="faq-section section-pad" aria-labelledby="faq-title">
+          <div className="section-heading compact">
+            <p className="eyebrow">Helpful answers</p>
+            <h2 id="faq-title">{page.h1} FAQ</h2>
+          </div>
+          <div className="faq-list">
+            {faqs.map((faq) => (
+              <details className="faq-item" key={faq.question}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
             ))}
           </div>
         </section>
@@ -155,6 +253,15 @@ export default async function LandingPage({ params }) {
         <NewsletterSection />
       </main>
       <SiteFooter />
+      <Script id={`${page.slug}-breadcrumbs-schema`} type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </Script>
+      <Script id={`${page.slug}-faq-schema`} type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </Script>
+      <Script id={`${page.slug}-item-list-schema`} type="application/ld+json">
+        {JSON.stringify(itemListSchema)}
+      </Script>
     </>
   );
 }

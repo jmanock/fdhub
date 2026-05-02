@@ -505,6 +505,37 @@ h3 {
   max-width: 890px;
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.breadcrumbs span {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.breadcrumbs a {
+  color: var(--ocean-dark);
+}
+
+.updated-label {
+  display: inline-flex;
+  margin: 0 0 18px;
+  padding: 8px 12px;
+  border: 1px solid rgba(8, 127, 181, 0.18);
+  border-radius: 999px;
+  background: rgba(223, 245, 248, 0.74);
+  color: var(--ocean-dark);
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
 .landing-visual {
   position: relative;
   overflow: hidden;
@@ -576,6 +607,35 @@ h3 {
   align-items: stretch;
 }
 
+.faq-section {
+  padding-top: 18px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 38px rgba(8, 35, 63, 0.07);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  padding: 20px 22px;
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 22px 22px;
+  color: var(--ink-muted);
+}
+
 .newsletter {
   padding-top: 20px;
 }
@@ -594,6 +654,13 @@ h3 {
 .newsletter-form {
   display: grid;
   gap: 12px;
+}
+
+.newsletter-trust {
+  margin-bottom: 0;
+  color: var(--palm) !important;
+  font-size: 0.95rem;
+  font-weight: 900;
 }
 
 .newsletter-form input,
@@ -653,6 +720,16 @@ h3 {
   gap: 14px 20px;
   color: var(--navy-soft);
   font-weight: 800;
+}
+
+.footer-links {
+  display: grid;
+  gap: 14px;
+}
+
+.footer-popular {
+  font-size: 0.9rem;
+  opacity: 0.86;
 }
 
 .simple-page {

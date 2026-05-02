@@ -4,6 +4,33 @@ import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-Q0DCC9Y491";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Florida Deals Hub",
+  url: "https://floridadealshub.com",
+  logo: "https://floridadealshub.com/favicon.svg",
+  sameAs: [
+    "https://flightdealsflorida.org",
+    "https://hoteldealsflorida.org",
+    "https://cruisedealsflorida.org",
+    "https://localdealsflorida.org"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Florida Deals Hub",
+  url: "https://floridadealshub.com",
+  description:
+    "Florida Deals Hub connects visitors with Florida flight deals, hotel deals, cruise deals, local deals, events, attractions, restaurants, and weekend getaway savings.",
+  publisher: {
+    "@type": "Organization",
+    name: "Florida Deals Hub"
+  }
+};
+
 export const metadata = {
   metadataBase: new URL("https://floridadealshub.com"),
   title: "Florida Deals Hub | Flights, Hotels, Cruises & Local Florida Deals",
@@ -46,6 +73,12 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <AnalyticsEvents />
+        <Script id="organization-schema" type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </Script>
+        <Script id="website-schema" type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </Script>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"

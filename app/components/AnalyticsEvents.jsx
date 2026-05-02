@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { getNetworkDestination, trackDealClick } from "../lib/analytics";
+import { getNetworkDestination, trackDealClick, trackNavigationClick } from "../lib/analytics";
 
 export default function AnalyticsEvents() {
   useEffect(() => {
@@ -13,12 +13,14 @@ export default function AnalyticsEvents() {
       }
 
       const destinationSite = getNetworkDestination(link.href);
+      const linkText = link.innerText?.trim() || link.getAttribute("aria-label") || link.href;
+
+      trackNavigationClick(linkText, link.href);
 
       if (!destinationSite) {
         return;
       }
 
-      const linkText = link.innerText?.trim() || link.getAttribute("aria-label") || link.href;
       trackDealClick(destinationSite, linkText);
     }
 

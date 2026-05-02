@@ -46,3 +46,11 @@ export function trackDealClick(destinationSite, linkText) {
     link_text: linkText
   });
 }
+
+export function trackNavigationClick(linkText, destinationUrl) {
+  trackEvent("navigation_click", {
+    site: siteName,
+    link_text: linkText,
+    destination_url: destinationUrl
+  });
+}

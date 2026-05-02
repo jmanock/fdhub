@@ -42,7 +42,14 @@ export default function Home() {
           <div className="hero-visual" aria-label="Florida Deals Hub category preview cards">
             {pillars.map((pillar, index) => (
               <a className={`stack-card card-${index + 1}`} href={pillar.href} key={pillar.title}>
-                <img src={pillar.image} alt={pillar.alt} />
+                <img
+                  src={pillar.image}
+                  alt={pillar.alt}
+                  width="900"
+                  height="620"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                />
                 <span>{pillar.badge}</span>
                 <strong>{pillar.title.replace("Florida ", "")}</strong>
               </a>
@@ -59,7 +66,14 @@ export default function Home() {
             {pillars.map((pillar) => (
               <article className="pillar-card" key={pillar.title}>
                 <div className="pillar-image">
-                  <img src={pillar.image} alt={pillar.alt} />
+                  <img
+                    src={pillar.image}
+                    alt={pillar.alt}
+                    width="900"
+                    height="620"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span>{pillar.badge}</span>
                 </div>
                 <div className="pillar-body">
