@@ -461,6 +461,73 @@ h3 {
   border-top: 5px solid var(--coral);
 }
 
+.trip-router,
+.booking-hotels,
+.stay-with-trip,
+.plan-trip {
+  padding-top: 18px;
+}
+
+.router-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.compact-router-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.router-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 50px rgba(8, 35, 63, 0.08);
+}
+
+.router-card p {
+  color: var(--ink-muted);
+}
+
+.router-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: auto;
+  padding: 12px 16px;
+  border-radius: 999px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--ocean), var(--ocean-dark));
+  font-weight: 900;
+  box-shadow: 0 14px 32px rgba(8, 127, 181, 0.2);
+}
+
+.booking-card {
+  border-top: 5px solid var(--gold);
+}
+
+.trust-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.trust-notes span {
+  padding: 8px 12px;
+  border: 1px solid rgba(8, 127, 181, 0.18);
+  border-radius: 999px;
+  background: rgba(223, 245, 248, 0.74);
+  color: var(--ocean-dark);
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
 .popular-searches,
 .related-pages {
   padding-top: 18px;
@@ -732,6 +799,13 @@ h3 {
   opacity: 0.86;
 }
 
+.affiliate-disclosure {
+  max-width: 760px;
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.86rem;
+}
+
 .simple-page {
   max-width: 980px;
   margin: 0 auto;
@@ -766,7 +840,8 @@ h3 {
   .pillar-grid,
   .trust-grid,
   .preview-grid,
-  .popular-link-grid {
+  .popular-link-grid,
+  .router-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -844,7 +919,8 @@ h3 {
   .pillar-grid,
   .trust-grid,
   .preview-grid,
-  .popular-link-grid {
+  .popular-link-grid,
+  .router-card-grid {
     grid-template-columns: 1fr;
   }
 

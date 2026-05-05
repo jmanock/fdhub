@@ -1,7 +1,14 @@
 import NewsletterSection from "./components/NewsletterSection";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
-import { pillars, popularPages, sites } from "./lib/network";
+import {
+  expediaHotelCards,
+  pillars,
+  planTripLinks,
+  popularPages,
+  sites,
+  tripRouterCards
+} from "./lib/network";
 
 const trust = [
   ["Curated Florida Deals", "A focused network built around travel, savings, and things to do across the state."],
@@ -57,6 +64,27 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="trip-router section-pad" aria-labelledby="trip-router-title">
+          <div className="section-heading">
+            <p className="eyebrow">Plan with the network</p>
+            <h2 id="trip-router-title">Start Your Florida Trip</h2>
+          </div>
+          <div className="router-card-grid">
+            {tripRouterCards.map((card) => (
+              <article className="router-card" key={card.title}>
+                <h3>{card.title}</h3>
+                <p>{card.copy}</p>
+                <a href={card.href}>{card.cta}</a>
+              </article>
+            ))}
+          </div>
+          <div className="trust-notes" aria-label="Florida Deals Hub trust notes">
+            <span>Curated Florida travel deals</span>
+            <span>Updated regularly</span>
+            <span>Prices and availability may change</span>
+          </div>
+        </section>
+
         <section className="pillars section-pad" aria-labelledby="network-title">
           <div className="section-heading">
             <p className="eyebrow">The network</p>
@@ -82,6 +110,44 @@ export default function Home() {
                   <a href={pillar.href}>{pillar.button}</a>
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="booking-hotels section-pad" aria-labelledby="booking-title">
+          <div className="section-heading">
+            <p className="eyebrow">Hotel planning</p>
+            <h2 id="booking-title">Find Florida Hotels</h2>
+          </div>
+          <div className="router-card-grid">
+            {expediaHotelCards.map((hotel) => (
+              <article className="router-card booking-card" key={hotel.destination}>
+                <h3>{hotel.title}</h3>
+                <p>{hotel.copy}</p>
+                <a
+                  href={hotel.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-hotel-destination={hotel.destination}
+                  data-hotel-provider="expedia"
+                >
+                  {hotel.cta}
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="plan-trip section-pad" aria-labelledby="plan-title">
+          <div className="section-heading compact">
+            <p className="eyebrow">Quick routes</p>
+            <h2 id="plan-title">Plan Your Florida Trip</h2>
+          </div>
+          <div className="popular-link-grid">
+            {planTripLinks.map(([label, href]) => (
+              <a href={href} key={href}>
+                {label}
+              </a>
             ))}
           </div>
         </section>

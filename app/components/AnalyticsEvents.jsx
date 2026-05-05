@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import { getNetworkDestination, trackDealClick, trackNavigationClick } from "../lib/analytics";
+import {
+  getHotelBookingProvider,
+  getNetworkDestination,
+  trackDealClick,
+  trackHotelBookingClick,
+  trackNavigationClick
+} from "../lib/analytics";
 
 export default function AnalyticsEvents() {
   useEffect(() => {
@@ -13,9 +19,22 @@ export default function AnalyticsEvents() {
       }
 
       const destinationSite = getNetworkDestination(link.href);
+      const hotelProvider = getHotelBookingProvider(link.href);
       const linkText = link.innerText?.trim() || link.getAttribute("aria-label") || link.href;
 
-      trackNavigationClick(linkText, link.href);
+      trackNavigationClick({
+        linkText,
+        destinationUrl: link.href,
+        destinationSite: destinationSite || hotelProvider || "floridadealshub.com"
+      });
+
+      if (hotelProvider) {
+        trackHotelBookingClick({
+          destination: link.dataset.hotelDestination || link.dataset.bookingDestination || linkText,
+          outboundUrl: link.href,
+          provider: hotelProvider
+        });
+      }
 
       if (!destinationSite) {
         return;

@@ -13,7 +13,8 @@ import {
   landingPageMap,
   landingPages,
   lastUpdatedLabel,
-  pillars
+  pillars,
+  stayWithTripCards
 } from "../lib/network";
 
 export function generateStaticParams() {
@@ -217,6 +218,30 @@ export default async function LandingPage({ params }) {
                 <h3>{label}</h3>
                 <p>{copy}</p>
               </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="stay-with-trip section-pad" aria-labelledby="stay-with-trip-title">
+          <div className="section-heading">
+            <p className="eyebrow">Stay with your trip</p>
+            <h2 id="stay-with-trip-title">Need a place to stay?</h2>
+          </div>
+          <div className="router-card-grid compact-router-grid">
+            {stayWithTripCards.map((hotel) => (
+              <article className="router-card booking-card" key={`${page.slug}-${hotel.title}`}>
+                <h3>{hotel.title}</h3>
+                <p>{hotel.copy}</p>
+                <a
+                  href={hotel.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-hotel-destination={hotel.destination}
+                  data-hotel-provider="expedia"
+                >
+                  {hotel.title}
+                </a>
+              </article>
             ))}
           </div>
         </section>

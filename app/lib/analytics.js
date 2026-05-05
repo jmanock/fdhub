@@ -47,10 +47,32 @@ export function trackDealClick(destinationSite, linkText) {
   });
 }
 
-export function trackNavigationClick(linkText, destinationUrl) {
+export function getHotelBookingProvider(url) {
+  try {
+    const { hostname } = new URL(url);
+    const normalizedHost = hostname.replace(/^www\./, "");
+    return normalizedHost === "expedia.com" ? "expedia" : null;
+  } catch {
+    return null;
+  }
+}
+
+export function trackHotelBookingClick({ destination, outboundUrl, provider = "expedia" }) {
+  trackEvent("hotel_booking_click", {
+    site: siteName,
+    source: "hub",
+    provider,
+    destination,
+    page_path: window.location.pathname,
+    outbound_url: outboundUrl
+  });
+}
+
+export function trackNavigationClick({ linkText, destinationUrl, destinationSite }) {
   trackEvent("navigation_click", {
     site: siteName,
     link_text: linkText,
-    destination_url: destinationUrl
+    destination_url: destinationUrl,
+    destination_site: destinationSite
   });
 }

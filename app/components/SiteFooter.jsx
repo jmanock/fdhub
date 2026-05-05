@@ -32,6 +32,10 @@ export default function SiteFooter() {
             </Link>
           ))}
         </nav>
+        <p className="affiliate-disclosure">
+          Florida Deals Hub may earn a commission when you book through some links. This helps keep
+          our deal alerts free.
+        </p>
       </div>
     </footer>
   );
