@@ -70,38 +70,107 @@ export const pillars = [
 export const popularPages = [
   ["Florida Travel Deals", "/florida-travel-deals"],
   ["Florida Weekend Getaways", "/florida-weekend-getaways"],
-  ["Orlando Deals", "/orlando-deals"],
-  ["Miami Deals", "/miami-deals"],
-  ["Florida Family Deals", "/florida-family-deals"],
-  ["Cheap Florida Trips", "/cheap-florida-trips"],
+  ["Cheap Florida Vacations", "/cheap-florida-vacations"],
+  ["Florida Vacation Planning", "/florida-vacation-planning"],
+  ["Best Time To Visit Florida", "/best-time-to-visit-florida"],
+  ["Florida Family Vacations", "/florida-family-vacations"],
   ["Florida Deal Alerts", "/florida-deal-alerts"]
 ];
 
 export const tripRouterCards = [
   {
-    title: "Flights",
-    copy: "Start with Florida flight deal sources for major airports and quick getaway routes.",
+    title: "Cheap Flights From Florida",
+    copy: "Start with airfare sources for Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, and quick getaway routes.",
     cta: "Find Flights",
     href: sites.flights
   },
   {
-    title: "Hotels",
+    title: "Florida Hotel Deals",
     copy: "Compare Florida hotel deal pages for beach stays, city breaks, and family trips.",
-    cta: "Check Hotels",
+    cta: "Browse Hotels",
     href: sites.hotels
   },
   {
-    title: "Cruises",
+    title: "Florida Cruise Deals",
     copy: "Browse Florida cruise deal pages for Bahamas, Caribbean, weekend, and family sailings.",
-    cta: "Browse Cruises",
+    cta: "Explore Cruises",
     href: sites.cruises
   },
   {
-    title: "Local Deals",
+    title: "Things To Do In Florida",
     copy: "Find restaurants, attractions, events, family activities, and local Florida savings.",
-    cta: "Explore Local Deals",
+    cta: "Discover Local Deals",
     href: sites.local
   }
+];
+
+export const topPicks = [
+  {
+    label: "Top Pick",
+    title: "Florida flight deal watch",
+    copy: "Track cheap flights from Florida airports for flexible weekends and seasonal trips.",
+    href: sites.flights,
+    tone: "sky"
+  },
+  {
+    label: "Popular",
+    title: "Orlando hotel planning",
+    copy: "Compare hotel deal sources for theme park trips, family stays, and Central Florida getaways.",
+    href: sites.hotels,
+    tone: "sand"
+  },
+  {
+    label: "Weekend Idea",
+    title: "Short cruises from Florida",
+    copy: "Check cruise deal pages for Bahamas, Caribbean, and weekend sailings from Florida ports.",
+    href: sites.cruises,
+    tone: "sea"
+  },
+  {
+    label: "Family Pick",
+    title: "Things to do in Florida",
+    copy: "Browse local restaurants, events, attractions, and family activities across Florida.",
+    href: sites.local,
+    tone: "sun"
+  }
+];
+
+export const planTripCards = [
+  {
+    title: "Find Flights",
+    copy: "Start with cheap flights from Florida airports and flexible date ideas.",
+    href: sites.flights
+  },
+  {
+    title: "Find Hotels",
+    copy: "Compare Florida hotel deals for beach trips, city stays, and family vacations.",
+    href: sites.hotels
+  },
+  {
+    title: "Book a Cruise",
+    copy: "View cruise deals from Florida ports for short getaways and longer sailings.",
+    href: sites.cruises
+  },
+  {
+    title: "Explore Activities",
+    copy: "Find things to do in Florida, from restaurants and events to attractions.",
+    href: sites.local
+  }
+];
+
+export const popularSearchLinks = [
+  ["Orlando Travel Deals", "/orlando-deals"],
+  ["Miami Travel Deals", "/miami-deals"],
+  ["Tampa Travel Deals", "/tampa-deals"],
+  ["Florida Beach Vacations", "/florida-beach-deals"],
+  ["Weekend Getaways Florida", "/florida-weekend-getaways"],
+  ["Family Vacations Florida", "/florida-family-vacations"]
+];
+
+export const homepageSeoParagraphs = [
+  "Florida Deals Hub is built as the front door for planning a Florida trip without digging through unrelated offers. Start with the part of the trip that matters most: cheap flights from Florida airports, Florida hotel deals, cruise deals from Florida ports, or things to do in Florida once you arrive. Each path sends you to a focused site in the Florida Deals network instead of trying to turn the Hub into another crowded deal feed.",
+  "The easiest way to find useful Florida travel deals is to stay flexible. Check nearby airports, compare beach and city hotel areas, watch cruise dates from multiple ports, and leave room for local attractions, restaurants, events, and family activities. Prices and availability may change, so Florida Deals Hub keeps the guidance clean, current, and practical while helping you move quickly to the right deal source.",
+  "Use this page as a trip planning map. If airfare is your main cost, start with flight deals. If the destination is already set, compare hotels or weekend getaway pages. If you are traveling from a Florida port, cruise pages may be the fastest path. If you live in Florida or want ideas after arrival, local deal pages can help fill the rest of the trip."
 ];
 
 export const expediaHotelCards = [
@@ -221,6 +290,78 @@ export const landingPages = [
       ["Short cruise ideas", "Browse Florida cruise deal pages for weekend and Bahamas sailings.", sites.cruises, "sea"],
       ["Quick Florida flights", "Find Florida flight deal sources for short weekend routes.", sites.flights, "sky"],
       ["Weekend local deals", "Explore local Florida deals for events, dining, and things to do.", sites.local, "sun"]
+    ]
+  },
+  {
+    slug: "cheap-florida-vacations",
+    title: "Cheap Florida Vacations | Flights, Hotels, Cruises & Things To Do",
+    metaDescription:
+      "Plan cheap Florida vacations with flight deal sources, hotel deal pages, cruises from Florida ports, attractions, restaurants, events, and family activities.",
+    h1: "Cheap Florida Vacations",
+    eyebrow: "Vacation value",
+    intro:
+      "Cheap Florida vacations are easier to plan when you separate the trip into airfare, hotels, cruises, and local activities. Florida Deals Hub helps you choose the right network site for each part of the search.",
+    alt: "Florida vacation planning with beach hotels flights cruises and activities",
+    related: ["florida-travel-deals", "cheap-florida-trips", "florida-vacation-planning", "florida-family-vacations"],
+    previews: [
+      ["Cheap flights from Florida", "Start with Florida flight deal sources for flexible routes and dates.", sites.flights, "sky"],
+      ["Florida hotel deals", "Compare hotel deal pages for affordable beach, city, and family stays.", sites.hotels, "sand"],
+      ["Cruise deals from Florida", "Browse cruise pages for short getaways and longer sailings.", sites.cruises, "sea"],
+      ["Things to do in Florida", "Find local attractions, restaurants, events, and family activities.", sites.local, "sun"]
+    ]
+  },
+  {
+    slug: "florida-vacation-planning",
+    title: "Florida Vacation Planning | Flights, Hotels, Cruises & Activities",
+    metaDescription:
+      "Plan a Florida vacation with helpful routes to flight deals, hotel deals, cruise deals, restaurants, attractions, events, and local activities.",
+    h1: "Florida Vacation Planning",
+    eyebrow: "Trip planning",
+    intro:
+      "Florida vacation planning can start with a flight, a hotel, a cruise, or a list of things to do. This Hub page organizes the first steps so travelers can move into the best niche site without sorting through a cluttered feed.",
+    alt: "Florida vacation planning checklist for flights hotels cruises and activities",
+    related: ["florida-travel-deals", "florida-vacation-deals", "best-time-to-visit-florida", "florida-family-vacations"],
+    previews: [
+      ["Find flights", "Use flight deal sources for major Florida airports and flexible trip ideas.", sites.flights, "sky"],
+      ["Compare hotels", "Check Florida hotel deal pages for resorts, beach towns, and city stays.", sites.hotels, "sand"],
+      ["Plan a cruise", "Browse cruise deals from Florida ports for weekend and vacation sailings.", sites.cruises, "sea"],
+      ["Explore activities", "Find restaurants, events, attractions, and things to do in Florida.", sites.local, "sun"]
+    ]
+  },
+  {
+    slug: "best-time-to-visit-florida",
+    title: "Best Time To Visit Florida | Travel Deals, Seasons & Trip Tips",
+    metaDescription:
+      "Learn the best time to visit Florida for flights, hotels, cruises, beaches, attractions, events, family trips, and weekend getaways.",
+    h1: "Best Time To Visit Florida",
+    eyebrow: "Seasonal planning",
+    intro:
+      "The best time to visit Florida depends on your route, budget, weather preferences, and plans. Florida Deals Hub helps travelers compare flights, hotels, cruises, and local activities by season.",
+    alt: "Florida seasonal travel calendar with beaches flights hotels and cruises",
+    related: ["florida-travel-deals", "florida-vacation-planning", "florida-weekend-getaways", "florida-beach-deals"],
+    previews: [
+      ["Seasonal flight deals", "Watch Florida flight sources when dates and airports are flexible.", sites.flights, "sky"],
+      ["Off-season hotel ideas", "Check hotel deal pages for beach towns, cities, and family areas.", sites.hotels, "sand"],
+      ["Cruise timing", "Browse Florida cruise deal pages for seasonal sailings and port options.", sites.cruises, "sea"],
+      ["Events and attractions", "Use local deal pages to plan around events, dining, and things to do.", sites.local, "sun"]
+    ]
+  },
+  {
+    slug: "florida-family-vacations",
+    title: "Florida Family Vacations | Flights, Hotels, Cruises & Activities",
+    metaDescription:
+      "Plan Florida family vacations with flight deal sources, hotel stays, cruise ideas, attractions, restaurants, events, and family-friendly things to do.",
+    h1: "Florida Family Vacations",
+    eyebrow: "Family planning",
+    intro:
+      "Florida family vacations often need a clear path through flights, hotels, attractions, restaurants, events, and cruise options. Florida Deals Hub routes each part of the plan to the right network site.",
+    alt: "Florida family vacation planning with hotels attractions flights and cruises",
+    related: ["florida-family-deals", "orlando-deals", "cheap-florida-vacations", "florida-vacation-planning"],
+    previews: [
+      ["Family flight ideas", "Find flight deal sources for Orlando, Tampa, Miami, Jacksonville, and more.", sites.flights, "sky"],
+      ["Family hotel deals", "Compare hotel deal pages for resorts, suites, beach stays, and weekends.", sites.hotels, "sand"],
+      ["Family cruise deals", "Browse cruise pages for sailings from Florida ports.", sites.cruises, "sea"],
+      ["Family activities", "Explore local deals for attractions, restaurants, events, and things to do.", sites.local, "sun"]
     ]
   },
   {
@@ -481,10 +622,10 @@ export function getRelatedSearchLinks(page) {
 
   return [
     ...hubLinks,
-    { label: "Florida flight deals", href: sites.flights },
+    { label: "cheap flights from Florida", href: sites.flights },
     { label: "Florida hotel deals", href: sites.hotels },
-    { label: "Florida cruise deals", href: sites.cruises },
-    { label: "local Florida deals", href: sites.local }
+    { label: "cruise deals from Florida", href: sites.cruises },
+    { label: "things to do in Florida", href: sites.local }
   ];
 }
 

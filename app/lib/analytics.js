@@ -1,10 +1,22 @@
 export const siteName = "floridadealshub.com";
 
 export const networkDomains = {
-  "flightdealsflorida.org": "flightdealsflorida.org",
-  "hoteldealsflorida.org": "hoteldealsflorida.org",
-  "cruisedealsflorida.org": "cruisedealsflorida.org",
-  "localdealsflorida.org": "localdealsflorida.org"
+  "flightdealsflorida.org": {
+    site: "flightdealsflorida.org",
+    destination: "flights"
+  },
+  "hoteldealsflorida.org": {
+    site: "hoteldealsflorida.org",
+    destination: "hotels"
+  },
+  "cruisedealsflorida.org": {
+    site: "cruisedealsflorida.org",
+    destination: "cruises"
+  },
+  "localdealsflorida.org": {
+    site: "localdealsflorida.org",
+    destination: "local"
+  }
 };
 
 export function trackEvent(eventName, parameters = {}) {
@@ -33,7 +45,17 @@ export function getNetworkDestination(url) {
   try {
     const { hostname } = new URL(url);
     const normalizedHost = hostname.replace(/^www\./, "");
-    return networkDomains[normalizedHost] || null;
+    return networkDomains[normalizedHost]?.site || null;
+  } catch {
+    return null;
+  }
+}
+
+export function getNetworkCategory(url) {
+  try {
+    const { hostname } = new URL(url);
+    const normalizedHost = hostname.replace(/^www\./, "");
+    return networkDomains[normalizedHost]?.destination || null;
   } catch {
     return null;
   }
@@ -68,10 +90,12 @@ export function trackHotelBookingClick({ destination, outboundUrl, provider = "e
   });
 }
 
-export function trackNavigationClick({ linkText, destinationUrl, destinationSite }) {
+export function trackNavigationClick({ linkText, destinationUrl, destinationSite, destination }) {
   trackEvent("navigation_click", {
     site: siteName,
+    destination,
     link_text: linkText,
+    page_path: window.location.pathname,
     destination_url: destinationUrl,
     destination_site: destinationSite
   });

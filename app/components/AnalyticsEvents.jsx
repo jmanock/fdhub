@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import {
   getHotelBookingProvider,
+  getNetworkCategory,
   getNetworkDestination,
   trackDealClick,
   trackHotelBookingClick,
@@ -19,13 +20,15 @@ export default function AnalyticsEvents() {
       }
 
       const destinationSite = getNetworkDestination(link.href);
+      const destination = getNetworkCategory(link.href);
       const hotelProvider = getHotelBookingProvider(link.href);
       const linkText = link.innerText?.trim() || link.getAttribute("aria-label") || link.href;
 
       trackNavigationClick({
         linkText,
         destinationUrl: link.href,
-        destinationSite: destinationSite || hotelProvider || "floridadealshub.com"
+        destinationSite: destinationSite || hotelProvider || "floridadealshub.com",
+        destination: destination || hotelProvider || "hub"
       });
 
       if (hotelProvider) {
