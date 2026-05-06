@@ -30,14 +30,14 @@ export function trackEvent(eventName, parameters = {}) {
 export function trackNewsletterSignupStarted() {
   trackEvent("newsletter_signup_started", {
     site: siteName,
-    source: "hub"
+    source: siteName
   });
 }
 
 export function trackNewsletterSignupSuccess() {
   trackEvent("newsletter_signup_success", {
     site: siteName,
-    source: "hub"
+    source: siteName
   });
 }
 
@@ -93,10 +93,10 @@ export function trackHotelBookingClick({ destination, outboundUrl, provider = "e
 export function trackNavigationClick({ linkText, destinationUrl, destinationSite, destination }) {
   trackEvent("navigation_click", {
     site: siteName,
-    destination,
+    destination_site: destination || destinationSite,
     link_text: linkText,
     page_path: window.location.pathname,
     destination_url: destinationUrl,
-    destination_site: destinationSite
+    destination_domain: destinationSite
   });
 }

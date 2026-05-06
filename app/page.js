@@ -5,6 +5,7 @@ import SiteHeader from "./components/SiteHeader";
 import {
   baseUrl,
   expediaHotelCards,
+  homepageFaqs,
   homepageSeoParagraphs,
   lastUpdatedLabel,
   pillars,
@@ -25,7 +26,7 @@ const trust = [
 const homeItemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Top Florida Deals Right Now",
+  name: "Top Florida Deal Picks Right Now",
   url: baseUrl,
   itemListElement: topPicks.map((pick, index) => ({
     "@type": "ListItem",
@@ -33,8 +34,21 @@ const homeItemListSchema = {
     item: {
       "@type": "WebPage",
       name: pick.title,
-      description: pick.copy,
+      description: `${pick.value}: ${pick.copy}`,
       url: pick.href
+    }
+  }))
+};
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homepageFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer
     }
   }))
 };
@@ -48,15 +62,16 @@ export default function Home() {
         <section className="hero section-pad">
           <div className="hero-copy">
             <p className="eyebrow">Updated: {lastUpdatedLabel}</p>
-            <h1>Plan Your Florida Trip</h1>
+            <h1>Find the Best Deals Across Florida</h1>
             <p className="hero-subhead">
-              Flights, hotels, cruises, and local deals - all in one place.
+              Flights, hotels, cruises, local events, restaurants, attractions, and weekend
+              getaways - all connected through Florida Deals Hub.
             </p>
             <div className="hero-actions" aria-label="Explore Florida deals categories">
-              <a href={sites.flights}>Find Flights</a>
-              <a href={sites.hotels}>Browse Hotels</a>
-              <a href={sites.cruises}>Explore Cruises</a>
-              <a href={sites.local}>Discover Local Deals</a>
+              <a href={sites.flights}>Find Flight Deals</a>
+              <a href={sites.hotels}>Compare Hotel Deals</a>
+              <a href={sites.cruises}>Browse Cruise Deals</a>
+              <a href={sites.local}>Explore Local Deals</a>
             </div>
           </div>
 
@@ -81,11 +96,12 @@ export default function Home() {
         <section className="trip-router section-pad" aria-labelledby="trip-router-title">
           <div className="section-heading">
             <p className="eyebrow">Plan with the network</p>
-            <h2 id="trip-router-title">Start With What You Need</h2>
+            <h2 id="trip-router-title">Choose Your Deal Type</h2>
           </div>
           <div className="router-card-grid">
             {tripRouterCards.map((card) => (
               <article className="router-card" key={card.title}>
+                <span className="router-badge">{card.badge}</span>
                 <h3>{card.title}</h3>
                 <p>{card.copy}</p>
                 <a href={card.href}>{card.cta}</a>
@@ -96,20 +112,23 @@ export default function Home() {
             <span>Curated Florida travel deals</span>
             <span>Updated regularly</span>
             <span>Prices and availability may change</span>
+            <span>Confirm current details with the source</span>
           </div>
         </section>
 
         <section className="preview section-pad" aria-labelledby="preview-title">
           <div className="section-heading">
             <p className="eyebrow">Curated routes</p>
-            <h2 id="preview-title">Top Florida Deals Right Now</h2>
+            <h2 id="preview-title">Top Florida Deal Picks Right Now</h2>
           </div>
           <div className="preview-grid">
             {topPicks.map((pick) => (
               <a className={`preview-card ${pick.tone}`} href={pick.href} key={pick.title}>
                 <span>{pick.label}</span>
                 <h3>{pick.title}</h3>
+                <p className="pick-value">{pick.value}</p>
                 <p>{pick.copy}</p>
+                <strong className="top-pick-cta">{pick.cta}</strong>
               </a>
             ))}
           </div>
@@ -189,13 +208,28 @@ export default function Home() {
         <section className="popular-searches section-pad" aria-labelledby="popular-title">
           <div className="section-heading compact">
             <p className="eyebrow">Popular searches</p>
-            <h2 id="popular-title">Popular Florida Searches</h2>
+            <h2 id="popular-title">Popular Florida Deal Searches</h2>
           </div>
           <div className="popular-link-grid">
             {popularSearchLinks.map(([label, href]) => (
               <a href={href} key={href}>
                 {label}
               </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="faq-section section-pad" aria-labelledby="home-faq-title">
+          <div className="section-heading compact">
+            <p className="eyebrow">Helpful answers</p>
+            <h2 id="home-faq-title">Florida Deals Hub FAQ</h2>
+          </div>
+          <div className="faq-list">
+            {homepageFaqs.map((faq) => (
+              <details className="faq-item" key={faq.question}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
             ))}
           </div>
         </section>
@@ -230,6 +264,9 @@ export default function Home() {
       <SiteFooter />
       <Script id="home-top-picks-schema" type="application/ld+json">
         {JSON.stringify(homeItemListSchema)}
+      </Script>
+      <Script id="home-faq-schema" type="application/ld+json">
+        {JSON.stringify(homeFaqSchema)}
       </Script>
     </>
   );
