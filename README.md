@@ -29,6 +29,30 @@ Core page themes include:
 - Florida family vacations
 - City and local deal pages
 
+Each major SEO page should include 300-600 words of useful, unique copy, visible breadcrumbs, `Updated: Month Year`, a professional trust strip, FAQ content, related Hub links, and clear routes to Florida Flight Deals, Florida Hotel Deals, Florida Cruise Deals, and Local Deals Florida. Pages should be informational routing pages, not duplicate deal feeds.
+
+## Sitemap And Canonicals
+
+`public/robots.txt` allows crawling and points to `https://floridadealshub.com/sitemap.xml`.
+
+`public/sitemap.xml` uses HTTPS, the non-www canonical domain, no duplicate slash variants, and only canonical Hub URLs. Add every crawlable Hub page here with a `lastmod`, `changefreq`, and `priority` that matches its importance.
+
+Canonical tags are generated through Next metadata. The homepage canonical is defined in `app/layout.js`; SEO landing page canonicals are self-referencing absolute URLs generated in `app/[slug]/page.js`. Do not point multiple pages to the homepage unless the pages are truly duplicates.
+
+## Metadata And Structured Data
+
+Global metadata, Open Graph defaults, Twitter card defaults, Organization schema, and WebSite schema live in `app/layout.js`.
+
+SEO page metadata is generated from `landingPages` in `app/lib/network.js`. Every page should have a unique title, meta description, canonical URL, Open Graph title/description/image/url, and Twitter `summary_large_image` metadata. Use a relevant Florida travel image and descriptive alt text for each important page.
+
+Page-level JSON-LD in `app/[slug]/page.js` includes:
+
+- `BreadcrumbList`
+- `FAQPage`
+- `ItemList` for featured routing cards
+
+Do not add fake `Offer`, pricing, review, or product schema unless the underlying data is accurate and maintained.
+
 ## Expedia Affiliate Links
 
 Expedia links live in `app/lib/affiliateLinks.js`.
@@ -73,6 +97,9 @@ To add a page:
 1. Add a new object to `landingPages` with `slug`, metadata, H1, intro, related pages, and preview links.
 2. Add the new URL to `public/sitemap.xml`.
 3. Use existing network links from `sites` and hotel links from `getExpediaHotelLink`.
-4. Keep the page as a router to the niche sites, not a duplicate deals feed.
+4. Add a relevant `image`, descriptive `alt`, page-specific `details`, FAQs if the default set is not specific enough, related pages, and preview links.
+5. Keep the page as a router to the niche sites, not a duplicate deals feed.
 
 Content pages automatically receive breadcrumbs, last-updated text, FAQ schema, related links, newsletter signup, and the Expedia "Need a place to stay?" hotel CTA section.
+
+Before deployment, run `npm run lint` and `npm run build`, then spot-check robots, sitemap, canonical tags, Open Graph/Twitter metadata, schema, internal links, external affiliate link attributes, newsletter behavior, GA tracking, and mobile layout.

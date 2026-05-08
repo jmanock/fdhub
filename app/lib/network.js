@@ -289,6 +289,25 @@ export const lastUpdatedLabel = new Intl.DateTimeFormat("en-US", {
   year: "numeric"
 }).format(new Date());
 
+export const pageImages = {
+  floridaCoast:
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+  weekendBeach:
+    "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+  familyTrip:
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+  planning:
+    "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
+  miami:
+    "https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1200&q=80",
+  tampa:
+    "https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?auto=format&fit=crop&w=1200&q=80",
+  orlando:
+    "https://images.unsplash.com/photo-1605880135636-7b553d681026?auto=format&fit=crop&w=1200&q=80",
+  calendar:
+    "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80"
+};
+
 export const landingPages = [
   {
     slug: "florida-travel-deals",
@@ -299,7 +318,12 @@ export const landingPages = [
     eyebrow: "Travel savings",
     intro:
       "Florida Deals Hub connects travelers and locals with useful deal pages across flights, hotels, cruises, and local experiences. Browse the network to find current deal sources and curated Florida savings.",
+    image: pageImages.floridaCoast,
     alt: "Florida shoreline and travel planning cards for Florida travel deals",
+    details: [
+      "Use this page when you are still deciding what kind of Florida deal you need. Some travelers start with airfare into Orlando, Miami, Tampa, Fort Lauderdale, or Jacksonville. Others need Florida hotel deals, cruise ideas from Florida ports, local attractions, restaurants, events, or weekend getaway inspiration.",
+      "The Hub keeps broad Florida travel searches organized by sending each intent to a focused network site. That makes it easier to compare the right type of source without mixing flights, hotel stays, cruises, and local activities into one cluttered feed."
+    ],
     related: ["florida-vacation-deals", "florida-weekend-deals", "florida-beach-deals", "florida-deal-alerts"],
     previews: [
       ["Florida flight deals", "Compare current flight deal sources for major Florida airports.", sites.flights, "sky"],
@@ -317,7 +341,12 @@ export const landingPages = [
     eyebrow: "Weekend getaways",
     intro:
       "Use Florida Deals Hub to route weekend plans to the right part of the network, from quick hotel stays and short cruises to local events, restaurant savings, and flight deal sources.",
+    image: pageImages.weekendBeach,
     alt: "Weekend bag near a Florida beach for Florida weekend deals",
+    details: [
+      "Weekend plans often depend on timing. A short Florida trip may start with a Friday flight, a two-night hotel, a cruise from a nearby port, or a local event that makes the getaway worthwhile.",
+      "Use the network routes to compare Florida hotel deals for quick stays, cruise pages for short sailings, flight deal sources for flexible dates, and Local Deals Florida for restaurants, attractions, family activities, and things to do once you arrive."
+    ],
     related: ["florida-travel-deals", "florida-vacation-deals", "florida-beach-deals", "florida-deals-for-locals"],
     previews: [
       ["Weekend hotel getaways", "Browse Florida hotel deals for beach stays and city breaks.", sites.hotels, "sand"],
@@ -335,8 +364,13 @@ export const landingPages = [
     eyebrow: "Weekend planning",
     intro:
       "Florida weekend getaways can be simple when the planning path is clear. Florida Deals Hub helps you move from broad getaway ideas into focused pages for flights, hotels, cruises, local events, restaurants, attractions, and short beach trips.",
+    image: pageImages.weekendBeach,
     alt: "Florida beach weekend getaway planning with hotels and travel deals",
-    related: ["florida-weekend-deals", "florida-travel-deals", "florida-beach-deals", "cheap-florida-trips"],
+    details: [
+      "Good weekend getaways usually come from combining a realistic travel window with the right destination. Orlando may work for family activities, Miami and Fort Lauderdale for beaches and nightlife, Tampa for Gulf Coast plans, and cruise ports for short sailings.",
+      "Florida Deals Hub helps you split the search into flights, hotels, cruises, and local activities so each part can be checked with the right source. Prices and schedules may change, especially around holidays, major events, school breaks, and beach weekends."
+    ],
+    related: ["florida-weekend-deals", "florida-travel-deals", "florida-beach-deals", "cheap-florida-vacations"],
     previews: [
       ["Weekend hotel stays", "Check Florida hotel deal pages for quick getaways and staycations.", sites.hotels, "sand"],
       ["Short cruise ideas", "Browse Florida cruise deal pages for weekend and Bahamas sailings.", sites.cruises, "sea"],
@@ -353,7 +387,12 @@ export const landingPages = [
     eyebrow: "Vacation value",
     intro:
       "Cheap Florida vacations are easier to plan when you separate the trip into airfare, hotels, cruises, and local activities. Florida Deals Hub helps you choose the right network site for each part of the search.",
+    image: pageImages.floridaCoast,
     alt: "Florida vacation planning with beach hotels flights cruises and activities",
+    details: [
+      "A lower-cost Florida vacation usually comes from flexibility. Compare nearby airports, watch hotel areas outside the busiest beach blocks, look at cruise dates from multiple ports, and leave room for restaurants, attractions, and local events that fit your budget.",
+      "This page is built as a planning gateway. Start with the category that controls your trip cost, then use the related pages to compare beach vacations, family travel, weekend trips, and seasonal timing."
+    ],
     related: ["florida-travel-deals", "cheap-florida-trips", "florida-vacation-planning", "florida-family-vacations"],
     previews: [
       ["Cheap flights from Florida", "Start with Florida flight deal sources for flexible routes and dates.", sites.flights, "sky"],
@@ -371,7 +410,12 @@ export const landingPages = [
     eyebrow: "Trip planning",
     intro:
       "Florida vacation planning can start with a flight, a hotel, a cruise, or a list of things to do. This Hub page organizes the first steps so travelers can move into the best niche site without sorting through a cluttered feed.",
+    image: pageImages.planning,
     alt: "Florida vacation planning checklist for flights hotels cruises and activities",
+    details: [
+      "Use this page as a trip planning checklist. If your dates are flexible, begin with flights. If the destination matters most, compare hotels by city or beach area. If you want an easy packaged getaway, check cruise routes from Florida ports. Then use local deal pages to fill in attractions, restaurants, events, and family activities.",
+      "The Hub does not sell travel directly. It helps you choose the correct source, understand what to compare, and confirm current details with the provider, booking site, cruise line, airline, venue, restaurant, or official source."
+    ],
     related: ["florida-travel-deals", "florida-vacation-deals", "best-time-to-visit-florida", "florida-family-vacations"],
     previews: [
       ["Find flights", "Use flight deal sources for major Florida airports and flexible trip ideas.", sites.flights, "sky"],
@@ -389,7 +433,12 @@ export const landingPages = [
     eyebrow: "Seasonal planning",
     intro:
       "The best time to visit Florida depends on your route, budget, weather preferences, and plans. Florida Deals Hub helps travelers compare flights, hotels, cruises, and local activities by season.",
+    image: pageImages.calendar,
     alt: "Florida seasonal travel calendar with beaches flights hotels and cruises",
+    details: [
+      "Florida travel prices often move with school breaks, holidays, spring travel, cruise demand, weather patterns, festivals, sporting events, and beach season. A date that works well for a theme park trip may not be the best date for a beach hotel or cruise.",
+      "Use this page to think through timing before you choose a category. Flexible travelers may compare nearby airports, shift hotel dates, check cruise departures from more than one port, and look for local activities that make an off-peak trip feel worthwhile."
+    ],
     related: ["florida-travel-deals", "florida-vacation-planning", "florida-weekend-getaways", "florida-beach-deals"],
     previews: [
       ["Seasonal flight deals", "Watch Florida flight sources when dates and airports are flexible.", sites.flights, "sky"],
@@ -407,7 +456,12 @@ export const landingPages = [
     eyebrow: "Family planning",
     intro:
       "Florida family vacations often need a clear path through flights, hotels, attractions, restaurants, events, and cruise options. Florida Deals Hub routes each part of the plan to the right network site.",
+    image: pageImages.familyTrip,
     alt: "Florida family vacation planning with hotels attractions flights and cruises",
+    details: [
+      "Family trips need practical planning: airport timing, hotel location, room setup, attraction days, meals, transportation, and backup activities. Florida Deals Hub keeps those choices separated so families can compare each part without losing the bigger plan.",
+      "Start with flights if airfare will decide the dates, hotels if location matters most, cruise pages if you want a sailing from a Florida port, and Local Deals Florida for attractions, restaurants, events, and family-friendly things to do."
+    ],
     related: ["florida-family-deals", "orlando-deals", "cheap-florida-vacations", "florida-vacation-planning"],
     previews: [
       ["Family flight ideas", "Find flight deal sources for Orlando, Tampa, Miami, Jacksonville, and more.", sites.flights, "sky"],
@@ -425,6 +479,7 @@ export const landingPages = [
     eyebrow: "Vacation planning",
     intro:
       "Florida vacation planning often crosses flights, hotels, cruises, and local experiences. This page helps you choose the right Florida Deals Hub network site for current deal sources and featured Florida savings.",
+    image: pageImages.floridaCoast,
     alt: "Florida resort pool and palm trees for Florida vacation deals",
     related: ["florida-travel-deals", "florida-family-deals", "florida-beach-deals", "miami-deals"],
     previews: [
@@ -443,6 +498,7 @@ export const landingPages = [
     eyebrow: "Budget trip planning",
     intro:
       "Cheap Florida trips usually come from combining the right flight, a smart hotel choice, flexible dates, and local savings once you arrive. Florida Deals Hub routes each part of that search to the best niche site in the network.",
+    image: pageImages.planning,
     alt: "Affordable Florida trip planning with hotel flight cruise and local deal cards",
     related: ["florida-travel-deals", "florida-vacation-deals", "florida-weekend-getaways", "florida-deal-alerts"],
     previews: [
@@ -461,6 +517,7 @@ export const landingPages = [
     eyebrow: "Family savings",
     intro:
       "Families can use Florida Deals Hub as a starting point for hotel stays, attraction ideas, local events, flight deal sources, and cruise pages. Deals may change, so check current offers on the niche sites.",
+    image: pageImages.familyTrip,
     alt: "Family walking near a sunny Florida beach for family deals",
     related: ["orlando-deals", "florida-weekend-deals", "florida-vacation-deals", "florida-deal-alerts"],
     previews: [
@@ -479,6 +536,7 @@ export const landingPages = [
     eyebrow: "Coastal deals",
     intro:
       "Florida beach trips can start with a hotel, a flight, a cruise, or a local restaurant and attraction plan. Florida Deals Hub routes you to current deal sources across the coastal network.",
+    image: pageImages.floridaCoast,
     alt: "Blue Florida beach water and umbrellas for Florida beach deals",
     related: ["florida-vacation-deals", "miami-deals", "fort-lauderdale-deals", "florida-weekend-deals"],
     previews: [
@@ -497,7 +555,12 @@ export const landingPages = [
     eyebrow: "Central Florida",
     intro:
       "Use this Orlando deals page to route your search to Orlando flight deal sources, Orlando hotel deals, family attractions, restaurants, events, and cruise options from nearby Florida ports.",
+    image: pageImages.orlando,
     alt: "Orlando travel planning scene for flights hotels and attraction deals",
+    details: [
+      "Orlando planning often starts with flights into Central Florida and hotels near theme parks, convention areas, family activities, or weekend event plans. The right source depends on whether airfare, lodging, attractions, or restaurants are driving the trip.",
+      "Use Florida Flight Deals for Orlando airport routes, Florida Hotel Deals for family stays and weekend hotels, Florida Cruise Deals for Port Canaveral and nearby sailings, and Local Deals Florida for attractions, events, restaurants, and things to do around Orlando."
+    ],
     related: ["florida-family-deals", "florida-weekend-deals", "tampa-deals", "florida-deal-alerts"],
     previews: [
       ["Orlando flight deals", "Check Florida flight deal sources for Orlando airport routes.", sites.flights, "sky"],
@@ -515,7 +578,12 @@ export const landingPages = [
     eyebrow: "South Florida",
     intro:
       "Miami deal searches often include flights, beach hotels, cruises from Miami, dining, events, and attractions. Florida Deals Hub points you to the right niche site for current deal sources.",
+    image: pageImages.miami,
     alt: "Miami beach and skyline for Miami travel deals",
+    details: [
+      "Miami trips can combine airfare, South Florida hotel areas, cruises from Miami, restaurants, nightlife, beaches, events, and local attractions. Because those searches have different timing and availability, the Hub keeps each route clear.",
+      "Start with flights if you are comparing Miami and nearby airports, hotels if you need a beach or city stay, cruises if the port is the anchor of the trip, and Local Deals Florida for dining, events, attractions, and neighborhood ideas."
+    ],
     related: ["fort-lauderdale-deals", "florida-beach-deals", "florida-vacation-deals", "florida-travel-deals"],
     previews: [
       ["Miami flight deals", "Browse Florida flight deals for Miami and nearby airports.", sites.flights, "sky"],
@@ -533,7 +601,12 @@ export const landingPages = [
     eyebrow: "Gulf Coast",
     intro:
       "Tampa is a strong starting point for Gulf Coast hotels, flights, cruises, local dining, events, and attractions. Use Florida Deals Hub to choose the right network site for current offers.",
+    image: pageImages.tampa,
     alt: "Tampa waterfront at sunset for Tampa deals",
+    details: [
+      "Tampa deal searches often include flights into the Gulf Coast, hotels for city or beach-adjacent stays, cruises from Tampa, restaurants, events, attractions, and nearby weekend trips. The best next click depends on which part of the plan is most important.",
+      "Use the Hub to move into the focused site for airfare, hotel searches, cruise departures, or local things to do. Confirm current prices, schedules, restrictions, and availability with the provider or official source before making plans."
+    ],
     related: ["florida-beach-deals", "florida-weekend-deals", "orlando-deals", "florida-deals-for-locals"],
     previews: [
       ["Tampa flight deals", "Check Florida flight deals for Tampa airport routes.", sites.flights, "sky"],
@@ -619,11 +692,16 @@ export const landingPages = [
 export const landingPageMap = Object.fromEntries(landingPages.map((page) => [page.slug, page]));
 
 export function getIntroParagraphs(page) {
+  const pageDetails = page.details || [
+    `${page.h1} are easier to research when flights, hotels, cruises, and local experiences are separated into focused sources. Florida Deals Hub keeps those paths connected so visitors can compare the right category without sorting through an unrelated feed.`,
+    "Use the cards below to move into the best niche site for your trip, weekend, staycation, or local plan. Start with airfare if your dates are flexible, move into hotels when you know the city or beach area, and check cruise or local deal pages when the trip depends on ports, attractions, restaurants, events, or family activities."
+  ];
+
   return [
     page.intro,
-    `${page.h1} are easier to research when flights, hotels, cruises, and local experiences are separated into focused sources. Florida Deals Hub keeps those paths connected so visitors can compare the right category without sorting through an unrelated feed. Start with airfare if your dates are flexible, move into hotels when you know the city or beach area, and check cruise or local deal pages when the trip depends on ports, attractions, restaurants, events, or family activities.`,
-    "For hotel-heavy searches, the Hub also includes a small set of Expedia hotel links for high-intent Florida destinations. These links are a secondary planning layer, not a replacement for Florida Hotel Deals. They are here for visitors who already know they want to check availability in Orlando, Miami, Tampa, or Fort Lauderdale while still keeping the network focused on curated Florida deal pages.",
-    "Use the cards below to move into the best niche site for your trip, weekend, staycation, or local plan. Deals, hotel prices, flight fares, cruise offers, dates, and availability may change, so check current offers before booking or buying. Florida Deals Hub may earn a commission from some hotel links, which helps keep deal alerts free."
+    ...pageDetails,
+    "After you choose a direction, use the related searches and network cards to move deeper into the part of the Florida Deals network that matches your intent. The Hub is strongest when it acts like a map: broad enough to help with Florida travel planning, but focused enough to send flights, hotels, cruises, and local activities to the right destination.",
+    "Deals, hotel prices, flight fares, cruise offers, dates, restrictions, and availability may change. Florida Deals Hub helps users discover deal sources and planning paths, but visitors should confirm current details with the booking provider, airline, hotel, cruise line, event organizer, restaurant, attraction, or official source before booking or buying."
   ];
 }
 

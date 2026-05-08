@@ -30,6 +30,7 @@ export async function generateMetadata({ params }) {
   }
 
   const url = `${baseUrl}/${page.slug}`;
+  const imageUrl = page.image || `${baseUrl}/og.svg`;
 
   return {
     title: page.title,
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }) {
       type: "website",
       images: [
         {
-          url: `${baseUrl}/og.svg`,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: page.alt
@@ -56,7 +57,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: page.title,
       description: page.metaDescription,
-      images: [`${baseUrl}/og.svg`]
+      images: [imageUrl]
     }
   };
 }
@@ -144,7 +145,7 @@ export default async function LandingPage({ params }) {
           </div>
           <div className="landing-visual">
             <img
-              src={pillars[1].image}
+              src={page.image || pillars[1].image}
               alt={page.alt}
               width="900"
               height="720"
@@ -160,6 +161,15 @@ export default async function LandingPage({ params }) {
                 </a>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="page-trust section-pad" aria-label="Florida Deals Hub trust notes">
+          <div className="trust-notes page-trust-notes">
+            <span>Curated Florida travel and local deal pages</span>
+            <span>Updated regularly</span>
+            <span>Prices and availability may change</span>
+            <span>Confirm current details with the source</span>
           </div>
         </section>
 
