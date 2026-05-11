@@ -21,8 +21,8 @@ export const pillars = [
     key: "flights",
     title: "Florida Flight Deals",
     anchor: "Florida flight deals",
-    copy: "Cheap flights in and out of Orlando, Miami, Tampa, Fort Lauderdale, and Jacksonville.",
-    button: "View Flight Deals",
+    copy: "Cheap route ideas, weekend escapes, and airfare finds from major Florida airports.",
+    button: "Explore Florida Flights",
     href: sites.flights,
     badge: "FLY",
     image:
@@ -33,8 +33,8 @@ export const pillars = [
     key: "hotels",
     title: "Florida Hotel Deals",
     anchor: "Florida hotel deals",
-    copy: "Beach resorts, family stays, weekend getaways, and staycation deals.",
-    button: "View Hotel Deals",
+    copy: "Beach resorts, city hotels, family stays, weekend getaways, and staycation searches.",
+    button: "Compare Florida Hotels",
     href: sites.hotels,
     badge: "STAY",
     image:
@@ -45,8 +45,8 @@ export const pillars = [
     key: "cruises",
     title: "Florida Cruise Deals",
     anchor: "Florida cruise deals",
-    copy: "Bahamas, Caribbean, weekend, and family cruise deals from Florida ports.",
-    button: "View Cruise Deals",
+    copy: "Bahamas, Caribbean, weekend, and family cruise planning from Florida ports.",
+    button: "Browse Florida Cruises",
     href: sites.cruises,
     badge: "SAIL",
     image:
@@ -57,8 +57,8 @@ export const pillars = [
     key: "local",
     title: "Local Deals Florida",
     anchor: "local Florida deals",
-    copy: "Restaurants, events, attractions, family fun, and hidden local savings.",
-    button: "View Local Deals",
+    copy: "Restaurants, events, attractions, family fun, local guides, and things to do.",
+    button: "Explore Local Florida Deals",
     href: sites.local,
     badge: "LOCAL",
     image:
@@ -68,13 +68,14 @@ export const pillars = [
 ];
 
 export const popularPages = [
+  ["Florida Travel Guide", "/florida-travel-guide"],
+  ["Best Places To Visit In Florida", "/best-places-to-visit-in-florida"],
   ["Florida Travel Deals", "/florida-travel-deals"],
   ["Florida Weekend Getaways", "/florida-weekend-getaways"],
-  ["Cheap Florida Vacations", "/cheap-florida-vacations"],
+  ["Best Florida Beaches", "/best-florida-beaches"],
   ["Florida Vacation Planning", "/florida-vacation-planning"],
   ["Best Time To Visit Florida", "/best-time-to-visit-florida"],
-  ["Florida Family Vacations", "/florida-family-vacations"],
-  ["Florida Deal Alerts", "/florida-deal-alerts"]
+  ["Orlando Travel Guide", "/orlando-travel-guide"]
 ];
 
 export const tripRouterCards = [
@@ -172,17 +173,41 @@ export const planTripCards = [
 
 export const popularSearchLinks = [
   ["Florida Travel Deals", "/florida-travel-deals"],
+  ["Florida Travel Guide", "/florida-travel-guide"],
   ["Florida Weekend Getaways", "/florida-weekend-getaways"],
   ["Cheap Florida Vacations", "/cheap-florida-vacations"],
-  ["Orlando Travel Deals", "/orlando-deals"],
-  ["Miami Travel Deals", "/miami-deals"],
-  ["Tampa Travel Deals", "/tampa-deals"],
-  ["Florida Family Vacations", "/florida-family-vacations"],
+  ["Orlando Travel Guide", "/orlando-travel-guide"],
+  ["Miami Travel Guide", "/miami-travel-guide"],
+  ["Tampa Travel Guide", "/tampa-travel-guide"],
+  ["Best Florida Beaches", "/best-florida-beaches"],
+  ["Best Places To Visit In Florida", "/best-places-to-visit-in-florida"],
   ["Best Time To Visit Florida", "/best-time-to-visit-florida"],
   ["Orlando Flight Deals", sites.flights],
   ["Miami Beach Hotel Deals", sites.hotels],
   ["Cruises From Miami", sites.cruises],
   ["Orlando Local Deals", sites.local]
+];
+
+export const popularDestinationLinks = [
+  ["Orlando", "/orlando-travel-guide", "Theme parks, family hotels, attraction planning, and Central Florida flights."],
+  ["Miami", "/miami-travel-guide", "Beaches, cruise departures, restaurants, nightlife, and South Florida hotels."],
+  ["Tampa", "/tampa-travel-guide", "Gulf Coast hotels, cruise departures, local dining, and nearby beaches."],
+  ["Fort Lauderdale", "/fort-lauderdale-travel-guide", "Beach stays, cruise-night hotels, airport access, and South Florida trips."],
+  ["Key West", "/key-west-travel-guide", "Island hotels, road trips, romantic getaways, restaurants, and water activities."]
+];
+
+export const travelGuideLinks = [
+  ["Florida Travel Guide", "/florida-travel-guide", "Start with the statewide guide for destinations, timing, categories, and trip planning."],
+  ["Best Places To Visit In Florida", "/best-places-to-visit-in-florida", "Compare cities, beaches, family areas, cruise ports, and weekend destinations."],
+  ["Florida Vacation Planning Guide", "/florida-vacation-planning-guide", "Build a practical plan across flights, hotels, cruises, attractions, and local deals."],
+  ["How To Plan A Florida Trip", "/how-to-plan-a-florida-trip", "Walk through the planning steps before choosing the right network site."]
+];
+
+export const seasonalTravelLinks = [
+  ["Summer Florida Trips", "/florida-summer-travel-guide", "Plan beaches, family trips, hotels, attractions, and heat-friendly schedules."],
+  ["Fall Florida Travel", "/florida-fall-travel-guide", "Use shoulder-season timing for weekend trips, events, road trips, and beach stays."],
+  ["Spring Break Guide", "/florida-spring-break-guide", "Compare beaches, Orlando hotels, flights, cruises, and family spring travel."],
+  ["Holiday Travel", "/florida-holiday-travel-guide", "Plan flights, hotels, cruises, family activities, and local events around busy dates."]
 ];
 
 export const homepageSeoParagraphs = [
@@ -305,10 +330,409 @@ export const pageImages = {
   orlando:
     "https://images.unsplash.com/photo-1605880135636-7b553d681026?auto=format&fit=crop&w=1200&q=80",
   calendar:
-    "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80"
+    "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80",
+  keyWest:
+    "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?auto=format&fit=crop&w=1200&q=80",
+  clearwater:
+    "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
+  roadTrip:
+    "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+  cruisePort:
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1200&q=80",
+  summer:
+    "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+  romance:
+    "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80",
+  themePark:
+    "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
 };
 
+const networkPreviewCards = [
+  ["Florida flight deals", "Compare airfare sources for Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, and more.", sites.flights, "sky"],
+  ["Florida hotel deals", "Review hotel deal pages for beach stays, family resorts, city weekends, and staycations.", sites.hotels, "sand"],
+  ["Florida cruise deals", "Browse cruise planning pages for sailings from Miami, Tampa, Port Canaveral, and other Florida ports.", sites.cruises, "sea"],
+  ["Local Florida deals", "Find attractions, restaurants, events, museums, family activities, and things to do around Florida.", sites.local, "sun"]
+];
+
+const authorityPageConfigs = [
+  {
+    slug: "florida-travel-guide",
+    title: "Florida Travel Guide | Beaches, Cities, Flights, Hotels & Things To Do",
+    metaDescription:
+      "Plan a Florida trip with travel tips for beaches, cities, flights, hotels, cruises, family vacations, local attractions, and seasonal travel ideas.",
+    h1: "Florida Travel Guide",
+    eyebrow: "Florida travel authority",
+    intro:
+      "The Florida Travel Guide is the central planning resource inside Florida Deals Hub, built to help travelers choose destinations, compare trip categories, and move into the right deal source.",
+    image: pageImages.floridaCoast,
+    alt: "Florida coastline travel guide with beaches hotels flights and local attractions",
+    related: ["best-places-to-visit-in-florida", "best-time-to-visit-florida", "florida-vacation-planning-guide", "florida-budget-travel-guide"],
+    destinations: "Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, Key West, Naples, Destin, and Clearwater",
+    advice:
+      "Start by deciding whether your trip is driven by a destination, a season, a budget, or a specific experience. Theme park trips, beach vacations, cruise departures, family travel, road trips, and local weekend plans all need different first steps.",
+    recommendations: [
+      ["Best places to visit", "/best-places-to-visit-in-florida", "Compare Florida cities, beach towns, family areas, and local trip ideas."],
+      ["When to go", "/best-time-to-visit-florida", "Use seasonal timing to compare weather, crowds, hotel demand, and event calendars."],
+      ["Vacation planning", "/florida-vacation-planning-guide", "Build a practical plan across flights, hotels, cruises, activities, and local travel."]
+    ]
+  },
+  {
+    slug: "best-florida-beaches",
+    title: "Best Florida Beaches | Coastal Vacation Ideas, Hotels & Things To Do",
+    metaDescription:
+      "Explore the best Florida beaches for family trips, romantic getaways, weekend escapes, hotels, local attractions, and coastal vacation planning.",
+    h1: "Best Florida Beaches",
+    eyebrow: "Beach travel",
+    intro:
+      "Florida beach trips work best when you match the coast to the kind of vacation you want: quiet sand, family activities, resort areas, nightlife, shelling, fishing, or a quick weekend escape.",
+    image: pageImages.clearwater,
+    alt: "Clear Florida beach water and coastal hotels for beach vacation planning",
+    related: ["florida-beach-deals", "romantic-florida-getaways", "florida-summer-travel-guide", "best-places-to-visit-in-florida"],
+    destinations: "Clearwater Beach, Miami Beach, Destin, Naples, Fort Lauderdale, Key West, Sarasota, St. Augustine, and the Panhandle",
+    advice:
+      "For hotel-heavy beach trips, compare location carefully. A cheaper room far from the beach may add parking, transportation, or time costs. For family beach trips, look for calmer water, walkable food options, and backup activities for rainy afternoons.",
+    recommendations: [
+      ["Miami Beach", "/miami-travel-guide", "Best for nightlife, dining, art, beach hotels, and cruises from Miami."],
+      ["Clearwater", "/clearwater-travel-guide", "Best for Gulf Coast beaches, family-friendly hotels, and sunset weekends."],
+      ["Destin", "/destin-florida-guide", "Best for Panhandle beaches, family trips, boating, and longer stays."]
+    ]
+  },
+  {
+    slug: "best-florida-family-vacations",
+    title: "Best Florida Family Vacations | Beaches, Theme Parks & Trip Ideas",
+    metaDescription:
+      "Find Florida family vacation ideas with theme parks, beaches, hotels, attractions, cruises, road trips, and budget-friendly planning tips.",
+    h1: "Best Florida Family Vacations",
+    eyebrow: "Family travel",
+    intro:
+      "The best Florida family vacations balance easy logistics, flexible hotels, weather backup plans, kid-friendly attractions, and realistic daily schedules.",
+    image: pageImages.familyTrip,
+    alt: "Florida family vacation planning with beaches attractions hotels and flights",
+    related: ["florida-family-vacations", "orlando-travel-guide", "cheap-florida-family-vacations", "florida-theme-park-guide"],
+    destinations: "Orlando, Tampa Bay, Clearwater, Miami, Jacksonville, Destin, Naples, and cruise ports near family-friendly sailings",
+    advice:
+      "Families should plan around travel time as much as price. A hotel close to attractions can save energy, while a beach rental or resort-style hotel may work better when the goal is a slower trip with fewer daily moves.",
+    recommendations: [
+      ["Orlando family trips", "/orlando-travel-guide", "Use Orlando as the anchor for theme parks, hotels, attractions, and flexible flights."],
+      ["Cheap family vacations", "/cheap-florida-family-vacations", "Compare lower-cost Florida family trip ideas across beaches, hotels, and local activities."],
+      ["Theme park planning", "/florida-theme-park-guide", "Plan park days, hotel areas, attraction timing, and local restaurant options."]
+    ]
+  },
+  {
+    slug: "cheap-florida-vacation-ideas",
+    title: "Cheap Florida Vacation Ideas | Affordable Beaches, Hotels & Trips",
+    metaDescription:
+      "Explore cheap Florida vacation ideas including affordable beach towns, flexible flights, hotel areas, road trips, cruises, and local things to do.",
+    h1: "Cheap Florida Vacation Ideas",
+    eyebrow: "Budget ideas",
+    intro:
+      "Cheap Florida vacation ideas usually come from flexible timing, realistic destinations, smart hotel areas, and local activities that do not require every day to be expensive.",
+    image: pageImages.planning,
+    alt: "Florida budget vacation planning with beaches hotels routes and activities",
+    related: ["cheap-florida-vacations", "florida-budget-travel-guide", "best-florida-weekend-trips", "florida-fall-travel-guide"],
+    destinations: "Tampa Bay, Jacksonville, Daytona Beach, St. Augustine, the Space Coast, inland Central Florida, and shoulder-season beach towns",
+    advice:
+      "Look for value by comparing nearby airports, avoiding peak holiday dates, choosing hotel areas with easy parking or walkability, and mixing paid attractions with beaches, parks, free events, and local dining.",
+    recommendations: [
+      ["Budget travel guide", "/florida-budget-travel-guide", "Learn how to compare Florida costs across flights, hotels, cruises, and activities."],
+      ["Weekend trips", "/best-florida-weekend-trips", "Find shorter Florida trips that are easier to fit around work and school schedules."],
+      ["Fall travel", "/florida-fall-travel-guide", "Use shoulder-season timing for beach towns, city stays, and local events."]
+    ]
+  },
+  {
+    slug: "best-places-to-visit-in-florida",
+    title: "Best Places To Visit In Florida | Cities, Beaches & Vacation Ideas",
+    metaDescription:
+      "Discover the best places to visit in Florida including Orlando, Miami, Tampa, Key West, Clearwater, Destin, Naples, Jacksonville, and coastal getaways.",
+    h1: "Best Places To Visit In Florida",
+    eyebrow: "Destination guide",
+    intro:
+      "The best places to visit in Florida depend on whether you want beaches, theme parks, cruises, food, nightlife, family activities, road trips, or quiet coastal time.",
+    image: pageImages.miami,
+    alt: "Florida destinations with city skyline beaches hotels and travel ideas",
+    related: ["florida-travel-guide", "orlando-travel-guide", "miami-travel-guide", "key-west-travel-guide"],
+    destinations: "Orlando for theme parks, Miami for beaches and culture, Tampa for Gulf Coast access, Key West for island trips, Destin for Panhandle beaches, and Jacksonville for Northeast Florida",
+    advice:
+      "Choose a destination by matching the trip style first. A family vacation may point toward Orlando or Clearwater, while a couples trip may fit Key West, Naples, or Miami. Cruise travelers should plan around departure ports before picking hotels.",
+    recommendations: [
+      ["Orlando", "/orlando-travel-guide", "Theme parks, family hotels, attractions, restaurants, and Central Florida flights."],
+      ["Miami", "/miami-travel-guide", "Beaches, nightlife, cruises, hotels, restaurants, and South Florida travel."],
+      ["Key West", "/key-west-travel-guide", "Island stays, romantic getaways, road trips, local dining, and tropical activities."]
+    ]
+  },
+  {
+    slug: "romantic-florida-getaways",
+    title: "Romantic Florida Getaways | Beaches, Hotels & Couples Trip Ideas",
+    metaDescription:
+      "Plan romantic Florida getaways with beach towns, hotels, Key West trips, Naples weekends, Miami escapes, cruises, restaurants, and couples activities.",
+    h1: "Romantic Florida Getaways",
+    eyebrow: "Couples travel",
+    intro:
+      "Romantic Florida getaways can be coastal, city-focused, cruise-based, quiet, or food-driven depending on the pace you want for the trip.",
+    image: pageImages.romance,
+    alt: "Romantic Florida beach getaway with sunset coast and travel planning",
+    related: ["best-couples-getaways-florida", "key-west-travel-guide", "naples-florida-guide", "best-florida-beaches"],
+    destinations: "Key West, Naples, Miami Beach, Fort Lauderdale, St. Augustine, Amelia Island, Sarasota, and Gulf Coast beach towns",
+    advice:
+      "For couples trips, hotel location can matter more than filling the schedule. Walkable dining, beach access, sunset spots, spa options, and a manageable flight or drive can make the trip feel smoother.",
+    recommendations: [
+      ["Key West", "/key-west-travel-guide", "Island hotels, sunsets, restaurants, water activities, and road-trip planning."],
+      ["Naples", "/naples-florida-guide", "Quiet beaches, polished hotels, dining, shopping, and Gulf Coast weekends."],
+      ["Couples getaways", "/best-couples-getaways-florida", "Compare romantic Florida trip ideas by pace, budget, and season."]
+    ]
+  },
+  {
+    slug: "best-florida-road-trips",
+    title: "Best Florida Road Trips | Scenic Drives, Beaches & Weekend Routes",
+    metaDescription:
+      "Explore the best Florida road trips including beach routes, Key West drives, Gulf Coast weekends, family stops, hotels, attractions, and local deals.",
+    h1: "Best Florida Road Trips",
+    eyebrow: "Road trips",
+    intro:
+      "Florida road trips are useful when you want beaches, small towns, attractions, food stops, and flexible hotel nights without building the whole trip around one airport.",
+    image: pageImages.roadTrip,
+    alt: "Florida road trip route with coastal drive beaches hotels and attractions",
+    related: ["how-to-plan-a-florida-trip", "7-day-florida-itinerary", "key-west-travel-guide", "florida-beach-vacation-guide"],
+    destinations: "Miami to Key West, Tampa to Clearwater and St. Pete, Jacksonville to St. Augustine, Orlando to the Space Coast, and Gulf Coast beach routes",
+    advice:
+      "Keep drive days realistic. A strong Florida road trip leaves time for beach stops, local restaurants, attractions, and hotel check-ins instead of turning every day into a long highway push.",
+    recommendations: [
+      ["7-day itinerary", "/7-day-florida-itinerary", "Use a weeklong structure to connect cities, beaches, and local activities."],
+      ["Key West drive", "/key-west-travel-guide", "Plan the Overseas Highway, hotel areas, restaurants, and island activities."],
+      ["Beach vacation guide", "/florida-beach-vacation-guide", "Compare coastal areas before choosing hotels and local stops."]
+    ]
+  },
+  {
+    slug: "florida-vacation-planning-guide",
+    title: "Florida Vacation Planning Guide | Flights, Hotels, Cruises & Activities",
+    metaDescription:
+      "Use this Florida vacation planning guide to compare flights, hotels, cruises, attractions, family activities, beaches, and seasonal trip ideas.",
+    h1: "Florida Vacation Planning Guide",
+    eyebrow: "Planning guide",
+    intro:
+      "The Florida Vacation Planning Guide helps travelers turn a broad idea into a practical plan across destinations, dates, flights, hotels, cruises, and local activities.",
+    image: pageImages.planning,
+    alt: "Florida vacation planning guide with itinerary flights hotels cruises and attractions",
+    related: ["how-to-plan-a-florida-trip", "florida-travel-guide", "best-time-to-visit-florida", "florida-budget-travel-guide"],
+    destinations: "Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, Key West, Clearwater, Destin, Naples, and cruise ports around Florida",
+    advice:
+      "A useful Florida plan starts with one anchor: dates, destination, budget, cruise departure, family event, or beach preference. Once the anchor is clear, use the network to compare airfare, hotels, cruise options, and local activities.",
+    recommendations: [
+      ["How to plan", "/how-to-plan-a-florida-trip", "Walk through dates, destinations, flights, hotels, cruises, and daily activities."],
+      ["Best time to visit", "/best-time-to-visit-florida", "Compare seasons, weather, event demand, beach timing, and hotel patterns."],
+      ["Budget planning", "/florida-budget-travel-guide", "Keep costs realistic across transportation, stays, food, attractions, and local plans."]
+    ]
+  },
+  {
+    slug: "florida-budget-travel-guide",
+    title: "Florida Budget Travel Guide | Cheap Trips, Hotels & Local Ideas",
+    metaDescription:
+      "Plan Florida budget travel with affordable trip ideas, flexible flights, hotel tips, cruises, beaches, local attractions, and seasonal savings strategies.",
+    h1: "Florida Budget Travel Guide",
+    eyebrow: "Budget travel",
+    intro:
+      "Florida budget travel is less about one magic discount and more about choosing the right season, destination, airport, hotel area, and activity mix.",
+    image: pageImages.planning,
+    alt: "Florida budget travel guide with affordable hotels flights beaches and local activities",
+    related: ["cheap-florida-vacation-ideas", "cheap-florida-vacations", "cheap-florida-family-vacations", "florida-fall-travel-guide"],
+    destinations: "Jacksonville, Tampa Bay, the Space Coast, Daytona Beach, St. Augustine, Fort Myers, and shoulder-season Gulf Coast towns",
+    advice:
+      "Budget travelers should compare nearby airports, avoid the most compressed peak dates, and plan local activities before booking. Restaurants, parking, attraction tickets, resort fees, and transportation can change the real cost of a trip.",
+    recommendations: [
+      ["Cheap vacation ideas", "/cheap-florida-vacation-ideas", "Compare lower-cost Florida trip styles and destination types."],
+      ["Family budget trips", "/cheap-florida-family-vacations", "Plan family-friendly Florida vacations with practical cost tradeoffs."],
+      ["Weekend travel", "/best-florida-weekend-trips", "Use short trips to control hotel nights, travel time, and daily spending."]
+    ]
+  },
+  {
+    slug: "florida-summer-travel-guide",
+    title: "Florida Summer Travel Guide | Beaches, Hotels & Family Trip Tips",
+    metaDescription:
+      "Plan Florida summer travel with beach ideas, family vacation tips, hotels, flights, cruises, attractions, weather notes, and local things to do.",
+    h1: "Florida Summer Travel Guide",
+    eyebrow: "Seasonal travel",
+    intro:
+      "Florida summer travel can work well for beach trips, family vacations, local events, and longer stays when you plan around heat, storms, crowds, and flexible indoor options.",
+    image: pageImages.summer,
+    alt: "Florida summer beach travel with blue water hotels and family vacation planning",
+    related: ["best-florida-beaches", "best-florida-family-vacations", "florida-theme-park-guide", "best-time-to-visit-florida"],
+    destinations: "Clearwater, Destin, Miami Beach, Orlando, Tampa Bay, Jacksonville beaches, Naples, and the Florida Keys",
+    advice:
+      "Summer plans should include weather flexibility. Morning beach time, afternoon breaks, indoor attractions, flexible dinner reservations, and hotels with strong amenities can make hot or rainy days easier.",
+    recommendations: [
+      ["Beach guide", "/best-florida-beaches", "Choose coastal areas by water, hotel type, activities, and travel time."],
+      ["Family vacations", "/best-florida-family-vacations", "Compare family-friendly destinations, hotels, attractions, and local activities."],
+      ["Theme parks", "/florida-theme-park-guide", "Plan park days around heat, crowds, hotels, transportation, and rest time."]
+    ]
+  },
+  {
+    slug: "florida-fall-travel-guide",
+    title: "Florida Fall Travel Guide | Beaches, Events & Affordable Trip Ideas",
+    metaDescription:
+      "Plan Florida fall travel with beach weekends, events, hotel ideas, flights, cruises, family trips, and seasonal vacation planning tips.",
+    h1: "Florida Fall Travel Guide",
+    eyebrow: "Seasonal travel",
+    intro:
+      "Florida fall travel can be a strong time for flexible travelers who want beach weekends, local events, food festivals, lower-pressure hotel searches, and shorter getaways.",
+    image: pageImages.weekendBeach,
+    alt: "Florida fall beach weekend with coastal hotels events and travel ideas",
+    related: ["florida-weekend-getaways", "cheap-florida-vacation-ideas", "best-florida-road-trips", "best-time-to-visit-florida"],
+    destinations: "Tampa Bay, St. Augustine, Orlando, Miami, Fort Lauderdale, Jacksonville, Naples, and Gulf Coast beach towns",
+    advice:
+      "Fall travelers should watch event calendars and weather patterns while staying flexible on dates. It can be a good season for road trips, quick hotel stays, cruise planning, and local Florida activities.",
+    recommendations: [
+      ["Weekend getaways", "/florida-weekend-getaways", "Plan short Florida trips around hotels, events, flights, cruises, and local activities."],
+      ["Road trips", "/best-florida-road-trips", "Build fall drives around beaches, food stops, historic towns, and hotel nights."],
+      ["Budget guide", "/florida-budget-travel-guide", "Compare seasonal value across destinations, hotels, and things to do."]
+    ]
+  },
+  {
+    slug: "florida-spring-break-guide",
+    title: "Florida Spring Break Guide | Beaches, Hotels & Family Travel Tips",
+    metaDescription:
+      "Plan Florida spring break travel with beach destinations, family hotels, flights, cruises, local activities, crowd tips, and vacation planning ideas.",
+    h1: "Florida Spring Break Guide",
+    eyebrow: "Seasonal travel",
+    intro:
+      "Florida spring break travel needs early planning because beach hotels, flights, attractions, restaurants, and cruise dates can all tighten around school calendars.",
+    image: pageImages.clearwater,
+    alt: "Florida spring break beach travel with family hotels flights and local activities",
+    related: ["best-florida-beaches", "florida-family-vacations", "orlando-travel-guide", "best-time-to-visit-florida"],
+    destinations: "Orlando, Clearwater, Miami Beach, Fort Lauderdale, Destin, Daytona Beach, Tampa Bay, and cruise ports with school-break sailings",
+    advice:
+      "Compare destination style before booking. Some spring break trips are beach-first, while others are built around theme parks, cruises, family resorts, or local events. Confirm policies, parking, and booking terms before committing.",
+    recommendations: [
+      ["Orlando spring trips", "/orlando-travel-guide", "Plan theme parks, family hotels, flights, attractions, and restaurants."],
+      ["Beach options", "/best-florida-beaches", "Compare Florida beaches by family fit, nightlife, hotels, and travel logistics."],
+      ["Family vacations", "/best-florida-family-vacations", "Balance attractions, hotels, flights, food, and flexible schedules."]
+    ]
+  },
+  {
+    slug: "florida-holiday-travel-guide",
+    title: "Florida Holiday Travel Guide | Flights, Hotels, Cruises & Events",
+    metaDescription:
+      "Plan Florida holiday travel with flights, hotels, cruises, beach trips, local events, family activities, seasonal crowds, and trip-planning tips.",
+    h1: "Florida Holiday Travel Guide",
+    eyebrow: "Holiday travel",
+    intro:
+      "Florida holiday travel can be rewarding, but it needs careful timing because flights, hotels, cruises, events, and family attractions often see compressed demand.",
+    image: pageImages.calendar,
+    alt: "Florida holiday travel planning with flights hotels cruises events and family activities",
+    related: ["best-time-to-visit-florida", "florida-family-vacations", "best-florida-weekend-trips", "florida-vacation-planning-guide"],
+    destinations: "Orlando, Miami, Tampa Bay, Fort Lauderdale, Key West, Naples, Jacksonville, and cruise ports with holiday sailings",
+    advice:
+      "Holiday travelers should confirm schedules, minimum hotel stays, cancellation rules, restaurant hours, attraction calendars, and transportation timing. Flexibility on airports or dates can help widen the search.",
+    recommendations: [
+      ["Best time to visit", "/best-time-to-visit-florida", "Compare holidays with other Florida travel seasons and planning windows."],
+      ["Family trips", "/best-florida-family-vacations", "Plan kid-friendly holiday travel with hotels, attractions, flights, and local activities."],
+      ["Cruise ports", "/best-florida-cruise-ports", "Compare Florida cruise departure areas before choosing hotels or flights."]
+    ]
+  }
+];
+
+function createAuthorityPage(config) {
+  return {
+    ...config,
+    article: true,
+    details: [
+      `${config.h1} should start with the destinations that fit the trip. Useful Florida planning often includes ${config.destinations}. Each area has different flight options, hotel patterns, cruise access, attractions, restaurant scenes, and local transportation needs.`,
+      config.advice,
+      "Use Florida Deals Hub as the editorial layer for the network. Start with the travel idea on this page, then move into the focused vertical site when you are ready to compare Florida flight deals, Florida hotel deals, Florida cruise deals, or local Florida deals.",
+      "Before booking, confirm current dates, rates, schedules, cancellation terms, attraction hours, restaurant availability, cruise details, and weather considerations with the provider or official source."
+    ],
+    previews: networkPreviewCards
+  };
+}
+
+const destinationPageConfigs = [
+  ["orlando-travel-guide", "Orlando Travel Guide | Flights, Hotels, Attractions & Vacation Tips", "Plan an Orlando vacation with hotel ideas, flight tips, theme park attractions, cruises near Orlando, restaurants, and local Florida travel recommendations.", "Orlando Travel Guide", "Central Florida guide", pageImages.orlando, "Orlando travel guide with theme parks hotels flights and attractions", "Orlando is Florida's biggest family-travel planning hub, with theme parks, resorts, convention areas, restaurants, day trips, and nearby cruise options.", "Orlando International Airport, theme park hotel corridors, International Drive, Lake Buena Vista, Winter Park, downtown Orlando, and Port Canaveral cruise access", ["florida-theme-park-guide", "best-florida-family-vacations", "7-day-florida-itinerary", "orlando-deals"]],
+  ["miami-travel-guide", "Miami Travel Guide | Beaches, Hotels, Cruises & Local Tips", "Plan a Miami trip with beaches, hotels, flights, cruises from Miami, restaurants, nightlife, attractions, and South Florida travel ideas.", "Miami Travel Guide", "South Florida guide", pageImages.miami, "Miami travel guide with beach skyline hotels cruises and restaurants", "Miami works well for beach trips, food-focused weekends, nightlife, arts districts, cruise departures, and South Florida road-trip add-ons.", "Miami International Airport, Miami Beach, Brickell, Wynwood, Downtown Miami, Little Havana, Coral Gables, and PortMiami cruise departures", ["best-florida-beaches", "romantic-florida-getaways", "best-florida-cruise-ports", "miami-deals"]],
+  ["tampa-travel-guide", "Tampa Travel Guide | Hotels, Flights, Cruises & Gulf Coast Ideas", "Plan a Tampa trip with flights, hotels, cruise departures, Gulf Coast beaches, restaurants, attractions, events, and local Florida travel tips.", "Tampa Travel Guide", "Gulf Coast guide", pageImages.tampa, "Tampa waterfront travel guide with hotels flights cruises and local attractions", "Tampa is a flexible Gulf Coast base for city stays, beaches, restaurants, sports, family attractions, and cruise departures.", "Tampa International Airport, downtown Tampa, Ybor City, St. Pete, Clearwater, Gulf beaches, Busch Gardens, and Port Tampa Bay", ["clearwater-travel-guide", "best-florida-weekend-trips", "best-florida-cruise-ports", "tampa-deals"]],
+  ["fort-lauderdale-travel-guide", "Fort Lauderdale Travel Guide | Beaches, Hotels, Flights & Cruises", "Plan a Fort Lauderdale trip with beach hotels, flights, cruises, restaurants, attractions, local events, and South Florida travel ideas.", "Fort Lauderdale Travel Guide", "Coastal guide", pageImages.floridaCoast, "Fort Lauderdale beach and marina travel guide with hotels cruises and flights", "Fort Lauderdale is useful for beach stays, cruise-night hotels, South Florida flights, waterfront dining, and easy connections to Miami or Palm Beach.", "Fort Lauderdale-Hollywood International Airport, beach hotels, Las Olas, Port Everglades, Hollywood Beach, Pompano Beach, and South Florida day trips", ["miami-travel-guide", "best-florida-beaches", "romantic-florida-getaways", "fort-lauderdale-deals"]],
+  ["jacksonville-travel-guide", "Jacksonville Travel Guide | Flights, Hotels, Beaches & Local Things To Do", "Plan a Jacksonville trip with flights, hotels, beaches, restaurants, family attractions, local events, and Northeast Florida travel ideas.", "Jacksonville Travel Guide", "Northeast Florida guide", pageImages.roadTrip, "Jacksonville travel guide with riverfront beaches hotels flights and local attractions", "Jacksonville is a strong base for Northeast Florida beaches, riverfront weekends, sports, family activities, local restaurants, and nearby St. Augustine trips.", "Jacksonville International Airport, downtown Jacksonville, Riverside, Jacksonville Beach, Atlantic Beach, Amelia Island, and St. Augustine", ["best-florida-road-trips", "florida-family-vacations", "florida-deals-for-locals", "jacksonville-deals"]],
+  ["key-west-travel-guide", "Key West Travel Guide | Hotels, Road Trips, Flights & Things To Do", "Plan a Key West trip with hotel areas, flight tips, road trip ideas, restaurants, beaches, water activities, and romantic Florida getaway planning.", "Key West Travel Guide", "Florida Keys guide", pageImages.keyWest, "Key West tropical travel guide with island hotels road trips and things to do", "Key West is best for island hotels, sunsets, food, water activities, couples trips, road trips, and a slower Florida vacation pace.", "Key West International Airport, Old Town, Duval Street, Mallory Square, beaches, marinas, the Overseas Highway, and Florida Keys road-trip stops", ["romantic-florida-getaways", "best-florida-road-trips", "best-couples-getaways-florida", "best-florida-beaches"]],
+  ["naples-florida-guide", "Naples Florida Guide | Beaches, Hotels, Dining & Romantic Getaways", "Plan a Naples Florida trip with beach hotels, restaurants, couples getaway ideas, family activities, Gulf Coast travel tips, and local things to do.", "Naples Florida Guide", "Gulf Coast guide", pageImages.romance, "Naples Florida guide with beach hotels dining romantic getaways and local activities", "Naples is a polished Gulf Coast destination for beaches, dining, shopping, couples trips, family stays, and slower weekend getaways.", "Naples beaches, Fifth Avenue South, Third Street South, Marco Island, golf areas, waterfront dining, and nearby Everglades day trips", ["romantic-florida-getaways", "best-florida-beaches", "florida-weekend-getaways", "best-couples-getaways-florida"]],
+  ["destin-florida-guide", "Destin Florida Guide | Beaches, Family Hotels & Vacation Ideas", "Plan a Destin Florida vacation with beaches, family hotels, flights, local attractions, restaurants, boating, and Panhandle trip ideas.", "Destin Florida Guide", "Panhandle guide", pageImages.clearwater, "Destin Florida beach guide with family hotels vacation ideas and local attractions", "Destin is a popular Panhandle beach destination for family vacations, longer stays, boating, fishing, beach condos, and Gulf Coast local activities.", "Destin-Fort Walton Beach Airport, Miramar Beach, Henderson Beach, HarborWalk Village, 30A access, family beach hotels, and local restaurants", ["best-florida-beaches", "best-florida-family-vacations", "florida-summer-travel-guide", "cheap-florida-vacation-ideas"]],
+  ["clearwater-travel-guide", "Clearwater Travel Guide | Beaches, Hotels, Tampa Trips & Things To Do", "Plan a Clearwater Florida trip with beach hotels, Tampa flights, Gulf Coast restaurants, family activities, events, and local things to do.", "Clearwater Travel Guide", "Gulf beach guide", pageImages.clearwater, "Clearwater beach travel guide with Gulf Coast hotels Tampa flights and family activities", "Clearwater works well for beach weekends, family hotels, Tampa-area flights, sunset trips, restaurants, and Gulf Coast local activities.", "Clearwater Beach, Sand Key, Dunedin, St. Pete, Tampa International Airport, Pier 60, family hotels, and Gulf Coast day trips", ["tampa-travel-guide", "best-florida-beaches", "florida-weekend-getaways", "best-florida-family-vacations"]]
+];
+
+function createDestinationPage([slug, title, metaDescription, h1, eyebrow, image, alt, intro, destinations, related]) {
+  const city = h1.replace(" Travel Guide", "").replace(" Florida Guide", "").replace(" Guide", "");
+
+  return {
+    slug,
+    title,
+    metaDescription,
+    h1,
+    eyebrow,
+    intro,
+    image,
+    alt,
+    article: true,
+    related,
+    details: [
+      `${h1} visitors should plan around the parts of the trip that create the biggest decisions: flights, hotel location, local transportation, restaurants, attractions, cruise access, and day-trip timing.`,
+      `Useful planning areas include ${destinations}. Compare those areas before choosing dates or hotels, because the best base for a family trip may be different from the best base for a couples getaway, beach weekend, convention trip, or cruise night.`,
+      `Use Florida Flight Deals for ${city} flight deals, Florida Hotel Deals for ${city} hotel searches, Florida Cruise Deals for nearby cruise departures from Florida, and Local Deals Florida for ${city} attraction discounts, restaurants, events, and things to do.`,
+      "Prices, hours, schedules, hotel rules, attraction details, and availability may change seasonally. Confirm current details with the airline, hotel, cruise line, attraction, restaurant, event organizer, or official source before making plans."
+    ],
+    recommendations: [
+      [`${city} flight deals`, sites.flights, `Compare flight deal sources and airport routing for ${city} travel.`],
+      [`${city} hotel searches`, sites.hotels, `Review Florida hotel deal pages for city, beach, family, and weekend stays.`],
+      [`${city} cruise departures`, sites.cruises, "Check Florida cruise pages for nearby departure ports and sailing ideas."],
+      [`${city} attraction discounts`, sites.local, "Find local Florida deals for restaurants, events, attractions, and things to do."]
+    ],
+    previews: networkPreviewCards
+  };
+}
+
+const planningPageConfigs = [
+  ["how-to-plan-a-florida-trip", "How To Plan A Florida Trip | Flights, Hotels, Cruises & Activities", "Learn how to plan a Florida trip with destination tips, flights, hotels, cruises, attractions, beaches, local activities, and budget guidance.", "How To Plan A Florida Trip", "Planning steps", pageImages.planning, "Florida trip planning checklist with flights hotels cruises and activities", "Planning a Florida trip is easier when you choose one anchor first: destination, dates, budget, beach type, cruise port, family activity, or hotel area.", "Break the trip into phases: choose destinations, compare travel dates, check flights, narrow hotel areas, decide whether a cruise fits, and leave room for local attractions, restaurants, events, and flexible weather plans.", ["florida-vacation-planning-guide", "florida-travel-guide", "best-time-to-visit-florida", "7-day-florida-itinerary"]],
+  ["7-day-florida-itinerary", "7 Day Florida Itinerary | Beaches, Cities, Attractions & Road Trip Ideas", "Plan a 7 day Florida itinerary with beaches, cities, theme parks, hotels, flights, local attractions, road trips, and cruise add-ons.", "7 Day Florida Itinerary", "Itinerary ideas", pageImages.roadTrip, "Seven day Florida itinerary with road trip beaches cities and attractions", "A 7 day Florida itinerary should avoid trying to see the whole state at once. Pick one region or two connected regions, then build in time for weather, traffic, food, and local stops.", "A practical week could pair Orlando with the Space Coast, Miami with Key West, Tampa with Clearwater and St. Pete, or Jacksonville with St. Augustine and Amelia Island. Use the network links when flights, hotels, cruises, or local activities become the next planning step.", ["best-florida-road-trips", "orlando-travel-guide", "miami-travel-guide", "how-to-plan-a-florida-trip"]],
+  ["best-florida-weekend-trips", "Best Florida Weekend Trips | Beaches, Cities, Cruises & Local Ideas", "Find the best Florida weekend trips with beaches, city breaks, cruises, hotel ideas, attractions, restaurants, events, and quick getaway planning tips.", "Best Florida Weekend Trips", "Weekend ideas", pageImages.weekendBeach, "Florida weekend trip ideas with beaches city hotels cruises and activities", "The best Florida weekend trips are easy to reach, simple to navigate, and not overloaded with too many stops. A strong weekend usually needs one main plan and a few flexible local ideas.", "Weekend travelers can compare beach hotels, city stays, short cruises, theme park trips, food weekends, and local events. Keep travel time realistic so the trip feels like a getaway instead of a commute.", ["florida-weekend-getaways", "tampa-travel-guide", "clearwater-travel-guide", "romantic-florida-getaways"]],
+  ["cheap-florida-family-vacations", "Cheap Florida Family Vacations | Budget Hotels, Beaches & Attractions", "Plan cheap Florida family vacations with budget-friendly hotel areas, beaches, attractions, flights, local activities, and practical trip ideas.", "Cheap Florida Family Vacations", "Family budget travel", pageImages.familyTrip, "Cheap Florida family vacation planning with budget hotels beaches and attractions", "Cheap Florida family vacations depend on managing the whole trip cost, not just finding a lower room rate. Flights, parking, food, attraction tickets, beach gear, and transportation all matter.", "Families can reduce pressure by choosing fewer hotel moves, comparing nearby airports, using free beach or park time, mixing big attractions with local activities, and planning meals before every day becomes expensive.", ["best-florida-family-vacations", "cheap-florida-vacation-ideas", "florida-budget-travel-guide", "orlando-travel-guide"]],
+  ["best-couples-getaways-florida", "Best Couples Getaways Florida | Romantic Beaches, Hotels & Weekend Ideas", "Explore the best couples getaways in Florida with romantic beaches, hotels, Key West trips, Naples weekends, Miami escapes, cruises, and local dining ideas.", "Best Couples Getaways Florida", "Couples trips", pageImages.romance, "Florida couples getaway with romantic beach hotels dining and travel ideas", "The best couples getaways in Florida depend on pace. Some trips are built around quiet beaches and hotels, while others lean into restaurants, nightlife, boat days, cruises, or historic towns.", "Couples should compare hotel location, walkability, dinner options, sunset spots, and travel time before filling the itinerary. A slower plan often makes a short Florida getaway feel more polished.", ["romantic-florida-getaways", "key-west-travel-guide", "naples-florida-guide", "miami-travel-guide"]],
+  ["florida-beach-vacation-guide", "Florida Beach Vacation Guide | Hotels, Family Trips & Coastal Ideas", "Plan a Florida beach vacation with coastal destination ideas, hotel tips, family activities, flights, restaurants, and things to do near the beach.", "Florida Beach Vacation Guide", "Beach planning", pageImages.clearwater, "Florida beach vacation guide with coastal hotels family activities and things to do", "A Florida beach vacation should start with the coast that fits your trip style: Gulf Coast sunsets, Atlantic surf, Miami energy, Panhandle sand, island escapes, or quieter family towns.", "Once the beach style is clear, compare hotel location, airport access, restaurants, parking, weather, local activities, and whether you want a car. Beach trips are often smoother when local food and rainy-day plans are chosen early.", ["best-florida-beaches", "clearwater-travel-guide", "destin-florida-guide", "miami-travel-guide"]],
+  ["best-florida-cruise-ports", "Best Florida Cruise Ports | Miami, Tampa, Port Canaveral & More", "Compare the best Florida cruise ports including Miami, Port Canaveral, Tampa, Fort Lauderdale, nearby hotels, flights, and pre-cruise trip ideas.", "Best Florida Cruise Ports", "Cruise planning", pageImages.cruisePort, "Florida cruise ports guide with ships hotels flights and pre cruise planning", "Florida cruise ports can shape the whole trip. The departure city affects flights, hotels, transportation, pre-cruise activities, and whether a beach or theme park add-on makes sense.", "Compare Miami, Port Canaveral, Tampa, Fort Lauderdale, and Jacksonville by route options, hotel areas, airport access, and local activities. Confirm cruise schedules and port details with the cruise line before booking.", ["miami-travel-guide", "tampa-travel-guide", "orlando-travel-guide", "fort-lauderdale-travel-guide"]],
+  ["florida-theme-park-guide", "Florida Theme Park Guide | Orlando Hotels, Flights & Attraction Tips", "Plan Florida theme park travel with Orlando hotel areas, flight tips, attraction planning, local deals, family schedules, and vacation ideas.", "Florida Theme Park Guide", "Attraction planning", pageImages.themePark, "Florida theme park guide with Orlando hotels flights attractions and family planning", "Florida theme park trips need a practical plan for hotel location, transportation, park days, rest time, meals, weather, and family energy levels.", "Use Orlando as the main planning base, then compare nearby flights, hotel corridors, attraction timing, restaurant plans, and local deals. Keeping one flexible day can make a theme park vacation easier for families.", ["orlando-travel-guide", "best-florida-family-vacations", "cheap-florida-family-vacations", "how-to-plan-a-florida-trip"]]
+];
+
+function createPlanningPage([slug, title, metaDescription, h1, eyebrow, image, alt, intro, advice, related]) {
+  return {
+    slug,
+    title,
+    metaDescription,
+    h1,
+    eyebrow,
+    intro,
+    image,
+    alt,
+    article: true,
+    related,
+    details: [
+      advice,
+      "Use this Hub guide as the research layer before moving into the network's conversion-focused sites. Florida Flight Deals is useful when airfare or airports drive the plan. Florida Hotel Deals is useful when location, room type, or budget is the key decision. Florida Cruise Deals helps with port-based trips, and Local Deals Florida helps fill the itinerary with restaurants, attractions, events, and things to do.",
+      "Keep the plan flexible where possible. Florida travel demand can shift around holidays, school breaks, cruise departures, festivals, sports, weather, and beach weekends.",
+      "Confirm current prices, schedules, attraction hours, hotel terms, cruise details, and local availability with the provider or official source before booking."
+    ],
+    recommendations: [
+      ["Compare Florida flights", sites.flights, "Start with airfare when dates or airports will shape the trip."],
+      ["Compare Florida hotels", sites.hotels, "Review hotel deal pages for destination, beach, city, family, and budget stays."],
+      ["Browse Florida cruises", sites.cruises, "Check cruise departure ideas when a sailing could anchor the vacation."],
+      ["Find Florida activities", sites.local, "Use local deals for restaurants, attractions, events, and things to do."]
+    ],
+    previews: networkPreviewCards
+  };
+}
+
+const generatedAuthorityPages = authorityPageConfigs.map(createAuthorityPage);
+const generatedDestinationPages = destinationPageConfigs.map(createDestinationPage);
+const generatedPlanningPages = planningPageConfigs.map(createPlanningPage);
+
 export const landingPages = [
+  ...generatedAuthorityPages,
+  ...generatedDestinationPages,
+  ...generatedPlanningPages,
   {
     slug: "florida-travel-deals",
     title: "Florida Travel Deals | Flights, Hotels, Cruises & Local Savings",
@@ -357,9 +781,9 @@ export const landingPages = [
   },
   {
     slug: "florida-weekend-getaways",
-    title: "Florida Weekend Getaways | Hotels, Flights, Cruises & Local Deals",
+    title: "Florida Weekend Getaways | Beaches, Cruises & Cheap Travel Ideas",
     metaDescription:
-      "Plan Florida weekend getaways with hotel deal sources, cheap flight routes, short cruises, local events, restaurants, attractions, and beach savings.",
+      "Discover Florida weekend getaway ideas including beaches, cruises, hotels, attractions, and affordable short trips across the state.",
     h1: "Florida Weekend Getaways",
     eyebrow: "Weekend planning",
     intro:
@@ -426,9 +850,9 @@ export const landingPages = [
   },
   {
     slug: "best-time-to-visit-florida",
-    title: "Best Time To Visit Florida | Travel Deals, Seasons & Trip Tips",
+    title: "Best Time To Visit Florida | Weather, Deals, Seasons & Trip Tips",
     metaDescription:
-      "Learn the best time to visit Florida for flights, hotels, cruises, beaches, attractions, events, family trips, and weekend getaways.",
+      "Learn the best time to visit Florida for weather, flights, hotels, cruises, beaches, attractions, events, family trips, and weekend getaways.",
     h1: "Best Time To Visit Florida",
     eyebrow: "Seasonal planning",
     intro:
@@ -760,7 +1184,7 @@ export function getRelatedSearchLinks(page) {
 }
 
 export function getBreadcrumbs(page) {
-  if (page.slug === "florida-travel-deals") {
+  if (page.slug === "florida-travel-deals" || page.slug === "florida-travel-guide") {
     return [
       { label: "Home", href: "/" },
       { label: page.h1, href: `/${page.slug}` }
@@ -769,7 +1193,7 @@ export function getBreadcrumbs(page) {
 
   return [
     { label: "Home", href: "/" },
-    { label: "Florida Travel Deals", href: "/florida-travel-deals" },
+    { label: "Florida Travel Guide", href: "/florida-travel-guide" },
     { label: page.h1, href: `/${page.slug}` }
   ];
 }

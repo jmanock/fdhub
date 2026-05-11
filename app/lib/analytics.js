@@ -69,6 +69,16 @@ export function trackDealClick(destinationSite, linkText) {
   });
 }
 
+export function trackNetworkSiteClick({ destinationSite, destinationType, ctaText }) {
+  trackEvent("network_site_click", {
+    source_site: siteName,
+    destination_site: destinationSite,
+    destination_type: destinationType,
+    cta_text: ctaText,
+    page_path: window.location.pathname
+  });
+}
+
 export function getHotelBookingProvider(url) {
   try {
     const { hostname } = new URL(url);
@@ -93,7 +103,10 @@ export function trackHotelBookingClick({ destination, outboundUrl, provider = "e
 export function trackNavigationClick({ linkText, destinationUrl, destinationSite, destination }) {
   trackEvent("navigation_click", {
     site: siteName,
+    source_site: siteName,
     destination_site: destination || destinationSite,
+    destination_type: destination,
+    cta_text: linkText,
     link_text: linkText,
     page_path: window.location.pathname,
     destination_url: destinationUrl,

@@ -705,6 +705,38 @@ h3 {
   padding-bottom: 10px;
 }
 
+.guide-recommendations {
+  padding-top: 10px;
+  padding-bottom: 18px;
+}
+
+.guide-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.guide-card {
+  display: grid;
+  gap: 10px;
+  min-height: 160px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 38px rgba(8, 35, 63, 0.07);
+  color: var(--navy);
+}
+
+.guide-card h3 {
+  font-size: 1.12rem;
+}
+
+.guide-card p {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
 .landing-card-grid {
   align-items: stretch;
 }
@@ -876,6 +908,7 @@ h3 {
   .trust-grid,
   .preview-grid,
   .popular-link-grid,
+  .guide-card-grid,
   .router-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -955,6 +988,7 @@ h3 {
   .trust-grid,
   .preview-grid,
   .popular-link-grid,
+  .guide-card-grid,
   .router-card-grid {
     grid-template-columns: 1fr;
   }

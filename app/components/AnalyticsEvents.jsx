@@ -7,7 +7,8 @@ import {
   getNetworkDestination,
   trackDealClick,
   trackHotelBookingClick,
-  trackNavigationClick
+  trackNavigationClick,
+  trackNetworkSiteClick
 } from "../lib/analytics";
 
 export default function AnalyticsEvents() {
@@ -44,6 +45,11 @@ export default function AnalyticsEvents() {
       }
 
       trackDealClick(destinationSite, linkText);
+      trackNetworkSiteClick({
+        destinationSite,
+        destinationType: destination,
+        ctaText: linkText
+      });
     }
 
     document.addEventListener("click", handleDocumentClick);

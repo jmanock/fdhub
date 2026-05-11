@@ -75,6 +75,8 @@ export default async function LandingPage({ params }) {
   const introParagraphs = getIntroParagraphs(page);
   const relatedSearchLinks = getRelatedSearchLinks(page);
   const pageUrl = `${baseUrl}/${page.slug}`;
+  const pageImageUrl = page.image || `${baseUrl}/og.svg`;
+  const modifiedDate = new Date().toISOString().slice(0, 10);
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -113,6 +115,32 @@ export default async function LandingPage({ params }) {
       }
     }))
   };
+  const articleSchema = page.article
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: page.h1,
+        description: page.metaDescription,
+        image: pageImageUrl,
+        dateModified: modifiedDate,
+        datePublished: modifiedDate,
+        mainEntityOfPage: pageUrl,
+        author: {
+          "@type": "Organization",
+          name: "Florida Deals Hub",
+          url: baseUrl
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Florida Deals Hub",
+          url: baseUrl,
+          logo: {
+            "@type": "ImageObject",
+            url: `${baseUrl}/favicon.svg`
+          }
+        }
+      }
+    : null;
 
   return (
     <>
@@ -186,6 +214,23 @@ export default async function LandingPage({ params }) {
             </p>
           </div>
         </section>
+
+        {page.recommendations?.length ? (
+          <section className="guide-recommendations section-pad" aria-labelledby="recommendations-title">
+            <div className="section-heading compact">
+              <p className="eyebrow">Travel planning</p>
+              <h2 id="recommendations-title">Related Florida Guides</h2>
+            </div>
+            <div className="guide-card-grid">
+              {page.recommendations.map(([label, href, copy]) => (
+                <a className="guide-card" href={href} key={`${page.slug}-${label}`}>
+                  <h3>{label}</h3>
+                  <p>{copy}</p>
+                </a>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="pillars section-pad" aria-labelledby="network-route-title">
           <div className="section-heading">
@@ -297,6 +342,11 @@ export default async function LandingPage({ params }) {
       <Script id={`${page.slug}-item-list-schema`} type="application/ld+json">
         {JSON.stringify(itemListSchema)}
       </Script>
+      {articleSchema ? (
+        <Script id={`${page.slug}-article-schema`} type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </Script>
+      ) : null}
     </>
   );
 }

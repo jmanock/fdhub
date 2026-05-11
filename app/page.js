@@ -10,9 +10,12 @@ import {
   lastUpdatedLabel,
   pillars,
   planTripCards,
+  popularDestinationLinks,
   popularSearchLinks,
+  seasonalTravelLinks,
   sites,
   topPicks,
+  travelGuideLinks,
   tripRouterCards
 } from "./lib/network";
 
@@ -26,7 +29,7 @@ const trust = [
 const homeItemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Top Florida Deal Picks Right Now",
+  name: "Trending Florida Deals",
   url: baseUrl,
   itemListElement: topPicks.map((pick, index) => ({
     "@type": "ListItem",
@@ -119,7 +122,7 @@ export default function Home() {
         <section className="preview section-pad" aria-labelledby="preview-title">
           <div className="section-heading">
             <p className="eyebrow">Curated routes</p>
-            <h2 id="preview-title">Top Florida Deal Picks Right Now</h2>
+            <h2 id="preview-title">Trending Florida Deals</h2>
           </div>
           <div className="preview-grid">
             {topPicks.map((pick) => (
@@ -144,6 +147,21 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="popular-destinations section-pad" aria-labelledby="destination-title">
+          <div className="section-heading">
+            <p className="eyebrow">Destination guides</p>
+            <h2 id="destination-title">Popular Florida Destinations</h2>
+          </div>
+          <div className="guide-card-grid">
+            {popularDestinationLinks.map(([label, href, copy]) => (
+              <a className="guide-card" href={href} key={href}>
+                <h3>{label}</h3>
+                <p>{copy}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section className="plan-trip section-pad" aria-labelledby="plan-title">
           <div className="section-heading">
             <p className="eyebrow">Trip routes</p>
@@ -156,6 +174,21 @@ export default function Home() {
                 <p>{card.copy}</p>
                 <a href={card.href}>{card.title}</a>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="travel-guides section-pad" aria-labelledby="guides-title">
+          <div className="section-heading">
+            <p className="eyebrow">Editorial guides</p>
+            <h2 id="guides-title">Plan With Florida Travel Guides</h2>
+          </div>
+          <div className="guide-card-grid">
+            {travelGuideLinks.map(([label, href, copy]) => (
+              <a className="guide-card" href={href} key={href}>
+                <h3>{label}</h3>
+                <p>{copy}</p>
+              </a>
             ))}
           </div>
         </section>
@@ -201,6 +234,21 @@ export default function Home() {
                   <a href={pillar.href}>{pillar.button}</a>
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="seasonal-travel section-pad" aria-labelledby="seasonal-title">
+          <div className="section-heading">
+            <p className="eyebrow">Seasonal travel</p>
+            <h2 id="seasonal-title">Seasonal Florida Travel</h2>
+          </div>
+          <div className="guide-card-grid">
+            {seasonalTravelLinks.map(([label, href, copy]) => (
+              <a className="guide-card" href={href} key={href}>
+                <h3>{label}</h3>
+                <p>{copy}</p>
+              </a>
             ))}
           </div>
         </section>
