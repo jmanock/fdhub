@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import NewsletterSection from "../components/NewsletterSection";
+import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import {
@@ -172,9 +173,10 @@ export default async function LandingPage({ params }) {
             </div>
           </div>
           <div className="landing-visual">
-            <img
+            <SafeImage
               src={page.image || pillars[1].image}
               alt={page.alt}
+              fallback="/images/fallbacks/florida-travel-placeholder.svg"
               width="900"
               height="720"
               loading="eager"
@@ -232,18 +234,48 @@ export default async function LandingPage({ params }) {
           </section>
         ) : null}
 
+        {page.rows?.length ? (
+          <section className="comparison-section section-pad" aria-labelledby="comparison-title">
+            <div className="section-heading compact">
+              <p className="eyebrow">Comparison guide</p>
+              <h2 id="comparison-title">Which Florida trip fits better?</h2>
+            </div>
+            <div className="comparison-table-wrap">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Compare</th>
+                    <th>{page.optionA}</th>
+                    <th>{page.optionB}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {page.rows.map(([label, optionA, optionB]) => (
+                    <tr key={`${page.slug}-${label}`}>
+                      <th scope="row">{label}</th>
+                      <td>{optionA}</td>
+                      <td>{optionB}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ) : null}
+
         <section className="pillars section-pad" aria-labelledby="network-route-title">
           <div className="section-heading">
             <p className="eyebrow">Choose a category</p>
-            <h2 id="network-route-title">Browse the Florida Deals Network</h2>
+            <h2 id="network-route-title">Start Planning Your Florida Trip</h2>
           </div>
           <div className="pillar-grid landing-card-grid">
             {pillars.map((pillar) => (
               <article className="pillar-card" key={pillar.key}>
                 <div className="pillar-image">
-                  <img
+                  <SafeImage
                     src={pillar.image}
                     alt={pillar.alt}
+                    fallback="/images/fallbacks/florida-deals-placeholder.svg"
                     width="900"
                     height="620"
                     loading="lazy"
@@ -253,7 +285,9 @@ export default async function LandingPage({ params }) {
                 </div>
                 <div className="pillar-body">
                   <h3>{pillar.title}</h3>
+                  <p className="best-for-tag">Best for: {pillar.bestFor}</p>
                   <p>{pillar.copy}</p>
+                  <p className="value-line">Why this exists: {pillar.why}</p>
                   <a href={pillar.href}>{pillar.anchor}</a>
                 </div>
               </article>
@@ -304,7 +338,7 @@ export default async function LandingPage({ params }) {
         <section className="related-pages section-pad" aria-labelledby="related-title">
           <div className="section-heading compact">
             <p className="eyebrow">Keep exploring</p>
-            <h2 id="related-title">Related Florida Deal Searches</h2>
+            <h2 id="related-title">Related Florida Searches</h2>
           </div>
           <div className="popular-link-grid">
             {relatedSearchLinks.map((related) => (

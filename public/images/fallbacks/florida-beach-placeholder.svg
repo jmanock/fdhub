@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Florida beach placeholder image">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dff5f8"/>
+      <stop offset=".55" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f7f1e7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="915" cy="185" r="86" fill="#f7bd2a"/>
+  <path d="M0 520c180-70 365-70 555 0 190 70 380 70 645 0v280H0z" fill="#0fa3c8"/>
+  <path d="M0 636c150-28 300-28 450 0s300 28 450 0 230-28 300 0v164H0z" fill="#f7f1e7"/>
+  <path d="M354 530c64-96 154-150 270-160 92-8 174 16 246 72-102-18-199-3-291 45-73 39-148 53-225 43z" fill="#ffffff" opacity=".9"/>
+  <text x="600" y="430" text-anchor="middle" fill="#08233f" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800">Florida Beach Guide</text>
+  <text x="600" y="492" text-anchor="middle" fill="#0b5f7f" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Coastal stays, local finds, and trip ideas</text>
+</svg>

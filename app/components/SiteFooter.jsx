@@ -1,5 +1,22 @@
 import Link from "next/link";
-import { popularPages, sites } from "../lib/network";
+import { sites } from "../lib/network";
+
+const footerDestinations = [
+  ["Orlando Deals", "/orlando-deals"],
+  ["Miami Deals", "/miami-deals"],
+  ["Tampa Deals", "/tampa-deals"],
+  ["Fort Lauderdale Deals", "/fort-lauderdale-deals"],
+  ["Key West Travel Guide", "/key-west-travel-guide"],
+  ["Clearwater Travel Guide", "/clearwater-travel-guide"]
+];
+
+const footerGuides = [
+  ["Florida Weekend Getaways", "/florida-weekend-getaways"],
+  ["Cheap Florida Vacations", "/cheap-florida-vacations"],
+  ["Best Time To Visit Florida", "/best-time-to-visit-florida"],
+  ["Florida Family Vacations", "/florida-family-vacations"],
+  ["Florida Vacation Planning Guide", "/florida-vacation-planning-guide"]
+];
 
 export default function SiteFooter() {
   return (
@@ -14,24 +31,39 @@ export default function SiteFooter() {
         </Link>
       </div>
       <div className="footer-links">
-        <nav aria-label="Footer">
-          <a href={sites.flights}>Flight Deals</a>
-          <a href={sites.hotels}>Hotel Deals</a>
-          <a href={sites.cruises}>Cruise Deals</a>
-          <a href={sites.local}>Local Deals</a>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-          <a href="/sitemap.xml">Sitemap</a>
-        </nav>
-        <nav className="footer-popular" aria-label="Popular Florida deal searches">
-          {popularPages.map(([label, href]) => (
-            <Link href={href} key={href}>
-              {label}
-            </Link>
-          ))}
-        </nav>
+        <div className="footer-nav-grid">
+          <nav aria-label="Florida destinations">
+            <h2>Florida Destinations</h2>
+            {footerDestinations.map(([label, href]) => (
+              <Link href={href} key={href}>
+                {label}
+              </Link>
+            ))}
+          </nav>
+          <nav aria-label="Travel categories">
+            <h2>Travel Categories</h2>
+            <a href={sites.flights}>Florida Flight Deals</a>
+            <a href={sites.hotels}>Florida Hotel Deals</a>
+            <a href={sites.cruises}>Florida Cruise Deals</a>
+            <a href={sites.local}>Local Florida Deals</a>
+          </nav>
+          <nav aria-label="Florida travel guides">
+            <h2>Florida Travel Guides</h2>
+            {footerGuides.map(([label, href]) => (
+              <Link href={href} key={href}>
+                {label}
+              </Link>
+            ))}
+          </nav>
+          <nav aria-label="Company links">
+            <h2>Hub</h2>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <a href="/sitemap.xml">Sitemap</a>
+          </nav>
+        </div>
         <p className="affiliate-disclosure">
           Florida Deals Hub may earn a commission when you book through some links. This helps keep
           our deal alerts free.

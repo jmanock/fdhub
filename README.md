@@ -9,10 +9,13 @@ The Hub is the network's content authority site. It should publish broad Florida
 The homepage is organized as a trip-planning router:
 
 - Hero with four primary same-tab routes to the niche sites
+- "Popular Florida Searches This Week" freshness-oriented routing links
 - "Choose Your Deal Type" category cards
-- "Trending Florida Deals" curated network highlights
+- "Trending Florida Deals" curated network highlights with Best For tags
 - SEO travel-planning copy
 - Popular destination guide links
+- Editorial picks
+- Destination clusters for Orlando, Miami, and Tampa
 - "Plan Your Florida Trip" routing cards
 - Editorial travel guide links
 - Seasonal travel guide links
@@ -30,6 +33,7 @@ Core page themes include:
 - Destination guides for Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, Key West, Naples, Destin, and Clearwater
 - Trip-planning guides and itineraries
 - Seasonal Florida travel guides
+- Comparison guides for destination and trip-type decisions
 - Florida travel deals
 - Cheap Florida vacations
 - Florida weekend getaways
@@ -63,6 +67,32 @@ Page-level JSON-LD in `app/[slug]/page.js` includes:
 
 Do not add fake `Offer`, pricing, review, or product schema unless the underlying data is accurate and maintained.
 
+## Image Fallback Strategy
+
+Use `app/components/SafeImage.jsx` for Hub-controlled images. It preserves the image box, swaps failed image URLs to a local fallback, and tracks `image_fallback_used` without interrupting the page.
+
+Fallback assets live in `public/images/fallbacks/`:
+
+- `florida-travel-placeholder.svg`
+- `florida-beach-placeholder.svg`
+- `florida-deals-placeholder.svg`
+
+Images should use descriptive alt text, stable width and height attributes, eager loading only for primary hero imagery, and lazy loading for below-the-fold cards. Match destination images to page topic whenever possible.
+
+## Related Searches, Clusters, And Footer SEO
+
+Every major Hub page should include a related searches grid with useful Hub links and descriptive same-tab routes to the four network sites. The page template calls this section `Related Florida Searches`.
+
+Destination clusters group related pages and category links for Orlando, Miami, and Tampa. They are designed to build topical authority around major Florida destination searches while routing visitors to flights, hotels, cruises, and local deals.
+
+The footer is a crawl-friendly navigation hub with sections for Florida Destinations, Travel Categories, Florida Travel Guides, and Hub links. Keep footer links useful and limited enough to scan.
+
+## Comparison Pages
+
+Comparison pages are generated from `comparisonPageConfigs` in `app/lib/network.js`. Each comparison page should include unique metadata, a useful intro, comparison table rows, recommendations, related searches, FAQ schema, BreadcrumbList schema, ItemList schema, and Article schema.
+
+Good comparison pages help users decide between destinations or trip styles, then send them into the right vertical site. Avoid fake rankings, fake savings, unsupported pricing claims, and thin city-vs-city copy.
+
 ## Expedia Affiliate Links
 
 Expedia links live in `app/lib/affiliateLinks.js`.
@@ -87,6 +117,7 @@ Tracked events include:
 - `network_site_click` for authority-routing clicks to the four network sites. Parameters include `source_site`, `destination_site`, `destination_type`, `cta_text`, and `page_path`.
 - `deal_click` for clicks to the four Florida Deals network sites
 - `hotel_booking_click` for Expedia hotel clicks, with provider, destination, page path, and outbound URL
+- `image_fallback_used` when a remote image fails and a local fallback is shown
 - `newsletter_signup_started`
 - `newsletter_signup_success`
 
@@ -97,11 +128,11 @@ Newsletter submissions use `floridadealshub.com` as the source in `app/api/newsl
 - Links to Hub pages and Florida Deals network sites open in the same tab.
 - External affiliate links open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
 - Use descriptive CTA language such as `Find Flights`, `Compare Hotels`, `View Cruise Deals`, and `Explore Local Deals`.
-- Do not use vague anchors such as `Click Here` or unsupported savings claims.
+- Do not use vague generic anchors or unsupported savings claims.
 
 ## Adding Destination Or SEO Pages
 
-Hub SEO pages are defined in `app/lib/network.js`. Broad authority pages use `authorityPageConfigs`, destination guides use `destinationPageConfigs`, planning articles use `planningPageConfigs`, and legacy deal-routing pages live directly in `landingPages`.
+Hub SEO pages are defined in `app/lib/network.js`. Broad authority pages use `authorityPageConfigs`, destination guides use `destinationPageConfigs`, planning articles use `planningPageConfigs`, comparison pages use `comparisonPageConfigs`, and legacy deal-routing pages live directly in `landingPages`.
 
 To add a page:
 

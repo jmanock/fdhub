@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Florida travel placeholder image">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dff5f8"/>
+      <stop offset="0.58" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f7f1e7"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="1">
+      <stop offset="0" stop-color="#087fb5"/>
+      <stop offset="1" stop-color="#0fa3c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <circle cx="930" cy="170" r="82" fill="#f7bd2a"/>
+  <path d="M0 520c160-54 290-54 430 0s275 54 430 0 247-54 340 0v280H0z" fill="url(#water)" opacity=".92"/>
+  <path d="M0 610c150-38 300-38 450 0s300 38 450 0 230-38 300 0v190H0z" fill="#08233f" opacity=".18"/>
+  <path d="M210 456h780l-70 70H280z" fill="#ffffff" opacity=".92"/>
+  <path d="M344 456l84-148h334l84 148z" fill="#ffffff" opacity=".84"/>
+  <text x="600" y="410" text-anchor="middle" fill="#08233f" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">Florida Deals Hub</text>
+  <text x="600" y="474" text-anchor="middle" fill="#0b5f7f" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Flights • Hotels • Cruises • Local Deals</text>
+</svg>

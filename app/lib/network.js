@@ -22,6 +22,9 @@ export const pillars = [
     title: "Florida Flight Deals",
     anchor: "Florida flight deals",
     copy: "Cheap route ideas, weekend escapes, and airfare finds from major Florida airports.",
+    bestFor: "Weekend Trips, Flexible Dates",
+    why:
+      "Useful when airfare or airport choice controls the rest of the Florida trip.",
     button: "Explore Florida Flights",
     href: sites.flights,
     badge: "FLY",
@@ -34,6 +37,9 @@ export const pillars = [
     title: "Florida Hotel Deals",
     anchor: "Florida hotel deals",
     copy: "Beach resorts, city hotels, family stays, weekend getaways, and staycation searches.",
+    bestFor: "Beach Stays, Family Hotels",
+    why:
+      "Hotel location often decides how easy a Florida trip feels once you arrive.",
     button: "Compare Florida Hotels",
     href: sites.hotels,
     badge: "STAY",
@@ -46,6 +52,9 @@ export const pillars = [
     title: "Florida Cruise Deals",
     anchor: "Florida cruise deals",
     copy: "Bahamas, Caribbean, weekend, and family cruise planning from Florida ports.",
+    bestFor: "Cruise Travelers, Port Nights",
+    why:
+      "Florida cruise ports can anchor a full getaway with flights, hotels, and local plans.",
     button: "Browse Florida Cruises",
     href: sites.cruises,
     badge: "SAIL",
@@ -58,6 +67,9 @@ export const pillars = [
     title: "Local Deals Florida",
     anchor: "local Florida deals",
     copy: "Restaurants, events, attractions, family fun, local guides, and things to do.",
+    bestFor: "Local Activities, Families",
+    why:
+      "Local deals help turn a flight, hotel, or cruise trip into a complete Florida plan.",
     button: "Explore Local Florida Deals",
     href: sites.local,
     badge: "LOCAL",
@@ -114,6 +126,7 @@ export const topPicks = [
     label: "Top Pick",
     title: "Orlando fare finds",
     value: "Flight pick",
+    bestFor: "Theme Park Trips",
     copy: "Useful for watching flexible trips in and out of Central Florida airports.",
     cta: "Find Flight Deals",
     href: sites.flights,
@@ -123,6 +136,7 @@ export const topPicks = [
     label: "Popular",
     title: "Miami Beach stays",
     value: "Hotel pick",
+    bestFor: "Beach Escape",
     copy: "Helpful for comparing beach stays, weekend hotel ideas, and South Florida getaways.",
     cta: "Compare Hotel Deals",
     href: sites.hotels,
@@ -132,6 +146,7 @@ export const topPicks = [
     label: "Weekend Idea",
     title: "Bahamas sailings from Florida",
     value: "Cruise pick",
+    bestFor: "Cruise Travelers",
     copy: "A practical starting point for weekend cruises and port-based trip planning.",
     cta: "Browse Cruise Deals",
     href: sites.cruises,
@@ -141,6 +156,7 @@ export const topPicks = [
     label: "Family Pick",
     title: "Orlando attraction deals",
     value: "Local pick",
+    bestFor: "Family Activities",
     copy: "Good for finding things to do in Florida after flights and hotels are handled.",
     cta: "Explore Local Deals",
     href: sites.local,
@@ -208,6 +224,64 @@ export const seasonalTravelLinks = [
   ["Fall Florida Travel", "/florida-fall-travel-guide", "Use shoulder-season timing for weekend trips, events, road trips, and beach stays."],
   ["Spring Break Guide", "/florida-spring-break-guide", "Compare beaches, Orlando hotels, flights, cruises, and family spring travel."],
   ["Holiday Travel", "/florida-holiday-travel-guide", "Plan flights, hotels, cruises, family activities, and local events around busy dates."]
+];
+
+export const popularThisWeekLinks = [
+  ["Florida Travel Deals", "/florida-travel-deals", "Best for first-time Florida deal searches"],
+  ["Florida Weekend Getaways", "/florida-weekend-getaways", "Best for short trips"],
+  ["Orlando Deals", "/orlando-deals", "Best for families and theme parks"],
+  ["Miami Deals", "/miami-deals", "Best for beach and cruise trips"],
+  ["Florida Hotel Deals", sites.hotels, "Best for comparing stays"],
+  ["Florida Cruise Deals", sites.cruises, "Best for Florida port departures"],
+  ["Florida Flight Deals", sites.flights, "Best for flexible routes"],
+  ["Florida Local Deals", sites.local, "Best for attractions and events"]
+];
+
+export const editorPicks = [
+  ["Best for families", "Orlando vacation planning", "/orlando-travel-guide", "Theme park trips, family hotels, local attractions, and flexible flight options."],
+  ["Best beach escape", "Miami and Florida Keys trips", "/miami-travel-guide", "Beach hotels, restaurants, nightlife, cruises, and tropical road-trip add-ons."],
+  ["Best cruise starter", "Miami cruise departures", sites.cruises, "A practical route for travelers planning flights, hotels, and port nights around a sailing."],
+  ["Best budget idea", "Florida weekend getaways", "/florida-weekend-getaways", "Shorter stays can keep hotel nights, drive time, and daily spending easier to manage."],
+  ["Best local discovery", "Orlando local deals", sites.local, "Useful for attractions, restaurants, events, and things to do after travel is booked."]
+];
+
+export const destinationClusters = [
+  {
+    title: "Orlando Cluster",
+    bestFor: "Families, Theme Park Trips",
+    links: [
+      ["Orlando Deals", "/orlando-deals"],
+      ["Orlando Travel Guide", "/orlando-travel-guide"],
+      ["Orlando Flight Deals", sites.flights],
+      ["Orlando Hotel Deals", sites.hotels],
+      ["Orlando Local Deals", sites.local],
+      ["Florida Family Vacations", "/florida-family-vacations"]
+    ]
+  },
+  {
+    title: "Miami Cluster",
+    bestFor: "Beach Escapes, Cruise Travelers",
+    links: [
+      ["Miami Deals", "/miami-deals"],
+      ["Miami Travel Guide", "/miami-travel-guide"],
+      ["Miami Flight Deals", sites.flights],
+      ["Miami Beach Hotel Deals", sites.hotels],
+      ["Cruises From Miami", sites.cruises],
+      ["Miami Local Deals", sites.local]
+    ]
+  },
+  {
+    title: "Tampa Cluster",
+    bestFor: "Gulf Coast, Cruise Departures",
+    links: [
+      ["Tampa Deals", "/tampa-deals"],
+      ["Tampa Travel Guide", "/tampa-travel-guide"],
+      ["Tampa Flight Deals", sites.flights],
+      ["Tampa Hotel Deals", sites.hotels],
+      ["Cruises From Tampa", sites.cruises],
+      ["Tampa Local Deals", sites.local]
+    ]
+  }
 ];
 
 export const homepageSeoParagraphs = [
@@ -725,14 +799,158 @@ function createPlanningPage([slug, title, metaDescription, h1, eyebrow, image, a
   };
 }
 
+const comparisonPageConfigs = [
+  {
+    slug: "orlando-vs-miami-vacation",
+    title: "Orlando vs Miami Vacation | Which Florida Trip Is Better?",
+    metaDescription:
+      "Compare Orlando and Miami vacations by beaches, theme parks, hotels, flights, nightlife, family travel, cruises, and budget planning.",
+    h1: "Orlando vs Miami Vacation",
+    intro:
+      "Choosing between Orlando and Miami depends on whether your Florida vacation is built around theme parks and family attractions or beaches, nightlife, restaurants, and cruise departures.",
+    image: pageImages.orlando,
+    alt: "Orlando and Miami vacation comparison with theme parks beaches hotels and flights",
+    optionA: "Orlando",
+    optionB: "Miami",
+    related: ["orlando-travel-guide", "miami-travel-guide", "best-florida-family-vacations", "best-florida-beaches"],
+    rows: [
+      ["Best for", "Families, theme parks, attractions, first-time Florida visitors", "Beach escapes, nightlife, restaurants, cruises, couples trips"],
+      ["Trip style", "Structured days, park tickets, resort areas, family schedules", "Beach time, dining, neighborhoods, port access, flexible weekends"],
+      ["Hotel strategy", "Stay near parks, convention areas, or resort corridors", "Choose Miami Beach, Brickell, Downtown, or airport/cruise areas"],
+      ["Deal path", "Start with flights and hotels, then local attraction deals", "Start with hotels or cruises, then flights and local dining"]
+    ]
+  },
+  {
+    slug: "miami-vs-tampa-travel",
+    title: "Miami vs Tampa Travel | Beaches, Hotels, Cruises & Trip Planning",
+    metaDescription:
+      "Compare Miami and Tampa travel for beaches, hotels, flights, cruise departures, restaurants, family trips, nightlife, and Florida vacation planning.",
+    h1: "Miami vs Tampa Travel",
+    intro:
+      "Miami and Tampa both work for Florida trips, but they serve different travel styles. Miami leans beach, nightlife, culture, and major cruise departures, while Tampa works well for Gulf Coast access, family attractions, sports, and easier beach add-ons.",
+    image: pageImages.miami,
+    alt: "Miami versus Tampa travel comparison with beaches waterfront hotels and cruises",
+    optionA: "Miami",
+    optionB: "Tampa",
+    related: ["miami-travel-guide", "tampa-travel-guide", "best-florida-beaches", "best-florida-cruise-ports"],
+    rows: [
+      ["Best for", "Beach weekends, nightlife, dining, cruises from Miami", "Gulf Coast hotels, family trips, sports, cruises from Tampa"],
+      ["Airport planning", "Miami and nearby Fort Lauderdale can widen flight options", "Tampa is convenient for Gulf Coast and Clearwater plans"],
+      ["Hotel strategy", "Choose beach, city, airport, or port areas carefully", "Compare downtown, airport, St. Pete, and Clearwater areas"],
+      ["Local activities", "Food, arts districts, beaches, nightlife, boat days", "Museums, beaches, restaurants, sports, family attractions"]
+    ]
+  },
+  {
+    slug: "florida-beach-vacation-vs-theme-park-trip",
+    title: "Florida Beach Vacation vs Theme Park Trip | Which Is Better?",
+    metaDescription:
+      "Compare a Florida beach vacation and a theme park trip by hotels, flights, family travel, budgets, weather, attractions, and local activities.",
+    h1: "Florida Beach Vacation vs Theme Park Trip",
+    intro:
+      "A Florida beach vacation and a theme park trip can both be memorable, but they require very different planning. Beach trips are often about location and pace, while theme park trips depend on tickets, timing, hotels, and transportation.",
+    image: pageImages.clearwater,
+    alt: "Florida beach vacation versus theme park trip comparison with hotels and family travel",
+    optionA: "Beach Vacation",
+    optionB: "Theme Park Trip",
+    related: ["florida-beach-vacation-guide", "florida-theme-park-guide", "best-florida-family-vacations", "orlando-travel-guide"],
+    rows: [
+      ["Best for", "Relaxed schedules, couples, beach families, coastal dining", "Families, first-time visitors, structured attraction days"],
+      ["Main cost drivers", "Hotel location, parking, resort fees, dining, flights", "Tickets, hotel proximity, food, transportation, rest days"],
+      ["Weather plan", "Build in indoor meals, museums, shopping, and flexible beach time", "Plan breaks, indoor shows, hotel pool time, and backup evenings"],
+      ["Deal path", "Compare hotels first, then flights and local activities", "Compare flights and hotels, then local attraction planning"]
+    ]
+  },
+  {
+    slug: "florida-weekend-trip-vs-weeklong-vacation",
+    title: "Florida Weekend Trip vs Weeklong Vacation | Which Should You Plan?",
+    metaDescription:
+      "Compare a Florida weekend trip and a weeklong vacation by hotels, flights, cruises, beaches, attractions, family travel, and budget planning.",
+    h1: "Florida Weekend Trip vs Weeklong Vacation",
+    intro:
+      "A Florida weekend trip is best when the plan is focused and easy to reach. A weeklong vacation gives you more room for beaches, cities, theme parks, cruises, road trips, and local activities.",
+    image: pageImages.weekendBeach,
+    alt: "Florida weekend trip versus weeklong vacation comparison with beaches hotels and activities",
+    optionA: "Weekend Trip",
+    optionB: "Weeklong Vacation",
+    related: ["florida-weekend-getaways", "7-day-florida-itinerary", "best-florida-road-trips", "florida-vacation-planning-guide"],
+    rows: [
+      ["Best for", "Short escapes, locals, couples, quick beach or city stays", "Families, road trips, mixed destinations, deeper planning"],
+      ["Planning focus", "Minimize travel time and hotel moves", "Balance regions, rest days, activities, and transportation"],
+      ["Budget style", "Fewer nights but often compressed timing", "More total cost but better pacing and flexibility"],
+      ["Deal path", "Start with hotels or local events", "Start with flights, itinerary, hotels, and activity clusters"]
+    ]
+  },
+  {
+    slug: "cheap-florida-vacation-vs-luxury-florida-trip",
+    title: "Cheap Florida Vacation vs Luxury Florida Trip | Planning Comparison",
+    metaDescription:
+      "Compare cheap Florida vacations and luxury Florida trips by hotels, flights, beaches, cruises, restaurants, attractions, and planning tradeoffs.",
+    h1: "Cheap Florida Vacation vs Luxury Florida Trip",
+    intro:
+      "A cheap Florida vacation and a luxury Florida trip can use the same destinations, but the planning choices are different. Budget trips rely on flexibility and tradeoffs, while luxury trips lean on location, service, amenities, and convenience.",
+    image: pageImages.planning,
+    alt: "Cheap Florida vacation versus luxury Florida trip comparison with hotels beaches and travel planning",
+    optionA: "Cheap Florida Vacation",
+    optionB: "Luxury Florida Trip",
+    related: ["cheap-florida-vacation-ideas", "florida-budget-travel-guide", "romantic-florida-getaways", "naples-florida-guide"],
+    rows: [
+      ["Best for", "Flexible travelers, families watching total cost, short trips", "Couples, special occasions, resort stays, convenience-first travel"],
+      ["Hotel strategy", "Compare areas, parking, fees, and off-peak dates", "Prioritize location, amenities, views, dining, and service"],
+      ["Activity style", "Mix beaches, parks, free events, and selective paid attractions", "Build around restaurants, spas, tours, boating, and premium hotels"],
+      ["Deal path", "Start with flights and hotel value", "Start with destination and hotel experience"]
+    ]
+  },
+  {
+    slug: "orlando-vs-tampa-family-vacation",
+    title: "Orlando vs Tampa Family Vacation | Theme Parks, Beaches & Hotels",
+    metaDescription:
+      "Compare Orlando and Tampa family vacations by theme parks, beaches, hotels, flights, attractions, local activities, and budget planning.",
+    h1: "Orlando vs Tampa Family Vacation",
+    intro:
+      "Orlando and Tampa are both strong family vacation bases. Orlando is best when theme parks and major attractions are the anchor, while Tampa is better when a family wants Gulf Coast beaches, museums, sports, and a slightly more mixed itinerary.",
+    image: pageImages.familyTrip,
+    alt: "Orlando versus Tampa family vacation comparison with theme parks beaches hotels and attractions",
+    optionA: "Orlando",
+    optionB: "Tampa",
+    related: ["orlando-travel-guide", "tampa-travel-guide", "best-florida-family-vacations", "clearwater-travel-guide"],
+    rows: [
+      ["Best for", "Theme park trips, resort corridors, attraction-heavy days", "Gulf Coast beaches, city stays, sports, museums, flexible family days"],
+      ["Hotel strategy", "Stay near the park or area driving most of the trip", "Compare Tampa, St. Pete, Clearwater, and airport areas"],
+      ["Local activities", "Theme parks, dinner shows, shopping, attractions", "Beaches, museums, sports, restaurants, parks, family attractions"],
+      ["Deal path", "Start with flights, hotels, then attraction and local deals", "Start with hotel area, beach plans, flights, and local activities"]
+    ]
+  }
+];
+
+function createComparisonPage(config) {
+  return {
+    ...config,
+    eyebrow: "Florida comparison guide",
+    article: true,
+    details: [
+      `${config.h1} is useful when two good Florida trip ideas compete for the same dates or budget. The right choice depends on who is traveling, how much structure the trip needs, and which costs are most likely to shape the plan.`,
+      "Use the comparison below as a starting point, then move into the Florida Deals network when you are ready to compare flights, hotels, cruises, or local activities. The Hub explains the tradeoffs; the category sites help with the next step.",
+      "Prices, schedules, attraction hours, cruise departures, hotel rules, and local availability may change. Confirm current details with booking providers and official sources before committing."
+    ],
+    recommendations: [
+      [`Choose ${config.optionA}`, config.related[0] ? `/${config.related[0]}` : "/florida-travel-guide", `Best for travelers leaning toward ${config.optionA.toLowerCase()} after comparing the tradeoffs.`],
+      [`Choose ${config.optionB}`, config.related[1] ? `/${config.related[1]}` : "/florida-travel-guide", `Best for travelers leaning toward ${config.optionB.toLowerCase()} after comparing the tradeoffs.`],
+      ["Start planning with deals", "/florida-travel-deals", "Move from comparison research into flights, hotels, cruises, and local deal routes."]
+    ],
+    previews: networkPreviewCards
+  };
+}
+
 const generatedAuthorityPages = authorityPageConfigs.map(createAuthorityPage);
 const generatedDestinationPages = destinationPageConfigs.map(createDestinationPage);
 const generatedPlanningPages = planningPageConfigs.map(createPlanningPage);
+const generatedComparisonPages = comparisonPageConfigs.map(createComparisonPage);
 
 export const landingPages = [
   ...generatedAuthorityPages,
   ...generatedDestinationPages,
   ...generatedPlanningPages,
+  ...generatedComparisonPages,
   {
     slug: "florida-travel-deals",
     title: "Florida Travel Deals | Flights, Hotels, Cruises & Local Savings",

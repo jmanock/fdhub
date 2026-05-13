@@ -1,9 +1,12 @@
 import Script from "next/script";
 import NewsletterSection from "./components/NewsletterSection";
+import SafeImage from "./components/SafeImage";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
 import {
   baseUrl,
+  destinationClusters,
+  editorPicks,
   expediaHotelCards,
   homepageFaqs,
   homepageSeoParagraphs,
@@ -12,6 +15,7 @@ import {
   planTripCards,
   popularDestinationLinks,
   popularSearchLinks,
+  popularThisWeekLinks,
   seasonalTravelLinks,
   sites,
   topPicks,
@@ -81,9 +85,10 @@ export default function Home() {
           <div className="hero-visual" aria-label="Florida Deals Hub category preview cards">
             {pillars.map((pillar, index) => (
               <a className={`stack-card card-${index + 1}`} href={pillar.href} key={pillar.title}>
-                <img
+                <SafeImage
                   src={pillar.image}
                   alt={pillar.alt}
+                  fallback="/images/fallbacks/florida-deals-placeholder.svg"
                   width="900"
                   height="620"
                   loading={index === 0 ? "eager" : "lazy"}
@@ -91,6 +96,21 @@ export default function Home() {
                 />
                 <span>{pillar.badge}</span>
                 <strong>{pillar.title.replace("Florida ", "")}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="popular-this-week section-pad" aria-labelledby="popular-week-title">
+          <div className="section-heading">
+            <p className="eyebrow">Updated travel interest</p>
+            <h2 id="popular-week-title">Popular Florida Searches This Week</h2>
+          </div>
+          <div className="guide-card-grid">
+            {popularThisWeekLinks.map(([label, href, bestFor]) => (
+              <a className="guide-card" href={href} key={label}>
+                <h3>{label}</h3>
+                <p className="best-for-tag">{bestFor}</p>
               </a>
             ))}
           </div>
@@ -130,8 +150,25 @@ export default function Home() {
                 <span>{pick.label}</span>
                 <h3>{pick.title}</h3>
                 <p className="pick-value">{pick.value}</p>
+                <p className="best-for-tag">Best for: {pick.bestFor}</p>
                 <p>{pick.copy}</p>
                 <strong className="top-pick-cta">{pick.cta}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="editor-picks section-pad" aria-labelledby="editor-title">
+          <div className="section-heading">
+            <p className="eyebrow">Editorial picks</p>
+            <h2 id="editor-title">Editorial Picks For Florida Planning</h2>
+          </div>
+          <div className="guide-card-grid">
+            {editorPicks.map(([label, title, href, copy]) => (
+              <a className="guide-card" href={href} key={`${label}-${title}`}>
+                <p className="best-for-tag">{label}</p>
+                <h3>{title}</h3>
+                <p>{copy}</p>
               </a>
             ))}
           </div>
@@ -158,6 +195,28 @@ export default function Home() {
                 <h3>{label}</h3>
                 <p>{copy}</p>
               </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="destination-clusters section-pad" aria-labelledby="clusters-title">
+          <div className="section-heading">
+            <p className="eyebrow">Destination clusters</p>
+            <h2 id="clusters-title">Explore Florida By Destination</h2>
+          </div>
+          <div className="cluster-grid">
+            {destinationClusters.map((cluster) => (
+              <article className="cluster-card" key={cluster.title}>
+                <p className="best-for-tag">Best for: {cluster.bestFor}</p>
+                <h3>{cluster.title}</h3>
+                <div>
+                  {cluster.links.map(([label, href]) => (
+                    <a href={href} key={`${cluster.title}-${label}`}>
+                      {label}
+                    </a>
+                  ))}
+                </div>
+              </article>
             ))}
           </div>
         </section>
@@ -218,9 +277,14 @@ export default function Home() {
             {pillars.map((pillar) => (
               <article className="pillar-card" key={pillar.title}>
                 <div className="pillar-image">
-                  <img
+                  <SafeImage
                     src={pillar.image}
                     alt={pillar.alt}
+                    fallback={
+                      pillar.key === "local"
+                        ? "/images/fallbacks/florida-beach-placeholder.svg"
+                        : "/images/fallbacks/florida-deals-placeholder.svg"
+                    }
                     width="900"
                     height="620"
                     loading="lazy"
@@ -230,7 +294,9 @@ export default function Home() {
                 </div>
                 <div className="pillar-body">
                   <h3>{pillar.title}</h3>
+                  <p className="best-for-tag">Best for: {pillar.bestFor}</p>
                   <p>{pillar.copy}</p>
+                  <p className="value-line">Why this guide: {pillar.why}</p>
                   <a href={pillar.href}>{pillar.button}</a>
                 </div>
               </article>
@@ -250,6 +316,24 @@ export default function Home() {
                 <p>{copy}</p>
               </a>
             ))}
+          </div>
+        </section>
+
+        <section className="trust-band section-pad" aria-labelledby="trust-site-title">
+          <div className="content-card">
+            <p className="eyebrow">Why trust this site?</p>
+            <h2 id="trust-site-title">A Florida-focused travel and local deals network</h2>
+            <p>
+              Florida Deals Hub is a Florida-focused travel and local deals network. We organize
+              flights, hotels, cruises, attractions, restaurants, events, and destination guides by
+              city, category, and trip type so visitors can compare options faster.
+            </p>
+            <div className="trust-notes" aria-label="Florida Deals Hub trust details">
+              <span>Updated travel content</span>
+              <span>Florida-focused network</span>
+              <span>Prices and availability may change</span>
+              <span>Confirm current details with official sources</span>
+            </div>
           </div>
         </section>
 

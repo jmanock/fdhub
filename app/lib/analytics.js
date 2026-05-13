@@ -79,6 +79,14 @@ export function trackNetworkSiteClick({ destinationSite, destinationType, ctaTex
   });
 }
 
+export function trackImageFallbackUsed(imageSrc) {
+  trackEvent("image_fallback_used", {
+    site: siteName,
+    image_src: imageSrc,
+    page_path: window.location.pathname
+  });
+}
+
 export function getHotelBookingProvider(url) {
   try {
     const { hostname } = new URL(url);
