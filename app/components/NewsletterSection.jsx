@@ -7,8 +7,11 @@ export default function NewsletterSection() {
         <div>
           <p className="eyebrow">Free alerts</p>
           <h2 id="newsletter-title">Get Florida Travel Deals & Vacation Ideas</h2>
-          <p>Flights, hotels, cruises, attractions, and Florida travel inspiration.</p>
-          <p className="newsletter-trust">Free. No spam. Deals and prices can change quickly.</p>
+          <p>
+            Weekly Florida travel ideas, weekend getaways, hotel searches, cruise deals, flight
+            alerts, and local things to do.
+          </p>
+          <p className="newsletter-trust">Free. No spam. Prices and offers can change quickly.</p>
         </div>
         <NewsletterForm />
       </div>

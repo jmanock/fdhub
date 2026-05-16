@@ -35,14 +35,14 @@ export const metadata = {
   metadataBase: new URL("https://floridadealshub.com"),
   title: "Florida Deals Hub | Flights, Hotels, Cruises & Local Florida Deals",
   description:
-    "Find the best Florida deals in one place, including flight deals, hotel discounts, cruise offers, restaurant specials, local events, attractions, and weekend getaways.",
+    "Plan a Florida trip with flight deals, hotel searches, cruise ideas, local attractions, weekend getaways, and destination travel guides.",
   alternates: {
     canonical: "https://floridadealshub.com"
   },
   openGraph: {
     title: "Florida Deals Hub | Flights, Hotels, Cruises & Local Florida Deals",
     description:
-      "Find the best Florida deals in one place, including flight deals, hotel discounts, cruise offers, restaurant specials, local events, attractions, and weekend getaways.",
+      "Plan a Florida trip with flight deals, hotel searches, cruise ideas, local attractions, weekend getaways, and destination travel guides.",
     url: "https://floridadealshub.com",
     siteName: "Florida Deals Hub",
     type: "website",
@@ -59,7 +59,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Florida Deals Hub | Flights, Hotels, Cruises & Local Florida Deals",
     description:
-      "Flights, hotels, cruises, local events, restaurants, attractions, and weekend getaways across Florida.",
+      "Plan a Florida trip with flight deals, hotel searches, cruise ideas, local attractions, weekend getaways, and destination travel guides.",
     images: ["https://floridadealshub.com/og.svg"]
   },
   icons: {
@@ -73,12 +73,16 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <AnalyticsEvents />
-        <Script id="organization-schema" type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </Script>
-        <Script id="website-schema" type="application/ld+json">
-          {JSON.stringify(websiteSchema)}
-        </Script>
+        <script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"

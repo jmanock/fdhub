@@ -9,13 +9,15 @@ The Hub is the network's content authority site. It should publish broad Florida
 The homepage is organized as a trip-planning router:
 
 - Hero with four primary same-tab routes to the niche sites
-- "Popular Florida Searches This Week" freshness-oriented routing links
+- "Trending Florida Searches" freshness-oriented routing links
 - "Choose Your Deal Type" category cards
 - "Trending Florida Deals" curated network highlights with Best For tags
 - SEO travel-planning copy
 - Popular destination guide links
 - Editorial picks
-- Destination clusters for Orlando, Miami, and Tampa
+- Destination clusters for Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, Key West, Clearwater, and St. Augustine
+- Comparison guides for destination and trip-type decisions
+- Best For trip-type routes for families, couples, budget travelers, beach trips, theme parks, cruise travelers, and weekend getaways
 - "Plan Your Florida Trip" routing cards
 - Editorial travel guide links
 - Seasonal travel guide links
@@ -32,8 +34,9 @@ Core page themes include:
 - Florida travel guide and statewide travel planning
 - Destination guides for Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, Key West, Naples, Destin, and Clearwater
 - Trip-planning guides and itineraries
-- Seasonal Florida travel guides
+- Seasonal Florida travel guides for summer, winter, spring break, holiday travel, hurricane season, Memorial Day weekend, and Labor Day weekend
 - Comparison guides for destination and trip-type decisions
+- E-E-A-T trust pages including About, Contact, Editorial Policy, and How We Find Deals
 - Florida travel deals
 - Cheap Florida vacations
 - Florida weekend getaways
@@ -83,15 +86,27 @@ Images should use descriptive alt text, stable width and height attributes, eage
 
 Every major Hub page should include a related searches grid with useful Hub links and descriptive same-tab routes to the four network sites. The page template calls this section `Related Florida Searches`.
 
-Destination clusters group related pages and category links for Orlando, Miami, and Tampa. They are designed to build topical authority around major Florida destination searches while routing visitors to flights, hotels, cruises, and local deals.
+Destination clusters group related pages and category links for Orlando, Miami, Tampa, Fort Lauderdale, Jacksonville, Key West, Clearwater, and St. Augustine. They are designed to build topical authority around major Florida destination searches while routing visitors to flights, hotels, cruises, and local deals.
 
-The footer is a crawl-friendly navigation hub with sections for Florida Destinations, Travel Categories, Florida Travel Guides, and Hub links. Keep footer links useful and limited enough to scan.
+The footer is a crawl-friendly navigation hub with sections for Florida Destinations, Travel Categories, Travel Guides, and Trust links. Keep footer links useful and limited enough to scan.
 
 ## Comparison Pages
 
 Comparison pages are generated from `comparisonPageConfigs` in `app/lib/network.js`. Each comparison page should include unique metadata, a useful intro, comparison table rows, recommendations, related searches, FAQ schema, BreadcrumbList schema, ItemList schema, and Article schema.
 
 Good comparison pages help users decide between destinations or trip styles, then send them into the right vertical site. Avoid fake rankings, fake savings, unsupported pricing claims, and thin city-vs-city copy.
+
+## Seasonal Pages
+
+Version 2 seasonal pages are generated from `v2SeasonalPageConfigs` in `app/lib/network.js`. These pages should give practical, evergreen travel guidance for high-intent seasonal searches, including destinations to consider, planning advice, relevant network routes, related searches, and FAQs.
+
+Seasonal pages should stay useful without fake urgency. Use language like `travel dates can affect prices`, `availability varies`, and `confirm current details with the booking or official source`.
+
+## Trust Pages
+
+The Hub includes E-E-A-T support pages at `/about`, `/contact`, `/editorial-policy`, and `/how-we-find-deals`.
+
+These pages should explain what Florida Deals Hub is, how the network is organized, how content is created, how affiliate links are handled, and why users should confirm prices, schedules, availability, and terms with the final source.
 
 ## Expedia Affiliate Links
 
@@ -132,7 +147,7 @@ Newsletter submissions use `floridadealshub.com` as the source in `app/api/newsl
 
 ## Adding Destination Or SEO Pages
 
-Hub SEO pages are defined in `app/lib/network.js`. Broad authority pages use `authorityPageConfigs`, destination guides use `destinationPageConfigs`, planning articles use `planningPageConfigs`, comparison pages use `comparisonPageConfigs`, and legacy deal-routing pages live directly in `landingPages`.
+Hub SEO pages are defined in `app/lib/network.js`. Broad authority pages use `authorityPageConfigs`, destination guides use `destinationPageConfigs`, planning articles use `planningPageConfigs`, seasonal articles use `v2SeasonalPageConfigs`, comparison pages use `comparisonPageConfigs`, and legacy deal-routing pages live directly in `landingPages`.
 
 To add a page:
 

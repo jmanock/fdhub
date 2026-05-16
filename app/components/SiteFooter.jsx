@@ -48,7 +48,7 @@ export default function SiteFooter() {
             <a href={sites.local}>Local Florida Deals</a>
           </nav>
           <nav aria-label="Florida travel guides">
-            <h2>Florida Travel Guides</h2>
+            <h2>Travel Guides</h2>
             {footerGuides.map(([label, href]) => (
               <Link href={href} key={href}>
                 {label}
@@ -56,9 +56,11 @@ export default function SiteFooter() {
             ))}
           </nav>
           <nav aria-label="Company links">
-            <h2>Hub</h2>
+            <h2>Trust</h2>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
+            <Link href="/editorial-policy">Editorial Policy</Link>
+            <Link href="/how-we-find-deals">How We Find Deals</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
             <a href="/sitemap.xml">Sitemap</a>

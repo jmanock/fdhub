@@ -220,10 +220,13 @@ export const travelGuideLinks = [
 ];
 
 export const seasonalTravelLinks = [
-  ["Summer Florida Trips", "/florida-summer-travel-guide", "Plan beaches, family trips, hotels, attractions, and heat-friendly schedules."],
-  ["Fall Florida Travel", "/florida-fall-travel-guide", "Use shoulder-season timing for weekend trips, events, road trips, and beach stays."],
-  ["Spring Break Guide", "/florida-spring-break-guide", "Compare beaches, Orlando hotels, flights, cruises, and family spring travel."],
-  ["Holiday Travel", "/florida-holiday-travel-guide", "Plan flights, hotels, cruises, family activities, and local events around busy dates."]
+  ["Summer Florida Vacations", "/summer-florida-vacations", "Plan beaches, family trips, hotels, attractions, and heat-friendly schedules."],
+  ["Winter Florida Getaways", "/winter-florida-getaways", "Compare warmer-weather escapes, cruise ideas, hotels, and local winter events."],
+  ["Spring Break Florida", "/spring-break-florida", "Compare beaches, Orlando hotels, flights, cruises, and family spring travel."],
+  ["Florida Holiday Travel", "/florida-holiday-travel", "Plan flights, hotels, cruises, family activities, and local events around busy dates."],
+  ["Hurricane Season Tips", "/florida-hurricane-season-travel-tips", "Plan flexible Florida trips around weather, policies, and backup activities."],
+  ["Memorial Day Weekend", "/memorial-day-florida-weekend", "Explore beach weekends, hotel areas, local events, and short-trip planning."],
+  ["Labor Day Weekend", "/labor-day-florida-weekend", "Plan late-summer Florida weekends with hotels, beaches, flights, and activities."]
 ];
 
 export const popularThisWeekLinks = [
@@ -281,7 +284,84 @@ export const destinationClusters = [
       ["Cruises From Tampa", sites.cruises],
       ["Tampa Local Deals", sites.local]
     ]
+  },
+  {
+    title: "Fort Lauderdale Cluster",
+    bestFor: "Beach Stays, Cruise Nights",
+    links: [
+      ["Fort Lauderdale Deals", "/fort-lauderdale-deals"],
+      ["Fort Lauderdale Travel Guide", "/fort-lauderdale-travel-guide"],
+      ["Fort Lauderdale Flight Deals", sites.flights],
+      ["Fort Lauderdale Hotel Deals", sites.hotels],
+      ["Fort Lauderdale Cruise Ideas", sites.cruises],
+      ["Fort Lauderdale Local Deals", sites.local]
+    ]
+  },
+  {
+    title: "Jacksonville Cluster",
+    bestFor: "Northeast Florida, Road Trips",
+    links: [
+      ["Jacksonville Deals", "/jacksonville-deals"],
+      ["Jacksonville Travel Guide", "/jacksonville-travel-guide"],
+      ["Jacksonville Flight Deals", sites.flights],
+      ["Jacksonville Hotel Deals", sites.hotels],
+      ["Jacksonville Local Deals", sites.local],
+      ["Florida Road Trips", "/best-florida-road-trips"]
+    ]
+  },
+  {
+    title: "Key West Cluster",
+    bestFor: "Romantic Getaways, Road Trips",
+    links: [
+      ["Key West Travel Guide", "/key-west-travel-guide"],
+      ["Key West Hotel Deals", sites.hotels],
+      ["Key West Flight Deals", sites.flights],
+      ["Key West Local Deals", sites.local],
+      ["Romantic Florida Getaways", "/romantic-florida-getaways"],
+      ["Florida Road Trips", "/best-florida-road-trips"]
+    ]
+  },
+  {
+    title: "Clearwater Cluster",
+    bestFor: "Beach Trips, Family Weekends",
+    links: [
+      ["Clearwater Travel Guide", "/clearwater-travel-guide"],
+      ["Clearwater Hotel Deals", sites.hotels],
+      ["Tampa Flight Deals", sites.flights],
+      ["Clearwater Local Deals", sites.local],
+      ["Best Florida Beaches", "/best-florida-beaches"],
+      ["Florida Weekend Getaways", "/florida-weekend-getaways"]
+    ]
+  },
+  {
+    title: "St. Augustine Cluster",
+    bestFor: "History, Weekend Trips",
+    links: [
+      ["St. Augustine Travel Ideas", "/best-florida-road-trips"],
+      ["Jacksonville Flight Deals", sites.flights],
+      ["St. Augustine Hotel Deals", sites.hotels],
+      ["St. Augustine Local Deals", sites.local],
+      ["Florida Weekend Getaways", "/florida-weekend-getaways"],
+      ["Florida Road Trips", "/best-florida-road-trips"]
+    ]
   }
+];
+
+export const comparisonGuideLinks = [
+  ["Orlando vs Miami Vacation", "/orlando-vs-miami-vacation", "Compare theme parks, beaches, hotels, flights, nightlife, cruises, and family travel."],
+  ["Miami vs Tampa Travel", "/miami-vs-tampa-travel", "Compare South Florida energy with Gulf Coast hotels, beaches, cruises, and local plans."],
+  ["Beach Vacation vs Theme Park Trip", "/florida-beach-vacation-vs-theme-park-trip", "Choose between coastal downtime and attraction-heavy family travel."],
+  ["Weekend Trip vs Weeklong Vacation", "/florida-weekend-trip-vs-weeklong-vacation", "Decide whether a short escape or longer itinerary fits your budget and schedule."]
+];
+
+export const bestForLinks = [
+  ["Best for Families", "/best-florida-family-vacations", "Family vacation ideas, Orlando planning, beach trips, attractions, and flexible hotels."],
+  ["Best for Couples", "/best-couples-getaways-florida", "Romantic Florida getaways, Key West ideas, Naples weekends, and beach hotels."],
+  ["Best for Budget Travelers", "/florida-budget-travel-guide", "Budget travel tips, cheap vacation ideas, weekend trips, and flexible planning."],
+  ["Best for Beach Trips", "/florida-beach-vacation-guide", "Coastal guides, beach hotels, local activities, and Florida beach comparisons."],
+  ["Best for Theme Park Trips", "/florida-theme-park-guide", "Orlando attraction planning, family hotels, flights, and local deals."],
+  ["Best for Cruise Travelers", "/best-florida-cruise-ports", "Florida port comparisons, cruise hotels, flights, and pre-cruise activities."],
+  ["Best for Weekend Getaways", "/florida-weekend-getaways", "Short Florida trips, beach weekends, hotel ideas, and local events."]
 ];
 
 export const homepageSeoParagraphs = [
@@ -402,7 +482,7 @@ export const pageImages = {
   tampa:
     "https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?auto=format&fit=crop&w=1200&q=80",
   orlando:
-    "https://images.unsplash.com/photo-1605880135636-7b553d681026?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
   calendar:
     "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80",
   keyWest:
@@ -704,6 +784,156 @@ const authorityPageConfigs = [
   }
 ];
 
+const v2SeasonalPageConfigs = [
+  {
+    slug: "summer-florida-vacations",
+    title: "Summer Florida Vacations | Beaches, Hotels & Family Trip Ideas",
+    metaDescription:
+      "Plan summer Florida vacations with beach ideas, family hotels, flights, cruises, attractions, weather tips, and local things to do.",
+    h1: "Summer Florida Vacations",
+    eyebrow: "Seasonal travel",
+    intro:
+      "Summer Florida vacations work best when the plan balances beaches, hotels, indoor breaks, flexible restaurants, and weather-aware local activities.",
+    image: pageImages.summer,
+    alt: "Summer Florida vacation with beach water family hotels flights and attractions",
+    related: ["florida-summer-travel-guide", "best-florida-beaches", "best-florida-family-vacations", "florida-theme-park-guide"],
+    destinations: "Clearwater, Destin, Miami Beach, Orlando, Tampa Bay, Jacksonville beaches, Naples, Key West, and the Florida Keys",
+    advice:
+      "Summer travelers should plan around heat, afternoon storms, school schedules, and beach demand. Look for hotels with useful amenities, morning outdoor plans, indoor backup activities, and flexible local options if weather changes.",
+    recommendations: [
+      ["Florida beach vacation guide", "/florida-beach-vacation-guide", "Compare beach areas before choosing hotels and local plans."],
+      ["Florida family vacations", "/best-florida-family-vacations", "Plan family-friendly destinations, hotels, attractions, and activities."],
+      ["Florida hotel deals", sites.hotels, "Compare hotel deal pages for beach, city, and family stays."]
+    ]
+  },
+  {
+    slug: "winter-florida-getaways",
+    title: "Winter Florida Getaways | Warm Beaches, Cruises & Trip Ideas",
+    metaDescription:
+      "Plan winter Florida getaways with warm beaches, hotels, cruises, flights, local events, family trips, and seasonal travel planning tips.",
+    h1: "Winter Florida Getaways",
+    eyebrow: "Seasonal travel",
+    intro:
+      "Winter Florida getaways often focus on warmer weather, beach towns, cruises, family visits, local events, and city stays that feel easier than colder destinations.",
+    image: pageImages.floridaCoast,
+    alt: "Winter Florida getaway with warm beach hotels cruises and local events",
+    related: ["best-time-to-visit-florida", "best-florida-beaches", "best-florida-cruise-ports", "romantic-florida-getaways"],
+    destinations: "Miami, Fort Lauderdale, Naples, Key West, Clearwater, Tampa, Orlando, cruise ports, and South Florida beach towns",
+    advice:
+      "Winter visitors should compare hotel demand, holiday timing, cruise departures, local event calendars, and flight options early. Some destinations are busier in winter, so flexible dates and nearby airports can help widen the search.",
+    recommendations: [
+      ["Best time to visit Florida", "/best-time-to-visit-florida", "Compare winter with other Florida travel seasons."],
+      ["Cruise ports", "/best-florida-cruise-ports", "Plan winter sailings around port hotels and flights."],
+      ["Florida flight deals", sites.flights, "Check airfare routes into major Florida airports."]
+    ]
+  },
+  {
+    slug: "spring-break-florida",
+    title: "Spring Break Florida | Beaches, Hotels, Flights & Family Tips",
+    metaDescription:
+      "Plan spring break Florida trips with beach destinations, Orlando hotels, flights, cruises, family activities, crowd tips, and local deals.",
+    h1: "Spring Break Florida",
+    eyebrow: "Seasonal travel",
+    intro:
+      "Spring Break Florida trips need early planning because beach hotels, flights, attractions, local restaurants, and cruise dates can all tighten around school calendars.",
+    image: pageImages.clearwater,
+    alt: "Spring break Florida beach vacation with hotels flights cruises and family activities",
+    related: ["florida-spring-break-guide", "best-florida-beaches", "orlando-travel-guide", "florida-family-vacations"],
+    destinations: "Orlando, Clearwater, Miami Beach, Fort Lauderdale, Destin, Daytona Beach, Tampa Bay, and cruise ports with school-break sailings",
+    advice:
+      "Decide whether the trip is beach-first, theme-park-first, cruise-first, or family-resort-first. Then compare flights, hotel areas, cancellation terms, local activities, and transportation before dates get too compressed.",
+    recommendations: [
+      ["Orlando travel guide", "/orlando-travel-guide", "Plan theme parks, family hotels, flights, and attractions."],
+      ["Best Florida beaches", "/best-florida-beaches", "Compare beach areas by hotel type, trip style, and travel time."],
+      ["Local Florida deals", sites.local, "Find attractions, restaurants, events, and family activities."]
+    ]
+  },
+  {
+    slug: "florida-holiday-travel",
+    title: "Florida Holiday Travel | Flights, Hotels, Cruises & Events",
+    metaDescription:
+      "Plan Florida holiday travel with flights, hotels, cruises, beach trips, local events, family activities, seasonal crowds, and trip tips.",
+    h1: "Florida Holiday Travel",
+    eyebrow: "Seasonal travel",
+    intro:
+      "Florida holiday travel can be rewarding, but it needs careful timing because flights, hotels, cruises, events, and family attractions often see compressed demand.",
+    image: pageImages.calendar,
+    alt: "Florida holiday travel planning with flights hotels cruises events and family activities",
+    related: ["florida-holiday-travel-guide", "best-time-to-visit-florida", "florida-family-vacations", "best-florida-cruise-ports"],
+    destinations: "Orlando, Miami, Tampa Bay, Fort Lauderdale, Key West, Naples, Jacksonville, Clearwater, and cruise ports with holiday sailings",
+    advice:
+      "Holiday travelers should confirm schedules, minimum hotel stays, cancellation rules, restaurant hours, attraction calendars, and transportation timing. Flexibility on airports or dates can help widen the search.",
+    recommendations: [
+      ["Florida vacation planning guide", "/florida-vacation-planning-guide", "Build a holiday trip around dates, hotels, activities, and routes."],
+      ["Florida cruise deals", sites.cruises, "Browse cruise planning pages for holiday sailings from Florida ports."],
+      ["Florida hotel deals", sites.hotels, "Compare hotel deal pages for holiday stays and family trips."]
+    ]
+  },
+  {
+    slug: "florida-hurricane-season-travel-tips",
+    title: "Florida Hurricane Season Travel Tips | Flexible Trip Planning",
+    metaDescription:
+      "Use Florida hurricane season travel tips for flexible flights, hotels, cruises, beach plans, cancellation policies, weather awareness, and local activities.",
+    h1: "Florida Hurricane Season Travel Tips",
+    eyebrow: "Weather-aware planning",
+    intro:
+      "Florida hurricane season travel requires flexibility, policy awareness, and backup plans. The goal is not to avoid every trip, but to understand how weather can affect flights, hotels, cruises, beaches, and local activities.",
+    image: pageImages.planning,
+    alt: "Florida hurricane season travel planning with flexible hotels flights and weather-aware trip tips",
+    related: ["best-time-to-visit-florida", "florida-vacation-planning-guide", "florida-budget-travel-guide", "florida-beach-vacation-guide"],
+    destinations: "Miami, Tampa Bay, the Gulf Coast, the Atlantic Coast, Orlando, Jacksonville, the Florida Keys, and cruise ports with weather-sensitive sailings",
+    advice:
+      "Review cancellation terms, travel insurance options, airline policies, cruise line updates, hotel flexibility, and local weather sources before booking. Build backup indoor activities and avoid plans that depend on one fragile outdoor window.",
+    recommendations: [
+      ["Best time to visit Florida", "/best-time-to-visit-florida", "Compare weather, crowds, hotel demand, and seasonal timing."],
+      ["Florida flight deals", sites.flights, "Watch flexible routes and airports when dates may need to move."],
+      ["Local Florida deals", sites.local, "Use local activities as backup options when weather changes."]
+    ]
+  },
+  {
+    slug: "memorial-day-florida-weekend",
+    title: "Memorial Day Florida Weekend | Beaches, Hotels & Things To Do",
+    metaDescription:
+      "Plan Memorial Day Florida weekend trips with beaches, hotels, flights, cruises, local events, family activities, and short getaway ideas.",
+    h1: "Memorial Day Florida Weekend",
+    eyebrow: "Holiday weekend",
+    intro:
+      "Memorial Day Florida weekend trips often start summer travel season with beach demand, family plans, local events, hotel searches, and short getaway timing.",
+    image: pageImages.weekendBeach,
+    alt: "Memorial Day Florida weekend with beaches hotels flights and local events",
+    related: ["florida-weekend-getaways", "summer-florida-vacations", "best-florida-beaches", "best-florida-weekend-trips"],
+    destinations: "Clearwater, Tampa Bay, Miami Beach, Fort Lauderdale, Destin, Jacksonville beaches, Orlando, and Gulf Coast beach towns",
+    advice:
+      "Keep the weekend focused. Choose one beach, city, cruise port, or family attraction area, then compare hotels, flights, local events, restaurants, and parking before the schedule gets crowded.",
+    recommendations: [
+      ["Florida weekend getaways", "/florida-weekend-getaways", "Compare short-trip ideas across beaches, hotels, cruises, and local events."],
+      ["Florida hotel deals", sites.hotels, "Compare hotel deal pages for holiday weekend stays."],
+      ["Local Florida deals", sites.local, "Find restaurants, attractions, events, and things to do."]
+    ]
+  },
+  {
+    slug: "labor-day-florida-weekend",
+    title: "Labor Day Florida Weekend | Beaches, Hotels & Late Summer Trips",
+    metaDescription:
+      "Plan Labor Day Florida weekend trips with beaches, hotels, flights, cruises, local events, family activities, and late-summer getaway tips.",
+    h1: "Labor Day Florida Weekend",
+    eyebrow: "Holiday weekend",
+    intro:
+      "Labor Day Florida weekend can work for late-summer beach trips, quick city stays, family activities, cruises, and local events when the plan stays realistic and weather-aware.",
+    image: pageImages.summer,
+    alt: "Labor Day Florida weekend with late summer beaches hotels and local activities",
+    related: ["florida-weekend-getaways", "florida-fall-travel-guide", "florida-hurricane-season-travel-tips", "best-florida-beaches"],
+    destinations: "Tampa Bay, Clearwater, Miami, Fort Lauderdale, Orlando, Jacksonville beaches, Naples, and the Panhandle",
+    advice:
+      "Late-summer weekends benefit from flexible plans. Compare hotel areas, watch weather, keep indoor options nearby, and confirm current event schedules, restaurant hours, and attraction policies before you go.",
+    recommendations: [
+      ["Florida fall travel guide", "/florida-fall-travel-guide", "Compare late-summer weekends with shoulder-season trip ideas."],
+      ["Florida beach vacation guide", "/florida-beach-vacation-guide", "Choose beach areas by hotel type, activities, and travel logistics."],
+      ["Florida flight deals", sites.flights, "Check airfare sources for major Florida airports."]
+    ]
+  }
+];
+
 function createAuthorityPage(config) {
   return {
     ...config,
@@ -942,12 +1172,14 @@ function createComparisonPage(config) {
 }
 
 const generatedAuthorityPages = authorityPageConfigs.map(createAuthorityPage);
+const generatedV2SeasonalPages = v2SeasonalPageConfigs.map(createAuthorityPage);
 const generatedDestinationPages = destinationPageConfigs.map(createDestinationPage);
 const generatedPlanningPages = planningPageConfigs.map(createPlanningPage);
 const generatedComparisonPages = comparisonPageConfigs.map(createComparisonPage);
 
 export const landingPages = [
   ...generatedAuthorityPages,
+  ...generatedV2SeasonalPages,
   ...generatedDestinationPages,
   ...generatedPlanningPages,
   ...generatedComparisonPages,

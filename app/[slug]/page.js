@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import NewsletterSection from "../components/NewsletterSection";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
@@ -203,6 +202,21 @@ export default async function LandingPage({ params }) {
           </div>
         </section>
 
+        {page.article ? (
+          <section className="article-trust section-pad" aria-labelledby="article-trust-title">
+            <div className="content-card">
+              <p className="eyebrow">Why trust Florida Deals Hub?</p>
+              <h2 id="article-trust-title">A Florida-focused planning network</h2>
+              <p>
+                Florida Deals Hub organizes flights, hotels, cruises, attractions, restaurants,
+                events, and destination guides by city, category, and trip type so travelers can
+                compare options faster. Prices and availability may change, so confirm current
+                details with booking or official sources before making plans.
+              </p>
+            </div>
+          </section>
+        ) : null}
+
         <section className="landing-intro section-pad" aria-labelledby="guide-title">
           <div className="content-card">
             <p className="eyebrow">Florida Deals Hub guide</p>
@@ -367,19 +381,27 @@ export default async function LandingPage({ params }) {
         <NewsletterSection />
       </main>
       <SiteFooter />
-      <Script id={`${page.slug}-breadcrumbs-schema`} type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </Script>
-      <Script id={`${page.slug}-faq-schema`} type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </Script>
-      <Script id={`${page.slug}-item-list-schema`} type="application/ld+json">
-        {JSON.stringify(itemListSchema)}
-      </Script>
+      <script
+        id={`${page.slug}-breadcrumbs-schema`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id={`${page.slug}-faq-schema`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        id={`${page.slug}-item-list-schema`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       {articleSchema ? (
-        <Script id={`${page.slug}-article-schema`} type="application/ld+json">
-          {JSON.stringify(articleSchema)}
-        </Script>
+        <script
+          id={`${page.slug}-article-schema`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
       ) : null}
     </>
   );

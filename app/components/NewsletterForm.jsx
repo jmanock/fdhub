@@ -46,7 +46,7 @@ export default function NewsletterForm() {
       setEmail("");
       setHasStarted(false);
       trackNewsletterSignupSuccess();
-      setMessage("You're in! Florida travel updates are on the way.");
+      setMessage("You're in! Florida travel ideas are on the way.");
     } catch (error) {
       setStatus("error");
       setMessage(error.message || "Unable to join right now.");

@@ -1,10 +1,11 @@
-import Script from "next/script";
 import NewsletterSection from "./components/NewsletterSection";
 import SafeImage from "./components/SafeImage";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
 import {
   baseUrl,
+  bestForLinks,
+  comparisonGuideLinks,
   destinationClusters,
   editorPicks,
   expediaHotelCards,
@@ -104,7 +105,8 @@ export default function Home() {
         <section className="popular-this-week section-pad" aria-labelledby="popular-week-title">
           <div className="section-heading">
             <p className="eyebrow">Updated travel interest</p>
-            <h2 id="popular-week-title">Popular Florida Searches This Week</h2>
+            <h2 id="popular-week-title">Trending Florida Searches</h2>
+            <p>Popular searches from Florida travelers this week.</p>
           </div>
           <div className="guide-card-grid">
             {popularThisWeekLinks.map(([label, href, bestFor]) => (
@@ -244,6 +246,36 @@ export default function Home() {
           </div>
           <div className="guide-card-grid">
             {travelGuideLinks.map(([label, href, copy]) => (
+              <a className="guide-card" href={href} key={href}>
+                <h3>{label}</h3>
+                <p>{copy}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="comparison-guides section-pad" aria-labelledby="comparison-guides-title">
+          <div className="section-heading">
+            <p className="eyebrow">Compare trip ideas</p>
+            <h2 id="comparison-guides-title">Comparison Guides</h2>
+          </div>
+          <div className="guide-card-grid">
+            {comparisonGuideLinks.map(([label, href, copy]) => (
+              <a className="guide-card" href={href} key={href}>
+                <h3>{label}</h3>
+                <p>{copy}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="best-for section-pad" aria-labelledby="best-for-title">
+          <div className="section-heading">
+            <p className="eyebrow">Best for</p>
+            <h2 id="best-for-title">Find The Right Florida Trip Type</h2>
+          </div>
+          <div className="guide-card-grid">
+            {bestForLinks.map(([label, href, copy]) => (
               <a className="guide-card" href={href} key={href}>
                 <h3>{label}</h3>
                 <p>{copy}</p>
@@ -394,12 +426,16 @@ export default function Home() {
       </main>
 
       <SiteFooter />
-      <Script id="home-top-picks-schema" type="application/ld+json">
-        {JSON.stringify(homeItemListSchema)}
-      </Script>
-      <Script id="home-faq-schema" type="application/ld+json">
-        {JSON.stringify(homeFaqSchema)}
-      </Script>
+      <script
+        id="home-top-picks-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeItemListSchema) }}
+      />
+      <script
+        id="home-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+      />
     </>
   );
 }
