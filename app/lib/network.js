@@ -337,12 +337,48 @@ export const destinationClusters = [
     title: "St. Augustine Cluster",
     bestFor: "History, Weekend Trips",
     links: [
-      ["St. Augustine Travel Ideas", "/best-florida-road-trips"],
+      ["St. Augustine Travel Guide", "/st-augustine-travel-guide"],
       ["Jacksonville Flight Deals", sites.flights],
       ["St. Augustine Hotel Deals", sites.hotels],
       ["St. Augustine Local Deals", sites.local],
       ["Florida Weekend Getaways", "/florida-weekend-getaways"],
       ["Florida Road Trips", "/best-florida-road-trips"]
+    ]
+  },
+  {
+    title: "Daytona Beach Cluster",
+    bestFor: "Beach Weekends, Events",
+    links: [
+      ["Daytona Beach Travel Guide", "/daytona-beach-travel-guide"],
+      ["Daytona Beach Flight Deals", sites.flights],
+      ["Daytona Beach Hotel Deals", sites.hotels],
+      ["Daytona Beach Local Deals", sites.local],
+      ["Best Florida Beaches", "/best-florida-beaches"],
+      ["Florida Weekend Getaways", "/florida-weekend-getaways"]
+    ]
+  },
+  {
+    title: "Naples Cluster",
+    bestFor: "Couples, Gulf Coast Stays",
+    links: [
+      ["Naples Florida Guide", "/naples-florida-guide"],
+      ["Naples Flight Deals", sites.flights],
+      ["Naples Hotel Deals", sites.hotels],
+      ["Naples Local Deals", sites.local],
+      ["Romantic Florida Getaways", "/romantic-florida-getaways"],
+      ["Best Florida Beaches", "/best-florida-beaches"]
+    ]
+  },
+  {
+    title: "Destin Cluster",
+    bestFor: "Family Beach Vacations",
+    links: [
+      ["Destin Florida Guide", "/destin-florida-guide"],
+      ["Destin Flight Deals", sites.flights],
+      ["Destin Hotel Deals", sites.hotels],
+      ["Destin Local Deals", sites.local],
+      ["Cheap Florida Vacation Ideas", "/cheap-florida-vacation-ideas"],
+      ["Best Florida Family Vacations", "/best-florida-family-vacations"]
     ]
   }
 ];
@@ -957,7 +993,9 @@ const destinationPageConfigs = [
   ["key-west-travel-guide", "Key West Travel Guide | Hotels, Road Trips, Flights & Things To Do", "Plan a Key West trip with hotel areas, flight tips, road trip ideas, restaurants, beaches, water activities, and romantic Florida getaway planning.", "Key West Travel Guide", "Florida Keys guide", pageImages.keyWest, "Key West tropical travel guide with island hotels road trips and things to do", "Key West is best for island hotels, sunsets, food, water activities, couples trips, road trips, and a slower Florida vacation pace.", "Key West International Airport, Old Town, Duval Street, Mallory Square, beaches, marinas, the Overseas Highway, and Florida Keys road-trip stops", ["romantic-florida-getaways", "best-florida-road-trips", "best-couples-getaways-florida", "best-florida-beaches"]],
   ["naples-florida-guide", "Naples Florida Guide | Beaches, Hotels, Dining & Romantic Getaways", "Plan a Naples Florida trip with beach hotels, restaurants, couples getaway ideas, family activities, Gulf Coast travel tips, and local things to do.", "Naples Florida Guide", "Gulf Coast guide", pageImages.romance, "Naples Florida guide with beach hotels dining romantic getaways and local activities", "Naples is a polished Gulf Coast destination for beaches, dining, shopping, couples trips, family stays, and slower weekend getaways.", "Naples beaches, Fifth Avenue South, Third Street South, Marco Island, golf areas, waterfront dining, and nearby Everglades day trips", ["romantic-florida-getaways", "best-florida-beaches", "florida-weekend-getaways", "best-couples-getaways-florida"]],
   ["destin-florida-guide", "Destin Florida Guide | Beaches, Family Hotels & Vacation Ideas", "Plan a Destin Florida vacation with beaches, family hotels, flights, local attractions, restaurants, boating, and Panhandle trip ideas.", "Destin Florida Guide", "Panhandle guide", pageImages.clearwater, "Destin Florida beach guide with family hotels vacation ideas and local attractions", "Destin is a popular Panhandle beach destination for family vacations, longer stays, boating, fishing, beach condos, and Gulf Coast local activities.", "Destin-Fort Walton Beach Airport, Miramar Beach, Henderson Beach, HarborWalk Village, 30A access, family beach hotels, and local restaurants", ["best-florida-beaches", "best-florida-family-vacations", "florida-summer-travel-guide", "cheap-florida-vacation-ideas"]],
-  ["clearwater-travel-guide", "Clearwater Travel Guide | Beaches, Hotels, Tampa Trips & Things To Do", "Plan a Clearwater Florida trip with beach hotels, Tampa flights, Gulf Coast restaurants, family activities, events, and local things to do.", "Clearwater Travel Guide", "Gulf beach guide", pageImages.clearwater, "Clearwater beach travel guide with Gulf Coast hotels Tampa flights and family activities", "Clearwater works well for beach weekends, family hotels, Tampa-area flights, sunset trips, restaurants, and Gulf Coast local activities.", "Clearwater Beach, Sand Key, Dunedin, St. Pete, Tampa International Airport, Pier 60, family hotels, and Gulf Coast day trips", ["tampa-travel-guide", "best-florida-beaches", "florida-weekend-getaways", "best-florida-family-vacations"]]
+  ["clearwater-travel-guide", "Clearwater Travel Guide | Beaches, Hotels, Tampa Trips & Things To Do", "Plan a Clearwater Florida trip with beach hotels, Tampa flights, Gulf Coast restaurants, family activities, events, and local things to do.", "Clearwater Travel Guide", "Gulf beach guide", pageImages.clearwater, "Clearwater beach travel guide with Gulf Coast hotels Tampa flights and family activities", "Clearwater works well for beach weekends, family hotels, Tampa-area flights, sunset trips, restaurants, and Gulf Coast local activities.", "Clearwater Beach, Sand Key, Dunedin, St. Pete, Tampa International Airport, Pier 60, family hotels, and Gulf Coast day trips", ["tampa-travel-guide", "best-florida-beaches", "florida-weekend-getaways", "best-florida-family-vacations"]],
+  ["st-augustine-travel-guide", "St. Augustine Travel Guide | Hotels, History, Beaches & Weekend Ideas", "Plan a St. Augustine trip with historic district hotels, Jacksonville flights, beaches, tours, restaurants, family attractions, and weekend ideas.", "St. Augustine Travel Guide", "Historic Coast guide", pageImages.roadTrip, "St. Augustine historic street travel guide with hotels tours beaches and weekend ideas", "St. Augustine is ideal for historic weekends, walkable hotels, restaurants, museums, beaches, family tours, and Northeast Florida road trips.", "Historic District, Castillo de San Marcos, Anastasia Island, Vilano Beach, St. George Street, Jacksonville airport access, and nearby beach hotels", ["jacksonville-travel-guide", "best-florida-road-trips", "florida-weekend-getaways", "best-places-to-visit-in-florida"]],
+  ["daytona-beach-travel-guide", "Daytona Beach Travel Guide | Hotels, Events, Flights & Things To Do", "Plan a Daytona Beach trip with oceanfront hotels, Orlando flights, Speedway events, beach weekends, restaurants, and local things to do.", "Daytona Beach Travel Guide", "Atlantic beach guide", pageImages.weekendBeach, "Daytona Beach travel guide with oceanfront hotels events flights and things to do", "Daytona Beach works for affordable beach weekends, racing events, family trips, road trips, and Atlantic Coast hotel searches.", "Daytona Beach, the Speedway area, oceanfront hotels, boardwalk attractions, Ponce Inlet, Daytona Beach International Airport, Orlando airport access, and local event districts", ["orlando-travel-guide", "best-florida-beaches", "florida-weekend-getaways", "best-florida-family-vacations"]]
 ];
 
 function createDestinationPage([slug, title, metaDescription, h1, eyebrow, image, alt, intro, destinations, related]) {
