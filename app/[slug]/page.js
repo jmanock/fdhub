@@ -4,6 +4,7 @@ import NewsletterSection from "../components/NewsletterSection";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import { piscifunGearPicks } from "../lib/affiliate/piscifunLinks";
 import {
   baseUrl,
   getBreadcrumbs,
@@ -74,6 +75,7 @@ export default async function LandingPage({ params }) {
   const faqs = getFaqs(page);
   const introParagraphs = getIntroParagraphs(page);
   const relatedSearchLinks = getRelatedSearchLinks(page);
+  const gearPicks = page.showPiscifunGear ? piscifunGearPicks : [];
   const pageUrl = `${baseUrl}/${page.slug}`;
   const pageImageUrl = page.image || `${baseUrl}/og.svg`;
   const modifiedDate = new Date().toISOString().slice(0, 10);
@@ -348,6 +350,51 @@ export default async function LandingPage({ params }) {
             ))}
           </div>
         </section>
+
+        {gearPicks.length ? (
+          <section className="gear-picks section-pad" aria-labelledby="gear-picks-title">
+            <div className="section-heading">
+              <p className="eyebrow">Outdoor trip essentials</p>
+              <h2 id="gear-picks-title">Florida Travel Gear Picks</h2>
+              <p>
+                Helpful gear sources for beach weekends, fishing trips, water activities, parks,
+                springs, and Florida road trips. Product availability and prices may change.
+              </p>
+            </div>
+            <div className="guide-card-grid">
+              {gearPicks.map((item) => (
+                <article className="guide-card affiliate-gear-card" key={item.title}>
+                  <SafeImage
+                    src={item.imageUrl}
+                    alt={item.imageAlt}
+                    fallback="/images/fallbacks/florida-deals-placeholder.svg"
+                    width="640"
+                    height="420"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <p className="best-for-tag">Best for: {item.bestForTags.join(", ")}</p>
+                  <a
+                    href={item.affiliateUrl}
+                    target="_blank"
+                    rel="nofollow sponsored noopener noreferrer"
+                    data-affiliate-program="awin"
+                    data-advertiser="piscifun"
+                    data-item-title={item.title}
+                    data-category={item.category}
+                  >
+                    {item.title === "Shop Outdoor Gear" ? "Shop Outdoor Gear" : "Browse Piscifun Products"}
+                  </a>
+                  <p className="affiliate-disclosure">
+                    Some links on this site may earn us a commission at no extra cost to you.
+                  </p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="related-pages section-pad" aria-labelledby="related-title">
           <div className="section-heading compact">

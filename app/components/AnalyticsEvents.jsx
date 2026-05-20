@@ -24,6 +24,31 @@ export default function AnalyticsEvents() {
       const destination = getNetworkCategory(link.href);
       const hotelProvider = getHotelBookingProvider(link.href);
       const linkText = link.innerText?.trim() || link.getAttribute("aria-label") || link.href;
+      const affiliateProgram = link.dataset.affiliateProgram;
+
+      if (affiliateProgram) {
+        window.gtag?.("event", "affiliate_click", {
+          source_site: "floridadealshub.com",
+          affiliate_program: affiliateProgram,
+          advertiser: link.dataset.advertiser,
+          item_title: link.dataset.itemTitle || linkText,
+          category: link.dataset.category,
+          cta_text: linkText,
+          outbound_url: link.href,
+          page_path: window.location.pathname
+        });
+        window.dataLayer?.push({
+          event: "affiliate_click",
+          source_site: "floridadealshub.com",
+          affiliate_program: affiliateProgram,
+          advertiser: link.dataset.advertiser,
+          item_title: link.dataset.itemTitle || linkText,
+          category: link.dataset.category,
+          cta_text: linkText,
+          outbound_url: link.href,
+          page_path: window.location.pathname
+        });
+      }
 
       trackNavigationClick({
         linkText,

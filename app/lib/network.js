@@ -575,7 +575,8 @@ const authorityPageConfigs = [
     recommendations: [
       ["Best places to visit", "/best-places-to-visit-in-florida", "Compare Florida cities, beach towns, family areas, and local trip ideas."],
       ["When to go", "/best-time-to-visit-florida", "Use seasonal timing to compare weather, crowds, hotel demand, and event calendars."],
-      ["Vacation planning", "/florida-vacation-planning-guide", "Build a practical plan across flights, hotels, cruises, activities, and local travel."]
+      ["Vacation planning", "/florida-vacation-planning-guide", "Build a practical plan across flights, hotels, cruises, activities, and local travel."],
+      ["Florida travel gear", "/florida-travel-gear-guide", "Pack for beaches, fishing days, parks, springs, and weekend outdoor trips."]
     ]
   },
   {
@@ -744,6 +745,52 @@ const authorityPageConfigs = [
       ["Cheap vacation ideas", "/cheap-florida-vacation-ideas", "Compare lower-cost Florida trip styles and destination types."],
       ["Family budget trips", "/cheap-florida-family-vacations", "Plan family-friendly Florida vacations with practical cost tradeoffs."],
       ["Weekend travel", "/best-florida-weekend-trips", "Use short trips to control hotel nights, travel time, and daily spending."]
+    ]
+  },
+  {
+    slug: "florida-water-activities-guide",
+    title: "Florida Water Activities Guide | Beaches, Fishing, Springs & Outdoor Gear",
+    metaDescription:
+      "Plan Florida water activities with beach ideas, fishing trips, springs, boating days, family outings, outdoor gear notes, and related travel guides.",
+    h1: "Florida Water Activities Guide",
+    eyebrow: "Florida outdoor guide",
+    intro:
+      "Florida water activities can shape an entire trip, from easy beach days and springs to fishing, kayaking, boating, aquariums, and waterfront local plans.",
+    image: pageImages.clearwater,
+    alt: "Florida water activities guide with beach fishing springs and outdoor trip planning",
+    related: ["best-florida-beaches", "florida-travel-gear-guide", "florida-weekend-getaways", "best-florida-family-vacations"],
+    destinations: "Clearwater, Key West, Naples, Destin, Miami, Tampa Bay, St. Augustine, springs, beaches, piers, parks, and waterfront districts",
+    advice:
+      "Choose water activities by comfort level, weather, transportation, and how much gear the day requires. Beach days, fishing piers, springs, kayak routes, boating days, and aquariums all need different timing and backup plans.",
+    article: true,
+    showPiscifunGear: true,
+    recommendations: [
+      ["Best Florida beaches", "/best-florida-beaches", "Compare coastal towns and beach trip ideas."],
+      ["Florida travel gear guide", "/florida-travel-gear-guide", "Review practical gear sources for beach and outdoor days."],
+      ["Florida weekend getaways", "/florida-weekend-getaways", "Build a short water-focused trip with hotels, flights, and local activities."]
+    ]
+  },
+  {
+    slug: "florida-travel-gear-guide",
+    title: "Florida Travel Gear Guide | Outdoor, Fishing & Beach Trip Essentials",
+    metaDescription:
+      "Pack smarter for Florida trips with outdoor gear ideas for beach weekends, fishing days, parks, springs, cruise add-ons, and family activities.",
+    h1: "Florida Travel Gear Guide",
+    eyebrow: "Trip packing guide",
+    intro:
+      "Florida travel gear should support the trip you are actually taking: beaches, parks, fishing days, springs, cruises, hotel pool time, or weekend road trips.",
+    image: pageImages.planning,
+    alt: "Florida travel gear guide for beach fishing outdoor and weekend trips",
+    related: ["florida-water-activities-guide", "cheap-florida-vacation-ideas", "florida-weekend-getaways", "florida-vacation-planning-guide"],
+    destinations: "Beach weekends, fishing piers, local parks, springs, outdoor attractions, cruise packing, hotel pool days, and Florida road trips",
+    advice:
+      "Avoid overpacking by choosing items that solve real Florida problems: sun, water, storage, weather changes, light carrying, and simple outdoor comfort. Confirm current product details and availability with the merchant before buying.",
+    article: true,
+    showPiscifunGear: true,
+    recommendations: [
+      ["Florida water activities", "/florida-water-activities-guide", "Plan beaches, fishing, springs, boating, and waterfront activities."],
+      ["Cheap Florida vacation ideas", "/cheap-florida-vacation-ideas", "Keep packing and activity choices aligned with budget trips."],
+      ["Florida weekend trips", "/florida-weekend-getaways", "Pack for short trips without overcomplicating the plan."]
     ]
   },
   {
