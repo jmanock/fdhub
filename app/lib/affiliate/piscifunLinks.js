@@ -1,4 +1,5 @@
 export const piscifunHomepageAffiliateUrl = "https://www.awin1.com/cread.php?awinmid=89509&awinaffid=2881665";
+export const tideWeHomepageAffiliateUrl = "https://www.awin1.com/cread.php?awinmid=78182&awinaffid=2881665";
 
 export const piscifunGearPicks = [
   {
@@ -32,6 +33,19 @@ export const piscifunGearPicks = [
     affiliateUrl: piscifunHomepageAffiliateUrl,
     imageUrl: "/images/fallbacks/florida-deals-placeholder.svg",
     imageAlt: "Florida outdoor gear placeholder for travel planning",
-    bestForTags: ["Beach weekends", "Water activities", "Family trips"]
+    bestForTags: ["Beach weekends", "Water activities", "Family trips"],
+    advertiser: "piscifun"
+  },
+  {
+    title: "Florida Camping & Rain Gear",
+    description:
+      "Outdoor apparel, waterproof gear, boots, and bags for Florida camping weekends, wet-weather plans, and rugged outdoor trips.",
+    category: "outdoor_rain_gear",
+    destinationOrUseCase: "Camping, rain gear, cabins, parks, and outdoor weekends",
+    affiliateUrl: tideWeHomepageAffiliateUrl,
+    imageUrl: "/images/fallbacks/florida-deals-placeholder.svg",
+    imageAlt: "Florida camping and outdoor rain gear placeholder for trip planning",
+    bestForTags: ["Camping", "Rain gear", "Outdoor apparel"],
+    advertiser: "tidewe"
   }
 ];

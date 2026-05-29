@@ -381,11 +381,11 @@ export default async function LandingPage({ params }) {
                     target="_blank"
                     rel="nofollow sponsored noopener noreferrer"
                     data-affiliate-program="awin"
-                    data-advertiser="piscifun"
+                    data-advertiser={item.advertiser || "piscifun"}
                     data-item-title={item.title}
                     data-category={item.category}
                   >
-                    {item.title === "Shop Outdoor Gear" ? "Shop Outdoor Gear" : "Browse Piscifun Products"}
+                    {item.advertiser === "tidewe" ? "Browse TideWe Outdoor Gear" : item.title === "Shop Outdoor Gear" ? "Shop Outdoor Gear" : "Browse Piscifun Products"}
                   </a>
                   <p className="affiliate-disclosure">
                     Some links on this site may earn us a commission at no extra cost to you.
