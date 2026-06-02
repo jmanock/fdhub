@@ -1,5 +1,8 @@
 [
   {
+    "status": "published",
+    "popular": true,
+    "editorPick": true,
     "slug": "orlando-vs-miami-family-vacation",
     "title": "Orlando vs Miami For A Florida Family Vacation",
     "excerpt": "A practical comparison for families choosing between theme parks, beaches, hotels, flights, food, and things to do.",
@@ -42,18 +45,50 @@
         "disclosureRequired": true
       }
     ],
-    "relatedDestinations": ["Orlando", "Miami", "Tampa", "Clearwater"],
+    "relatedDestinations": [
+      "Orlando",
+      "Miami",
+      "Tampa",
+      "Clearwater"
+    ],
     "relatedGuides": [
-      { "label": "Orlando Travel Guide", "href": "/orlando-travel-guide" },
-      { "label": "Miami Travel Guide", "href": "/miami-travel-guide" },
-      { "label": "Best Florida Family Vacations", "href": "/best-florida-family-vacations" }
+      {
+        "label": "Orlando Travel Guide",
+        "href": "/orlando-travel-guide"
+      },
+      {
+        "label": "Miami Travel Guide",
+        "href": "/miami-travel-guide"
+      },
+      {
+        "label": "Best Florida Family Vacations",
+        "href": "/best-florida-family-vacations"
+      }
     ],
     "relatedSites": [
-      { "label": "Orlando Flight Deals", "href": "https://flightdealsflorida.org/cheap-flights-from-orlando", "site": "flights" },
-      { "label": "Orlando Hotel Deals", "href": "https://hoteldealsflorida.org/cheap-hotels-in-orlando", "site": "hotels" },
-      { "label": "Orlando Things To Do", "href": "https://localdealsflorida.org/things-to-do-in-orlando", "site": "local" }
+      {
+        "label": "Orlando Flight Deals",
+        "href": "https://flightdealsflorida.org/cheap-flights-from-orlando",
+        "site": "flights"
+      },
+      {
+        "label": "Orlando Hotel Deals",
+        "href": "https://hoteldealsflorida.org/cheap-hotels-in-orlando",
+        "site": "hotels"
+      },
+      {
+        "label": "Orlando Things To Do",
+        "href": "https://localdealsflorida.org/things-to-do-in-orlando",
+        "site": "local"
+      }
     ],
-    "tags": ["family travel", "orlando", "miami", "comparison", "hotels"],
+    "tags": [
+      "family travel",
+      "orlando",
+      "miami",
+      "comparison",
+      "hotels"
+    ],
     "views": 1240,
     "faqs": [
       {
@@ -67,6 +102,9 @@
     ]
   },
   {
+    "status": "published",
+    "popular": false,
+    "editorPick": true,
     "slug": "miami-boat-rental-day-guide",
     "title": "How To Plan A Miami Boat Rental Day",
     "excerpt": "A simple waterfront planning story for Miami travelers comparing boat rentals, yacht days, beaches, hotels, and pre-cruise activities.",
@@ -106,18 +144,49 @@
         "status": "pending_tracked_url"
       }
     ],
-    "relatedDestinations": ["Miami", "Fort Lauderdale", "Florida Keys", "Key West"],
+    "relatedDestinations": [
+      "Miami",
+      "Fort Lauderdale",
+      "Florida Keys",
+      "Key West"
+    ],
     "relatedGuides": [
-      { "label": "Florida Water Activities Guide", "href": "/florida-water-activities-guide" },
-      { "label": "Miami Travel Guide", "href": "/miami-travel-guide" },
-      { "label": "Miami Yacht Rental Guide", "href": "/miami-yacht-rental-guide" }
+      {
+        "label": "Florida Water Activities Guide",
+        "href": "/florida-water-activities-guide"
+      },
+      {
+        "label": "Miami Travel Guide",
+        "href": "/miami-travel-guide"
+      },
+      {
+        "label": "Miami Yacht Rental Guide",
+        "href": "/miami-yacht-rental-guide"
+      }
     ],
     "relatedSites": [
-      { "label": "Miami Pre-Cruise Activities", "href": "https://cruisedealsflorida.org/miami-pre-cruise-activities", "site": "cruises" },
-      { "label": "Miami Beach Hotels", "href": "https://hoteldealsflorida.org/miami-beach-hotels", "site": "hotels" },
-      { "label": "Miami Things To Do", "href": "https://localdealsflorida.org/miami-things-to-do", "site": "local" }
+      {
+        "label": "Miami Pre-Cruise Activities",
+        "href": "https://cruisedealsflorida.org/miami-pre-cruise-activities",
+        "site": "cruises"
+      },
+      {
+        "label": "Miami Beach Hotels",
+        "href": "https://hoteldealsflorida.org/miami-beach-hotels",
+        "site": "hotels"
+      },
+      {
+        "label": "Miami Things To Do",
+        "href": "https://localdealsflorida.org/miami-things-to-do",
+        "site": "local"
+      }
     ],
-    "tags": ["miami", "boat rentals", "water activities", "pre-cruise"],
+    "tags": [
+      "miami",
+      "boat rentals",
+      "water activities",
+      "pre-cruise"
+    ],
     "views": 980,
     "faqs": [
       {
@@ -131,6 +200,9 @@
     ]
   },
   {
+    "status": "published",
+    "popular": true,
+    "editorPick": false,
     "slug": "best-florida-beach-towns-for-weekend-trips",
     "title": "Best Florida Beach Towns For Weekend Trips",
     "excerpt": "A destination spotlight for travelers comparing Clearwater, Destin, Daytona Beach, Naples, St. Augustine, and Key West.",
@@ -169,18 +241,52 @@
         "disclosureRequired": true
       }
     ],
-    "relatedDestinations": ["Clearwater", "Destin", "Daytona Beach", "Naples", "St. Augustine", "Key West"],
+    "relatedDestinations": [
+      "Clearwater",
+      "Destin",
+      "Daytona Beach",
+      "Naples",
+      "St. Augustine",
+      "Key West"
+    ],
     "relatedGuides": [
-      { "label": "Best Florida Beaches", "href": "/best-florida-beaches" },
-      { "label": "Florida Weekend Getaways", "href": "/florida-weekend-getaways" },
-      { "label": "Cheap Florida Vacation Ideas", "href": "/cheap-florida-vacation-ideas" }
+      {
+        "label": "Best Florida Beaches",
+        "href": "/best-florida-beaches"
+      },
+      {
+        "label": "Florida Weekend Getaways",
+        "href": "/florida-weekend-getaways"
+      },
+      {
+        "label": "Cheap Florida Vacation Ideas",
+        "href": "/cheap-florida-vacation-ideas"
+      }
     ],
     "relatedSites": [
-      { "label": "Florida Beachfront Hotels", "href": "https://hoteldealsflorida.org/florida-beachfront-hotels", "site": "hotels" },
-      { "label": "Weekend Flights From Florida", "href": "https://flightdealsflorida.org/weekend-flight-deals-florida", "site": "flights" },
-      { "label": "Florida Water Activities", "href": "https://localdealsflorida.org/florida-water-activities", "site": "local" }
+      {
+        "label": "Florida Beachfront Hotels",
+        "href": "https://hoteldealsflorida.org/florida-beachfront-hotels",
+        "site": "hotels"
+      },
+      {
+        "label": "Weekend Flights From Florida",
+        "href": "https://flightdealsflorida.org/weekend-flight-deals-florida",
+        "site": "flights"
+      },
+      {
+        "label": "Florida Water Activities",
+        "href": "https://localdealsflorida.org/florida-water-activities",
+        "site": "local"
+      }
     ],
-    "tags": ["beaches", "weekend trips", "clearwater", "destin", "naples"],
+    "tags": [
+      "beaches",
+      "weekend trips",
+      "clearwater",
+      "destin",
+      "naples"
+    ],
     "views": 1510,
     "faqs": [
       {
@@ -194,6 +300,9 @@
     ]
   },
   {
+    "status": "published",
+    "popular": false,
+    "editorPick": false,
     "slug": "florida-cruise-packing-story",
     "title": "What To Pack For A Florida Cruise Without Overpacking",
     "excerpt": "A cruise packing story for Miami, Port Canaveral, Tampa, and Fort Lauderdale sailings.",
@@ -232,18 +341,50 @@
         "disclosureRequired": true
       }
     ],
-    "relatedDestinations": ["Miami", "Port Canaveral", "Tampa", "Fort Lauderdale"],
+    "relatedDestinations": [
+      "Miami",
+      "Port Canaveral",
+      "Tampa",
+      "Fort Lauderdale"
+    ],
     "relatedGuides": [
-      { "label": "Florida Cruise Port Guide", "href": "/best-florida-cruise-ports" },
-      { "label": "Florida Travel Gear Guide", "href": "/florida-travel-gear-guide" },
-      { "label": "Florida Water Activities Guide", "href": "/florida-water-activities-guide" }
+      {
+        "label": "Florida Cruise Port Guide",
+        "href": "/best-florida-cruise-ports"
+      },
+      {
+        "label": "Florida Travel Gear Guide",
+        "href": "/florida-travel-gear-guide"
+      },
+      {
+        "label": "Florida Water Activities Guide",
+        "href": "/florida-water-activities-guide"
+      }
     ],
     "relatedSites": [
-      { "label": "Cruise Packing Essentials", "href": "https://cruisedealsflorida.org/cruise-packing-essentials", "site": "cruises" },
-      { "label": "Hotels Near Florida Cruise Ports", "href": "https://hoteldealsflorida.org/hotels-near-florida-cruise-ports", "site": "hotels" },
-      { "label": "Miami Pre-Cruise Activities", "href": "https://cruisedealsflorida.org/miami-pre-cruise-activities", "site": "cruises" }
+      {
+        "label": "Cruise Packing Essentials",
+        "href": "https://cruisedealsflorida.org/cruise-packing-essentials",
+        "site": "cruises"
+      },
+      {
+        "label": "Hotels Near Florida Cruise Ports",
+        "href": "https://hoteldealsflorida.org/hotels-near-florida-cruise-ports",
+        "site": "hotels"
+      },
+      {
+        "label": "Miami Pre-Cruise Activities",
+        "href": "https://cruisedealsflorida.org/miami-pre-cruise-activities",
+        "site": "cruises"
+      }
     ],
-    "tags": ["cruises", "packing", "port canaveral", "miami", "travel gear"],
+    "tags": [
+      "cruises",
+      "packing",
+      "port canaveral",
+      "miami",
+      "travel gear"
+    ],
     "views": 870,
     "faqs": [
       {
@@ -257,6 +398,9 @@
     ]
   },
   {
+    "status": "published",
+    "popular": false,
+    "editorPick": false,
     "slug": "google-flights-florida-airport-strategy",
     "title": "Using Google Flights For Florida Airport Comparisons",
     "excerpt": "A flight story about comparing MCO, MIA, TPA, FLL, and JAX before locking in a Florida trip.",
@@ -283,18 +427,52 @@
     "featured": false,
     "trending": false,
     "affiliateLinks": [],
-    "relatedDestinations": ["Orlando", "Miami", "Tampa", "Fort Lauderdale", "Jacksonville"],
+    "relatedDestinations": [
+      "Orlando",
+      "Miami",
+      "Tampa",
+      "Fort Lauderdale",
+      "Jacksonville"
+    ],
     "relatedGuides": [
-      { "label": "Best Time To Visit Florida", "href": "/best-time-to-visit-florida" },
-      { "label": "Florida Weekend Getaways", "href": "/florida-weekend-getaways" },
-      { "label": "How To Plan A Florida Trip", "href": "/how-to-plan-a-florida-trip" }
+      {
+        "label": "Best Time To Visit Florida",
+        "href": "/best-time-to-visit-florida"
+      },
+      {
+        "label": "Florida Weekend Getaways",
+        "href": "/florida-weekend-getaways"
+      },
+      {
+        "label": "How To Plan A Florida Trip",
+        "href": "/how-to-plan-a-florida-trip"
+      }
     ],
     "relatedSites": [
-      { "label": "Google Flights vs Skyscanner For Florida Routes", "href": "https://flightdealsflorida.org/google-flights-vs-skyscanner-for-florida-routes", "site": "flights" },
-      { "label": "Cheapest Airports In Florida", "href": "https://flightdealsflorida.org/cheapest-airports-in-florida", "site": "flights" },
-      { "label": "Orlando Airport Guide", "href": "https://flightdealsflorida.org/orlando-airport-guide", "site": "flights" }
+      {
+        "label": "Google Flights vs Skyscanner For Florida Routes",
+        "href": "https://flightdealsflorida.org/google-flights-vs-skyscanner-for-florida-routes",
+        "site": "flights"
+      },
+      {
+        "label": "Cheapest Airports In Florida",
+        "href": "https://flightdealsflorida.org/cheapest-airports-in-florida",
+        "site": "flights"
+      },
+      {
+        "label": "Orlando Airport Guide",
+        "href": "https://flightdealsflorida.org/orlando-airport-guide",
+        "site": "flights"
+      }
     ],
-    "tags": ["flights", "google flights", "airports", "mco", "mia", "fll"],
+    "tags": [
+      "flights",
+      "google flights",
+      "airports",
+      "mco",
+      "mia",
+      "fll"
+    ],
     "views": 760,
     "faqs": [
       {
@@ -308,6 +486,9 @@
     ]
   },
   {
+    "status": "published",
+    "popular": false,
+    "editorPick": false,
     "slug": "where-to-stay-near-disney-without-overpaying",
     "title": "Where To Stay Near Disney Without Overpaying",
     "excerpt": "A hotel story for Orlando travelers comparing resort areas, off-property stays, family logistics, and current hotel options.",
@@ -346,18 +527,48 @@
         "disclosureRequired": true
       }
     ],
-    "relatedDestinations": ["Orlando", "Port Canaveral", "Tampa"],
+    "relatedDestinations": [
+      "Orlando",
+      "Port Canaveral",
+      "Tampa"
+    ],
     "relatedGuides": [
-      { "label": "Orlando Travel Guide", "href": "/orlando-travel-guide" },
-      { "label": "Florida Family Vacations", "href": "/best-florida-family-vacations" },
-      { "label": "Cheap Florida Family Vacations", "href": "/cheap-florida-family-vacations" }
+      {
+        "label": "Orlando Travel Guide",
+        "href": "/orlando-travel-guide"
+      },
+      {
+        "label": "Florida Family Vacations",
+        "href": "/best-florida-family-vacations"
+      },
+      {
+        "label": "Cheap Florida Family Vacations",
+        "href": "/cheap-florida-family-vacations"
+      }
     ],
     "relatedSites": [
-      { "label": "Hotels Near Disney", "href": "https://hoteldealsflorida.org/hotels-near-disney", "site": "hotels" },
-      { "label": "Cheap Flights From Orlando", "href": "https://flightdealsflorida.org/cheap-flights-from-orlando", "site": "flights" },
-      { "label": "Orlando Things To Do", "href": "https://localdealsflorida.org/things-to-do-in-orlando", "site": "local" }
+      {
+        "label": "Hotels Near Disney",
+        "href": "https://hoteldealsflorida.org/hotels-near-disney",
+        "site": "hotels"
+      },
+      {
+        "label": "Cheap Flights From Orlando",
+        "href": "https://flightdealsflorida.org/cheap-flights-from-orlando",
+        "site": "flights"
+      },
+      {
+        "label": "Orlando Things To Do",
+        "href": "https://localdealsflorida.org/things-to-do-in-orlando",
+        "site": "local"
+      }
     ],
-    "tags": ["orlando hotels", "disney", "family hotels", "resorts"],
+    "tags": [
+      "orlando hotels",
+      "disney",
+      "family hotels",
+      "resorts"
+    ],
     "views": 690,
     "faqs": [
       {
@@ -371,6 +582,9 @@
     ]
   },
   {
+    "status": "published",
+    "popular": false,
+    "editorPick": false,
     "slug": "florida-fishing-weekend-trip-guide",
     "title": "How To Plan A Florida Fishing Weekend",
     "excerpt": "A local travel story for beach, pier, kayak, and charter-friendly fishing weekends around Florida.",
@@ -409,18 +623,51 @@
         "disclosureRequired": true
       }
     ],
-    "relatedDestinations": ["Florida Keys", "Destin", "Tampa", "Jacksonville", "Naples"],
+    "relatedDestinations": [
+      "Florida Keys",
+      "Destin",
+      "Tampa",
+      "Jacksonville",
+      "Naples"
+    ],
     "relatedGuides": [
-      { "label": "Florida Fishing Trip Guide", "href": "/florida-fishing-trip-guide" },
-      { "label": "Florida Travel Gear Guide", "href": "/florida-travel-gear-guide" },
-      { "label": "Florida Water Activities Guide", "href": "/florida-water-activities-guide" }
+      {
+        "label": "Florida Fishing Trip Guide",
+        "href": "/florida-fishing-trip-guide"
+      },
+      {
+        "label": "Florida Travel Gear Guide",
+        "href": "/florida-travel-gear-guide"
+      },
+      {
+        "label": "Florida Water Activities Guide",
+        "href": "/florida-water-activities-guide"
+      }
     ],
     "relatedSites": [
-      { "label": "Florida Fishing Trip Gear", "href": "https://localdealsflorida.org/florida-fishing-trip-gear", "site": "local" },
-      { "label": "Best Florida Water Activities", "href": "https://localdealsflorida.org/best-florida-water-activities", "site": "local" },
-      { "label": "Florida Weekend Flight Ideas", "href": "https://flightdealsflorida.org/weekend-flight-deals-florida", "site": "flights" }
+      {
+        "label": "Florida Fishing Trip Gear",
+        "href": "https://localdealsflorida.org/florida-fishing-trip-gear",
+        "site": "local"
+      },
+      {
+        "label": "Best Florida Water Activities",
+        "href": "https://localdealsflorida.org/best-florida-water-activities",
+        "site": "local"
+      },
+      {
+        "label": "Florida Weekend Flight Ideas",
+        "href": "https://flightdealsflorida.org/weekend-flight-deals-florida",
+        "site": "flights"
+      }
     ],
-    "tags": ["fishing", "gear", "weekend trips", "florida keys", "destin"],
+    "tags": [
+      "fishing",
+      "gear",
+      "weekend trips",
+      "florida keys",
+      "destin"
+    ],
     "views": 830,
     "faqs": [
       {
@@ -434,6 +681,9 @@
     ]
   },
   {
+    "status": "published",
+    "popular": false,
+    "editorPick": false,
     "slug": "tampa-weekend-escape-story",
     "title": "A Tampa Weekend Escape That Balances Food, Beaches, And Easy Logistics",
     "excerpt": "A destination story for travelers using Tampa as a Gulf Coast weekend base.",
@@ -472,18 +722,50 @@
         "disclosureRequired": true
       }
     ],
-    "relatedDestinations": ["Tampa", "Clearwater", "Sarasota", "Fort Myers"],
+    "relatedDestinations": [
+      "Tampa",
+      "Clearwater",
+      "Sarasota",
+      "Fort Myers"
+    ],
     "relatedGuides": [
-      { "label": "Tampa Travel Guide", "href": "/tampa-travel-guide" },
-      { "label": "Florida Weekend Getaways", "href": "/florida-weekend-getaways" },
-      { "label": "Best Time To Visit Florida", "href": "/best-time-to-visit-florida" }
+      {
+        "label": "Tampa Travel Guide",
+        "href": "/tampa-travel-guide"
+      },
+      {
+        "label": "Florida Weekend Getaways",
+        "href": "/florida-weekend-getaways"
+      },
+      {
+        "label": "Best Time To Visit Florida",
+        "href": "/best-time-to-visit-florida"
+      }
     ],
     "relatedSites": [
-      { "label": "Tampa Weekend Activities", "href": "https://localdealsflorida.org/tampa-weekend-activities", "site": "local" },
-      { "label": "Tampa Flight Deals", "href": "https://flightdealsflorida.org/cheap-flights-from-tampa", "site": "flights" },
-      { "label": "Cruises From Tampa", "href": "https://cruisedealsflorida.org/cruises-from-tampa", "site": "cruises" }
+      {
+        "label": "Tampa Weekend Activities",
+        "href": "https://localdealsflorida.org/tampa-weekend-activities",
+        "site": "local"
+      },
+      {
+        "label": "Tampa Flight Deals",
+        "href": "https://flightdealsflorida.org/cheap-flights-from-tampa",
+        "site": "flights"
+      },
+      {
+        "label": "Cruises From Tampa",
+        "href": "https://cruisedealsflorida.org/cruises-from-tampa",
+        "site": "cruises"
+      }
     ],
-    "tags": ["tampa", "weekend trips", "food", "beaches", "cruises"],
+    "tags": [
+      "tampa",
+      "weekend trips",
+      "food",
+      "beaches",
+      "cruises"
+    ],
     "views": 620,
     "faqs": [
       {
@@ -493,6 +775,1873 @@
       {
         "question": "Should Tampa weekend travelers stay downtown or near the beach?",
         "answer": "Stay downtown for restaurants and city activities. Stay nearer the beach when sand time is the main goal."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Disney vs Universal: Which Orlando Vacation Is Better? | Florida Travel Journal",
+    "metaDescription": "Compare Disney and Universal for families, first-time visitors, hotel planning, park pacing, budgets, and Orlando trip style.",
+    "slug": "disney-vs-universal",
+    "title": "Disney vs Universal: Which Orlando Vacation Is Better?",
+    "excerpt": "Compare Disney and Universal for families, first-time visitors, hotel planning, park pacing, budgets, and Orlando trip style.",
+    "category": "theme-parks",
+    "destination": "Orlando",
+    "heroImage": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Orlando theme park vacation comparison for Disney and Universal trips",
+    "featured": true,
+    "trending": true,
+    "popular": true,
+    "editorPick": true,
+    "views": 2210,
+    "tags": [
+      "theme parks",
+      "orlando",
+      "families",
+      "comparison",
+      "hotels"
+    ],
+    "relatedDestinations": [
+      "Orlando",
+      "Tampa",
+      "Port Canaveral"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Orlando Travel Guide",
+        "href": "/orlando-travel-guide"
+      },
+      {
+        "label": "Florida Theme Park Guide",
+        "href": "/florida-theme-park-guide"
+      },
+      {
+        "label": "Best Florida Family Vacations",
+        "href": "/best-florida-family-vacations"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Cheap Flights From Orlando",
+        "href": "https://flightdealsflorida.org/cheap-flights-from-orlando",
+        "site": "flights"
+      },
+      {
+        "label": "Hotels Near Disney",
+        "href": "https://hoteldealsflorida.org/hotels-near-disney",
+        "site": "hotels"
+      },
+      {
+        "label": "Orlando Things To Do",
+        "href": "https://localdealsflorida.org/things-to-do-in-orlando",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare Orlando theme park hotels",
+        "description": "Check current Orlando hotel options before choosing Disney, Universal, or a split park trip.",
+        "category": "hotels",
+        "destination": "Orlando",
+        "cta": "Compare Orlando Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Start With The Trip Personality",
+        "body": "Disney usually fits travelers who want classic characters, longer family traditions, immersive resort time, and a slower multi-day rhythm. Universal often fits visitors who want thrill rides, Harry Potter areas, easier park hopping, and a more compact Orlando trip. The better choice is less about which park is famous and more about the ages, energy level, interests, and hotel style of the group."
+      },
+      {
+        "heading": "Compare Hotels Before Tickets",
+        "body": "Hotel location changes the whole Orlando experience. Disney-area hotels can make sense for longer family stays, while Universal-area hotels can work well for shorter trips with park-to-park days. Off-property hotels may lower the nightly rate, but parking, shuttles, rideshares, and midday breaks can erase part of the savings."
+      },
+      {
+        "heading": "Budget For The Full Day",
+        "body": "Tickets are only one part of the cost. Meals, parking, express access, souvenirs, stroller needs, hotel fees, and transportation can matter just as much. A two-day Universal trip may be easier to price than a longer Disney vacation, but every family should compare the total schedule and not just the advertised ticket price."
+      },
+      {
+        "heading": "Best For Families",
+        "body": "Disney is usually better for younger kids, multi-generational trips, character-heavy vacations, and travelers who want the hotel to feel like part of the experience. Universal is often better for older kids, teens, thrill seekers, Harry Potter fans, and families who want fewer park days."
+      },
+      {
+        "heading": "How To Plan It",
+        "body": "Pick the park style first, then compare flights, hotel areas, and local activities around that decision. Leave one flexible day for pools, shopping, or a lower-pressure Orlando activity so the trip does not become a wall of reservations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Disney or Universal better for first-time Orlando visitors?",
+        "answer": "Disney is usually stronger for classic family trips and younger kids, while Universal can be easier for teens, thrill rides, and shorter trips."
+      },
+      {
+        "question": "Can you visit both Disney and Universal in one trip?",
+        "answer": "Yes, but it works best with enough days, a hotel plan that does not create too much driving, and at least one rest day."
+      },
+      {
+        "question": "Which is cheaper, Disney or Universal?",
+        "answer": "It depends on tickets, hotel area, transportation, food, and trip length. Compare the full itinerary rather than one line item."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Universal Orlando First-Timer Guide: Parks, Hotels & Planning Tips | Florida Travel Journal",
+    "metaDescription": "A practical first-timer guide for Universal Orlando hotels, park hopping, timing, flights, and what to plan before booking.",
+    "slug": "universal-orlando-first-timer-guide",
+    "title": "Universal Orlando First-Timer Guide: Parks, Hotels & Planning Tips",
+    "excerpt": "A practical first-timer guide for Universal Orlando hotels, park hopping, timing, flights, and what to plan before booking.",
+    "category": "theme-parks",
+    "destination": "Orlando",
+    "heroImage": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Universal Orlando first timer planning with hotels flights and attractions",
+    "trending": true,
+    "popular": true,
+    "views": 1760,
+    "tags": [
+      "universal orlando",
+      "theme parks",
+      "orlando hotels",
+      "first time visitors"
+    ],
+    "relatedDestinations": [
+      "Orlando",
+      "Port Canaveral"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Orlando Travel Guide",
+        "href": "/orlando-travel-guide"
+      },
+      {
+        "label": "Florida Theme Park Guide",
+        "href": "/florida-theme-park-guide"
+      },
+      {
+        "label": "Cheap Florida Family Vacations",
+        "href": "/cheap-florida-family-vacations"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Orlando Flight Deals",
+        "href": "https://flightdealsflorida.org/orlando-flight-deals",
+        "site": "flights"
+      },
+      {
+        "label": "Orlando Hotel Deals",
+        "href": "https://hoteldealsflorida.org/cheap-hotels-in-orlando",
+        "site": "hotels"
+      },
+      {
+        "label": "Orlando Local Activities",
+        "href": "https://localdealsflorida.org/things-to-do-in-orlando",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Check Orlando hotel options",
+        "description": "Compare current hotel options for Universal-area stays, family suites, and resort-style Orlando weekends.",
+        "category": "hotels",
+        "destination": "Orlando",
+        "cta": "Check Orlando Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Understand The Park Layout",
+        "body": "Universal Orlando is easier to understand once you separate the main theme parks, hotel areas, dining district, and transportation options. First-time visitors should decide whether park-to-park access matters, especially if they want the full Harry Potter train experience."
+      },
+      {
+        "heading": "Choose A Hotel Around Convenience",
+        "body": "A hotel near Universal can save time and energy, especially on shorter trips. Off-site hotels may be cheaper, but travelers should compare shuttle reliability, parking, resort fees, and how quickly everyone can return for a midday break."
+      },
+      {
+        "heading": "Plan For Heat And Walking",
+        "body": "Orlando park days can be physically demanding. Build the day around water, comfortable shoes, shade breaks, and realistic expectations. A slower morning or pool evening often makes the next park day better."
+      },
+      {
+        "heading": "When Express Access Matters",
+        "body": "Express access may be valuable during busy periods, short trips, or visits focused on headliner rides. It is less essential when travelers have more days, flexible timing, or a lower-pressure itinerary."
+      },
+      {
+        "heading": "Build The Rest Of The Trip",
+        "body": "After park dates are set, compare flights, hotel areas, local restaurants, and backup activities. Universal trips pair well with Orlando local attractions, water parks, outlet shopping, and Port Canaveral cruise add-ons."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many days do first-time visitors need for Universal Orlando?",
+        "answer": "Many first-time visitors plan two to three park days, depending on whether they want a relaxed pace, park-to-park access, or water park time."
+      },
+      {
+        "question": "Should Universal visitors stay on-site?",
+        "answer": "On-site hotels can be convenient, but off-site hotels may work if transportation, fees, and schedule needs still make sense."
+      },
+      {
+        "question": "Is Universal Orlando good for younger kids?",
+        "answer": "It can be, but Universal often shines more for older kids, teens, thrill rides, and Harry Potter fans."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Best Time To Visit Orlando Theme Parks For Weather, Crowds & Hotels | Florida Travel Journal",
+    "metaDescription": "Compare Orlando theme park seasons by crowds, heat, hotel demand, school calendars, storms, and family travel needs.",
+    "slug": "best-time-to-visit-orlando-theme-parks",
+    "title": "Best Time To Visit Orlando Theme Parks For Weather, Crowds & Hotels",
+    "excerpt": "Compare Orlando theme park seasons by crowds, heat, hotel demand, school calendars, storms, and family travel needs.",
+    "category": "theme-parks",
+    "destination": "Orlando",
+    "heroImage": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Orlando theme park timing guide with weather crowds and hotel planning",
+    "trending": true,
+    "views": 1695,
+    "tags": [
+      "orlando",
+      "theme parks",
+      "best time to visit",
+      "families"
+    ],
+    "relatedDestinations": [
+      "Orlando",
+      "Tampa"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Best Time To Visit Florida",
+        "href": "/best-time-to-visit-florida"
+      },
+      {
+        "label": "Orlando Travel Guide",
+        "href": "/orlando-travel-guide"
+      },
+      {
+        "label": "Florida Family Vacations",
+        "href": "/best-florida-family-vacations"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Best Time To Book Flights From Florida",
+        "href": "https://flightdealsflorida.org/best-time-to-book-flights-from-florida",
+        "site": "flights"
+      },
+      {
+        "label": "Where To Stay In Orlando",
+        "href": "https://hoteldealsflorida.org/where-to-stay-in-orlando",
+        "site": "hotels"
+      },
+      {
+        "label": "Orlando Things To Do",
+        "href": "https://localdealsflorida.org/things-to-do-in-orlando",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare Orlando hotels by season",
+        "description": "Check current Orlando hotel availability before locking in school-break or holiday dates.",
+        "category": "hotels",
+        "destination": "Orlando",
+        "cta": "Compare Orlando Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "The Comfortable Months",
+        "body": "Late winter and parts of spring can be comfortable for Orlando theme parks because temperatures are milder and walking all day feels easier. These windows can still bring busy weeks around school breaks, so travelers should compare calendars before assuming a quiet trip."
+      },
+      {
+        "heading": "Summer Tradeoffs",
+        "body": "Summer often works for families because school is out, but heat, afternoon storms, and longer days require a better pacing plan. Hotels with pools, indoor breaks, and flexible cancellation rules can matter more than a small nightly savings."
+      },
+      {
+        "heading": "Holiday And Event Seasons",
+        "body": "Holiday decorations, Halloween events, festivals, and school breaks can make Orlando feel special, but they can also raise demand. If the event is the point of the trip, book around it. If budget matters more, compare shoulder dates."
+      },
+      {
+        "heading": "Hotel Timing",
+        "body": "Theme park hotel prices can shift with school calendars, conventions, events, and long weekends. Compare several nearby areas before booking and consider whether convenience is worth more than the lowest rate."
+      },
+      {
+        "heading": "Best Planning Move",
+        "body": "Choose dates by balancing weather, crowd tolerance, hotel cost, and child energy. A slightly less convenient calendar week can make the entire vacation feel calmer."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What month is best for Orlando theme parks?",
+        "answer": "Comfortable months often include parts of January, February, March, April, and November, but school breaks and events can change crowd levels."
+      },
+      {
+        "question": "Is summer bad for Orlando theme parks?",
+        "answer": "Summer can work well for families, but travelers should plan for heat, storms, pool breaks, and realistic daily pacing."
+      },
+      {
+        "question": "When are Orlando hotels most expensive?",
+        "answer": "Demand often rises around holidays, school breaks, major events, and peak vacation weeks, but rates vary by hotel area and availability."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Clearwater vs Destin: Which Florida Beach Trip Is Better? | Florida Travel Journal",
+    "metaDescription": "Compare Clearwater and Destin for family beach vacations, hotel areas, flights, driving time, water activities, and weekend trips.",
+    "slug": "clearwater-vs-destin-beach-trip",
+    "title": "Clearwater vs Destin: Which Florida Beach Trip Is Better?",
+    "excerpt": "Compare Clearwater and Destin for family beach vacations, hotel areas, flights, driving time, water activities, and weekend trips.",
+    "category": "beaches",
+    "destination": "Clearwater",
+    "heroImage": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Clearwater and Destin beach trip comparison for Florida families and weekend travelers",
+    "featured": true,
+    "trending": true,
+    "popular": true,
+    "editorPick": true,
+    "views": 2020,
+    "tags": [
+      "beaches",
+      "clearwater",
+      "destin",
+      "comparison",
+      "family travel"
+    ],
+    "relatedDestinations": [
+      "Clearwater",
+      "Destin",
+      "Tampa",
+      "Sarasota"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Best Florida Beaches",
+        "href": "/best-florida-beaches"
+      },
+      {
+        "label": "Clearwater Travel Guide",
+        "href": "/clearwater-travel-guide"
+      },
+      {
+        "label": "Destin Florida Guide",
+        "href": "/destin-florida-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Florida Beachfront Hotels",
+        "href": "https://hoteldealsflorida.org/florida-beachfront-hotels",
+        "site": "hotels"
+      },
+      {
+        "label": "Tampa Flight Deals",
+        "href": "https://flightdealsflorida.org/cheap-flights-from-tampa",
+        "site": "flights"
+      },
+      {
+        "label": "Florida Water Activities",
+        "href": "https://localdealsflorida.org/florida-water-activities",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare Florida beach hotels",
+        "description": "Check current hotel options for Gulf Coast beach trips, family stays, and weekend escapes.",
+        "category": "hotels",
+        "destination": "Florida",
+        "cta": "Compare Beach Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "The Main Difference",
+        "body": "Clearwater is usually easier for shorter Gulf Coast trips, Tampa-area flights, family hotels, restaurants, and sunset beach weekends. Destin often feels more like a dedicated Panhandle beach vacation with bright water, fishing, boating, condos, and longer stays."
+      },
+      {
+        "heading": "Which Is Easier To Reach",
+        "body": "Clearwater benefits from Tampa airport access and a strong weekend-trip setup. Destin may require more planning depending on the traveler’s starting point, but it can reward families who want a beach-first trip with fewer city distractions."
+      },
+      {
+        "heading": "Hotel And Condo Style",
+        "body": "Clearwater has a hotel-heavy beach corridor with walkable food and activity options. Destin often leans into condos, vacation rentals, family beach weeks, and water activities. The best choice depends on whether you want a quick hotel weekend or a longer beach base."
+      },
+      {
+        "heading": "Best For Families",
+        "body": "Clearwater can be easier for mixed-age groups because the trip is compact and there are Tampa/St. Pete backup activities nearby. Destin is excellent when the beach, boating, and fishing are the main reasons for going."
+      },
+      {
+        "heading": "How To Choose",
+        "body": "Pick Clearwater for a simpler weekend and Destin for a bigger beach vacation. Compare flights, hotel style, drive time, parking, and rainy-day backups before choosing based only on photos."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Clearwater or Destin better for families?",
+        "answer": "Both can be good. Clearwater is often easier for shorter trips, while Destin is strong for longer beach vacations, fishing, and boating."
+      },
+      {
+        "question": "Which is easier to fly to, Clearwater or Destin?",
+        "answer": "Clearwater is commonly paired with Tampa flights. Destin-area access depends on route options and the traveler’s origin."
+      },
+      {
+        "question": "Which beach is better for a weekend trip?",
+        "answer": "Clearwater is usually simpler for a quick weekend, especially for travelers using Tampa-area flights or driving from Central Florida."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Best Florida Beaches For Families, Weekend Trips & First-Time Visitors | Florida Travel Journal",
+    "metaDescription": "A family-focused beach guide comparing calm water, hotel access, food, activities, and backup plans across Florida.",
+    "slug": "best-florida-beaches-for-families",
+    "title": "Best Florida Beaches For Families, Weekend Trips & First-Time Visitors",
+    "excerpt": "A family-focused beach guide comparing calm water, hotel access, food, activities, and backup plans across Florida.",
+    "category": "beaches",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Family friendly Florida beach with calm water hotels and weekend trip planning",
+    "trending": true,
+    "popular": true,
+    "views": 1850,
+    "tags": [
+      "beaches",
+      "families",
+      "weekend trips",
+      "hotels"
+    ],
+    "relatedDestinations": [
+      "Clearwater",
+      "Destin",
+      "Daytona Beach",
+      "Naples",
+      "St. Augustine"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Best Florida Beaches",
+        "href": "/best-florida-beaches"
+      },
+      {
+        "label": "Best Florida Family Vacations",
+        "href": "/best-florida-family-vacations"
+      },
+      {
+        "label": "Florida Weekend Getaways",
+        "href": "/florida-weekend-getaways"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Florida Beachfront Hotels",
+        "href": "https://hoteldealsflorida.org/florida-beachfront-hotels",
+        "site": "hotels"
+      },
+      {
+        "label": "Weekend Flight Ideas",
+        "href": "https://flightdealsflorida.org/weekend-flight-deals-florida",
+        "site": "flights"
+      },
+      {
+        "label": "Florida Family Activities",
+        "href": "https://localdealsflorida.org/best-family-activities-in-florida",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Search family beach hotels",
+        "description": "Compare current hotel options near Florida beaches that work for families and weekend trips.",
+        "category": "hotels",
+        "destination": "Florida",
+        "cta": "Search Beach Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "What Makes A Beach Family-Friendly",
+        "body": "A family beach is not just pretty. It needs manageable parking, food nearby, calmer water when possible, bathrooms, shade options, hotel access, and backup activities for storms or tired kids."
+      },
+      {
+        "heading": "Good Starting Points",
+        "body": "Clearwater, Destin, Daytona Beach, Naples, St. Augustine, Fort Lauderdale, and Sarasota can all work for families in different ways. The right choice depends on drive time, budget, hotel style, and how much structure the family wants."
+      },
+      {
+        "heading": "Hotel Location Matters",
+        "body": "For families, a walkable hotel or beachfront stay can be worth more than a lower nightly rate far from the sand. Shorter walks reduce parking stress and make midday breaks easier."
+      },
+      {
+        "heading": "Plan For Weather",
+        "body": "Florida beach trips need indoor or lower-pressure backups. Museums, aquariums, restaurants, shopping districts, scenic drives, and hotel pools can save a day when storms arrive."
+      },
+      {
+        "heading": "Make The Trip Easier",
+        "body": "Choose one main beach area, keep meal plans simple, and avoid overloading every day. Family beach trips work best when there is space for rest, snacks, shade, and changing weather."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the best Florida beach for families?",
+        "answer": "Clearwater, Destin, Daytona Beach, Naples, Sarasota, and St. Augustine are all strong options depending on travel time and hotel needs."
+      },
+      {
+        "question": "Should families book beachfront hotels?",
+        "answer": "Beachfront or walkable hotels can be worth it for families because they reduce parking, gear hauling, and midday-trip stress."
+      },
+      {
+        "question": "What should families check before a Florida beach trip?",
+        "answer": "Check parking, weather, water conditions, hotel fees, food options, bathrooms, and indoor backup activities."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Hidden Florida Beach Towns Worth Visiting For Slower Weekend Trips | Florida Travel Journal",
+    "metaDescription": "Explore quieter Florida beach towns and coastal areas for travelers who want less crowded weekends and more local character.",
+    "slug": "hidden-florida-beach-towns-worth-visiting",
+    "title": "Hidden Florida Beach Towns Worth Visiting For Slower Weekend Trips",
+    "excerpt": "Explore quieter Florida beach towns and coastal areas for travelers who want less crowded weekends and more local character.",
+    "category": "beaches",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Quiet Florida beach town for slower weekend trips and local coastal travel",
+    "editorPick": true,
+    "views": 1475,
+    "tags": [
+      "beach towns",
+      "weekend trips",
+      "local travel",
+      "florida beaches"
+    ],
+    "relatedDestinations": [
+      "St. Augustine",
+      "Naples",
+      "Florida Keys",
+      "Sarasota",
+      "Fort Myers"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Best Florida Beaches",
+        "href": "/best-florida-beaches"
+      },
+      {
+        "label": "Best Florida Weekend Trips",
+        "href": "/best-florida-weekend-trips"
+      },
+      {
+        "label": "Florida Beach Vacation Guide",
+        "href": "/florida-beach-vacation-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Florida Beach Hotels",
+        "href": "https://hoteldealsflorida.org/florida-beachfront-hotels",
+        "site": "hotels"
+      },
+      {
+        "label": "Florida Local Deals",
+        "href": "https://localdealsflorida.org",
+        "site": "local"
+      },
+      {
+        "label": "Weekend Flights From Florida",
+        "href": "https://flightdealsflorida.org/weekend-flight-deals-florida",
+        "site": "flights"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare coastal hotel options",
+        "description": "Check current hotel options for quieter Florida coastal weekends and beach town stays.",
+        "category": "hotels",
+        "destination": "Florida",
+        "cta": "Compare Coastal Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Look Beyond The Famous Beaches",
+        "body": "Florida’s quieter beach towns can be better for travelers who want slower mornings, local restaurants, scenic walks, and fewer packed schedules. They may not always have the biggest resorts, but they can make a weekend feel more personal."
+      },
+      {
+        "heading": "Good Areas To Compare",
+        "body": "Look at coastal pockets near St. Augustine, Naples, Sarasota, Fort Myers, the Florida Keys, and parts of the Panhandle. Each area has a different balance of hotels, rentals, restaurants, water access, and drive time."
+      },
+      {
+        "heading": "Tradeoffs To Expect",
+        "body": "Smaller beach towns may have fewer hotel choices, limited late-night food, or more seasonal rhythms. That is part of the appeal, but travelers should confirm parking, restaurant hours, and beach access before booking."
+      },
+      {
+        "heading": "Who Should Choose This",
+        "body": "Hidden beach towns work best for couples, repeat Florida visitors, slower family weekends, road trippers, and travelers who care more about local feel than big resort amenities."
+      },
+      {
+        "heading": "Planning Tip",
+        "body": "Book around the experience you want: quiet shelling, food, fishing, history, sunsets, or a scenic drive. A less famous beach is only better when it fits the actual trip."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are quieter Florida beach towns cheaper?",
+        "answer": "Sometimes, but prices depend on season, hotel supply, holidays, and how close the stay is to the water."
+      },
+      {
+        "question": "What should travelers confirm before visiting a smaller beach town?",
+        "answer": "Confirm beach access, parking, restaurant hours, hotel policies, and weather backup plans."
+      },
+      {
+        "question": "Are hidden beach towns good for families?",
+        "answer": "They can be, especially for slower trips, but families should check bathrooms, food options, walkability, and activities."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Miami Cruise Port Guide For First-Time Cruisers | Florida Travel Journal",
+    "metaDescription": "A first-time cruiser guide to PortMiami hotels, flights, transportation, timing, pre-cruise activities, and local planning.",
+    "slug": "miami-cruise-port-guide-first-time-cruisers",
+    "title": "Miami Cruise Port Guide For First-Time Cruisers",
+    "excerpt": "A first-time cruiser guide to PortMiami hotels, flights, transportation, timing, pre-cruise activities, and local planning.",
+    "category": "cruise-stories",
+    "destination": "Miami",
+    "heroImage": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "PortMiami cruise planning guide for first time cruisers with hotels and flights",
+    "featured": true,
+    "trending": true,
+    "popular": true,
+    "editorPick": true,
+    "views": 2330,
+    "tags": [
+      "cruises",
+      "miami",
+      "portmiami",
+      "first time cruisers"
+    ],
+    "relatedDestinations": [
+      "Miami",
+      "Fort Lauderdale",
+      "Florida Keys"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Miami Travel Guide",
+        "href": "/miami-travel-guide"
+      },
+      {
+        "label": "Best Florida Cruise Ports",
+        "href": "/best-florida-cruise-ports"
+      },
+      {
+        "label": "Florida Vacation Planning Guide",
+        "href": "/florida-vacation-planning-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Cruises From Miami",
+        "href": "https://cruisedealsflorida.org/cruises-from-miami",
+        "site": "cruises"
+      },
+      {
+        "label": "Hotels Near Miami Cruise Port",
+        "href": "https://hoteldealsflorida.org/hotels-near-miami-cruise-port",
+        "site": "hotels"
+      },
+      {
+        "label": "Miami Flight Deals",
+        "href": "https://flightdealsflorida.org/miami-flight-deals",
+        "site": "flights"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare Miami cruise-night hotels",
+        "description": "Check current hotel options near Miami cruise areas before your sailing.",
+        "category": "hotels",
+        "destination": "Miami",
+        "cta": "Compare Cruise Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Plan The Night Before",
+        "body": "First-time cruisers should strongly consider arriving in Miami at least the day before sailing. Flight delays, traffic, hotel check-ins, and port timing can create stress when everything is squeezed into embarkation morning."
+      },
+      {
+        "heading": "Choose The Right Hotel Area",
+        "body": "Downtown Miami, Brickell, Miami Beach, and airport-area hotels all serve different needs. Downtown and Brickell can be convenient for port access and restaurants. Miami Beach adds vacation energy but may add transportation time."
+      },
+      {
+        "heading": "Think Through Transportation",
+        "body": "Compare airport arrival, hotel transfer, rideshare timing, luggage needs, and port arrival windows. PortMiami is busy, so leave more margin than you think you need, especially for families and first-time travelers."
+      },
+      {
+        "heading": "Add One Miami Experience",
+        "body": "A pre-cruise trip can include a waterfront dinner, neighborhood walk, museum visit, beach afternoon, or boat day if timing allows. Keep the activity easy and close to the hotel so it does not interfere with sailing day."
+      },
+      {
+        "heading": "Best First-Timer Move",
+        "body": "Make the cruise the anchor and plan everything else around it. Flights, hotel location, dinner plans, and local activities should reduce stress rather than add more moving parts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Should first-time cruisers fly to Miami the day before?",
+        "answer": "Yes when possible. Arriving the day before reduces risk from flight delays, traffic, and embarkation timing."
+      },
+      {
+        "question": "Where should Miami cruise travelers stay?",
+        "answer": "Downtown, Brickell, Miami Beach, and airport-area hotels can all work depending on budget, transportation, and pre-cruise plans."
+      },
+      {
+        "question": "Is PortMiami close to Miami airport?",
+        "answer": "It is reasonably close, but traffic and timing vary, so travelers should leave a comfortable buffer."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Port Canaveral vs Miami: Which Florida Cruise Port Is Better? | Florida Travel Journal",
+    "metaDescription": "Compare Port Canaveral and Miami for first-time cruisers, families, flights, hotels, beaches, and pre-cruise activities.",
+    "slug": "port-canaveral-vs-miami-cruise-port",
+    "title": "Port Canaveral vs Miami: Which Florida Cruise Port Is Better?",
+    "excerpt": "Compare Port Canaveral and Miami for first-time cruisers, families, flights, hotels, beaches, and pre-cruise activities.",
+    "category": "cruise-stories",
+    "destination": "Port Canaveral",
+    "heroImage": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Florida cruise port comparison between Port Canaveral and Miami",
+    "trending": true,
+    "popular": true,
+    "views": 1885,
+    "tags": [
+      "cruises",
+      "port canaveral",
+      "miami",
+      "comparison"
+    ],
+    "relatedDestinations": [
+      "Port Canaveral",
+      "Miami",
+      "Orlando"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Port Canaveral Travel Guide",
+        "href": "/port-canaveral-travel-guide"
+      },
+      {
+        "label": "Miami Travel Guide",
+        "href": "/miami-travel-guide"
+      },
+      {
+        "label": "Best Florida Cruise Ports",
+        "href": "/best-florida-cruise-ports"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Cruises From Port Canaveral",
+        "href": "https://cruisedealsflorida.org/cruises-from-port-canaveral",
+        "site": "cruises"
+      },
+      {
+        "label": "Cruises From Miami",
+        "href": "https://cruisedealsflorida.org/cruises-from-miami",
+        "site": "cruises"
+      },
+      {
+        "label": "Hotels Near Florida Cruise Ports",
+        "href": "https://hoteldealsflorida.org/hotels-near-florida-cruise-ports",
+        "site": "hotels"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare cruise port hotels",
+        "description": "Check current hotel options near Florida cruise ports before choosing a sailing.",
+        "category": "hotels",
+        "destination": "Florida",
+        "cta": "Compare Port Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "The Big Difference",
+        "body": "Port Canaveral is closely tied to Orlando, Cocoa Beach, family cruises, and theme park add-ons. Miami is tied to South Florida, international flights, nightlife, beaches, and a huge cruise ecosystem."
+      },
+      {
+        "heading": "Flights And Hotels",
+        "body": "Port Canaveral travelers often compare Orlando flights and hotels near Cocoa Beach or the port. Miami travelers compare MIA, Fort Lauderdale, Downtown, Brickell, Miami Beach, and airport-area stays."
+      },
+      {
+        "heading": "Best For Families",
+        "body": "Port Canaveral can be excellent for families adding Orlando attractions or beach time. Miami can work well for families too, but the city pace and transportation choices may require more planning."
+      },
+      {
+        "heading": "Best For Pre-Cruise Activities",
+        "body": "Miami is stronger for restaurants, nightlife, museums, boat days, and beach energy. Port Canaveral is stronger for Cocoa Beach, Kennedy Space Center, and Orlando add-ons."
+      },
+      {
+        "heading": "How To Choose",
+        "body": "Choose the port that fits the trip before and after the ship. The best cruise port is the one that makes flights, hotels, and local plans easier."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Port Canaveral or Miami better for families?",
+        "answer": "Port Canaveral is often easier for Orlando add-ons and family beach plans, while Miami is better for South Florida city and beach energy."
+      },
+      {
+        "question": "Which cruise port is easier to fly into?",
+        "answer": "Miami uses MIA and sometimes Fort Lauderdale. Port Canaveral is commonly paired with Orlando flights. The best option depends on route and timing."
+      },
+      {
+        "question": "Can you add theme parks to a Port Canaveral cruise?",
+        "answer": "Yes. Many travelers pair Orlando theme parks with Port Canaveral cruises, but transportation and timing need planning."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Best Cruises From Florida For First-Time Cruisers | Florida Travel Journal",
+    "metaDescription": "How first-time cruisers can compare Bahamas, Caribbean, weekend, family, and port-based Florida cruise options.",
+    "slug": "best-cruises-from-florida-first-time-cruisers",
+    "title": "Best Cruises From Florida For First-Time Cruisers",
+    "excerpt": "How first-time cruisers can compare Bahamas, Caribbean, weekend, family, and port-based Florida cruise options.",
+    "category": "cruise-stories",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Florida cruise ship sailing for first time cruiser planning",
+    "trending": true,
+    "views": 1640,
+    "tags": [
+      "cruises",
+      "first time cruisers",
+      "bahamas",
+      "caribbean"
+    ],
+    "relatedDestinations": [
+      "Miami",
+      "Port Canaveral",
+      "Tampa",
+      "Fort Lauderdale"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Best Florida Cruise Ports",
+        "href": "/best-florida-cruise-ports"
+      },
+      {
+        "label": "Florida Vacation Planning Guide",
+        "href": "/florida-vacation-planning-guide"
+      },
+      {
+        "label": "Florida Travel Gear Guide",
+        "href": "/florida-travel-gear-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Best Cruises From Florida",
+        "href": "https://cruisedealsflorida.org/best-cruises-from-florida",
+        "site": "cruises"
+      },
+      {
+        "label": "Bahamas Cruises From Florida",
+        "href": "https://cruisedealsflorida.org/bahamas-cruises-from-florida",
+        "site": "cruises"
+      },
+      {
+        "label": "Florida Cruise Packing Essentials",
+        "href": "https://cruisedealsflorida.org/cruise-packing-essentials",
+        "site": "cruises"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "piscifun",
+        "network": "awin",
+        "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=89509&awinaffid=2881665",
+        "disclosureRequired": true,
+        "title": "Browse cruise packing gear",
+        "description": "Useful compact gear and waterproof organization ideas for Florida cruise port days and beach stops.",
+        "category": "travel gear",
+        "destination": "Florida",
+        "cta": "Browse Piscifun Products"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Start With Trip Length",
+        "body": "First-time cruisers should begin with trip length. A short Bahamas cruise is easier to test, while a longer Caribbean sailing gives more time to settle into ship life. Weekend cruises can be convenient but may feel fast."
+      },
+      {
+        "heading": "Compare The Port First",
+        "body": "Miami, Port Canaveral, Fort Lauderdale, and Tampa each create a different pre-cruise plan. Flights, hotels, transportation, and local activities may matter as much as the ship itinerary."
+      },
+      {
+        "heading": "Choose A Simple Itinerary",
+        "body": "For a first cruise, simple can be better. Fewer moving parts, a familiar port, a clear hotel plan, and a ship style that matches the traveler can reduce stress."
+      },
+      {
+        "heading": "Plan The Packing",
+        "body": "Cruise travelers need documents, day-one essentials, sun protection, comfortable shoes, and rules-aware packing. Do not bring items that the cruise line restricts."
+      },
+      {
+        "heading": "Make It A Full Florida Trip",
+        "body": "A cruise can become a bigger vacation with one hotel night, a local activity, or a beach afternoon before sailing. Keep the add-on easy and close to the port."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What cruise length is best for first-time cruisers?",
+        "answer": "Many first-time cruisers like three- to five-night sailings because they are long enough to experience the ship but not too big a commitment."
+      },
+      {
+        "question": "Which Florida cruise port is best for beginners?",
+        "answer": "Miami and Port Canaveral are common starting points, but the best port depends on flights, hotels, and itinerary."
+      },
+      {
+        "question": "Should first-time cruisers arrive the day before?",
+        "answer": "Arriving the day before is usually safer when flights are involved because it reduces embarkation-day risk."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "What To Do Before A Miami Cruise: Easy Pre-Cruise Ideas | Florida Travel Journal",
+    "metaDescription": "Plan a low-stress Miami pre-cruise day with hotels, restaurants, beaches, boat rentals, museums, and port timing.",
+    "slug": "what-to-do-before-a-miami-cruise",
+    "title": "What To Do Before A Miami Cruise: Easy Pre-Cruise Ideas",
+    "excerpt": "Plan a low-stress Miami pre-cruise day with hotels, restaurants, beaches, boat rentals, museums, and port timing.",
+    "category": "cruise-stories",
+    "destination": "Miami",
+    "heroImage": "https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Miami pre cruise activities with waterfront hotels and local planning",
+    "trending": true,
+    "editorPick": true,
+    "views": 1555,
+    "tags": [
+      "miami",
+      "pre-cruise",
+      "things to do",
+      "cruises"
+    ],
+    "relatedDestinations": [
+      "Miami",
+      "Fort Lauderdale",
+      "Florida Keys"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Miami Travel Guide",
+        "href": "/miami-travel-guide"
+      },
+      {
+        "label": "Miami Yacht Rental Guide",
+        "href": "/miami-yacht-rental-guide"
+      },
+      {
+        "label": "Florida Water Activities Guide",
+        "href": "/florida-water-activities-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Miami Pre-Cruise Activities",
+        "href": "https://cruisedealsflorida.org/miami-pre-cruise-activities",
+        "site": "cruises"
+      },
+      {
+        "label": "Miami Things To Do",
+        "href": "https://localdealsflorida.org/miami-things-to-do",
+        "site": "local"
+      },
+      {
+        "label": "Miami Beach Hotels",
+        "href": "https://hoteldealsflorida.org/miami-beach-hotels",
+        "site": "hotels"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare Miami cruise hotels",
+        "description": "Check current hotel options before a Miami cruise night or weekend add-on.",
+        "category": "hotels",
+        "destination": "Miami",
+        "cta": "Compare Miami Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Keep The Plan Close",
+        "body": "The best pre-cruise activities are easy to reach from the hotel and do not create timing stress. Choose one main activity, one meal plan, and a clear path to the port."
+      },
+      {
+        "heading": "Good Pre-Cruise Ideas",
+        "body": "Miami travelers can choose a waterfront dinner, beach walk, museum visit, neighborhood stroll, boat day, or simple hotel pool afternoon. Avoid packing too many plans into the day before sailing."
+      },
+      {
+        "heading": "Hotel Area Matters",
+        "body": "Downtown and Brickell can be convenient for port access and restaurants. Miami Beach can feel more vacation-like but may add transportation time. Airport hotels may be practical for late arrivals."
+      },
+      {
+        "heading": "Boat Days Need Buffer",
+        "body": "A boat rental or yacht day can be memorable, but it should be planned with weather, pickup location, and next-day embarkation timing in mind. Do not stack it too close to cruise departure."
+      },
+      {
+        "heading": "Simple Is Usually Better",
+        "body": "First-time cruisers should prioritize sleep, documents, luggage, and transportation. A relaxed Miami evening often beats an ambitious schedule."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the easiest thing to do before a Miami cruise?",
+        "answer": "A waterfront dinner, short beach visit, hotel pool afternoon, or nearby museum is usually easier than a packed all-day itinerary."
+      },
+      {
+        "question": "Should pre-cruise travelers stay in Miami Beach?",
+        "answer": "Miami Beach can be fun, but travelers should compare transportation time, luggage needs, and port access before choosing it."
+      },
+      {
+        "question": "Can you do a boat rental before a Miami cruise?",
+        "answer": "Yes, if the timing, weather buffer, pickup point, and transportation plan are realistic."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Key West Weekend Travel Guide: Hotels, Flights, Food & Water Days | Florida Travel Journal",
+    "metaDescription": "Plan a Key West weekend with realistic arrival timing, hotel areas, sunset plans, water activities, and Florida Keys pacing.",
+    "slug": "key-west-weekend-travel-guide",
+    "title": "Key West Weekend Travel Guide: Hotels, Flights, Food & Water Days",
+    "excerpt": "Plan a Key West weekend with realistic arrival timing, hotel areas, sunset plans, water activities, and Florida Keys pacing.",
+    "category": "destination-spotlights",
+    "destination": "Key West",
+    "heroImage": "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Key West weekend travel with hotels food sunsets and water activities",
+    "featured": true,
+    "trending": true,
+    "popular": true,
+    "views": 1810,
+    "tags": [
+      "key west",
+      "weekend trips",
+      "florida keys",
+      "water activities"
+    ],
+    "relatedDestinations": [
+      "Key West",
+      "Florida Keys",
+      "Miami"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Key West Travel Guide",
+        "href": "/key-west-travel-guide"
+      },
+      {
+        "label": "Florida Keys Road Trip Guide",
+        "href": "/florida-keys-road-trip-guide"
+      },
+      {
+        "label": "Romantic Florida Getaways",
+        "href": "/romantic-florida-getaways"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Key West Hotel Deals",
+        "href": "https://hoteldealsflorida.org/key-west-hotel-deals",
+        "site": "hotels"
+      },
+      {
+        "label": "Key West Flight Deals",
+        "href": "https://flightdealsflorida.org/key-west-flight-deals",
+        "site": "flights"
+      },
+      {
+        "label": "Florida Water Activities",
+        "href": "https://localdealsflorida.org/florida-water-activities",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare Key West hotels",
+        "description": "Check current Key West hotel options for weekend trips, island stays, and Florida Keys getaways.",
+        "category": "hotels",
+        "destination": "Key West",
+        "cta": "Compare Key West Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Plan Around Arrival Time",
+        "body": "Key West weekends are better when travelers are honest about arrival timing. Flying directly, driving from Miami, or building a Keys road trip each creates a different kind of weekend."
+      },
+      {
+        "heading": "Choose The Right Hotel Base",
+        "body": "Old Town is convenient for restaurants, sunset walks, and nightlife. Other areas may offer quieter stays or different price points. The right hotel depends on whether the weekend is romantic, social, water-focused, or slow."
+      },
+      {
+        "heading": "Keep The Schedule Light",
+        "body": "Key West rewards wandering, food, sunset plans, and water activities. A weekend with too many reservations can miss what makes the island work."
+      },
+      {
+        "heading": "Add One Water Experience",
+        "body": "Snorkeling, boating, fishing, kayaking, or a sunset sail can anchor the weekend. Choose one activity and leave weather flexibility."
+      },
+      {
+        "heading": "Best Planning Move",
+        "body": "Decide whether the journey is part of the vacation. A scenic drive can be worth it, but not if it turns a short weekend into a rushed arrival and exhausted departure."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Key West good for a weekend trip?",
+        "answer": "Yes, but it works best when arrival timing is realistic and the schedule is not overloaded."
+      },
+      {
+        "question": "Should travelers fly or drive to Key West?",
+        "answer": "Flying saves time, while driving from Miami can be scenic. The better choice depends on trip length and budget."
+      },
+      {
+        "question": "Where should first-time Key West visitors stay?",
+        "answer": "Old Town is often convenient for restaurants, walking, sunset plans, and nightlife, but quieter areas can work for slower trips."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "St. Augustine Weekend Guide: History, Beaches, Hotels & Food | Florida Travel Journal",
+    "metaDescription": "A practical St. Augustine weekend story for travelers comparing historic districts, beaches, hotels, restaurants, and road-trip timing.",
+    "slug": "st-augustine-weekend-guide",
+    "title": "St. Augustine Weekend Guide: History, Beaches, Hotels & Food",
+    "excerpt": "A practical St. Augustine weekend story for travelers comparing historic districts, beaches, hotels, restaurants, and road-trip timing.",
+    "category": "destination-spotlights",
+    "destination": "St. Augustine",
+    "heroImage": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "St Augustine weekend guide with historic streets beaches hotels and food",
+    "trending": true,
+    "views": 1390,
+    "tags": [
+      "st augustine",
+      "weekend trips",
+      "history",
+      "beaches"
+    ],
+    "relatedDestinations": [
+      "St. Augustine",
+      "Jacksonville",
+      "Daytona Beach"
+    ],
+    "relatedGuides": [
+      {
+        "label": "St. Augustine Travel Guide",
+        "href": "/st-augustine-travel-guide"
+      },
+      {
+        "label": "Florida Weekend Getaways",
+        "href": "/florida-weekend-getaways"
+      },
+      {
+        "label": "Best Florida Road Trips",
+        "href": "/best-florida-road-trips"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Jacksonville Flight Deals",
+        "href": "https://flightdealsflorida.org/jacksonville-flight-deals",
+        "site": "flights"
+      },
+      {
+        "label": "St. Augustine Hotel Deals",
+        "href": "https://hoteldealsflorida.org/st-augustine-hotel-deals",
+        "site": "hotels"
+      },
+      {
+        "label": "St. Augustine Local Deals",
+        "href": "https://localdealsflorida.org/st-augustine-local-deals",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare St. Augustine hotels",
+        "description": "Check current hotel options for historic district weekends and beach-adjacent stays.",
+        "category": "hotels",
+        "destination": "St. Augustine",
+        "cta": "Compare Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Pick Historic Or Beach First",
+        "body": "St. Augustine weekends usually start with one big choice: historic district energy or beach access. The historic district is best for walking, food, tours, and architecture. Beach-area stays can feel slower and more relaxed."
+      },
+      {
+        "heading": "Use Jacksonville As A Gateway",
+        "body": "Travelers flying in often compare Jacksonville access, while road trippers may pair St. Augustine with Daytona Beach, Amelia Island, or other Northeast Florida stops."
+      },
+      {
+        "heading": "Keep The Weekend Walkable",
+        "body": "A walkable hotel can make St. Augustine easier because parking and traffic can be annoying during busy periods. If the historic district is the focus, convenience may be worth more than a small room-rate difference."
+      },
+      {
+        "heading": "Balance Tours And Free Time",
+        "body": "History tours, museums, restaurants, and scenic walks are the draw, but the weekend works best with room to wander. Leave time for coffee, side streets, and waterfront views."
+      },
+      {
+        "heading": "Best Planning Move",
+        "body": "Choose one main plan per day: historic exploring, beach time, food, or a nearby drive. St. Augustine feels better when the itinerary has breathing room."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is St. Augustine good for a weekend getaway?",
+        "answer": "Yes. It works well for history, food, walkable streets, beach add-ons, and Northeast Florida road trips."
+      },
+      {
+        "question": "Should visitors stay in the historic district?",
+        "answer": "The historic district is convenient for walking and food, but beach-area stays may fit travelers who want a quieter coastal weekend."
+      },
+      {
+        "question": "What airport is best for St. Augustine?",
+        "answer": "Jacksonville is commonly used, though the best route depends on fares, schedules, and ground transportation."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "How To Plan A Florida Vacation Without Overspending | Florida Travel Journal",
+    "metaDescription": "A practical budget planning story for Florida flights, hotels, cruises, activities, food, timing, and flexible trip choices.",
+    "slug": "how-to-plan-florida-vacation-without-overspending",
+    "title": "How To Plan A Florida Vacation Without Overspending",
+    "excerpt": "A practical budget planning story for Florida flights, hotels, cruises, activities, food, timing, and flexible trip choices.",
+    "category": "travel-tips",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Florida vacation budget planning with flights hotels food and activities",
+    "trending": true,
+    "popular": true,
+    "views": 1725,
+    "tags": [
+      "budget travel",
+      "florida vacation",
+      "planning",
+      "deals"
+    ],
+    "relatedDestinations": [
+      "Orlando",
+      "Miami",
+      "Tampa",
+      "Clearwater",
+      "Daytona Beach"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Cheap Florida Vacation Ideas",
+        "href": "/cheap-florida-vacation-ideas"
+      },
+      {
+        "label": "Florida Budget Travel Guide",
+        "href": "/florida-budget-travel-guide"
+      },
+      {
+        "label": "Florida Vacation Planning Guide",
+        "href": "/florida-vacation-planning-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Florida Flight Deals",
+        "href": "https://flightdealsflorida.org",
+        "site": "flights"
+      },
+      {
+        "label": "Florida Hotel Deals",
+        "href": "https://hoteldealsflorida.org",
+        "site": "hotels"
+      },
+      {
+        "label": "Local Deals Florida",
+        "href": "https://localdealsflorida.org",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "expedia",
+        "network": "expedia",
+        "affiliateUrl": "https://expedia.com/affiliate/2Wbjdi2",
+        "disclosureRequired": true,
+        "title": "Compare Florida hotel options",
+        "description": "Check current hotel options after choosing your destination and travel dates.",
+        "category": "hotels",
+        "destination": "Florida",
+        "cta": "Compare Florida Hotels"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Start With The Biggest Cost",
+        "body": "For many Florida trips, the biggest cost is flights, hotel nights, cruise fare, or theme park tickets. Identify the cost driver first, then build the rest of the itinerary around it."
+      },
+      {
+        "heading": "Travel Fewer Places Better",
+        "body": "Moving between too many destinations adds transportation, parking, time, and stress. A focused Orlando, Miami, Gulf Coast, Keys, or cruise-port trip can feel better and cost less than a scattered itinerary."
+      },
+      {
+        "heading": "Compare Timing And Flexibility",
+        "body": "A small date shift can affect airfare, hotel demand, and crowds. Shoulder dates, weekdays, and less obvious destinations can help, but only if the schedule still works."
+      },
+      {
+        "heading": "Budget For Local Spending",
+        "body": "Food, parking, resort fees, attractions, beach gear, and rideshares can surprise travelers. Build those costs into the plan before the trip, not after the credit card statement arrives."
+      },
+      {
+        "heading": "Use Deals As Support",
+        "body": "A deal is helpful when it supports the trip you already want. Avoid booking something just because it looks discounted if it adds complexity, distance, or a destination mismatch."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the easiest way to save on a Florida vacation?",
+        "answer": "Start by controlling the biggest cost, usually flights, hotels, tickets, or cruise fare, then keep the itinerary focused."
+      },
+      {
+        "question": "Are cheap Florida vacations still possible?",
+        "answer": "Yes, especially with flexible dates, fewer hotel moves, realistic local spending, and destinations that match the budget."
+      },
+      {
+        "question": "Should travelers book flights or hotels first?",
+        "answer": "Book the piece with the least flexibility first, then compare the rest of the trip around it."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Florida Vacation Packing Guide For Beaches, Parks, Cruises & Weekend Trips | Florida Travel Journal",
+    "metaDescription": "Pack smarter for Florida weather, beaches, theme parks, cruises, fishing days, rain, and family weekend trips.",
+    "slug": "florida-vacation-packing-guide",
+    "title": "Florida Vacation Packing Guide For Beaches, Parks, Cruises & Weekend Trips",
+    "excerpt": "Pack smarter for Florida weather, beaches, theme parks, cruises, fishing days, rain, and family weekend trips.",
+    "category": "travel-tips",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Florida vacation packing guide for beaches parks cruises and weekend trips",
+    "trending": true,
+    "views": 1415,
+    "tags": [
+      "packing",
+      "travel tips",
+      "beaches",
+      "cruises",
+      "theme parks"
+    ],
+    "relatedDestinations": [
+      "Orlando",
+      "Miami",
+      "Clearwater",
+      "Port Canaveral",
+      "Florida Keys"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Florida Travel Gear Guide",
+        "href": "/florida-travel-gear-guide"
+      },
+      {
+        "label": "Florida Beach Day Essentials Guide",
+        "href": "/florida-beach-day-essentials-guide"
+      },
+      {
+        "label": "Florida Cruise Port Guide",
+        "href": "/best-florida-cruise-ports"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Cruise Packing Essentials",
+        "href": "https://cruisedealsflorida.org/cruise-packing-essentials",
+        "site": "cruises"
+      },
+      {
+        "label": "Beach Vacation Essentials",
+        "href": "https://hoteldealsflorida.org/beach-vacation-essentials",
+        "site": "hotels"
+      },
+      {
+        "label": "Florida Fishing Trip Gear",
+        "href": "https://localdealsflorida.org/florida-fishing-trip-gear",
+        "site": "local"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "piscifun",
+        "network": "awin",
+        "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=89509&awinaffid=2881665",
+        "disclosureRequired": true,
+        "title": "Browse outdoor travel gear",
+        "description": "Helpful compact gear for beach days, fishing trips, cruise port activities, and Florida weekend packing.",
+        "category": "travel gear",
+        "destination": "Florida",
+        "cta": "Browse Piscifun Products"
+      },
+      {
+        "advertiser": "tidewe",
+        "network": "awin",
+        "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=78182&awinaffid=2881665",
+        "disclosureRequired": true,
+        "title": "Browse waterproof outdoor gear",
+        "description": "Useful for rain gear, waterproof bags, camping, fishing, and outdoor Florida weekends.",
+        "category": "outdoor gear",
+        "destination": "Florida",
+        "cta": "Browse TideWe Gear"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Pack For Heat And Rain",
+        "body": "Florida packing should assume sun, humidity, sudden rain, air-conditioned interiors, and outdoor walking. Lightweight layers, sun protection, and comfortable shoes matter more than packing a different outfit for every possible plan."
+      },
+      {
+        "heading": "Match Gear To The Trip",
+        "body": "Theme park trips need walking comfort and small bags. Beach trips need shade, towels, sandals, and dry storage. Cruise trips need documents and embarkation-day essentials. Outdoor trips need water-resistant organization and practical gear."
+      },
+      {
+        "heading": "Do Not Overpack",
+        "body": "Overpacking makes hotel moves, flights, rideshares, and cruise boarding harder. Pack around the real itinerary and leave space for wet clothes, souvenirs, or laundry needs."
+      },
+      {
+        "heading": "Think About Families",
+        "body": "Families should pack snacks, water bottles, chargers, medicines, swim items, rain backup, and a simple day bag. Keeping essentials easy to reach can save a full day."
+      },
+      {
+        "heading": "Confirm Rules",
+        "body": "Cruise lines, airlines, hotels, parks, and attractions may have rules about bags, liquids, prohibited items, and storage. Confirm current rules before packing specialty gear."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What should travelers always pack for Florida?",
+        "answer": "Sun protection, comfortable shoes, water-friendly items, light rain protection, chargers, and a flexible day bag are useful for many trips."
+      },
+      {
+        "question": "Do Florida cruises need special packing?",
+        "answer": "Cruises need documents, embarkation-day essentials, and cruise-line rule awareness, plus port-day gear if beaches or excursions are planned."
+      },
+      {
+        "question": "Should travelers pack rain gear for Florida?",
+        "answer": "Yes. Light rain protection is useful because storms can arrive quickly, especially in warmer months."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "How To Pick The Right Florida Destination For Your Trip Style | Florida Travel Journal",
+    "metaDescription": "Compare Florida destinations by beaches, theme parks, cruise ports, budget, hotels, weather, flights, and local activities.",
+    "slug": "how-to-pick-right-florida-destination",
+    "title": "How To Pick The Right Florida Destination For Your Trip Style",
+    "excerpt": "Compare Florida destinations by beaches, theme parks, cruise ports, budget, hotels, weather, flights, and local activities.",
+    "category": "travel-tips",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Florida destination planning for beaches cities theme parks cruises and local activities",
+    "editorPick": true,
+    "views": 1325,
+    "tags": [
+      "destinations",
+      "planning",
+      "florida travel",
+      "comparisons"
+    ],
+    "relatedDestinations": [
+      "Orlando",
+      "Miami",
+      "Tampa",
+      "Key West",
+      "Destin",
+      "St. Augustine"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Best Places To Visit In Florida",
+        "href": "/best-places-to-visit-in-florida"
+      },
+      {
+        "label": "Florida Travel Guide",
+        "href": "/florida-travel-guide"
+      },
+      {
+        "label": "Orlando vs Miami Vacation",
+        "href": "/orlando-vs-miami-vacation"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Florida Flight Deals",
+        "href": "https://flightdealsflorida.org",
+        "site": "flights"
+      },
+      {
+        "label": "Florida Hotel Deals",
+        "href": "https://hoteldealsflorida.org",
+        "site": "hotels"
+      },
+      {
+        "label": "Florida Cruise Deals",
+        "href": "https://cruisedealsflorida.org",
+        "site": "cruises"
+      }
+    ],
+    "affiliateLinks": [],
+    "content": [
+      {
+        "heading": "Start With The Reason For Going",
+        "body": "A Florida trip can be built around beaches, theme parks, cruises, food, outdoor time, family visits, events, or pure rest. The destination should match that reason before any deal or hotel price enters the decision."
+      },
+      {
+        "heading": "Compare Trip Friction",
+        "body": "A cheaper destination may become expensive if flights are inconvenient, hotel areas are far apart, or local transportation adds stress. Compare total trip friction, not just destination popularity."
+      },
+      {
+        "heading": "Match The Traveler",
+        "body": "Families may want Orlando, Clearwater, Destin, or Port Canaveral. Couples may prefer Key West, Naples, Miami, or St. Augustine. Outdoor travelers may compare the Keys, Destin, Fort Myers, and Gulf Coast areas."
+      },
+      {
+        "heading": "Think About Season",
+        "body": "Weather, crowds, hotel demand, festivals, school breaks, and hurricane season can all affect destination fit. A destination that is perfect in one month may feel wrong in another."
+      },
+      {
+        "heading": "Use The Network",
+        "body": "Once the destination is clear, compare flights, hotels, cruises, and local activities separately. That keeps the planning process focused and easier to adjust."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What Florida destination is best for first-time visitors?",
+        "answer": "Orlando, Miami, Tampa Bay, Clearwater, Key West, and St. Augustine are common starting points, depending on trip style."
+      },
+      {
+        "question": "How should travelers choose between beach and theme park trips?",
+        "answer": "Choose based on pace. Theme parks are structured and active; beach trips can be slower and more flexible."
+      },
+      {
+        "question": "Should budget decide the destination?",
+        "answer": "Budget matters, but travelers should also compare transportation, hotel area, weather, and local spending."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Florida Outdoor Weekend Guide: Beaches, Springs, Fishing & Rainy-Day Backup Plans | Florida Travel Journal",
+    "metaDescription": "Plan an outdoor Florida weekend with fishing, beaches, springs, camping, water activities, gear, hotels, and weather flexibility.",
+    "slug": "florida-outdoor-weekend-guide",
+    "title": "Florida Outdoor Weekend Guide: Beaches, Springs, Fishing & Rainy-Day Backup Plans",
+    "excerpt": "Plan an outdoor Florida weekend with fishing, beaches, springs, camping, water activities, gear, hotels, and weather flexibility.",
+    "category": "outdoor-florida",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Florida outdoor weekend with fishing beaches springs and travel gear planning",
+    "trending": true,
+    "views": 1290,
+    "tags": [
+      "outdoor florida",
+      "fishing",
+      "camping",
+      "water activities",
+      "gear"
+    ],
+    "relatedDestinations": [
+      "Florida Keys",
+      "Destin",
+      "Fort Myers",
+      "Tampa",
+      "Jacksonville"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Florida Outdoor Gear Guide",
+        "href": "/florida-outdoor-gear-guide"
+      },
+      {
+        "label": "Florida Fishing Trip Guide",
+        "href": "/florida-fishing-trip-guide"
+      },
+      {
+        "label": "Florida Water Activities Guide",
+        "href": "/florida-water-activities-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Florida Outdoor Activity Gear",
+        "href": "https://localdealsflorida.org/florida-outdoor-activity-gear",
+        "site": "local"
+      },
+      {
+        "label": "Florida Weekend Flight Ideas",
+        "href": "https://flightdealsflorida.org/weekend-flight-deals-florida",
+        "site": "flights"
+      },
+      {
+        "label": "Florida Beach Hotels",
+        "href": "https://hoteldealsflorida.org/florida-beachfront-hotels",
+        "site": "hotels"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "piscifun",
+        "network": "awin",
+        "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=89509&awinaffid=2881665",
+        "disclosureRequired": true,
+        "title": "Shop Florida fishing essentials",
+        "description": "Browse compact fishing and outdoor gear for beach, pier, and weekend Florida trips.",
+        "category": "fishing gear",
+        "destination": "Florida",
+        "cta": "Shop Outdoor Gear"
+      },
+      {
+        "advertiser": "tidewe",
+        "network": "awin",
+        "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=78182&awinaffid=2881665",
+        "disclosureRequired": true,
+        "title": "Browse waterproof outdoor gear",
+        "description": "Useful for rain, mud, fishing, camping, and wet-weather Florida outdoor weekends.",
+        "category": "outdoor gear",
+        "destination": "Florida",
+        "cta": "Browse TideWe Gear"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Pick One Outdoor Anchor",
+        "body": "A strong outdoor weekend usually has one main plan: beach day, fishing, spring visit, kayak trip, camping, or a scenic road trip. Too many outdoor plans can make weather and transportation harder."
+      },
+      {
+        "heading": "Pack For Water And Weather",
+        "body": "Florida outdoor trips need sun protection, water, dry storage, rain awareness, and comfortable footwear. Compact practical gear is more useful than packing for every possible scenario."
+      },
+      {
+        "heading": "Choose A Destination That Fits",
+        "body": "Destin, the Florida Keys, Fort Myers, Tampa Bay, Jacksonville, and Gulf Coast areas all support outdoor weekends, but they do not offer the same mix of hotels, fishing, beaches, and activities."
+      },
+      {
+        "heading": "Build A Backup Plan",
+        "body": "Storms, heat, wind, and tides can change outdoor plans. Pick nearby indoor attractions, restaurants, scenic drives, or hotel downtime so the trip still works."
+      },
+      {
+        "heading": "Keep It Useful",
+        "body": "Affiliate gear should support the trip, not create clutter. Choose only what solves a real problem: water, sun, storage, rain, walking, or fishing access."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What should travelers pack for a Florida outdoor weekend?",
+        "answer": "Sun protection, water, comfortable shoes, dry storage, light rain gear, and destination-specific activity gear."
+      },
+      {
+        "question": "Where are good Florida outdoor weekend destinations?",
+        "answer": "The Florida Keys, Destin, Fort Myers, Tampa Bay, Jacksonville, springs, beaches, and Gulf Coast areas can all work."
+      },
+      {
+        "question": "How should travelers plan around Florida weather?",
+        "answer": "Keep plans flexible, check local conditions, and choose a nearby backup activity before the trip starts."
+      }
+    ]
+  },
+  {
+    "publishDate": "2026-06-02",
+    "updatedDate": "2026-06-02",
+    "status": "published",
+    "metadataTitle": "Best Florida Water Activities For Beach Trips, Families & Weekend Travelers | Florida Travel Journal",
+    "metaDescription": "Compare Florida boating, snorkeling, kayaking, fishing, springs, beach days, and cruise-port water activities.",
+    "slug": "best-florida-water-activities-story",
+    "title": "Best Florida Water Activities For Beach Trips, Families & Weekend Travelers",
+    "excerpt": "Compare Florida boating, snorkeling, kayaking, fishing, springs, beach days, and cruise-port water activities.",
+    "category": "outdoor-florida",
+    "destination": "Florida",
+    "heroImage": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80",
+    "heroImageAlt": "Florida water activities with beaches boating snorkeling kayaking and family travel",
+    "featured": false,
+    "trending": true,
+    "popular": true,
+    "views": 1535,
+    "tags": [
+      "water activities",
+      "boating",
+      "snorkeling",
+      "families",
+      "beaches"
+    ],
+    "relatedDestinations": [
+      "Miami",
+      "Florida Keys",
+      "Destin",
+      "Clearwater",
+      "Fort Lauderdale"
+    ],
+    "relatedGuides": [
+      {
+        "label": "Florida Water Activities Guide",
+        "href": "/florida-water-activities-guide"
+      },
+      {
+        "label": "Best Florida Beaches",
+        "href": "/best-florida-beaches"
+      },
+      {
+        "label": "Florida Beach Day Essentials Guide",
+        "href": "/florida-beach-day-essentials-guide"
+      }
+    ],
+    "relatedSites": [
+      {
+        "label": "Best Florida Water Activities",
+        "href": "https://localdealsflorida.org/best-florida-water-activities",
+        "site": "local"
+      },
+      {
+        "label": "Miami Pre-Cruise Activities",
+        "href": "https://cruisedealsflorida.org/miami-pre-cruise-activities",
+        "site": "cruises"
+      },
+      {
+        "label": "Florida Beach Hotels",
+        "href": "https://hoteldealsflorida.org/florida-beachfront-hotels",
+        "site": "hotels"
+      }
+    ],
+    "affiliateLinks": [
+      {
+        "advertiser": "piscifun",
+        "network": "awin",
+        "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=89509&awinaffid=2881665",
+        "disclosureRequired": true,
+        "title": "Browse water-day gear",
+        "description": "Helpful outdoor gear for fishing, beach days, kayaking, and Florida water activities.",
+        "category": "outdoor gear",
+        "destination": "Florida",
+        "cta": "Browse Piscifun Products"
+      }
+    ],
+    "content": [
+      {
+        "heading": "Start With Comfort Level",
+        "body": "Florida water activities range from simple beach days to boating, fishing, snorkeling, kayaking, paddleboarding, and springs. Choose the activity around the traveler’s comfort level, not just the photo opportunity."
+      },
+      {
+        "heading": "Good Destination Matches",
+        "body": "Miami and Fort Lauderdale work well for boating and waterfront days. The Florida Keys are strong for snorkeling, fishing, and island trips. Destin is strong for beach, boating, and fishing. Clearwater is easy for families and sunset water plans."
+      },
+      {
+        "heading": "Check Rules And Conditions",
+        "body": "Weather, tides, water conditions, age limits, licenses, and operator rules can affect the day. Confirm details with official sources or providers before building the whole trip around a water activity."
+      },
+      {
+        "heading": "Pair With Hotels And Food",
+        "body": "Water days are easier when the hotel location, transportation, food, and cleanup plan make sense. Families especially benefit from staying close to the main activity."
+      },
+      {
+        "heading": "Keep Gear Simple",
+        "body": "Pack sun protection, dry storage, towels, shoes, and any activity-specific gear. Avoid overpacking if you are flying, cruising, or changing hotels."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the best Florida water activities for families?",
+        "answer": "Beach days, gentle boat tours, aquariums, springs, kayaking, and beginner-friendly snorkeling can work depending on ages and comfort."
+      },
+      {
+        "question": "Where should travelers go for Florida boating?",
+        "answer": "Miami, Fort Lauderdale, the Florida Keys, Tampa Bay, Destin, and Clearwater can all support boating plans."
+      },
+      {
+        "question": "Do travelers need special gear for Florida water activities?",
+        "answer": "Usually only practical basics: sun protection, dry storage, water shoes when useful, towels, and activity-specific items if needed."
       }
     ]
   }

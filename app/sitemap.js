@@ -1,5 +1,5 @@
 import { baseUrl, landingPages } from "./lib/network";
-import { getAllStories, hasJournalData, storyBasePath } from "./lib/stories";
+import { getAllStories, getStoryCategories, hasJournalData, storyBasePath } from "./lib/stories";
 
 const lastModified = new Date();
 
@@ -26,6 +26,12 @@ export default function sitemap() {
     changeFrequency: "monthly",
     priority: story.featured ? 0.8 : 0.7
   }));
+  const storyCategoryPages = getStoryCategories().map((category) => ({
+    url: `${baseUrl}${storyBasePath}/${category.slug}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: 0.72
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -42,7 +48,8 @@ export default function sitemap() {
             lastModified,
             changeFrequency: "weekly",
             priority: 0.85
-          }
+          },
+          ...storyCategoryPages
         ]
       : []),
     ...storyPages

@@ -47,12 +47,20 @@ const newStories = [];
 for (const file of files) {
   const story = JSON.parse(await readFile(path.join(draftDir, file), "utf8"));
 
+  if (story.status !== "reviewed") {
+    console.log(`SKIP ${file}: set status to reviewed before publishing`);
+    continue;
+  }
+
   if (existingSlugs.has(story.slug)) {
     console.log(`SKIP ${file}: slug already exists in shared/data/stories.json`);
     continue;
   }
 
-  newStories.push(story);
+  newStories.push({
+    ...story,
+    status: "published"
+  });
 }
 
 if (!newStories.length) {

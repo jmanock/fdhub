@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { trackNewsletterSignupStarted, trackNewsletterSignupSuccess } from "../lib/analytics";
 
-export default function NewsletterForm() {
+export default function NewsletterForm({ buttonLabel = "Send Me Deals" }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
@@ -71,7 +71,7 @@ export default function NewsletterForm() {
         required
       />
       <button type="submit" disabled={status === "loading"}>
-        {status === "loading" ? "Sending..." : "Send Me Deals"}
+        {status === "loading" ? "Sending..." : buttonLabel}
       </button>
       {message ? (
         <p className={`form-message ${status === "error" ? "error" : "success"}`} role="status">

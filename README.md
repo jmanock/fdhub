@@ -34,6 +34,7 @@ Routes:
 
 - `/journal`: featured stories, trending stories, most popular stories, and category sections
 - `/journal/[slug]`: individual story pages with story body, related network links, affiliate-safe recommendations, related stories, FAQs, newsletter signup, and schema
+- `/journal/[category]`: category collection pages generated from `data/journal/storyCategories.json`
 
 Source data:
 
@@ -67,6 +68,8 @@ Story requirements:
 - unique title, excerpt, slug, destination, category, dates, hero image, and descriptive alt text
 - useful editorial sections rather than generic SEO filler
 - related guides, related destinations, related network sites, and FAQs
+- `status: "published"` before the story appears on `/journal`, category pages, or `/journal/[slug]`
+- optional `featured`, `trending`, `popular`, and `editorPick` flags for magazine modules
 - affiliate disclosure when affiliate links are present
 - tracked affiliate URLs only; do not publish Sailo outbound links without the supplied AWIN URL
 
@@ -221,7 +224,7 @@ git pull origin main
 npm install
 npm run build
 pm2 delete fdhub
-pm2 start npm --name fdhub -- start
+PORT=3004 pm2 start npm --name fdhub -- start
 pm2 save
 curl -I http://localhost:3004
 ```

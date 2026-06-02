@@ -24,7 +24,13 @@ import {
   travelGuideLinks,
   tripRouterCards
 } from "./lib/network";
-import { getFeaturedStories, getTrendingStories } from "./lib/stories";
+import {
+  getEditorPickStories,
+  getFeaturedStories,
+  getLatestStories,
+  getPlanThisTripLinks,
+  getTrendingStories
+} from "./lib/stories";
 
 const trust = [
   ["Curated Florida Deals", "A focused network built around travel, savings, and things to do across the state."],
@@ -65,7 +71,10 @@ const homeFaqSchema = {
 
 export default function Home() {
   const [featuredJournalStory] = getFeaturedStories(1);
-  const journalStories = getTrendingStories(3);
+  const journalStories = getTrendingStories(5);
+  const latestJournalStories = getLatestStories(4);
+  const editorJournalStories = getEditorPickStories(3);
+  const featuredPlanLinks = featuredJournalStory ? getPlanThisTripLinks(featuredJournalStory) : [];
 
   return (
     <>
@@ -277,7 +286,7 @@ export default function Home() {
         <section className="travel-journal-home section-pad" aria-labelledby="travel-journal-home-title">
           <div className="section-heading">
             <p className="eyebrow">Florida Travel Journal</p>
-            <h2 id="travel-journal-home-title">Fresh Florida Trip Stories</h2>
+            <h2 id="travel-journal-home-title">Start With A Florida Travel Story</h2>
           </div>
           <div className="journal-home-grid">
             {featuredJournalStory ? (
@@ -294,6 +303,7 @@ export default function Home() {
                 <div>
                   <p className="eyebrow">{featuredJournalStory.categoryDetails.name}</p>
                   <h3>{featuredJournalStory.title}</h3>
+                  <p className="best-for-tag">{featuredJournalStory.destination}</p>
                   <p>{featuredJournalStory.excerpt}</p>
                   <p className="value-line">Read the story</p>
                 </div>
@@ -304,15 +314,35 @@ export default function Home() {
                 <Link className="guide-card compact-story-card" href={story.path} key={story.slug}>
                   <span className="story-category-label">{story.categoryDetails.name}</span>
                   <h3>{story.title}</h3>
+                  <p className="best-for-tag">{story.destination}</p>
                   <p>{story.excerpt}</p>
                 </Link>
               ))}
-              <Link className="guide-card compact-story-card" href="/journal">
-                <span className="story-category-label">Browse all</span>
-                <h3>Florida Travel Journal</h3>
-                <p>Read destination spotlights, comparisons, flight ideas, hotel stories, cruise planning, and local activity guides.</p>
-              </Link>
             </div>
+          </div>
+          <div className="router-card-grid journal-plan-grid">
+            {featuredPlanLinks.map((link) => (
+              <a className="router-card" href={link.href} key={link.href}>
+                <h3>{link.label}</h3>
+                <p>Use this next step to turn the featured story into flights, hotels, cruises, or local plans.</p>
+              </a>
+            ))}
+          </div>
+          <div className="guide-card-grid journal-home-list">
+            {editorJournalStories.map((story) => (
+              <Link className="guide-card compact-story-card" href={story.path} key={story.slug}>
+                <span className="story-category-label">Editor Pick</span>
+                <h3>{story.title}</h3>
+                <p>{story.excerpt}</p>
+              </Link>
+            ))}
+            {latestJournalStories.slice(0, 1).map((story) => (
+              <Link className="guide-card compact-story-card" href={story.path} key={story.slug}>
+                <span className="story-category-label">Latest</span>
+                <h3>{story.title}</h3>
+                <p>{story.excerpt}</p>
+              </Link>
+            ))}
           </div>
         </section>
 

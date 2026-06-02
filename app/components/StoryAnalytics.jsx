@@ -48,7 +48,8 @@ export default function StoryAnalytics({ story }) {
         ...baseParams,
         cta_text: ctaText,
         outbound_url: link.href,
-        destination_site: link.dataset.destinationSite || link.hostname
+        destination_site: link.dataset.destinationSite || link.hostname,
+        target_site: link.dataset.destinationSite || link.hostname
       };
 
       if (link.dataset.storyAffiliate === "true") {

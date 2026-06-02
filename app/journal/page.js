@@ -5,8 +5,10 @@ import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import {
   getAllStories,
+  getEditorPickStories,
   getFeaturedStories,
   getJournalCategorySections,
+  getLatestStories,
   getPopularStories,
   getTrendingStories,
   storyBasePath
@@ -66,6 +68,7 @@ function StoryCard({ story, compact = false }) {
       ) : null}
       <span className="story-category-label">{story.categoryDetails.name}</span>
       <h3>{story.title}</h3>
+      <p className="best-for-tag">{story.destination}</p>
       <p>{story.excerpt}</p>
       <p className="updated-label">Updated {story.updatedDate}</p>
     </Link>
@@ -75,8 +78,10 @@ function StoryCard({ story, compact = false }) {
 export default function JournalPage() {
   const allStories = getAllStories();
   const [featuredStory] = getFeaturedStories(1);
-  const trendingStories = getTrendingStories(4);
-  const popularStories = getPopularStories(5);
+  const trendingStories = getTrendingStories(6);
+  const popularStories = getPopularStories(6);
+  const editorPicks = getEditorPickStories(4);
+  const latestStories = getLatestStories(6);
   const categorySections = getJournalCategorySections();
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -130,6 +135,7 @@ export default function JournalPage() {
               <a href="#featured-stories">Featured Stories</a>
               <a href="#trending-stories">Trending</a>
               <a href="#story-categories">Categories</a>
+              <a href="#latest-stories">Latest</a>
             </div>
           </div>
           {featuredStory ? (
@@ -200,6 +206,13 @@ export default function JournalPage() {
             <p className="eyebrow">Browse by intent</p>
             <h2 id="story-categories-title">Florida Travel Journal Categories</h2>
           </div>
+          <div className="popular-link-grid journal-filter-grid" aria-label="Journal category filters">
+            {categorySections.map((category) => (
+              <Link href={category.path} key={category.slug}>
+                {category.name}
+              </Link>
+            ))}
+          </div>
           <div className="cluster-grid">
             {categorySections.map((category) => (
               <article className="cluster-card" key={category.slug}>
@@ -221,6 +234,18 @@ export default function JournalPage() {
           </div>
         </section>
 
+        <section className="destination-spotlight section-pad" aria-labelledby="journal-destination-title">
+          <div className="section-heading">
+            <p className="eyebrow">Destination spotlight</p>
+            <h2 id="journal-destination-title">Plan Around A Florida Place</h2>
+          </div>
+          <div className="guide-card-grid">
+            {getStoriesByDestination(allStories, ["Orlando", "Miami", "Key West"]).map((story) => (
+              <StoryCard story={story} compact key={story.slug} />
+            ))}
+          </div>
+        </section>
+
         <section className="best-for section-pad" aria-labelledby="popular-journal-title">
           <div className="section-heading">
             <p className="eyebrow">Most popular</p>
@@ -233,7 +258,36 @@ export default function JournalPage() {
           </div>
         </section>
 
-        <NewsletterSection />
+        <section className="comparison-guides section-pad" aria-labelledby="editor-picks-title">
+          <div className="section-heading">
+            <p className="eyebrow">Editor picks</p>
+            <h2 id="editor-picks-title">Travel Stories Worth Starting With</h2>
+          </div>
+          <div className="guide-card-grid">
+            {editorPicks.map((story) => (
+              <StoryCard story={story} compact key={story.slug} />
+            ))}
+          </div>
+        </section>
+
+        <section className="travel-guides section-pad" id="latest-stories" aria-labelledby="latest-stories-title">
+          <div className="section-heading">
+            <p className="eyebrow">Recently published</p>
+            <h2 id="latest-stories-title">Latest Florida Travel Stories</h2>
+          </div>
+          <div className="guide-card-grid">
+            {latestStories.map((story) => (
+              <StoryCard story={story} compact key={story.slug} />
+            ))}
+          </div>
+        </section>
+
+        <NewsletterSection
+          eyebrow="Florida travel list"
+          title="Get Florida Travel Ideas Every Week"
+          copy="Weekend trips, beach ideas, cruise tips, hotel guides, and Florida travel stories sent to your inbox."
+          buttonLabel="Join the Florida Travel List"
+        />
       </main>
       <SiteFooter />
       <script
@@ -248,4 +302,17 @@ export default function JournalPage() {
       />
     </>
   );
+}
+
+function getStoriesByDestination(stories, destinations) {
+  const wanted = new Set(destinations);
+  const picked = [];
+
+  for (const story of stories) {
+    if (wanted.has(story.destination) && !picked.some((item) => item.destination === story.destination)) {
+      picked.push(story);
+    }
+  }
+
+  return picked;
 }

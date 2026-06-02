@@ -27,8 +27,16 @@ const draft = {
   excerpt: "Add a practical Florida travel summary before review.",
   content: [
     {
-      heading: "Add A Specific Planning Section",
+      heading: "Start With The Trip Goal",
       body: "Replace this draft copy with original, destination-specific planning advice."
+    },
+    {
+      heading: "Compare The Main Planning Tradeoffs",
+      body: "Add practical context about timing, hotels, flights, activities, budget, weather, or local logistics."
+    },
+    {
+      heading: "Turn The Idea Into A Florida Trip",
+      body: "Add next-step guidance with internal links and network routes that help the reader keep planning."
     }
   ],
   category,
@@ -37,15 +45,29 @@ const draft = {
   heroImageAlt: "",
   publishDate: today,
   updatedDate: today,
+  status: "draft",
   featured: false,
   trending: false,
+  popular: false,
+  editorPick: false,
   affiliateLinks: [],
   relatedDestinations: [destination],
   relatedGuides: [],
   relatedSites: [],
   tags: [],
   views: 0,
-  faqs: []
+  faqs: [
+    {
+      question: "Who is this Florida travel story best for?",
+      answer: "Replace with a specific answer for the destination, trip type, or planning intent."
+    },
+    {
+      question: "What should travelers compare before booking?",
+      answer: "Replace with specific flight, hotel, cruise, activity, timing, or budget advice."
+    }
+  ],
+  metadataTitle: `${title} | Florida Travel Journal`,
+  metaDescription: "Replace with a unique, human-readable meta description before review."
 };
 
 await mkdir(draftDir, { recursive: true });

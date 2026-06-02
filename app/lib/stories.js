@@ -46,12 +46,21 @@ export const storyCategoryMap = Object.fromEntries(
   storyCategories.map((category) => [category.slug, category])
 );
 
+export function getStoryCategories() {
+  return storyCategories;
+}
+
+export function getStoryCategory(slug) {
+  return storyCategoryMap[slug] || null;
+}
+
 export function storyPath(slug) {
   return `${storyBasePath}/${slug}`;
 }
 
 export function getAllStories() {
   return stories
+    .filter((story) => story.status !== "draft" && story.status !== "review")
     .map((story) => ({
       ...story,
       categoryDetails: storyCategoryMap[story.category] || {
@@ -78,6 +87,13 @@ export function getFeaturedStories(limit = 3) {
     .slice(0, limit);
 }
 
+export function getEditorPickStories(limit = 4) {
+  return getAllStories()
+    .filter((story) => story.editorPick)
+    .sort((a, b) => b.views - a.views)
+    .slice(0, limit);
+}
+
 export function getTrendingStories(limit = 4) {
   return getAllStories()
     .filter((story) => story.trending)
@@ -87,7 +103,13 @@ export function getTrendingStories(limit = 4) {
 
 export function getPopularStories(limit = 5) {
   return getAllStories()
-    .sort((a, b) => b.views - a.views)
+    .sort((a, b) => Number(Boolean(b.popular)) - Number(Boolean(a.popular)) || b.views - a.views)
+    .slice(0, limit);
+}
+
+export function getLatestStories(limit = 6) {
+  return getAllStories()
+    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime() || b.views - a.views)
     .slice(0, limit);
 }
 
@@ -141,6 +163,7 @@ export function getStoryPlanLinks(story) {
 export function getJournalCategorySections() {
   return storyCategories.map((category) => ({
     ...category,
+    path: `${storyBasePath}/${category.slug}`,
     stories: getStoriesByCategory(category.slug, 3)
   }));
 }
@@ -176,4 +199,65 @@ export function getNetworkPlanDefaults() {
       site: "local"
     }
   ];
+}
+
+const destinationPlanLinks = {
+  Orlando: [
+    ["Search Flights To Orlando", "https://flightdealsflorida.org/cheap-flights-from-orlando", "flights"],
+    ["Compare Orlando Hotels", "https://hoteldealsflorida.org/cheap-hotels-in-orlando", "hotels"],
+    ["Explore Orlando Things To Do", "https://localdealsflorida.org/things-to-do-in-orlando", "local"],
+    ["Start With The Orlando Travel Guide", "/orlando-travel-guide", "hub"]
+  ],
+  Miami: [
+    ["Search Flights To Miami", "https://flightdealsflorida.org/miami-flight-deals", "flights"],
+    ["Compare Miami Hotels", "https://hoteldealsflorida.org/miami-beach-hotels", "hotels"],
+    ["Browse Cruises From Miami", "https://cruisedealsflorida.org/cruises-from-miami", "cruises"],
+    ["Read The Miami Travel Guide", "/miami-travel-guide", "hub"]
+  ],
+  "Key West": [
+    ["Search Flights To Key West", "https://flightdealsflorida.org/key-west-flight-deals", "flights"],
+    ["Compare Key West Hotels", "https://hoteldealsflorida.org/key-west-hotel-deals", "hotels"],
+    ["Explore Key West Water Activities", "https://localdealsflorida.org/florida-water-activities", "local"],
+    ["Read The Key West Travel Guide", "/key-west-travel-guide", "hub"]
+  ],
+  Clearwater: [
+    ["Search Tampa Flights", "https://flightdealsflorida.org/cheap-flights-from-tampa", "flights"],
+    ["Compare Clearwater Beach Hotels", "https://hoteldealsflorida.org/clearwater-beachfront-hotels", "hotels"],
+    ["Explore Clearwater Things To Do", "https://localdealsflorida.org/florida-water-activities", "local"],
+    ["Read The Clearwater Travel Guide", "/clearwater-travel-guide", "hub"]
+  ],
+  "Port Canaveral": [
+    ["Browse Port Canaveral Cruises", "https://cruisedealsflorida.org/cruises-from-port-canaveral", "cruises"],
+    ["Compare Cruise Port Hotels", "https://hoteldealsflorida.org/hotels-near-florida-cruise-ports", "hotels"],
+    ["Search Orlando Flights Before Your Cruise", "https://flightdealsflorida.org/orlando-flight-deals", "flights"],
+    ["Read The Port Canaveral Travel Guide", "/port-canaveral-travel-guide", "hub"]
+  ],
+  "St. Augustine": [
+    ["Search Jacksonville Flights", "https://flightdealsflorida.org/jacksonville-flight-deals", "flights"],
+    ["Compare St. Augustine Hotels", "https://hoteldealsflorida.org/st-augustine-hotel-deals", "hotels"],
+    ["Explore St. Augustine Local Ideas", "https://localdealsflorida.org/st-augustine-local-deals", "local"],
+    ["Read The St. Augustine Travel Guide", "/st-augustine-travel-guide", "hub"]
+  ],
+  Florida: [
+    ["Find Florida Flights", sites.flights, "flights"],
+    ["Compare Florida Hotels", sites.hotels, "hotels"],
+    ["Browse Florida Cruises", sites.cruises, "cruises"],
+    ["Explore Local Florida Deals", sites.local, "local"]
+  ]
+};
+
+export function getPlanThisTripLinks(story) {
+  const cruiseCategory = story.category === "cruise-stories";
+  const baseLinks = destinationPlanLinks[story.destination] || destinationPlanLinks.Florida;
+
+  if (cruiseCategory) {
+    return [
+      ["Browse Florida Cruise Deals", sites.cruises, "cruises"],
+      ["Compare Cruise Port Hotels", "https://hoteldealsflorida.org/hotels-near-florida-cruise-ports", "hotels"],
+      ["Search Flights Before Your Cruise", sites.flights, "flights"],
+      ["Explore Things To Do Before Sailing", sites.local, "local"]
+    ].map(([label, href, site]) => ({ label, href, site }));
+  }
+
+  return baseLinks.map(([label, href, site]) => ({ label, href, site }));
 }

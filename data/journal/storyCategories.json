@@ -1,37 +1,52 @@
 [
   {
     "slug": "destination-spotlights",
-    "name": "Destination Spotlights",
-    "description": "Florida city, beach, island, and weekend destination stories."
+    "name": "Destinations",
+    "description": "Florida city, island, beach town, and weekend destination stories."
   },
   {
-    "slug": "comparisons",
-    "name": "Comparisons",
-    "description": "Side-by-side Florida trip decisions for travelers comparing destinations, budgets, and travel styles."
+    "slug": "theme-parks",
+    "name": "Theme Parks",
+    "description": "Orlando theme park planning, hotel areas, timing, and family vacation stories."
   },
   {
-    "slug": "travel-tips",
-    "name": "Travel Tips",
-    "description": "Practical Florida planning advice for timing, packing, budgeting, and building flexible itineraries."
+    "slug": "beaches",
+    "name": "Beaches",
+    "description": "Florida beach comparisons, family beach ideas, Gulf Coast trips, and coastal weekend stories."
   },
   {
     "slug": "cruise-stories",
-    "name": "Cruise Stories",
-    "description": "Florida cruise port planning, pre-cruise ideas, packing advice, and sailing comparisons."
+    "name": "Cruises",
+    "description": "Florida cruise ports, first-time cruise planning, pre-cruise activities, and packing stories."
   },
   {
     "slug": "hotel-stories",
-    "name": "Hotel Stories",
+    "name": "Hotels",
     "description": "Hotel, resort, neighborhood, and stay-planning stories for Florida trips."
   },
   {
     "slug": "flight-stories",
-    "name": "Flight Stories",
+    "name": "Flights",
     "description": "Airport, route, airfare, and weekend flight stories for Florida travelers."
   },
   {
     "slug": "local-stories",
-    "name": "Local Stories",
-    "description": "Things to do, local activities, water days, food, family outings, and Florida weekend ideas."
+    "name": "Local Activities",
+    "description": "Things to do, water days, family outings, food, and local Florida weekend ideas."
+  },
+  {
+    "slug": "travel-tips",
+    "name": "Travel Tips",
+    "description": "Practical Florida planning advice for timing, packing, budgeting, and flexible itineraries."
+  },
+  {
+    "slug": "comparisons",
+    "name": "Comparisons",
+    "description": "Side-by-side Florida trip decisions for destinations, budgets, hotels, cruises, and travel styles."
+  },
+  {
+    "slug": "outdoor-florida",
+    "name": "Outdoor Florida",
+    "description": "Fishing, boating, camping, beach gear, water activities, and outdoor weekend stories."
   }
 ]

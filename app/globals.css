@@ -833,6 +833,45 @@ h3 {
   margin-top: 28px;
 }
 
+.story-toc {
+  margin: 18px 0 30px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(223, 245, 248, 0.42);
+}
+
+.story-toc div,
+.story-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.story-toc a,
+.story-inline-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid rgba(8, 127, 181, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ocean-dark);
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.story-inline-links {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.story-inline-links p {
+  width: 100%;
+}
+
 .story-section-block h3 {
   margin-bottom: 8px;
 }
@@ -862,6 +901,14 @@ h3 {
 
 .journal-home-list {
   grid-template-columns: 1fr;
+}
+
+.journal-plan-grid {
+  margin-top: 20px;
+}
+
+.journal-filter-grid {
+  margin-bottom: 22px;
 }
 
 .best-for-tag,
