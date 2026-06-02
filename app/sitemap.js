@@ -1,4 +1,5 @@
 import { baseUrl, landingPages } from "./lib/network";
+import { getAllStories, storyBasePath } from "./lib/stories";
 
 const lastModified = new Date();
 
@@ -19,6 +20,12 @@ export default function sitemap() {
     changeFrequency: "weekly",
     priority: page.article ? 0.9 : 0.8
   }));
+  const storyPages = getAllStories().map((story) => ({
+    url: story.url,
+    lastModified: new Date(story.updatedDate),
+    changeFrequency: "monthly",
+    priority: story.featured ? 0.8 : 0.7
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -27,6 +34,13 @@ export default function sitemap() {
       changeFrequency: page.changeFrequency,
       priority: page.priority
     })),
-    ...hubPages
+    {
+      url: `${baseUrl}${storyBasePath}`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.85
+    },
+    ...hubPages,
+    ...storyPages
   ];
 }

@@ -11,6 +11,7 @@ const footerDestinations = [
 ];
 
 const footerGuides = [
+  ["Florida Travel Journal", "/journal"],
   ["Florida Weekend Getaways", "/florida-weekend-getaways"],
   ["Cheap Florida Vacations", "/cheap-florida-vacations"],
   ["Best Time To Visit Florida", "/best-time-to-visit-florida"],

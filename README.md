@@ -22,8 +22,42 @@ The homepage is organized as a trip-planning router:
 - Editorial travel guide links
 - Seasonal travel guide links
 - Trust, network, popular searches, FAQ, optional hotel planning, and newsletter signup
+- Florida Travel Journal module with featured and trending stories
 
 The Hub should remain an editorial gateway and authority resource, not a duplicate deals feed.
+
+## Florida Travel Journal
+
+Version 9 adds the Florida Travel Journal as the Hub's story and engagement layer.
+
+Routes:
+
+- `/journal`: featured stories, trending stories, most popular stories, and category sections
+- `/journal/[slug]`: individual story pages with story body, related network links, affiliate-safe recommendations, related stories, FAQs, newsletter signup, and schema
+
+Source data:
+
+- `../shared/data/stories.json`
+- `../shared/data/storyCategories.json`
+- `app/lib/stories.js`
+
+Manual workflow:
+
+```bash
+npm run stories:generate -- --title="Florida Beach Weekend Ideas" --category=destination-spotlights --destination=Clearwater
+npm run stories:review
+npm run stories:publish -- --confirm-reviewed
+```
+
+The publish step intentionally requires `--confirm-reviewed`. Do not use the story generator as an automatic publishing system.
+
+Story requirements:
+
+- unique title, excerpt, slug, destination, category, dates, hero image, and descriptive alt text
+- useful editorial sections rather than generic SEO filler
+- related guides, related destinations, related network sites, and FAQs
+- affiliate disclosure when affiliate links are present
+- tracked affiliate URLs only; do not publish Sailo outbound links without the supplied AWIN URL
 
 ## SEO Page Strategy
 
@@ -135,6 +169,11 @@ Tracked events include:
 - `image_fallback_used` when a remote image fails and a local fallback is shown
 - `newsletter_signup_started`
 - `newsletter_signup_success`
+- `story_view`
+- `story_click`
+- `story_read_complete`
+- `story_affiliate_click`
+- `story_network_click`
 
 Newsletter submissions use `floridadealshub.com` as the source in `app/api/newsletter/route.js`.
 

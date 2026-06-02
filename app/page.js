@@ -1,3 +1,4 @@
+import Link from "next/link";
 import NewsletterSection from "./components/NewsletterSection";
 import SafeImage from "./components/SafeImage";
 import SiteFooter from "./components/SiteFooter";
@@ -23,6 +24,7 @@ import {
   travelGuideLinks,
   tripRouterCards
 } from "./lib/network";
+import { getFeaturedStories, getTrendingStories } from "./lib/stories";
 
 const trust = [
   ["Curated Florida Deals", "A focused network built around travel, savings, and things to do across the state."],
@@ -62,6 +64,9 @@ const homeFaqSchema = {
 };
 
 export default function Home() {
+  const [featuredJournalStory] = getFeaturedStories(1);
+  const journalStories = getTrendingStories(3);
+
   return (
     <>
       <SiteHeader />
@@ -266,6 +271,48 @@ export default function Home() {
                 <p>{copy}</p>
               </a>
             ))}
+          </div>
+        </section>
+
+        <section className="travel-journal-home section-pad" aria-labelledby="travel-journal-home-title">
+          <div className="section-heading">
+            <p className="eyebrow">Florida Travel Journal</p>
+            <h2 id="travel-journal-home-title">Fresh Florida Trip Stories</h2>
+          </div>
+          <div className="journal-home-grid">
+            {featuredJournalStory ? (
+              <Link className="content-card journal-home-feature" href={featuredJournalStory.path}>
+                <SafeImage
+                  src={featuredJournalStory.heroImage}
+                  alt={featuredJournalStory.heroImageAlt || featuredJournalStory.title}
+                  fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                  width="720"
+                  height="420"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <p className="eyebrow">{featuredJournalStory.categoryDetails.name}</p>
+                  <h3>{featuredJournalStory.title}</h3>
+                  <p>{featuredJournalStory.excerpt}</p>
+                  <p className="value-line">Read the story</p>
+                </div>
+              </Link>
+            ) : null}
+            <div className="guide-card-grid journal-home-list">
+              {journalStories.map((story) => (
+                <Link className="guide-card compact-story-card" href={story.path} key={story.slug}>
+                  <span className="story-category-label">{story.categoryDetails.name}</span>
+                  <h3>{story.title}</h3>
+                  <p>{story.excerpt}</p>
+                </Link>
+              ))}
+              <Link className="guide-card compact-story-card" href="/journal">
+                <span className="story-category-label">Browse all</span>
+                <h3>Florida Travel Journal</h3>
+                <p>Read destination spotlights, comparisons, flight ideas, hotel stories, cruise planning, and local activity guides.</p>
+              </Link>
+            </div>
           </div>
         </section>
 

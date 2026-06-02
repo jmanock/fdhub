@@ -6,7 +6,10 @@
     "dev": "next dev",
     "lint": "eslint .",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "stories:generate": "node scripts/stories-generate.mjs",
+    "stories:review": "node scripts/stories-review.mjs",
+    "stories:publish": "node scripts/stories-publish.mjs"
   },
   "dependencies": {
     "next": "latest",
