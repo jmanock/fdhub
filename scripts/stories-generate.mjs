@@ -1,5 +1,9 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const hubRoot = path.resolve(scriptDir, "..");
 
 const args = process.argv.slice(2);
 const titleArg = args.find((arg) => arg.startsWith("--title="));
@@ -14,7 +18,7 @@ const slug = title
   .replace(/[^a-z0-9]+/g, "-")
   .replace(/^-|-$/g, "");
 const today = new Date().toISOString().slice(0, 10);
-const draftDir = path.join(process.cwd(), "story-drafts");
+const draftDir = path.join(hubRoot, "story-drafts");
 const draftPath = path.join(draftDir, `${slug || "untitled-florida-story"}.json`);
 
 const draft = {

@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predev": "node scripts/prepare-shared-data.mjs",
     "lint": "eslint .",
+    "prebuild": "node scripts/prepare-shared-data.mjs",
     "build": "next build",
     "start": "next start",
     "stories:generate": "node scripts/stories-generate.mjs",

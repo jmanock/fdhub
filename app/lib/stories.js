@@ -3,14 +3,44 @@ import path from "node:path";
 import { baseUrl, sites } from "./network";
 
 export const storyBasePath = "/journal";
+const storyCategoriesPath = path.join(process.cwd(), "data", "journal", "storyCategories.json");
+const storiesPath = path.join(process.cwd(), "data", "journal", "stories.json");
 
-function readSharedJson(fileName) {
-  const filePath = path.join(process.cwd(), "..", "shared", "data", fileName);
-  return JSON.parse(readFileSync(filePath, "utf8"));
+function warnJournalData(message) {
+  console.warn(`[journal-data] ${message}`);
 }
 
-const storyCategories = readSharedJson("storyCategories.json");
-const stories = readSharedJson("stories.json");
+function readJsonArraySafe(filePath, label) {
+  try {
+    const parsed = JSON.parse(readFileSync(filePath, "utf8"));
+
+    if (!Array.isArray(parsed)) {
+      warnJournalData(`${label} at ${filePath} must be a JSON array. Using empty data.`);
+      return [];
+    }
+
+    return parsed;
+  } catch (error) {
+    warnJournalData(`${label} could not be loaded from ${filePath}: ${error.message}. Using empty data.`);
+  }
+
+  return [];
+}
+
+export function loadStoryCategoriesSafe() {
+  return readJsonArraySafe(storyCategoriesPath, "Story categories");
+}
+
+export function loadStoriesSafe() {
+  return readJsonArraySafe(storiesPath, "Stories");
+}
+
+const storyCategories = loadStoryCategoriesSafe();
+const stories = loadStoriesSafe();
+
+export function hasJournalData() {
+  return storyCategories.length > 0 && stories.length > 0;
+}
 
 export const storyCategoryMap = Object.fromEntries(
   storyCategories.map((category) => [category.slug, category])

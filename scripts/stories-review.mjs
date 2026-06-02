@@ -1,7 +1,10 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const draftDir = path.join(process.cwd(), "story-drafts");
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const hubRoot = path.resolve(scriptDir, "..");
+const draftDir = path.join(hubRoot, "story-drafts");
 const requiredFields = [
   "slug",
   "title",

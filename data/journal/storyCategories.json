@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "destination-spotlights",
+    "name": "Destination Spotlights",
+    "description": "Florida city, beach, island, and weekend destination stories."
+  },
+  {
+    "slug": "comparisons",
+    "name": "Comparisons",
+    "description": "Side-by-side Florida trip decisions for travelers comparing destinations, budgets, and travel styles."
+  },
+  {
+    "slug": "travel-tips",
+    "name": "Travel Tips",
+    "description": "Practical Florida planning advice for timing, packing, budgeting, and building flexible itineraries."
+  },
+  {
+    "slug": "cruise-stories",
+    "name": "Cruise Stories",
+    "description": "Florida cruise port planning, pre-cruise ideas, packing advice, and sailing comparisons."
+  },
+  {
+    "slug": "hotel-stories",
+    "name": "Hotel Stories",
+    "description": "Hotel, resort, neighborhood, and stay-planning stories for Florida trips."
+  },
+  {
+    "slug": "flight-stories",
+    "name": "Flight Stories",
+    "description": "Airport, route, airfare, and weekend flight stories for Florida travelers."
+  },
+  {
+    "slug": "local-stories",
+    "name": "Local Stories",
+    "description": "Things to do, local activities, water days, food, family outings, and Florida weekend ideas."
+  }
+]

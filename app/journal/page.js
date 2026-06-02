@@ -167,11 +167,20 @@ export default function JournalPage() {
             <p className="eyebrow">Editor picks</p>
             <h2 id="featured-stories-title">Featured Florida Travel Stories</h2>
           </div>
-          <div className="guide-card-grid">
-            {getFeaturedStories(3).map((story) => (
-              <StoryCard story={story} key={story.slug} />
-            ))}
-          </div>
+          {allStories.length ? (
+            <div className="guide-card-grid">
+              {getFeaturedStories(3).map((story) => (
+                <StoryCard story={story} key={story.slug} />
+              ))}
+            </div>
+          ) : (
+            <div className="content-card">
+              <p>
+                Florida Travel Journal stories are being prepared. Use the Florida travel guides
+                and network links below while new stories are reviewed.
+              </p>
+            </div>
+          )}
         </section>
 
         <section className="popular-this-week section-pad" id="trending-stories" aria-labelledby="trending-stories-title">

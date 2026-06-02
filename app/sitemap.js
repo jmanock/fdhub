@@ -1,5 +1,5 @@
 import { baseUrl, landingPages } from "./lib/network";
-import { getAllStories, storyBasePath } from "./lib/stories";
+import { getAllStories, hasJournalData, storyBasePath } from "./lib/stories";
 
 const lastModified = new Date();
 
@@ -34,13 +34,17 @@ export default function sitemap() {
       changeFrequency: page.changeFrequency,
       priority: page.priority
     })),
-    {
-      url: `${baseUrl}${storyBasePath}`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.85
-    },
     ...hubPages,
+    ...(hasJournalData()
+      ? [
+          {
+            url: `${baseUrl}${storyBasePath}`,
+            lastModified,
+            changeFrequency: "weekly",
+            priority: 0.85
+          }
+        ]
+      : []),
     ...storyPages
   ];
 }

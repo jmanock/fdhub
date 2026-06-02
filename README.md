@@ -37,9 +37,20 @@ Routes:
 
 Source data:
 
-- `../shared/data/stories.json`
-- `../shared/data/storyCategories.json`
+- `data/journal/stories.json`
+- `data/journal/storyCategories.json`
+- optional local-development source: `../shared/data/stories.json`
+- optional local-development source: `../shared/data/storyCategories.json`
 - `app/lib/stories.js`
+
+Production safety:
+
+- `app/lib/stories.js` loads Hub-local data first.
+- Runtime Journal data loading stays inside the Hub app directory.
+- Missing Journal data returns empty arrays with a clear `[journal-data]` warning.
+- `/sitemap.xml` includes Journal URLs only when Journal data loads successfully.
+- `npm run prebuild` runs `scripts/prepare-shared-data.mjs` before production builds.
+- The Hub can build from `/var/www/fdhub` without `/var/www/shared`.
 
 Manual workflow:
 
@@ -85,7 +96,7 @@ Each major SEO page should include useful, unique copy, visible breadcrumbs, `Up
 
 `public/robots.txt` allows crawling and points to `https://floridadealshub.com/sitemap.xml`.
 
-`app/sitemap.js` generates `/sitemap.xml` from `landingPages` plus static pages. The sitemap uses HTTPS, the non-www canonical domain, no duplicate slash variants, and only canonical Hub URLs. New pages added to `landingPages` are included automatically.
+`app/sitemap.js` generates `/sitemap.xml` from `landingPages` plus static pages. Journal pages are included only when Journal story data loads successfully. The sitemap uses HTTPS, the non-www canonical domain, no duplicate slash variants, and only canonical Hub URLs. New pages added to `landingPages` are included automatically.
 
 Canonical tags are generated through Next metadata. The homepage canonical is defined in `app/layout.js`; SEO landing page canonicals are self-referencing absolute URLs generated in `app/[slug]/page.js`. Do not point multiple pages to the homepage unless the pages are truly duplicates.
 
@@ -199,3 +210,20 @@ To add a page:
 Content pages automatically receive breadcrumbs, last-updated text, FAQ schema, related links, guide cards when provided, newsletter signup, and the Expedia "Need a place to stay?" hotel CTA section.
 
 Before deployment, run `npm run lint` and `npm run build`, then spot-check robots, sitemap, canonical tags, Open Graph/Twitter metadata, schema, internal links, external affiliate link attributes, newsletter behavior, GA tracking, and mobile layout.
+
+## DigitalOcean PM2 Deploy
+
+When deploying the Hub as `/var/www/fdhub`, use one clean PM2 process:
+
+```bash
+cd /var/www/fdhub
+git pull origin main
+npm install
+npm run build
+pm2 delete fdhub
+pm2 start npm --name fdhub -- start
+pm2 save
+curl -I http://localhost:3004
+```
+
+Deleting the old `fdhub` process before starting the new one avoids duplicate PM2 processes. Do not start multiple `fdhub` processes on the same port.
