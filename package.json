@@ -11,7 +11,10 @@
     "start": "next start",
     "stories:generate": "node scripts/stories-generate.mjs",
     "stories:review": "node scripts/stories-review.mjs",
-    "stories:publish": "node scripts/stories-publish.mjs"
+    "stories:publish": "node scripts/stories-publish.mjs",
+    "seo:indexnow": "node scripts/seo-automation.mjs --site=floridadealshub --mode=indexnow",
+    "seo:validate": "node scripts/seo-automation.mjs --site=floridadealshub --mode=validate",
+    "seo:report": "node scripts/seo-automation.mjs --site=floridadealshub --mode=report"
   },
   "dependencies": {
     "next": "latest",

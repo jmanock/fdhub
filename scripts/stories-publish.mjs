@@ -9,6 +9,7 @@ const draftDir = path.join(hubRoot, "story-drafts");
 const localJournalDir = path.join(hubRoot, "data", "journal");
 const localStoriesPath = path.join(localJournalDir, "stories.json");
 const sharedStoriesPath = path.join(networkRoot, "shared", "data", "stories.json");
+const indexNowQueuePath = path.join(hubRoot, ".seo", "indexnow-queue.json");
 const publishFlag = process.argv.includes("--confirm-reviewed");
 
 async function exists(filePath) {
@@ -80,3 +81,16 @@ if (await exists(path.dirname(sharedStoriesPath))) {
 } else {
   console.log("shared/data was not found; Hub-local story data was updated only.");
 }
+
+const publishedUrls = newStories.map((story) => `https://floridadealshub.com/journal/${story.slug}`);
+let queuedUrls = [];
+
+try {
+  queuedUrls = JSON.parse(await readFile(indexNowQueuePath, "utf8"));
+} catch {
+  queuedUrls = [];
+}
+
+await mkdir(path.dirname(indexNowQueuePath), { recursive: true });
+await writeFile(indexNowQueuePath, `${JSON.stringify([...new Set([...queuedUrls, ...publishedUrls])], null, 2)}\n`);
+console.log(`Queued ${publishedUrls.length} published story URL(s) for IndexNow submission.`);
