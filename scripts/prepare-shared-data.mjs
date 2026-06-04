@@ -7,7 +7,7 @@ const hubRoot = path.resolve(scriptDir, "..");
 const networkRoot = path.resolve(hubRoot, "..");
 const localJournalDir = path.join(hubRoot, "data", "journal");
 const sharedDataDir = path.join(networkRoot, "shared", "data");
-const files = ["storyCategories.json", "stories.json"];
+const files = ["storyCategories.json", "stories.json", "travelNews.json"];
 
 async function exists(filePath) {
   try {

@@ -15,7 +15,6 @@ import {
   lastUpdatedLabel,
   pillars,
   planTripCards,
-  popularDestinationLinks,
   popularSearchLinks,
   popularThisWeekLinks,
   seasonalTravelLinks,
@@ -24,6 +23,8 @@ import {
   travelGuideLinks,
   tripRouterCards
 } from "./lib/network";
+import { destinationHubs } from "./lib/destinationHubs";
+import { getTravelNewsItems } from "./lib/travelNews";
 import {
   getEditorPickStories,
   getFeaturedStories,
@@ -75,6 +76,11 @@ export default function Home() {
   const latestJournalStories = getLatestStories(4);
   const editorJournalStories = getEditorPickStories(3);
   const featuredPlanLinks = featuredJournalStory ? getPlanThisTripLinks(featuredJournalStory) : [];
+  const travelNewsItems = getTravelNewsItems(3);
+  const visualDestinationHubs = destinationHubs.slice(0, 6);
+  const weekendHubs = destinationHubs.filter((hub) =>
+    ["key-west", "clearwater", "destin", "st-augustine", "tampa"].includes(hub.slug)
+  );
 
   return (
     <>
@@ -205,12 +211,22 @@ export default function Home() {
             <p className="eyebrow">Destination guides</p>
             <h2 id="destination-title">Popular Florida Destinations</h2>
           </div>
-          <div className="guide-card-grid">
-            {popularDestinationLinks.map(([label, href, copy]) => (
-              <a className="guide-card" href={href} key={href}>
-                <h3>{label}</h3>
-                <p>{copy}</p>
-              </a>
+          <div className="guide-card-grid visual-card-grid">
+            {visualDestinationHubs.map((hub) => (
+              <Link className="guide-card story-card" href={`/${hub.slug}`} key={hub.slug}>
+                <SafeImage
+                  src={hub.image}
+                  alt={hub.imageAlt}
+                  fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                  width="720"
+                  height="430"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="story-category-label">Destination Hub</span>
+                <h3>{hub.name}</h3>
+                <p>{hub.description}</p>
+              </Link>
             ))}
           </div>
         </section>
@@ -345,6 +361,58 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <section className="weekend-ideas section-pad" aria-labelledby="weekend-ideas-title">
+          <div className="section-heading">
+            <p className="eyebrow">Weekend trip ideas</p>
+            <h2 id="weekend-ideas-title">Image-Led Florida Weekend Planning</h2>
+          </div>
+          <div className="guide-card-grid visual-card-grid">
+            {weekendHubs.map((hub) => (
+              <Link className="guide-card story-card" href={`/${hub.slug}`} key={hub.slug}>
+                <SafeImage
+                  src={hub.image}
+                  alt={hub.imageAlt}
+                  fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                  width="720"
+                  height="430"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="story-category-label">Weekend Hub</span>
+                <h3>{hub.name}</h3>
+                <p>{hub.description}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {travelNewsItems.length ? (
+          <section className="travel-news-home section-pad" aria-labelledby="travel-news-home-title">
+            <div className="section-heading">
+              <p className="eyebrow">Florida travel news</p>
+              <h2 id="travel-news-home-title">Travel Updates To Watch</h2>
+            </div>
+            <div className="guide-card-grid visual-card-grid">
+              {travelNewsItems.map((item) => (
+                <Link className="guide-card story-card" href={item.path} key={item.slug}>
+                  <SafeImage
+                    src={item.image}
+                    alt={item.imageAlt}
+                    fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                    width="720"
+                    height="430"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="story-category-label">{item.category}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.excerpt}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="best-for section-pad" aria-labelledby="best-for-title">
           <div className="section-heading">

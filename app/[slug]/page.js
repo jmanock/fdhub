@@ -5,6 +5,7 @@ import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import { piscifunGearPicks } from "../lib/affiliate/piscifunLinks";
+import { destinationHubs, getDestinationHub, getDestinationHubStories, getDestinationHubUrl } from "../lib/destinationHubs";
 import {
   baseUrl,
   getBreadcrumbs,
@@ -17,14 +18,53 @@ import {
   pillars,
   stayWithTripCards
 } from "../lib/network";
+import { getTravelNewsItems } from "../lib/travelNews";
 
 export function generateStaticParams() {
-  return landingPages.map((page) => ({ slug: page.slug }));
+  return [
+    ...landingPages.map((page) => ({ slug: page.slug })),
+    ...destinationHubs.map((hub) => ({ slug: hub.slug }))
+  ];
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const page = landingPageMap[slug];
+  const destinationHub = getDestinationHub(slug);
+
+  if (destinationHub) {
+    const title = `${destinationHub.name} Florida Travel Hub | Stories, Guides, Flights, Hotels & Things To Do`;
+    const description = `Plan a ${destinationHub.name} Florida trip with travel stories, destination guides, flights, hotels, cruises, local activities, and related Florida Deals Network links.`;
+
+    return {
+      title,
+      description,
+      alternates: {
+        canonical: getDestinationHubUrl(destinationHub)
+      },
+      openGraph: {
+        title,
+        description,
+        url: getDestinationHubUrl(destinationHub),
+        siteName: "Florida Deals Hub",
+        type: "website",
+        images: [
+          {
+            url: destinationHub.image,
+            width: 1200,
+            height: 630,
+            alt: destinationHub.imageAlt
+          }
+        ]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: [destinationHub.image]
+      }
+    };
+  }
 
   if (!page) {
     return {};
@@ -66,6 +106,11 @@ export async function generateMetadata({ params }) {
 export default async function LandingPage({ params }) {
   const { slug } = await params;
   const page = landingPageMap[slug];
+  const destinationHub = getDestinationHub(slug);
+
+  if (destinationHub) {
+    return <DestinationHubPage hub={destinationHub} />;
+  }
 
   if (!page) {
     notFound();
@@ -450,6 +495,150 @@ export default async function LandingPage({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
       ) : null}
+    </>
+  );
+}
+
+function DestinationHubPage({ hub }) {
+  const stories = getDestinationHubStories(hub.name, 6);
+  const newsItems = getTravelNewsItems(3).filter(
+    (item) => item.destination === hub.name || item.destination === "Florida"
+  );
+  const pageUrl = getDestinationHubUrl(hub);
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${hub.name} Florida planning links`,
+    url: pageUrl,
+    itemListElement: [...hub.networkLinks, ...hub.guides].map(([label, href], index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        name: label,
+        url: href.startsWith("http") ? href : `${baseUrl}${href}`
+      }
+    }))
+  };
+
+  return (
+    <>
+      <SiteHeader />
+      <main>
+        <section className="landing-hero section-pad">
+          <div className="landing-copy">
+            <nav className="breadcrumbs" aria-label="Breadcrumb">
+              <span><Link href="/">Home</Link></span>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">{hub.name}</span>
+            </nav>
+            <p className="eyebrow">Destination hub</p>
+            <h1>{hub.name} Florida Travel Hub</h1>
+            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
+            <p className="hero-subhead">{hub.description}</p>
+            <div className="hero-actions" aria-label={`${hub.name} planning links`}>
+              {hub.networkLinks.slice(0, 4).map(([label, href]) => (
+                <a href={href} key={href}>{label}</a>
+              ))}
+            </div>
+          </div>
+          <div className="landing-visual">
+            <SafeImage
+              src={hub.image}
+              alt={hub.imageAlt}
+              fallback="/images/fallbacks/florida-travel-placeholder.svg"
+              width="900"
+              height="720"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </section>
+
+        <section className="travel-guides section-pad" aria-labelledby="destination-stories-title">
+          <div className="section-heading">
+            <p className="eyebrow">Stories and ideas</p>
+            <h2 id="destination-stories-title">{hub.name} Travel Stories</h2>
+          </div>
+          <div className="guide-card-grid">
+            {stories.map((story) => (
+              <Link className="guide-card story-card" href={story.path} key={story.slug}>
+                <SafeImage
+                  src={story.heroImage}
+                  alt={story.heroImageAlt || story.title}
+                  fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                  width="720"
+                  height="430"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="story-category-label">{story.categoryDetails.name}</span>
+                <h3>{story.title}</h3>
+                <p>{story.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="plan-trip section-pad" aria-labelledby="destination-network-title">
+          <div className="section-heading">
+            <p className="eyebrow">Plan your trip</p>
+            <h2 id="destination-network-title">Build A {hub.name} Trip Across The Network</h2>
+          </div>
+          <div className="router-card-grid">
+            {hub.networkLinks.map(([label, href, site]) => (
+              <article className="router-card" key={href}>
+                <h3>{label}</h3>
+                <p>Continue planning with the {site === "hub" ? "Florida Deals Hub" : `Florida Deals ${site}`} network.</p>
+                <a href={href}>{label}</a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="popular-searches section-pad" aria-labelledby="destination-guides-title">
+          <div className="section-heading compact">
+            <p className="eyebrow">Guides</p>
+            <h2 id="destination-guides-title">Popular {hub.name} Planning Guides</h2>
+          </div>
+          <div className="popular-link-grid">
+            {hub.guides.map(([label, href]) => (
+              <a href={href} key={href}>{label}</a>
+            ))}
+          </div>
+        </section>
+
+        {newsItems.length ? (
+          <section className="travel-guides section-pad" aria-labelledby="destination-news-title">
+            <div className="section-heading">
+              <p className="eyebrow">Travel updates</p>
+              <h2 id="destination-news-title">Florida Travel News To Watch</h2>
+            </div>
+            <div className="guide-card-grid">
+              {newsItems.map((item) => (
+                <Link className="guide-card story-card compact-story-card" href={item.path} key={item.slug}>
+                  <span className="story-category-label">{item.category}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.excerpt}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        <NewsletterSection
+          eyebrow="Florida travel list"
+          title="Get Florida Travel Ideas Every Week"
+          copy="Weekend trips, beach ideas, cruise tips, hotel guides, and Florida travel stories sent to your inbox."
+          buttonLabel="Join the Florida Travel List"
+        />
+      </main>
+      <SiteFooter />
+      <script
+        id={`${hub.slug}-destination-item-list-schema`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
     </>
   );
 }

@@ -73,6 +73,43 @@ Story requirements:
 - affiliate disclosure when affiliate links are present
 - tracked affiliate URLs only; do not publish Sailo outbound links without the supplied AWIN URL
 
+Visual story fields:
+
+- `heroImage`
+- `heroImageAlt`
+- optional `content[].image`
+- optional `content[].imageAlt`
+- optional `affiliateLinks[].imageUrl`
+- optional `affiliateLinks[].imageAlt`
+
+## V10 Destination Hubs And Travel News
+
+V10 adds visual destination hubs and a travel-news framework without redesigning the site.
+
+Destination hub routes:
+
+- `/orlando`
+- `/miami`
+- `/key-west`
+- `/clearwater`
+- `/destin`
+- `/st-augustine`
+- `/tampa`
+
+Destination hub source:
+
+- `app/lib/destinationHubs.js`
+
+Each hub aggregates related stories, guide links, network routes, newsletter signup, and safe travel-news links when relevant.
+
+Travel-news framework:
+
+- data: `data/journal/travelNews.json`
+- helper: `app/lib/travelNews.js`
+- route: `/journal/news/[slug]`
+
+This is a manual framework only. Do not add scraper behavior until the source, attribution, and update rules are defined.
+
 ## SEO Page Strategy
 
 SEO landing pages are broad entry points for Google traffic. They should explain the travel intent, link naturally to all four niche sites, include useful copy, and route users onward.

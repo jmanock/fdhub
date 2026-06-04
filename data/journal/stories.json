@@ -9,7 +9,9 @@
     "content": [
       {
         "heading": "Start With The Pace Of The Trip",
-        "body": "Orlando usually works best when the family wants a structured trip with theme parks, resort pools, ticketed attractions, and easy day planning. Miami fits better when the goal is beaches, food, museums, neighborhoods, cruise add-ons, and a more flexible coastal schedule."
+        "body": "Orlando usually works best when the family wants a structured trip with theme parks, resort pools, ticketed attractions, and easy day planning. Miami fits better when the goal is beaches, food, museums, neighborhoods, cruise add-ons, and a more flexible coastal schedule.",
+        "image": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Orlando vs Miami For A Florida Family Vacation travel planning image"
       },
       {
         "heading": "Compare Hotels Before You Compare Attractions",
@@ -42,7 +44,9 @@
         "category": "hotels",
         "destination": "Orlando",
         "cta": "Compare Orlando Hotels",
-        "disclosureRequired": true
+        "disclosureRequired": true,
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Orlando family hotels for Orlando travel planning"
       }
     ],
     "relatedDestinations": [
@@ -111,7 +115,9 @@
     "content": [
       {
         "heading": "Pick The Occasion First",
-        "body": "A Miami boat day can mean a relaxed sandbar afternoon, a family-friendly sightseeing cruise, a celebration, or a pre-cruise activity before sailing from PortMiami. The right rental depends on group size, budget, timing, and whether you need a captain."
+        "body": "A Miami boat day can mean a relaxed sandbar afternoon, a family-friendly sightseeing cruise, a celebration, or a pre-cruise activity before sailing from PortMiami. The right rental depends on group size, budget, timing, and whether you need a captain.",
+        "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "How To Plan A Miami Boat Rental Day travel planning image"
       },
       {
         "heading": "Build The Day Around Weather And Transport",
@@ -141,7 +147,9 @@
         "destination": "Miami",
         "cta": "Sailo AWIN Link Pending",
         "disclosureRequired": true,
-        "status": "pending_tracked_url"
+        "status": "pending_tracked_url",
+        "imageUrl": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Miami boat rentals for Miami travel planning"
       }
     ],
     "relatedDestinations": [
@@ -209,7 +217,9 @@
     "content": [
       {
         "heading": "Match The Beach Town To The Weekend",
-        "body": "Florida beach weekends work best when the town matches the traveler. Clearwater is easy for Gulf Coast sunsets and families. Destin is strong for longer Panhandle beach stays. Daytona Beach fits event weekends and drive-friendly trips. Naples feels quieter and more upscale. St. Augustine adds history to the coast, while Key West works best when the journey is part of the trip."
+        "body": "Florida beach weekends work best when the town matches the traveler. Clearwater is easy for Gulf Coast sunsets and families. Destin is strong for longer Panhandle beach stays. Daytona Beach fits event weekends and drive-friendly trips. Naples feels quieter and more upscale. St. Augustine adds history to the coast, while Key West works best when the journey is part of the trip.",
+        "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Best Florida Beach Towns For Weekend Trips travel planning image"
       },
       {
         "heading": "Hotel Location Matters",
@@ -238,7 +248,9 @@
         "category": "hotels",
         "destination": "Florida",
         "cta": "Compare Beach Hotels",
-        "disclosureRequired": true
+        "disclosureRequired": true,
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Florida beach hotels for Clearwater travel planning"
       }
     ],
     "relatedDestinations": [
@@ -309,7 +321,9 @@
     "content": [
       {
         "heading": "Pack For The Port And The Ship",
-        "body": "Florida cruise travelers should pack for two parts of the trip: the ship and the port city. A Miami cruise may include beach time or restaurants before sailing. Port Canaveral often pairs with Orlando hotels and theme park add-ons. Tampa and Fort Lauderdale cruises may involve a shorter pre-cruise stay and local sightseeing."
+        "body": "Florida cruise travelers should pack for two parts of the trip: the ship and the port city. A Miami cruise may include beach time or restaurants before sailing. Port Canaveral often pairs with Orlando hotels and theme park add-ons. Tampa and Fort Lauderdale cruises may involve a shorter pre-cruise stay and local sightseeing.",
+        "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "What To Pack For A Florida Cruise Without Overpacking travel planning image"
       },
       {
         "heading": "Keep The First Day Easy",
@@ -338,7 +352,9 @@
         "category": "travel gear",
         "destination": "Florida",
         "cta": "Browse Piscifun Products",
-        "disclosureRequired": true
+        "disclosureRequired": true,
+        "imageUrl": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Browse compact travel and outdoor gear for Port Canaveral travel planning"
       }
     ],
     "relatedDestinations": [
@@ -407,7 +423,9 @@
     "content": [
       {
         "heading": "Compare Nearby Airports Before Choosing Dates",
-        "body": "Google Flights is most useful for Florida trips when travelers compare airport options early. Orlando, Miami, Tampa, Fort Lauderdale, and Jacksonville can produce different schedules, fares, and ground transportation tradeoffs."
+        "body": "Google Flights is most useful for Florida trips when travelers compare airport options early. Orlando, Miami, Tampa, Fort Lauderdale, and Jacksonville can produce different schedules, fares, and ground transportation tradeoffs.",
+        "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Using Google Flights For Florida Airport Comparisons travel planning image"
       },
       {
         "heading": "Think Beyond The Lowest Fare",
@@ -495,7 +513,9 @@
     "content": [
       {
         "heading": "Choose The Stay Style First",
-        "body": "Disney-area hotel searches can get noisy because travelers compare resorts, vacation rentals, budget hotels, suites, and off-property stays all at once. Start with the stay style: pool-heavy resort, lower-cost hotel, kitchen suite, walkable convenience, or more space for a longer trip."
+        "body": "Disney-area hotel searches can get noisy because travelers compare resorts, vacation rentals, budget hotels, suites, and off-property stays all at once. Start with the stay style: pool-heavy resort, lower-cost hotel, kitchen suite, walkable convenience, or more space for a longer trip.",
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Where To Stay Near Disney Without Overpaying travel planning image"
       },
       {
         "heading": "Look At Transportation And Fees",
@@ -524,7 +544,9 @@
         "category": "hotels",
         "destination": "Orlando",
         "cta": "Check Orlando Hotels",
-        "disclosureRequired": true
+        "disclosureRequired": true,
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Check Orlando hotel availability for Orlando travel planning"
       }
     ],
     "relatedDestinations": [
@@ -591,7 +613,9 @@
     "content": [
       {
         "heading": "Pick The Fishing Style",
-        "body": "A Florida fishing weekend can be a beach day, pier outing, kayak trip, freshwater escape, charter, or Keys road trip. The right plan depends on who is traveling, how much gear they want to bring, and whether fishing is the main event or one part of a beach weekend."
+        "body": "A Florida fishing weekend can be a beach day, pier outing, kayak trip, freshwater escape, charter, or Keys road trip. The right plan depends on who is traveling, how much gear they want to bring, and whether fishing is the main event or one part of a beach weekend.",
+        "image": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "How To Plan A Florida Fishing Weekend travel planning image"
       },
       {
         "heading": "Keep Gear Practical",
@@ -620,7 +644,9 @@
         "category": "fishing gear",
         "destination": "Florida",
         "cta": "Shop Outdoor Gear",
-        "disclosureRequired": true
+        "disclosureRequired": true,
+        "imageUrl": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Florida fishing essentials for Florida Keys travel planning"
       }
     ],
     "relatedDestinations": [
@@ -690,7 +716,9 @@
     "content": [
       {
         "heading": "Use Tampa As The Anchor",
-        "body": "Tampa works well for travelers who want a city weekend with Gulf Coast beach access nearby. It can be easier to plan than a beach-only stay because restaurants, museums, hotels, cruises, nightlife, and nearby Clearwater or St. Pete options are all within reach."
+        "body": "Tampa works well for travelers who want a city weekend with Gulf Coast beach access nearby. It can be easier to plan than a beach-only stay because restaurants, museums, hotels, cruises, nightlife, and nearby Clearwater or St. Pete options are all within reach.",
+        "image": "https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "A Tampa Weekend Escape That Balances Food, Beaches, And Easy Logistics travel planning image"
       },
       {
         "heading": "Choose The Hotel Around The Main Plan",
@@ -719,7 +747,9 @@
         "category": "hotels",
         "destination": "Tampa",
         "cta": "Compare Tampa Hotels",
-        "disclosureRequired": true
+        "disclosureRequired": true,
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Tampa hotels for Tampa travel planning"
       }
     ],
     "relatedDestinations": [
@@ -849,13 +879,17 @@
         "description": "Check current Orlando hotel options before choosing Disney, Universal, or a split park trip.",
         "category": "hotels",
         "destination": "Orlando",
-        "cta": "Compare Orlando Hotels"
+        "cta": "Compare Orlando Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Orlando theme park hotels for Orlando travel planning"
       }
     ],
     "content": [
       {
         "heading": "Start With The Trip Personality",
-        "body": "Disney usually fits travelers who want classic characters, longer family traditions, immersive resort time, and a slower multi-day rhythm. Universal often fits visitors who want thrill rides, Harry Potter areas, easier park hopping, and a more compact Orlando trip. The better choice is less about which park is famous and more about the ages, energy level, interests, and hotel style of the group."
+        "body": "Disney usually fits travelers who want classic characters, longer family traditions, immersive resort time, and a slower multi-day rhythm. Universal often fits visitors who want thrill rides, Harry Potter areas, easier park hopping, and a more compact Orlando trip. The better choice is less about which park is famous and more about the ages, energy level, interests, and hotel style of the group.",
+        "image": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Disney vs Universal: Which Orlando Vacation Is Better? travel planning image"
       },
       {
         "heading": "Compare Hotels Before Tickets",
@@ -956,13 +990,17 @@
         "description": "Compare current hotel options for Universal-area stays, family suites, and resort-style Orlando weekends.",
         "category": "hotels",
         "destination": "Orlando",
-        "cta": "Check Orlando Hotels"
+        "cta": "Check Orlando Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Check Orlando hotel options for Orlando travel planning"
       }
     ],
     "content": [
       {
         "heading": "Understand The Park Layout",
-        "body": "Universal Orlando is easier to understand once you separate the main theme parks, hotel areas, dining district, and transportation options. First-time visitors should decide whether park-to-park access matters, especially if they want the full Harry Potter train experience."
+        "body": "Universal Orlando is easier to understand once you separate the main theme parks, hotel areas, dining district, and transportation options. First-time visitors should decide whether park-to-park access matters, especially if they want the full Harry Potter train experience.",
+        "image": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Universal Orlando First-Timer Guide: Parks, Hotels & Planning Tips travel planning image"
       },
       {
         "heading": "Choose A Hotel Around Convenience",
@@ -1062,13 +1100,17 @@
         "description": "Check current Orlando hotel availability before locking in school-break or holiday dates.",
         "category": "hotels",
         "destination": "Orlando",
-        "cta": "Compare Orlando Hotels"
+        "cta": "Compare Orlando Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Orlando hotels by season for Orlando travel planning"
       }
     ],
     "content": [
       {
         "heading": "The Comfortable Months",
-        "body": "Late winter and parts of spring can be comfortable for Orlando theme parks because temperatures are milder and walking all day feels easier. These windows can still bring busy weeks around school breaks, so travelers should compare calendars before assuming a quiet trip."
+        "body": "Late winter and parts of spring can be comfortable for Orlando theme parks because temperatures are milder and walking all day feels easier. These windows can still bring busy weeks around school breaks, so travelers should compare calendars before assuming a quiet trip.",
+        "image": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Best Time To Visit Orlando Theme Parks For Weather, Crowds & Hotels travel planning image"
       },
       {
         "heading": "Summer Tradeoffs",
@@ -1174,13 +1216,17 @@
         "description": "Check current hotel options for Gulf Coast beach trips, family stays, and weekend escapes.",
         "category": "hotels",
         "destination": "Florida",
-        "cta": "Compare Beach Hotels"
+        "cta": "Compare Beach Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Florida beach hotels for Clearwater travel planning"
       }
     ],
     "content": [
       {
         "heading": "The Main Difference",
-        "body": "Clearwater is usually easier for shorter Gulf Coast trips, Tampa-area flights, family hotels, restaurants, and sunset beach weekends. Destin often feels more like a dedicated Panhandle beach vacation with bright water, fishing, boating, condos, and longer stays."
+        "body": "Clearwater is usually easier for shorter Gulf Coast trips, Tampa-area flights, family hotels, restaurants, and sunset beach weekends. Destin often feels more like a dedicated Panhandle beach vacation with bright water, fishing, boating, condos, and longer stays.",
+        "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Clearwater vs Destin: Which Florida Beach Trip Is Better? travel planning image"
       },
       {
         "heading": "Which Is Easier To Reach",
@@ -1284,13 +1330,17 @@
         "description": "Compare current hotel options near Florida beaches that work for families and weekend trips.",
         "category": "hotels",
         "destination": "Florida",
-        "cta": "Search Beach Hotels"
+        "cta": "Search Beach Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Search family beach hotels for Florida travel planning"
       }
     ],
     "content": [
       {
         "heading": "What Makes A Beach Family-Friendly",
-        "body": "A family beach is not just pretty. It needs manageable parking, food nearby, calmer water when possible, bathrooms, shade options, hotel access, and backup activities for storms or tired kids."
+        "body": "A family beach is not just pretty. It needs manageable parking, food nearby, calmer water when possible, bathrooms, shade options, hotel access, and backup activities for storms or tired kids.",
+        "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Best Florida Beaches For Families, Weekend Trips & First-Time Visitors travel planning image"
       },
       {
         "heading": "Good Starting Points",
@@ -1393,13 +1443,17 @@
         "description": "Check current hotel options for quieter Florida coastal weekends and beach town stays.",
         "category": "hotels",
         "destination": "Florida",
-        "cta": "Compare Coastal Hotels"
+        "cta": "Compare Coastal Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare coastal hotel options for Florida travel planning"
       }
     ],
     "content": [
       {
         "heading": "Look Beyond The Famous Beaches",
-        "body": "Florida’s quieter beach towns can be better for travelers who want slower mornings, local restaurants, scenic walks, and fewer packed schedules. They may not always have the biggest resorts, but they can make a weekend feel more personal."
+        "body": "Florida’s quieter beach towns can be better for travelers who want slower mornings, local restaurants, scenic walks, and fewer packed schedules. They may not always have the biggest resorts, but they can make a weekend feel more personal.",
+        "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Hidden Florida Beach Towns Worth Visiting For Slower Weekend Trips travel planning image"
       },
       {
         "heading": "Good Areas To Compare",
@@ -1503,13 +1557,17 @@
         "description": "Check current hotel options near Miami cruise areas before your sailing.",
         "category": "hotels",
         "destination": "Miami",
-        "cta": "Compare Cruise Hotels"
+        "cta": "Compare Cruise Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Miami cruise-night hotels for Miami travel planning"
       }
     ],
     "content": [
       {
         "heading": "Plan The Night Before",
-        "body": "First-time cruisers should strongly consider arriving in Miami at least the day before sailing. Flight delays, traffic, hotel check-ins, and port timing can create stress when everything is squeezed into embarkation morning."
+        "body": "First-time cruisers should strongly consider arriving in Miami at least the day before sailing. Flight delays, traffic, hotel check-ins, and port timing can create stress when everything is squeezed into embarkation morning.",
+        "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Miami Cruise Port Guide For First-Time Cruisers travel planning image"
       },
       {
         "heading": "Choose The Right Hotel Area",
@@ -1611,13 +1669,17 @@
         "description": "Check current hotel options near Florida cruise ports before choosing a sailing.",
         "category": "hotels",
         "destination": "Florida",
-        "cta": "Compare Port Hotels"
+        "cta": "Compare Port Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare cruise port hotels for Port Canaveral travel planning"
       }
     ],
     "content": [
       {
         "heading": "The Big Difference",
-        "body": "Port Canaveral is closely tied to Orlando, Cocoa Beach, family cruises, and theme park add-ons. Miami is tied to South Florida, international flights, nightlife, beaches, and a huge cruise ecosystem."
+        "body": "Port Canaveral is closely tied to Orlando, Cocoa Beach, family cruises, and theme park add-ons. Miami is tied to South Florida, international flights, nightlife, beaches, and a huge cruise ecosystem.",
+        "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Port Canaveral vs Miami: Which Florida Cruise Port Is Better? travel planning image"
       },
       {
         "heading": "Flights And Hotels",
@@ -1719,13 +1781,17 @@
         "description": "Useful compact gear and waterproof organization ideas for Florida cruise port days and beach stops.",
         "category": "travel gear",
         "destination": "Florida",
-        "cta": "Browse Piscifun Products"
+        "cta": "Browse Piscifun Products",
+        "imageUrl": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Browse cruise packing gear for Florida travel planning"
       }
     ],
     "content": [
       {
         "heading": "Start With Trip Length",
-        "body": "First-time cruisers should begin with trip length. A short Bahamas cruise is easier to test, while a longer Caribbean sailing gives more time to settle into ship life. Weekend cruises can be convenient but may feel fast."
+        "body": "First-time cruisers should begin with trip length. A short Bahamas cruise is easier to test, while a longer Caribbean sailing gives more time to settle into ship life. Weekend cruises can be convenient but may feel fast.",
+        "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Best Cruises From Florida For First-Time Cruisers travel planning image"
       },
       {
         "heading": "Compare The Port First",
@@ -1827,13 +1893,17 @@
         "description": "Check current hotel options before a Miami cruise night or weekend add-on.",
         "category": "hotels",
         "destination": "Miami",
-        "cta": "Compare Miami Hotels"
+        "cta": "Compare Miami Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Miami cruise hotels for Miami travel planning"
       }
     ],
     "content": [
       {
         "heading": "Keep The Plan Close",
-        "body": "The best pre-cruise activities are easy to reach from the hotel and do not create timing stress. Choose one main activity, one meal plan, and a clear path to the port."
+        "body": "The best pre-cruise activities are easy to reach from the hotel and do not create timing stress. Choose one main activity, one meal plan, and a clear path to the port.",
+        "image": "https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "What To Do Before A Miami Cruise: Easy Pre-Cruise Ideas travel planning image"
       },
       {
         "heading": "Good Pre-Cruise Ideas",
@@ -1936,13 +2006,17 @@
         "description": "Check current Key West hotel options for weekend trips, island stays, and Florida Keys getaways.",
         "category": "hotels",
         "destination": "Key West",
-        "cta": "Compare Key West Hotels"
+        "cta": "Compare Key West Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Key West hotels for Key West travel planning"
       }
     ],
     "content": [
       {
         "heading": "Plan Around Arrival Time",
-        "body": "Key West weekends are better when travelers are honest about arrival timing. Flying directly, driving from Miami, or building a Keys road trip each creates a different kind of weekend."
+        "body": "Key West weekends are better when travelers are honest about arrival timing. Flying directly, driving from Miami, or building a Keys road trip each creates a different kind of weekend.",
+        "image": "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Key West Weekend Travel Guide: Hotels, Flights, Food & Water Days travel planning image"
       },
       {
         "heading": "Choose The Right Hotel Base",
@@ -2043,13 +2117,17 @@
         "description": "Check current hotel options for historic district weekends and beach-adjacent stays.",
         "category": "hotels",
         "destination": "St. Augustine",
-        "cta": "Compare Hotels"
+        "cta": "Compare Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare St. Augustine hotels for St. Augustine travel planning"
       }
     ],
     "content": [
       {
         "heading": "Pick Historic Or Beach First",
-        "body": "St. Augustine weekends usually start with one big choice: historic district energy or beach access. The historic district is best for walking, food, tours, and architecture. Beach-area stays can feel slower and more relaxed."
+        "body": "St. Augustine weekends usually start with one big choice: historic district energy or beach access. The historic district is best for walking, food, tours, and architecture. Beach-area stays can feel slower and more relaxed.",
+        "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "St. Augustine Weekend Guide: History, Beaches, Hotels & Food travel planning image"
       },
       {
         "heading": "Use Jacksonville As A Gateway",
@@ -2153,13 +2231,17 @@
         "description": "Check current hotel options after choosing your destination and travel dates.",
         "category": "hotels",
         "destination": "Florida",
-        "cta": "Compare Florida Hotels"
+        "cta": "Compare Florida Hotels",
+        "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Compare Florida hotel options for Florida travel planning"
       }
     ],
     "content": [
       {
         "heading": "Start With The Biggest Cost",
-        "body": "For many Florida trips, the biggest cost is flights, hotel nights, cruise fare, or theme park tickets. Identify the cost driver first, then build the rest of the itinerary around it."
+        "body": "For many Florida trips, the biggest cost is flights, hotel nights, cruise fare, or theme park tickets. Identify the cost driver first, then build the rest of the itinerary around it.",
+        "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "How To Plan A Florida Vacation Without Overspending travel planning image"
       },
       {
         "heading": "Travel Fewer Places Better",
@@ -2263,7 +2345,9 @@
         "description": "Helpful compact gear for beach days, fishing trips, cruise port activities, and Florida weekend packing.",
         "category": "travel gear",
         "destination": "Florida",
-        "cta": "Browse Piscifun Products"
+        "cta": "Browse Piscifun Products",
+        "imageUrl": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Browse outdoor travel gear for Florida travel planning"
       },
       {
         "advertiser": "tidewe",
@@ -2274,13 +2358,17 @@
         "description": "Useful for rain gear, waterproof bags, camping, fishing, and outdoor Florida weekends.",
         "category": "outdoor gear",
         "destination": "Florida",
-        "cta": "Browse TideWe Gear"
+        "cta": "Browse TideWe Gear",
+        "imageUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Browse waterproof outdoor gear for Florida travel planning"
       }
     ],
     "content": [
       {
         "heading": "Pack For Heat And Rain",
-        "body": "Florida packing should assume sun, humidity, sudden rain, air-conditioned interiors, and outdoor walking. Lightweight layers, sun protection, and comfortable shoes matter more than packing a different outfit for every possible plan."
+        "body": "Florida packing should assume sun, humidity, sudden rain, air-conditioned interiors, and outdoor walking. Lightweight layers, sun protection, and comfortable shoes matter more than packing a different outfit for every possible plan.",
+        "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Florida Vacation Packing Guide For Beaches, Parks, Cruises & Weekend Trips travel planning image"
       },
       {
         "heading": "Match Gear To The Trip",
@@ -2378,7 +2466,9 @@
     "content": [
       {
         "heading": "Start With The Reason For Going",
-        "body": "A Florida trip can be built around beaches, theme parks, cruises, food, outdoor time, family visits, events, or pure rest. The destination should match that reason before any deal or hotel price enters the decision."
+        "body": "A Florida trip can be built around beaches, theme parks, cruises, food, outdoor time, family visits, events, or pure rest. The destination should match that reason before any deal or hotel price enters the decision.",
+        "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "How To Pick The Right Florida Destination For Your Trip Style travel planning image"
       },
       {
         "heading": "Compare Trip Friction",
@@ -2482,7 +2572,9 @@
         "description": "Browse compact fishing and outdoor gear for beach, pier, and weekend Florida trips.",
         "category": "fishing gear",
         "destination": "Florida",
-        "cta": "Shop Outdoor Gear"
+        "cta": "Shop Outdoor Gear",
+        "imageUrl": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Shop Florida fishing essentials for Florida travel planning"
       },
       {
         "advertiser": "tidewe",
@@ -2493,13 +2585,17 @@
         "description": "Useful for rain, mud, fishing, camping, and wet-weather Florida outdoor weekends.",
         "category": "outdoor gear",
         "destination": "Florida",
-        "cta": "Browse TideWe Gear"
+        "cta": "Browse TideWe Gear",
+        "imageUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Browse waterproof outdoor gear for Florida travel planning"
       }
     ],
     "content": [
       {
         "heading": "Pick One Outdoor Anchor",
-        "body": "A strong outdoor weekend usually has one main plan: beach day, fishing, spring visit, kayak trip, camping, or a scenic road trip. Too many outdoor plans can make weather and transportation harder."
+        "body": "A strong outdoor weekend usually has one main plan: beach day, fishing, spring visit, kayak trip, camping, or a scenic road trip. Too many outdoor plans can make weather and transportation harder.",
+        "image": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Florida Outdoor Weekend Guide: Beaches, Springs, Fishing & Rainy-Day Backup Plans travel planning image"
       },
       {
         "heading": "Pack For Water And Weather",
@@ -2605,13 +2701,17 @@
         "description": "Helpful outdoor gear for fishing, beach days, kayaking, and Florida water activities.",
         "category": "outdoor gear",
         "destination": "Florida",
-        "cta": "Browse Piscifun Products"
+        "cta": "Browse Piscifun Products",
+        "imageUrl": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Browse water-day gear for Florida travel planning"
       }
     ],
     "content": [
       {
         "heading": "Start With Comfort Level",
-        "body": "Florida water activities range from simple beach days to boating, fishing, snorkeling, kayaking, paddleboarding, and springs. Choose the activity around the traveler’s comfort level, not just the photo opportunity."
+        "body": "Florida water activities range from simple beach days to boating, fishing, snorkeling, kayaking, paddleboarding, and springs. Choose the activity around the traveler’s comfort level, not just the photo opportunity.",
+        "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80",
+        "imageAlt": "Best Florida Water Activities For Beach Trips, Families & Weekend Travelers travel planning image"
       },
       {
         "heading": "Good Destination Matches",

@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "florida-theme-park-updates-to-watch",
+    "title": "Florida Theme Park Updates To Watch",
+    "excerpt": "A lightweight update hub for Orlando theme park planning, new attractions, seasonal events, hotel demand, and family trip timing.",
+    "category": "Theme Parks",
+    "destination": "Orlando",
+    "publishDate": "2026-06-04",
+    "image": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=80",
+    "imageAlt": "Orlando theme park travel news and vacation planning updates",
+    "content": [
+      "Florida theme park plans can change around new attractions, event calendars, hotel demand, and school-break travel windows.",
+      "Use this update framework as a planning reminder, then confirm dates, attraction details, tickets, and policies with official park sources before booking."
+    ],
+    "relatedLinks": [
+      { "label": "Disney vs Universal", "href": "/journal/disney-vs-universal" },
+      { "label": "Orlando Travel Guide", "href": "/orlando" },
+      { "label": "Orlando Hotels", "href": "https://hoteldealsflorida.org/cheap-hotels-in-orlando" }
+    ]
+  },
+  {
+    "slug": "florida-cruise-planning-updates",
+    "title": "Florida Cruise Planning Updates For Port Travelers",
+    "excerpt": "A cruise planning update area for Florida ports, pre-cruise hotels, flights, packing, and first-time cruiser decisions.",
+    "category": "Cruises",
+    "destination": "Florida",
+    "publishDate": "2026-06-04",
+    "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1400&q=80",
+    "imageAlt": "Florida cruise travel news with cruise ship and port planning",
+    "content": [
+      "Florida cruise travelers should watch port logistics, flight timing, hotel demand, and itinerary changes before locking in a sailing.",
+      "This framework is not a live scraper. Confirm cruise line details, terminal guidance, and current travel requirements with official sources."
+    ],
+    "relatedLinks": [
+      { "label": "Miami Cruise Port Guide", "href": "/journal/miami-cruise-port-guide-first-time-cruisers" },
+      { "label": "Cruises From Miami", "href": "https://cruisedealsflorida.org/cruises-from-miami" },
+      { "label": "Hotels Near Cruise Ports", "href": "https://hoteldealsflorida.org/hotels-near-florida-cruise-ports" }
+    ]
+  },
+  {
+    "slug": "florida-airport-route-watch",
+    "title": "Florida Airport Route Watch For Trip Planners",
+    "excerpt": "A future-ready update module for Florida route ideas, airport comparisons, fare planning, and weekend flight searches.",
+    "category": "Flights",
+    "destination": "Florida",
+    "publishDate": "2026-06-04",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    "imageAlt": "Florida flight route watch with airplane wing and airport planning",
+    "content": [
+      "Flight route changes and seasonal schedules can affect Florida trip planning, especially around Orlando, Miami, Tampa, Fort Lauderdale, and Jacksonville.",
+      "Use this as a framework for future route updates and confirm current airline schedules directly before booking."
+    ],
+    "relatedLinks": [
+      { "label": "Google Flights Florida Strategy", "href": "/journal/google-flights-florida-airport-strategy" },
+      { "label": "Cheapest Airports In Florida", "href": "https://flightdealsflorida.org/cheapest-airports-in-florida" },
+      { "label": "Florida Weekend Getaways", "href": "/florida-weekend-getaways" }
+    ]
+  },
+  {
+    "slug": "florida-beach-season-planning-notes",
+    "title": "Florida Beach Season Planning Notes",
+    "excerpt": "A beach planning update module for weather, family beach trips, hotel timing, water activities, and Gulf Coast weekend ideas.",
+    "category": "Beaches",
+    "destination": "Florida",
+    "publishDate": "2026-06-04",
+    "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=80",
+    "imageAlt": "Florida beach season travel news with family beach and hotel planning",
+    "content": [
+      "Florida beach plans change with weather, school calendars, hotel demand, and local events.",
+      "Use this update area to connect beach stories with hotels, water activities, and seasonal travel planning. Confirm beach conditions and local details before traveling."
+    ],
+    "relatedLinks": [
+      { "label": "Best Florida Beaches For Families", "href": "/journal/best-florida-beaches-for-families" },
+      { "label": "Clearwater Destination Hub", "href": "/clearwater" },
+      { "label": "Florida Beach Hotels", "href": "https://hoteldealsflorida.org/florida-beachfront-hotels" }
+    ]
+  }
+]

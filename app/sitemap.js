@@ -1,5 +1,7 @@
 import { baseUrl, landingPages } from "./lib/network";
+import { destinationHubs } from "./lib/destinationHubs";
 import { getAllStories, getStoryCategories, hasJournalData, storyBasePath } from "./lib/stories";
+import { getTravelNewsItems } from "./lib/travelNews";
 
 const lastModified = new Date();
 
@@ -32,6 +34,18 @@ export default function sitemap() {
     changeFrequency: "weekly",
     priority: 0.72
   }));
+  const destinationHubPages = destinationHubs.map((hub) => ({
+    url: `${baseUrl}/${hub.slug}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: 0.86
+  }));
+  const travelNewsPages = getTravelNewsItems(100).map((item) => ({
+    url: item.url,
+    lastModified: new Date(item.publishDate),
+    changeFrequency: "weekly",
+    priority: 0.68
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -40,6 +54,7 @@ export default function sitemap() {
       changeFrequency: page.changeFrequency,
       priority: page.priority
     })),
+    ...destinationHubPages,
     ...hubPages,
     ...(hasJournalData()
       ? [
@@ -52,6 +67,7 @@ export default function sitemap() {
           ...storyCategoryPages
         ]
       : []),
-    ...storyPages
+    ...storyPages,
+    ...travelNewsPages
   ];
 }

@@ -28,15 +28,21 @@ const draft = {
   content: [
     {
       heading: "Start With The Trip Goal",
-      body: "Replace this draft copy with original, destination-specific planning advice."
+      body: "Replace this draft copy with original, destination-specific planning advice.",
+      image: "",
+      imageAlt: ""
     },
     {
       heading: "Compare The Main Planning Tradeoffs",
-      body: "Add practical context about timing, hotels, flights, activities, budget, weather, or local logistics."
+      body: "Add practical context about timing, hotels, flights, activities, budget, weather, or local logistics.",
+      image: "",
+      imageAlt: ""
     },
     {
       heading: "Turn The Idea Into A Florida Trip",
-      body: "Add next-step guidance with internal links and network routes that help the reader keep planning."
+      body: "Add next-step guidance with internal links and network routes that help the reader keep planning.",
+      image: "",
+      imageAlt: ""
     }
   ],
   category,

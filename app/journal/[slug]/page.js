@@ -268,6 +268,17 @@ export default async function StoryPage({ params }) {
                 >
                   <h3>{section.heading}</h3>
                   <p>{section.body}</p>
+                  {section.image ? (
+                    <SafeImage
+                      src={section.image}
+                      alt={section.imageAlt || section.heading}
+                      fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                      width="900"
+                      height="520"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : null}
                 </section>
               ))}
               <div className="story-inline-links">
@@ -323,6 +334,15 @@ export default async function StoryPage({ params }) {
                   data-item-title={link.title}
                   data-category={link.category}
                 >
+                  <SafeImage
+                    src={link.imageUrl || story.heroImage}
+                    alt={link.imageAlt || link.title}
+                    fallback="/images/fallbacks/florida-deals-placeholder.svg"
+                    width="640"
+                    height="420"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span className="story-category-label">{link.advertiser}</span>
                   <h3>{link.title}</h3>
                   <p>{link.description}</p>
