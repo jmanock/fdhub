@@ -4,6 +4,7 @@ import NewsletterSection from "../components/NewsletterSection";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import { piscifunGearPicks } from "../lib/affiliate/piscifunLinks";
 import { destinationHubs, getDestinationHub, getDestinationHubStories, getDestinationHubUrl } from "../lib/destinationHubs";
 import {
@@ -18,6 +19,7 @@ import {
   pillars,
   stayWithTripCards
 } from "../lib/network";
+import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
 
 export function generateStaticParams() {
@@ -121,6 +123,27 @@ export default async function LandingPage({ params }) {
   const introParagraphs = getIntroParagraphs(page);
   const relatedSearchLinks = getRelatedSearchLinks(page);
   const gearPicks = page.showPiscifunGear ? piscifunGearPicks : [];
+  const pageStories = getTrendingStories(6);
+  const pageTravelTips = [
+    {
+      title: "Choose the planning anchor",
+      copy: "Use this guide to decide whether the next step is flights, hotels, cruises, local activities, or travel gear.",
+      href: "/florida-vacation-planning-guide",
+      cta: "Plan The Trip"
+    },
+    {
+      title: "Compare related destinations",
+      copy: "Move from a broad Florida idea into a destination hub when location starts to matter more than category.",
+      href: "/best-places-to-visit-in-florida",
+      cta: "Browse Destinations"
+    },
+    {
+      title: "Keep searches connected",
+      copy: "Use network links on this page so flights, hotels, cruises, and local ideas support the same trip.",
+      href: "/florida-travel-deals",
+      cta: "Explore The Network"
+    }
+  ];
   const pageUrl = `${baseUrl}/${page.slug}`;
   const pageImageUrl = page.image || `${baseUrl}/og.svg`;
   const modifiedDate = new Date().toISOString().slice(0, 10);
@@ -295,6 +318,13 @@ export default async function LandingPage({ params }) {
           </section>
         ) : null}
 
+        <StoryModule
+          eyebrow="Related stories"
+          title="Florida Travel Journal Picks"
+          stories={pageStories.slice(0, 3)}
+          id={`${page.slug}-story-picks`}
+        />
+
         {page.rows?.length ? (
           <section className="comparison-section section-pad" aria-labelledby="comparison-title">
             <div className="section-heading compact">
@@ -441,6 +471,8 @@ export default async function LandingPage({ params }) {
           </section>
         ) : null}
 
+        <TravelTipsModule tips={pageTravelTips} />
+
         <section className="related-pages section-pad" aria-labelledby="related-title">
           <div className="section-heading compact">
             <p className="eyebrow">Keep exploring</p>
@@ -501,6 +533,7 @@ export default async function LandingPage({ params }) {
 
 function DestinationHubPage({ hub }) {
   const stories = getDestinationHubStories(hub.name, 6);
+  const latestStories = getLatestStories(4);
   const newsItems = getTravelNewsItems(3).filter(
     (item) => item.destination === hub.name || item.destination === "Florida"
   );
@@ -625,6 +658,13 @@ function DestinationHubPage({ hub }) {
             </div>
           </section>
         ) : null}
+
+        <StoryModule
+          eyebrow="Recently published"
+          title="Recent Florida Travel Journal Reads"
+          stories={latestStories}
+          id={`${hub.slug}-recent-stories`}
+        />
 
         <NewsletterSection
           eyebrow="Florida travel list"

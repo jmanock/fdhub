@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import MostViewedStories from "../../components/MostViewedStories";
 import NewsletterSection from "../../components/NewsletterSection";
 import SafeImage from "../../components/SafeImage";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import StoryAnalytics from "../../components/StoryAnalytics";
+import { StoryModule, TravelTipsModule } from "../../components/StoryModules";
 import {
   getAllStories,
   getPlanThisTripLinks,
@@ -121,10 +123,31 @@ export default async function StoryPage({ params }) {
   }
 
   const relatedStories = getRelatedStories(story, 3);
+  const popularStories = getAllStories().filter((candidate) => candidate.slug !== story.slug);
   const affiliateLinks = getStoryAffiliateLinks(story);
   const planLinks = getPlanThisTripLinks(story);
   const relatedPlanLinks = getStoryPlanLinks(story);
   const defaultNetworkLinks = getNetworkPlanDefaults();
+  const storyTravelTips = [
+    {
+      title: "Compare the next booking step",
+      copy: "Move from the story into flights, hotels, cruises, or local activities while the destination and trip style are fresh.",
+      href: "/florida-vacation-planning-guide",
+      cta: "Use The Planning Guide"
+    },
+    {
+      title: "Check nearby destinations",
+      copy: "A nearby Florida city, beach, or cruise port can make the same trip idea easier to book or more affordable.",
+      href: "/best-places-to-visit-in-florida",
+      cta: "Compare Places"
+    },
+    {
+      title: "Pack only for the plan",
+      copy: "Choose gear around the actual activity: beach, cruise, fishing, road trip, theme parks, or a rainy-day backup.",
+      href: "/travel-essentials",
+      cta: "Review Essentials"
+    }
+  ];
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -220,7 +243,7 @@ export default async function StoryPage({ params }) {
                 ))}
               </div>
             </div>
-            <div className="landing-visual">
+            <figure className="landing-visual story-hero-figure">
               <SafeImage
                 src={story.heroImage}
                 alt={story.heroImageAlt || story.title}
@@ -231,7 +254,8 @@ export default async function StoryPage({ params }) {
                 decoding="async"
                 fetchPriority="high"
               />
-            </div>
+              <figcaption>{story.heroImageAlt || `${story.destination} travel planning image`}</figcaption>
+            </figure>
           </section>
 
           {hasAffiliateDisclosure(story) ? (
@@ -269,15 +293,18 @@ export default async function StoryPage({ params }) {
                   <h3>{section.heading}</h3>
                   <p>{section.body}</p>
                   {section.image ? (
-                    <SafeImage
-                      src={section.image}
-                      alt={section.imageAlt || section.heading}
-                      fallback="/images/fallbacks/florida-travel-placeholder.svg"
-                      width="900"
-                      height="520"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <figure className="story-inline-figure">
+                      <SafeImage
+                        src={section.image}
+                        alt={section.imageAlt || section.heading}
+                        fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                        width="900"
+                        height="520"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption>{section.imageAlt || `${section.heading} travel planning image`}</figcaption>
+                    </figure>
                   ) : null}
                 </section>
               ))}
@@ -317,8 +344,8 @@ export default async function StoryPage({ params }) {
         {affiliateLinks.length ? (
           <section className="travel-guides section-pad" aria-labelledby="story-affiliate-title">
             <div className="section-heading">
-              <p className="eyebrow">Optional planning picks</p>
-              <h2 id="story-affiliate-title">Helpful Gear And Booking Links</h2>
+              <p className="eyebrow">Related deals and products</p>
+              <h2 id="story-affiliate-title">Helpful Gear, Experiences And Booking Links</h2>
             </div>
             <div className="guide-card-grid">
               {affiliateLinks.map((link) => (
@@ -373,6 +400,17 @@ export default async function StoryPage({ params }) {
             ))}
           </div>
         </section>
+
+        <StoryModule
+          eyebrow="Keep reading"
+          title="Popular Florida Travel Stories"
+          stories={popularStories.slice(0, 3)}
+          id="story-popular-stories"
+        />
+
+        <MostViewedStories stories={popularStories} title="Most Viewed Florida Stories" />
+
+        <TravelTipsModule tips={storyTravelTips} />
 
         <section className="popular-searches section-pad" aria-labelledby="story-destinations-title">
           <div className="section-heading compact">

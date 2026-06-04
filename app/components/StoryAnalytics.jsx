@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import { trackEvent } from "../lib/analytics";
 
+const localStoryViewsKey = "fdh_story_views";
+
 export default function StoryAnalytics({ story }) {
   const readCompleteTracked = useRef(false);
 
@@ -20,7 +22,16 @@ export default function StoryAnalytics({ story }) {
       page_path: window.location.pathname
     };
 
+    try {
+      const localViews = JSON.parse(window.localStorage.getItem(localStoryViewsKey) || "{}");
+      localViews[story.slug] = Number(localViews[story.slug] || 0) + 1;
+      window.localStorage.setItem(localStoryViewsKey, JSON.stringify(localViews));
+    } catch {
+      // Local view ranking is a fallback only; analytics events still fire below.
+    }
+
     trackEvent("story_view", baseParams);
+    trackEvent("story_views", baseParams);
 
     function handleScroll() {
       if (readCompleteTracked.current) {
@@ -53,12 +64,15 @@ export default function StoryAnalytics({ story }) {
       };
 
       if (link.dataset.storyAffiliate === "true") {
-        trackEvent("story_affiliate_click", {
+        const affiliateParams = {
           ...params,
           affiliate_program: link.dataset.affiliateProgram,
           advertiser: link.dataset.advertiser,
           item_title: link.dataset.itemTitle || ctaText
-        });
+        };
+
+        trackEvent("story_affiliate_click", affiliateParams);
+        trackEvent("story_affiliate_clicks", affiliateParams);
         return;
       }
 

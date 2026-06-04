@@ -1,8 +1,10 @@
 import Link from "next/link";
 import NewsletterSection from "../components/NewsletterSection";
+import MostViewedStories from "../components/MostViewedStories";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import { StoryCard, StoryModule, TravelTipsModule } from "../components/StoryModules";
 import {
   getAllStories,
   getEditorPickStories,
@@ -48,33 +50,6 @@ export const metadata = {
   }
 };
 
-function StoryCard({ story, compact = false }) {
-  return (
-    <Link
-      className={compact ? "guide-card story-card compact-story-card" : "guide-card story-card"}
-      href={story.path}
-      data-story-link="true"
-    >
-      {!compact ? (
-        <SafeImage
-          src={story.heroImage}
-          alt={story.heroImageAlt || story.title}
-          fallback="/images/fallbacks/florida-travel-placeholder.svg"
-          width="720"
-          height="430"
-          loading="lazy"
-          decoding="async"
-        />
-      ) : null}
-      <span className="story-category-label">{story.categoryDetails.name}</span>
-      <h3>{story.title}</h3>
-      <p className="best-for-tag">{story.destination}</p>
-      <p>{story.excerpt}</p>
-      <p className="updated-label">Updated {story.updatedDate}</p>
-    </Link>
-  );
-}
-
 export default function JournalPage() {
   const allStories = getAllStories();
   const [featuredStory] = getFeaturedStories(1);
@@ -83,6 +58,26 @@ export default function JournalPage() {
   const editorPicks = getEditorPickStories(4);
   const latestStories = getLatestStories(6);
   const categorySections = getJournalCategorySections();
+  const travelTips = [
+    {
+      title: "Start With The Constraint",
+      copy: "Pick the part of the trip that matters most first: dates, flights, hotel location, cruise port, or local activities.",
+      href: "/florida-vacation-planning-guide",
+      cta: "Use The Planning Guide"
+    },
+    {
+      title: "Compare Nearby Florida Areas",
+      copy: "A nearby airport, beach town, or hotel area can change the value of a trip without changing the whole vacation.",
+      href: "/best-places-to-visit-in-florida",
+      cta: "Compare Destinations"
+    },
+    {
+      title: "Keep A Weather Backup",
+      copy: "Florida trips are smoother when beach, park, and boating plans have a nearby indoor or lower-weather-risk option.",
+      href: "/florida-rainy-day-trip-guide",
+      cta: "Plan Rainy Day Ideas"
+    }
+  ];
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -189,17 +184,12 @@ export default function JournalPage() {
           )}
         </section>
 
-        <section className="popular-this-week section-pad" id="trending-stories" aria-labelledby="trending-stories-title">
-          <div className="section-heading">
-            <p className="eyebrow">Popular Florida searches</p>
-            <h2 id="trending-stories-title">Trending Travel Journal Reads</h2>
-          </div>
-          <div className="guide-card-grid">
-            {trendingStories.map((story) => (
-              <StoryCard story={story} compact key={story.slug} />
-            ))}
-          </div>
-        </section>
+        <StoryModule
+          eyebrow="Popular Florida searches"
+          title="Trending Travel Journal Reads"
+          stories={trendingStories}
+          id="trending-stories"
+        />
 
         <section className="travel-guides section-pad" id="story-categories" aria-labelledby="story-categories-title">
           <div className="section-heading">
@@ -258,29 +248,23 @@ export default function JournalPage() {
           </div>
         </section>
 
-        <section className="comparison-guides section-pad" aria-labelledby="editor-picks-title">
-          <div className="section-heading">
-            <p className="eyebrow">Editor picks</p>
-            <h2 id="editor-picks-title">Travel Stories Worth Starting With</h2>
-          </div>
-          <div className="guide-card-grid">
-            {editorPicks.map((story) => (
-              <StoryCard story={story} compact key={story.slug} />
-            ))}
-          </div>
-        </section>
+        <MostViewedStories stories={allStories} title="Most Viewed Florida Travel Stories" />
 
-        <section className="travel-guides section-pad" id="latest-stories" aria-labelledby="latest-stories-title">
-          <div className="section-heading">
-            <p className="eyebrow">Recently published</p>
-            <h2 id="latest-stories-title">Latest Florida Travel Stories</h2>
-          </div>
-          <div className="guide-card-grid">
-            {latestStories.map((story) => (
-              <StoryCard story={story} compact key={story.slug} />
-            ))}
-          </div>
-        </section>
+        <StoryModule
+          eyebrow="Editor picks"
+          title="Travel Stories Worth Starting With"
+          stories={editorPicks}
+          id="editor-picks"
+        />
+
+        <StoryModule
+          eyebrow="Recently published"
+          title="Latest Florida Travel Stories"
+          stories={latestStories}
+          id="latest-stories"
+        />
+
+        <TravelTipsModule tips={travelTips} />
 
         <NewsletterSection
           eyebrow="Florida travel list"

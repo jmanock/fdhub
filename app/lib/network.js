@@ -1316,6 +1316,52 @@ const v7HubProgrammaticPages = [
   })
 );
 
+const v105EngagementPages = [
+  ["gear", "Florida Travel Gear | Beach, Fishing, Cruise & Weekend Essentials", "Browse Florida travel gear ideas for beach days, fishing trips, cruises, outdoor weekends, and road trips with helpful related stories.", "Florida Travel Gear", "Travel essentials", pageImages.planning, "Florida travel gear resource page with beach fishing cruise and outdoor essentials", "Florida travel gear should support the trip you are actually taking, whether that means a beach day, pier fishing plan, cruise port stop, theme park weekend, or outdoor road trip.", "Florida beaches, cruise ports, fishing piers, springs, parks, hotels, road trips, and family activity days", "Use gear links as planning support, not as a reason to overpack. Confirm current product details, prices, and availability with the merchant before buying.", ["florida-travel-gear-guide", "florida-fishing-trip-guide", "florida-beach-day-essentials-guide", "florida-outdoor-gear-guide"], true],
+  ["fishing-gear", "Florida Fishing Gear | Beach, Pier & Weekend Trip Essentials", "Plan Florida fishing gear for beach days, piers, Keys weekends, Gulf Coast trips, family outings, and outdoor travel.", "Florida Fishing Gear", "Fishing trip gear", pageImages.clearwater, "Florida fishing gear page with beach pier and weekend trip essentials", "Florida fishing gear depends on the trip style: a short pier stop, beach day, kayak outing, Keys road trip, or full outdoor weekend.", "Destin, Florida Keys, Clearwater, Fort Myers, Naples, Jacksonville, piers, marinas, beaches, and parks", "Keep travel gear compact and check local fishing rules, access points, licenses, and weather before planning around a fishing stop.", ["florida-fishing-trip-guide", "florida-water-activities-guide", "florida-beach-day-essentials-guide", "destin-florida-guide"], true],
+  ["boat-rentals", "Florida Boat Rentals | Miami, Keys & Waterfront Day Planning", "Plan Florida boat rental ideas with Miami, the Keys, Fort Lauderdale, cruise port activities, hotels, and waterfront travel tips.", "Florida Boat Rentals", "Boating experiences", pageImages.summer, "Florida boat rentals resource page with Miami Keys and waterfront day planning", "Florida boat rental planning works best when travelers compare the occasion, group size, pickup area, weather, hotel location, and whether the boating day is part of a cruise or weekend trip.", "Miami, Miami Beach, Fort Lauderdale, Florida Keys, Key West, PortMiami, Port Everglades, and waterfront hotel areas", "Tracked Sailo affiliate URLs are required before publishing outbound Sailo CTAs. Until then, use internal boating guides and destination planning links.", ["florida-water-activities-guide", "miami-yacht-rental-guide", "miami-travel-guide", "key-west-travel-guide"], false],
+  ["travel-essentials", "Florida Travel Essentials | Packing Ideas For Beaches, Cruises & Families", "Review Florida travel essentials for beach vacations, cruises, theme parks, outdoor weekends, fishing trips, hotels, and family travel.", "Florida Travel Essentials", "Packing and planning", pageImages.floridaCoast, "Florida travel essentials page with packing ideas for beaches cruises families and outdoor weekends", "Florida travel essentials are easier to choose when the plan is specific. A cruise, beach day, theme park weekend, fishing trip, and hotel stay each need different practical items.", "Orlando, Miami, Tampa, Clearwater, Destin, Key West, Port Canaveral, cruise ports, beach towns, and outdoor destinations statewide", "Pack for sun, rain, water, walking, documents, and storage, then confirm airline, cruise line, hotel, park, and attraction rules before bringing specialty items.", ["florida-travel-gear-guide", "florida-outdoor-gear-guide", "florida-cruise-port-guide", "florida-beach-day-essentials-guide"], true],
+  ["best-florida-beaches-by-month", "Best Florida Beaches By Month | When To Visit Each Coast", "Compare the best Florida beaches by month with seasonal weather notes, hotel timing, family trip ideas, and coastal planning tips.", "Best Florida Beaches By Month", "Seasonal beach guide", pageImages.clearwater, "Best Florida beaches by month with seasonal coast and hotel planning", "The best Florida beach in January is not always the best beach in July. Monthly timing can change weather, hotel demand, water conditions, family schedules, and the kind of coast that feels easiest.", "Clearwater, Miami Beach, Destin, Naples, Fort Lauderdale, Key West, Daytona Beach, Sarasota, and St. Augustine", "Use monthly beach planning as a starting point, then confirm weather, local advisories, hotel rules, event calendars, and travel dates before booking.", ["best-florida-beaches", "florida-summer-travel-guide", "winter-florida-getaways", "florida-beach-vacation-guide"], false],
+  ["best-time-to-cruise-from-florida", "Best Time To Cruise From Florida | Ports, Weather & Family Timing", "Compare the best time to cruise from Florida with port timing, Bahamas routes, Caribbean seasons, family trips, and hotel planning.", "Best Time To Cruise From Florida", "Cruise timing guide", pageImages.cruisePort, "Best time to cruise from Florida with port weather and family trip planning", "The best time to cruise from Florida depends on port choice, route, weather flexibility, school schedules, hotel nights, and whether the sailing is a quick Bahamas trip or a longer Caribbean vacation.", "Miami, Port Canaveral, Tampa, Fort Lauderdale, Jacksonville, Bahamas routes, Caribbean routes, and pre-cruise hotel areas", "Cruise prices, itineraries, policies, and weather risk can change. Confirm current details with the cruise line or booking provider before making travel plans.", ["best-florida-cruise-ports", "port-canaveral-cruise-trip-guide", "miami-travel-guide", "florida-vacation-planning-guide"], false],
+  ["florida-family-vacation-planner", "Florida Family Vacation Planner | Theme Parks, Beaches, Hotels & Cruises", "Plan a Florida family vacation with theme parks, beaches, hotels, cruises, flights, rainy-day backups, and practical itinerary tips.", "Florida Family Vacation Planner", "Family planning", pageImages.familyTrip, "Florida family vacation planner with beaches theme parks hotels and cruise ideas", "A Florida family vacation planner should make the trip easier to execute, not just longer. Start with the anchor activity, then build flights, hotels, meals, rest time, and local activities around it.", "Orlando, Tampa, Clearwater, Miami, Jacksonville, Destin, Port Canaveral, family hotels, beaches, and theme park areas", "Families usually do better with fewer hotel moves, realistic travel days, shade and weather backups, and clear decisions about which paid attractions matter most.", ["best-florida-family-vacations", "orlando-travel-guide", "cheap-florida-family-vacations", "florida-rainy-day-trip-guide"], false]
+].map(([slug, title, metaDescription, h1, eyebrow, image, alt, intro, destinations, advice, related, showPiscifunGear]) =>
+  createAuthorityPage({
+    slug,
+    title,
+    metaDescription,
+    h1,
+    eyebrow,
+    image,
+    alt,
+    intro,
+    destinations,
+    advice,
+    related,
+    showPiscifunGear
+  })
+);
+
+const v105ComparisonPages = [
+  {
+    slug: "miami-vs-key-west-vacation",
+    title: "Miami vs Key West Vacation | Beaches, Hotels, Cruises & Nightlife",
+    metaDescription:
+      "Compare a Miami vs Key West vacation for beaches, hotels, flights, nightlife, boating, cruises, families, couples, and Florida Keys road trips.",
+    h1: "Miami vs Key West Vacation",
+    image: pageImages.keyWest,
+    alt: "Miami versus Key West vacation comparison with beaches hotels boating and nightlife",
+    optionA: "Miami",
+    optionB: "Key West",
+    related: ["miami-travel-guide", "key-west-travel-guide", "florida-keys-road-trip-guide", "romantic-florida-getaways"],
+    rows: [
+      ["Best for", "Beach hotels, nightlife, food, art, flights, cruises", "Island pace, sunsets, boating, couples trips, Keys road trips"],
+      ["Hotel strategy", "Choose Miami Beach, Brickell, Downtown, or Coconut Grove around the trip goal", "Stay near Old Town for walkability or choose quieter island lodging"],
+      ["Transportation", "MIA and FLL give travelers more flight flexibility", "Flying direct is convenient, but Miami fly-and-drive can work for longer trips"],
+      ["Best next click", "Compare Miami hotels, flights, cruises, and local activities", "Compare Keys hotels, road trip plans, water activities, and island guides"]
+    ]
+  }
+].map(createComparisonPage);
+
 export const landingPages = [
   ...generatedAuthorityPages,
   ...generatedV2SeasonalPages,
@@ -1323,6 +1369,8 @@ export const landingPages = [
   ...generatedPlanningPages,
   ...generatedComparisonPages,
   ...v7HubProgrammaticPages,
+  ...v105EngagementPages,
+  ...v105ComparisonPages,
   {
     slug: "florida-travel-deals",
     title: "Florida Travel Deals | Flights, Hotels, Cruises & Local Savings",

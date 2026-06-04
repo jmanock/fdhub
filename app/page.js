@@ -1,8 +1,10 @@
 import Link from "next/link";
+import MostViewedStories from "./components/MostViewedStories";
 import NewsletterSection from "./components/NewsletterSection";
 import SafeImage from "./components/SafeImage";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
+import { StoryModule, TravelTipsModule } from "./components/StoryModules";
 import {
   baseUrl,
   bestForLinks,
@@ -75,12 +77,33 @@ export default function Home() {
   const journalStories = getTrendingStories(5);
   const latestJournalStories = getLatestStories(4);
   const editorJournalStories = getEditorPickStories(3);
+  const popularJournalStories = getTrendingStories(8);
   const featuredPlanLinks = featuredJournalStory ? getPlanThisTripLinks(featuredJournalStory) : [];
   const travelNewsItems = getTravelNewsItems(3);
   const visualDestinationHubs = destinationHubs.slice(0, 6);
   const weekendHubs = destinationHubs.filter((hub) =>
     ["key-west", "clearwater", "destin", "st-augustine", "tampa"].includes(hub.slug)
   );
+  const homeTravelTips = [
+    {
+      title: "Compare the trip before the deal",
+      copy: "Use a destination or comparison guide first when you are choosing between cities, beaches, cruises, and family trip types.",
+      href: "/orlando-vs-miami-vacation",
+      cta: "Compare Destinations"
+    },
+    {
+      title: "Turn stories into next clicks",
+      copy: "After a story, move into flights, hotels, cruises, or local things to do while the trip idea is still clear.",
+      href: "/journal",
+      cta: "Browse The Journal"
+    },
+    {
+      title: "Pack for the activity",
+      copy: "Beach, cruise, fishing, and outdoor weekends need different gear choices, so keep packing tied to the actual plan.",
+      href: "/travel-essentials",
+      cta: "See Travel Essentials"
+    }
+  ];
 
   return (
     <>
@@ -137,6 +160,42 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {featuredJournalStory ? (
+          <section className="featured-story-section section-pad" aria-labelledby="featured-story-title">
+            <div className="section-heading">
+              <p className="eyebrow">Featured story</p>
+              <h2 id="featured-story-title">Start With A Florida Travel Story</h2>
+            </div>
+            <Link className="content-card journal-home-feature magazine-feature" href={featuredJournalStory.path} data-story-link="true">
+              <SafeImage
+                src={featuredJournalStory.heroImage}
+                alt={featuredJournalStory.heroImageAlt || featuredJournalStory.title}
+                fallback="/images/fallbacks/florida-travel-placeholder.svg"
+                width="1040"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <p className="eyebrow">{featuredJournalStory.categoryDetails.name}</p>
+                <h3>{featuredJournalStory.title}</h3>
+                <p className="best-for-tag">{featuredJournalStory.destination}</p>
+                <p>{featuredJournalStory.excerpt}</p>
+                <p className="value-line">Read the featured story</p>
+              </div>
+            </Link>
+          </section>
+        ) : null}
+
+        <StoryModule
+          eyebrow="Trending stories"
+          title="Trending Florida Travel Stories"
+          stories={popularJournalStories.slice(0, 6)}
+          id="home-trending-stories"
+        />
+
+        <MostViewedStories stories={popularJournalStories} title="Most Viewed Stories On This Device" />
 
         <section className="trip-router section-pad" aria-labelledby="trip-router-title">
           <div className="section-heading">
@@ -361,6 +420,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <TravelTipsModule tips={homeTravelTips} />
 
         <section className="weekend-ideas section-pad" aria-labelledby="weekend-ideas-title">
           <div className="section-heading">
