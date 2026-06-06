@@ -5,6 +5,7 @@ import SafeImage from "./components/SafeImage";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
 import { StoryModule, TravelTipsModule } from "./components/StoryModules";
+import { VacationPackageCards } from "./components/VacationPackagePage";
 import {
   baseUrl,
   bestForLinks,
@@ -34,6 +35,7 @@ import {
   getPlanThisTripLinks,
   getTrendingStories
 } from "./lib/stories";
+import { vacationPackages } from "./lib/vacationPackages";
 
 const trust = [
   ["Curated Florida Deals", "A focused network built around travel, savings, and things to do across the state."],
@@ -193,6 +195,12 @@ export default function Home() {
           title="Trending Florida Travel Stories"
           stories={popularJournalStories.slice(0, 6)}
           id="home-trending-stories"
+        />
+
+        <VacationPackageCards
+          packages={vacationPackages.slice(0, 6)}
+          title="Build A Complete Florida Vacation"
+          id="home-vacation-packages"
         />
 
         <MostViewedStories stories={popularJournalStories} title="Most Viewed Stories On This Device" />

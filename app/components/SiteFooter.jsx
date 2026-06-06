@@ -16,6 +16,8 @@ const footerGuides = [
   ["Cheap Florida Vacations", "/cheap-florida-vacations"],
   ["Best Time To Visit Florida", "/best-time-to-visit-florida"],
   ["Florida Family Vacations", "/florida-family-vacations"],
+  ["Family Vacations Under $2,000", "/florida-family-vacations-under-2000"],
+  ["Cruise Vacation Packages", "/family-cruise-vacation-package"],
   ["Florida Vacation Planning Guide", "/florida-vacation-planning-guide"]
 ];
 

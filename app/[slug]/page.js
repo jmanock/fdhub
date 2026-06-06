@@ -5,6 +5,7 @@ import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
+import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
 import { piscifunGearPicks } from "../lib/affiliate/piscifunLinks";
 import { destinationHubs, getDestinationHub, getDestinationHubStories, getDestinationHubUrl } from "../lib/destinationHubs";
 import {
@@ -21,11 +22,17 @@ import {
 } from "../lib/network";
 import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
+import {
+  getVacationPackage,
+  getVacationPackagesForDestination,
+  vacationPackages
+} from "../lib/vacationPackages";
 
 export function generateStaticParams() {
   return [
     ...landingPages.map((page) => ({ slug: page.slug })),
-    ...destinationHubs.map((hub) => ({ slug: hub.slug }))
+    ...destinationHubs.map((hub) => ({ slug: hub.slug })),
+    ...vacationPackages.map((item) => ({ slug: item.slug }))
   ];
 }
 
@@ -33,6 +40,31 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const page = landingPageMap[slug];
   const destinationHub = getDestinationHub(slug);
+  const vacationPackage = getVacationPackage(slug);
+
+  if (vacationPackage) {
+    const url = `${baseUrl}/${vacationPackage.slug}`;
+
+    return {
+      title: vacationPackage.title,
+      description: vacationPackage.metaDescription,
+      alternates: { canonical: url },
+      openGraph: {
+        title: vacationPackage.title,
+        description: vacationPackage.metaDescription,
+        url,
+        siteName: "Florida Deals Hub",
+        type: "article",
+        images: [{ url: vacationPackage.image, width: 1200, height: 630, alt: vacationPackage.imageAlt }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: vacationPackage.title,
+        description: vacationPackage.metaDescription,
+        images: [vacationPackage.image]
+      }
+    };
+  }
 
   if (destinationHub) {
     const title = `${destinationHub.name} Florida Travel Hub | Stories, Guides, Flights, Hotels & Things To Do`;
@@ -109,6 +141,11 @@ export default async function LandingPage({ params }) {
   const { slug } = await params;
   const page = landingPageMap[slug];
   const destinationHub = getDestinationHub(slug);
+  const vacationPackage = getVacationPackage(slug);
+
+  if (vacationPackage) {
+    return <VacationPackagePage packagePage={vacationPackage} />;
+  }
 
   if (destinationHub) {
     return <DestinationHubPage hub={destinationHub} />;
@@ -533,6 +570,7 @@ export default async function LandingPage({ params }) {
 
 function DestinationHubPage({ hub }) {
   const stories = getDestinationHubStories(hub.name, 6);
+  const packages = getVacationPackagesForDestination(hub.name, 3);
   const latestStories = getLatestStories(4);
   const newsItems = getTravelNewsItems(3).filter(
     (item) => item.destination === hub.name || item.destination === "Florida"
@@ -612,6 +650,12 @@ function DestinationHubPage({ hub }) {
             ))}
           </div>
         </section>
+
+        <VacationPackageCards
+          packages={packages}
+          title={`${hub.name} Vacation Packages And Cost Planners`}
+          id={`${hub.slug}-vacation-packages`}
+        />
 
         <section className="plan-trip section-pad" aria-labelledby="destination-network-title">
           <div className="section-heading">

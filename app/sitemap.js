@@ -2,6 +2,7 @@ import { baseUrl, landingPages } from "./lib/network";
 import { destinationHubs } from "./lib/destinationHubs";
 import { getAllStories, getStoryCategories, hasJournalData, storyBasePath } from "./lib/stories";
 import { getTravelNewsItems } from "./lib/travelNews";
+import { vacationPackages } from "./lib/vacationPackages";
 
 const lastModified = new Date();
 
@@ -46,6 +47,12 @@ export default function sitemap() {
     changeFrequency: "weekly",
     priority: 0.68
   }));
+  const vacationPackagePages = vacationPackages.map((item) => ({
+    url: `${baseUrl}/${item.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.9
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -55,6 +62,7 @@ export default function sitemap() {
       priority: page.priority
     })),
     ...destinationHubPages,
+    ...vacationPackagePages,
     ...hubPages,
     ...(hasJournalData()
       ? [

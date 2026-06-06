@@ -12,6 +12,7 @@
     "stories:generate": "node scripts/stories-generate.mjs",
     "stories:review": "node scripts/stories-review.mjs",
     "stories:publish": "node scripts/stories-publish.mjs",
+    "content:packages": "node scripts/package-content.mjs",
     "seo:indexnow": "node scripts/seo-automation.mjs --site=floridadealshub --mode=indexnow",
     "seo:validate": "node scripts/seo-automation.mjs --site=floridadealshub --mode=validate",
     "seo:report": "node scripts/seo-automation.mjs --site=floridadealshub --mode=report"
