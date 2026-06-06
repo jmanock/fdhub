@@ -13,6 +13,9 @@ const footerDestinations = [
 const footerGuides = [
   ["Vacation Packages", "/vacation-packages"],
   ["Family Vacation Packages", "/family-vacations"],
+  ["Best Family Vacations", "/best-florida-family-vacations"],
+  ["Family Beach Vacations", "/family-beach-vacations-florida"],
+  ["Family Cruise Vacations", "/family-cruise-vacations-florida"],
   ["Cruise Vacation Packages", "/cruise-packages"],
   ["Beach Vacation Packages", "/beach-vacations"],
   ["Things To Do", "/things-to-do"],

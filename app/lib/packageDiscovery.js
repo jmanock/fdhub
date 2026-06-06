@@ -3,13 +3,6 @@ import { vacationPackages } from "./vacationPackages";
 
 const categoryDefinitions = [
   {
-    slug: "family-vacations",
-    title: "Florida Family Vacation Packages",
-    description: "Compare Florida family vacations by budget, destination, trip length, beaches, theme parks, and cruises.",
-    image: pageImages.familyTrip,
-    match: ["family", "families"]
-  },
-  {
     slug: "cruise-packages",
     title: "Florida Cruise Vacation Packages",
     description: "Build a Florida cruise vacation with sailings, port hotels, flights, transfers, and pre-cruise activities.",
@@ -29,13 +22,6 @@ const categoryDefinitions = [
     description: "Discover short Florida trips that combine hotels, transportation, activities, cruises, and manageable schedules.",
     image: pageImages.weekendBeach,
     match: ["weekend", "short", "three-night", "three night"]
-  },
-  {
-    slug: "family-vacations-under-5000",
-    title: "Florida Family Vacations Under $5,000",
-    description: "Compare fuller Florida family trips with room for a cruise, resort stay, flights, theme parks, or multiple destinations.",
-    image: pageImages.familyTrip,
-    match: ["family"]
   },
   {
     slug: "3-day-cruises-from-florida",

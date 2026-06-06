@@ -770,6 +770,10 @@ h3 {
   grid-template-rows: auto auto auto 1fr auto;
 }
 
+.family-budget-card {
+  border-top: 5px solid var(--gold);
+}
+
 .package-summary {
   padding-top: 10px;
   padding-bottom: 10px;

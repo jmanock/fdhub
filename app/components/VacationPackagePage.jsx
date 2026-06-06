@@ -9,6 +9,7 @@ import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
 import ThingsToDoSection from "./ThingsToDoSection";
 import { StoryModule } from "./StoryModules";
 import { getTrendingStories } from "../lib/stories";
+import { familyGuideLinks } from "../lib/familyVacations";
 
 export function VacationPackageCards({ packages, title = "Vacation Packages Built Around Real Trip Decisions", id = "vacation-packages" }) {
   if (!packages.length) return null;
@@ -211,6 +212,18 @@ export default function VacationPackagePage({ packagePage }) {
         </section>
 
         <ThingsToDoSection title={`Add Activities To This ${packagePage.destination} Vacation`} />
+
+        {discovery.styles.includes("Family") ? (
+          <section className="related-pages section-pad" aria-labelledby={`${packagePage.slug}-family-links-title`}>
+            <div className="section-heading compact">
+              <p className="eyebrow">Family vacation authority</p>
+              <h2 id={`${packagePage.slug}-family-links-title`}>Compare More Florida Family Vacations</h2>
+            </div>
+            <div className="popular-link-grid">
+              {familyGuideLinks.slice(0, 12).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+            </div>
+          </section>
+        ) : null}
 
         <StoryModule
           eyebrow="Related travel stories"

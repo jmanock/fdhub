@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import NewsletterSection from "../components/NewsletterSection";
 import PackageCategoryPage from "../components/PackageCategoryPage";
+import FamilyVacationPage from "../components/FamilyVacationPage";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
@@ -24,6 +25,7 @@ import {
 import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
 import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
+import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
 import {
   getVacationPackage,
   getVacationPackagesForDestination,
@@ -32,10 +34,11 @@ import {
 
 export function generateStaticParams() {
   return [
-    ...landingPages.map((page) => ({ slug: page.slug })),
+    ...landingPages.filter((page) => !getFamilyVacationGuide(page.slug)).map((page) => ({ slug: page.slug })),
     ...destinationHubs.map((hub) => ({ slug: hub.slug })),
     ...vacationPackages.map((item) => ({ slug: item.slug })),
-    ...packageCategories.map((item) => ({ slug: item.slug }))
+    ...packageCategories.map((item) => ({ slug: item.slug })),
+    ...familyVacationGuides.map((item) => ({ slug: item.slug }))
   ];
 }
 
@@ -45,6 +48,25 @@ export async function generateMetadata({ params }) {
   const destinationHub = getDestinationHub(slug);
   const vacationPackage = getVacationPackage(slug);
   const packageCategory = getPackageCategory(slug);
+  const familyVacationGuide = getFamilyVacationGuide(slug);
+
+  if (familyVacationGuide) {
+    const url = `${baseUrl}/${familyVacationGuide.slug}`;
+    return {
+      title: familyVacationGuide.title,
+      description: familyVacationGuide.metaDescription,
+      alternates: { canonical: url },
+      openGraph: {
+        title: familyVacationGuide.title,
+        description: familyVacationGuide.metaDescription,
+        url,
+        siteName: "Florida Deals Hub",
+        type: "article",
+        images: [{ url: familyVacationGuide.image, width: 1200, height: 630, alt: familyVacationGuide.imageAlt }]
+      },
+      twitter: { card: "summary_large_image", title: familyVacationGuide.title, description: familyVacationGuide.metaDescription, images: [familyVacationGuide.image] }
+    };
+  }
 
   if (packageCategory) {
     const url = `${baseUrl}/${packageCategory.slug}`;
@@ -158,6 +180,11 @@ export default async function LandingPage({ params }) {
   const destinationHub = getDestinationHub(slug);
   const vacationPackage = getVacationPackage(slug);
   const packageCategory = getPackageCategory(slug);
+  const familyVacationGuide = getFamilyVacationGuide(slug);
+
+  if (familyVacationGuide) {
+    return <FamilyVacationPage guide={familyVacationGuide} />;
+  }
 
   if (packageCategory) {
     return <PackageCategoryPage category={packageCategory} />;

@@ -15,6 +15,7 @@ Florida Deals Hub uses proven search demand to build planning pages that connect
 
 - `app/lib/vacationPackages.js`: vacation package pages and search-demand map.
 - `app/lib/packageDiscovery.js`: package categories, filter attributes, and Things To Do collections.
+- `app/lib/familyVacations.js`: the Florida family vacation authority cluster, destination family pages, budgets, and family booking paths.
 - `app/lib/destinationHubs.js`: destination discovery pages.
 - `data/journal/stories.json`: editorial and trend stories.
 - `app/lib/network.js`: statewide guides, comparisons, seasonal pages, and deal routers.
