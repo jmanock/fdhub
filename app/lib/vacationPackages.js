@@ -445,6 +445,13 @@ export function getVacationPackage(slug) {
 export function getVacationPackagesForDestination(destination, limit = 3) {
   return vacationPackages
     .filter((item) => item.destination === destination || item.destination === "Florida" || item.options.some((option) => option.destination === destination))
+    .sort((a, b) => {
+      const score = (item) =>
+        (item.destination === destination ? 4 : 0) +
+        (item.options.some((option) => option.destination === destination) ? 2 : 0) +
+        (item.destination === "Florida" ? 1 : 0);
+      return score(b) - score(a);
+    })
     .slice(0, limit);
 }
 

@@ -34,16 +34,16 @@ const websiteSchema = {
 
 export const metadata = {
   metadataBase: new URL("https://floridadealshub.com"),
-  title: "Florida Deals Hub | Flights, Hotels, Cruises & Local Florida Deals",
+  title: "Florida Deals Hub | Florida Vacation Packages & Trip Planning",
   description:
-    "Plan a Florida trip with flight deals, hotel searches, cruise ideas, local attractions, weekend getaways, and destination travel guides.",
+    "Discover complete Florida vacation packages with cruises, hotels, flights, activities, destination guides, budgets, and weekend trip ideas.",
   alternates: {
     canonical: "https://floridadealshub.com"
   },
   openGraph: {
-    title: "Florida Deals Hub | Flights, Hotels, Cruises & Local Florida Deals",
+    title: "Florida Deals Hub | Florida Vacation Packages & Trip Planning",
     description:
-      "Plan a Florida trip with flight deals, hotel searches, cruise ideas, local attractions, weekend getaways, and destination travel guides.",
+      "Discover complete Florida vacation packages with cruises, hotels, flights, activities, destination guides, budgets, and weekend trip ideas.",
     url: "https://floridadealshub.com",
     siteName: "Florida Deals Hub",
     type: "website",
@@ -58,9 +58,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Florida Deals Hub | Flights, Hotels, Cruises & Local Florida Deals",
+    title: "Florida Deals Hub | Florida Vacation Packages & Trip Planning",
     description:
-      "Plan a Florida trip with flight deals, hotel searches, cruise ideas, local attractions, weekend getaways, and destination travel guides.",
+      "Discover complete Florida vacation packages with cruises, hotels, flights, activities, destination guides, budgets, and weekend trip ideas.",
     images: ["https://floridadealshub.com/og.svg"]
   },
   icons: {

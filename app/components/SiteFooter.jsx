@@ -11,13 +11,17 @@ const footerDestinations = [
 ];
 
 const footerGuides = [
+  ["Vacation Packages", "/vacation-packages"],
+  ["Family Vacation Packages", "/family-vacations"],
+  ["Cruise Vacation Packages", "/cruise-packages"],
+  ["Beach Vacation Packages", "/beach-vacations"],
+  ["Things To Do", "/things-to-do"],
   ["Florida Travel Journal", "/journal"],
   ["Florida Weekend Getaways", "/florida-weekend-getaways"],
   ["Cheap Florida Vacations", "/cheap-florida-vacations"],
   ["Best Time To Visit Florida", "/best-time-to-visit-florida"],
   ["Florida Family Vacations", "/florida-family-vacations"],
   ["Family Vacations Under $2,000", "/florida-family-vacations-under-2000"],
-  ["Cruise Vacation Packages", "/family-cruise-vacation-package"],
   ["Florida Vacation Planning Guide", "/florida-vacation-planning-guide"]
 ];
 

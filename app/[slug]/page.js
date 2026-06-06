@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import NewsletterSection from "../components/NewsletterSection";
+import PackageCategoryPage from "../components/PackageCategoryPage";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
@@ -22,6 +23,7 @@ import {
 } from "../lib/network";
 import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
+import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import {
   getVacationPackage,
   getVacationPackagesForDestination,
@@ -32,7 +34,8 @@ export function generateStaticParams() {
   return [
     ...landingPages.map((page) => ({ slug: page.slug })),
     ...destinationHubs.map((hub) => ({ slug: hub.slug })),
-    ...vacationPackages.map((item) => ({ slug: item.slug }))
+    ...vacationPackages.map((item) => ({ slug: item.slug })),
+    ...packageCategories.map((item) => ({ slug: item.slug }))
   ];
 }
 
@@ -41,6 +44,18 @@ export async function generateMetadata({ params }) {
   const page = landingPageMap[slug];
   const destinationHub = getDestinationHub(slug);
   const vacationPackage = getVacationPackage(slug);
+  const packageCategory = getPackageCategory(slug);
+
+  if (packageCategory) {
+    const url = `${baseUrl}/${packageCategory.slug}`;
+    return {
+      title: packageCategory.title,
+      description: packageCategory.description,
+      alternates: { canonical: url },
+      openGraph: { title: packageCategory.title, description: packageCategory.description, url, siteName: "Florida Deals Hub", type: "website", images: [packageCategory.image] },
+      twitter: { card: "summary_large_image", title: packageCategory.title, description: packageCategory.description, images: [packageCategory.image] }
+    };
+  }
 
   if (vacationPackage) {
     const url = `${baseUrl}/${vacationPackage.slug}`;
@@ -142,6 +157,11 @@ export default async function LandingPage({ params }) {
   const page = landingPageMap[slug];
   const destinationHub = getDestinationHub(slug);
   const vacationPackage = getVacationPackage(slug);
+  const packageCategory = getPackageCategory(slug);
+
+  if (packageCategory) {
+    return <PackageCategoryPage category={packageCategory} />;
+  }
 
   if (vacationPackage) {
     return <VacationPackagePage packagePage={vacationPackage} />;
@@ -656,6 +676,20 @@ function DestinationHubPage({ hub }) {
           title={`${hub.name} Vacation Packages And Cost Planners`}
           id={`${hub.slug}-vacation-packages`}
         />
+
+        <section className="popular-searches section-pad" aria-labelledby={`${hub.slug}-package-styles-title`}>
+          <div className="section-heading compact">
+            <p className="eyebrow">Compare package styles</p>
+            <h2 id={`${hub.slug}-package-styles-title`}>Choose A {hub.name} Vacation Style</h2>
+          </div>
+          <div className="popular-link-grid">
+            <Link href="/family-vacations">Family packages</Link>
+            <Link href="/cruise-packages">Cruise packages</Link>
+            <Link href="/weekend-getaways">Weekend packages</Link>
+            <Link href="/family-vacations-under-3000">Budget packages</Link>
+            <Link href="/luxury-vacations">Luxury packages</Link>
+          </div>
+        </section>
 
         <section className="plan-trip section-pad" aria-labelledby="destination-network-title">
           <div className="section-heading">

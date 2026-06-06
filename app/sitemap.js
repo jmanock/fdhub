@@ -3,6 +3,7 @@ import { destinationHubs } from "./lib/destinationHubs";
 import { getAllStories, getStoryCategories, hasJournalData, storyBasePath } from "./lib/stories";
 import { getTravelNewsItems } from "./lib/travelNews";
 import { vacationPackages } from "./lib/vacationPackages";
+import { packageCategories } from "./lib/packageDiscovery";
 
 const lastModified = new Date();
 
@@ -12,6 +13,8 @@ const staticPages = [
   { path: "/contact", priority: 0.4, changeFrequency: "monthly" },
   { path: "/editorial-policy", priority: 0.4, changeFrequency: "monthly" },
   { path: "/how-we-find-deals", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/vacation-packages", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/things-to-do", priority: 0.85, changeFrequency: "weekly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/terms", priority: 0.3, changeFrequency: "monthly" }
 ];
@@ -53,6 +56,12 @@ export default function sitemap() {
     changeFrequency: "monthly",
     priority: 0.9
   }));
+  const packageCategoryPages = packageCategories.map((item) => ({
+    url: `${baseUrl}/${item.slug}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: 0.88
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -62,6 +71,7 @@ export default function sitemap() {
       priority: page.priority
     })),
     ...destinationHubPages,
+    ...packageCategoryPages,
     ...vacationPackagePages,
     ...hubPages,
     ...(hasJournalData()

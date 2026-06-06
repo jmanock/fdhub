@@ -5,6 +5,10 @@ import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import { baseUrl, lastUpdatedLabel } from "../lib/network";
 import { getVacationPackageGallery } from "../lib/vacationPackages";
+import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
+import ThingsToDoSection from "./ThingsToDoSection";
+import { StoryModule } from "./StoryModules";
+import { getTrendingStories } from "../lib/stories";
 
 export function VacationPackageCards({ packages, title = "Vacation Packages Built Around Real Trip Decisions", id = "vacation-packages" }) {
   if (!packages.length) return null;
@@ -42,6 +46,10 @@ export function VacationPackageCards({ packages, title = "Vacation Packages Buil
 export default function VacationPackagePage({ packagePage }) {
   const pageUrl = `${baseUrl}/${packagePage.slug}`;
   const gallery = getVacationPackageGallery(packagePage);
+  const discovery = getPackageDiscoveryFields(packagePage);
+  const bestMonths = packagePage.destination === "Florida" ? "Varies by trip type" : packagePage.destination === "Miami" || packagePage.destination === "Key West" ? "November-April" : "October-May";
+  const familyRating = discovery.styles.includes("Family") ? "Strong family fit" : "Best for adults or flexible families";
+  const relatedStories = getTrendingStories(3);
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -118,6 +126,13 @@ export default function VacationPackagePage({ packagePage }) {
               These are editorial planning ranges, not live quotes or guaranteed prices. Airfare, hotel rates,
               cruise fares, taxes, fees, and availability change. Confirm the final total with each provider.
             </p>
+            <dl className="package-facts">
+              <div><dt>Vacation type</dt><dd>{discovery.styles.join(", ")}</dd></div>
+              <div><dt>Duration</dt><dd>{discovery.duration}</dd></div>
+              <div><dt>Budget</dt><dd>Up to ${discovery.maxBudget.toLocaleString()}</dd></div>
+              <div><dt>Best travel months</dt><dd>{bestMonths}</dd></div>
+              <div><dt>Family rating</dt><dd>{familyRating}</dd></div>
+            </dl>
           </div>
         </section>
 
@@ -168,6 +183,10 @@ export default function VacationPackagePage({ packagePage }) {
                 </tbody>
               </table>
             </div>
+            <div className="section-heading compact booking-section-heading">
+              <p className="eyebrow">Booking section</p>
+              <h3>Book Each Part Of The Package</h3>
+            </div>
             <div className="router-card-grid package-actions">
               {option.links.map(([label, href, site]) => (
                 <article className="router-card" key={href}>
@@ -190,6 +209,15 @@ export default function VacationPackagePage({ packagePage }) {
             {packagePage.tips.map((tip, index) => <article className="guide-card" key={tip}><p className="best-for-tag">Tip {index + 1}</p><h3>{tip}</h3></article>)}
           </div>
         </section>
+
+        <ThingsToDoSection title={`Add Activities To This ${packagePage.destination} Vacation`} />
+
+        <StoryModule
+          eyebrow="Related travel stories"
+          title="Read Before You Book"
+          stories={relatedStories}
+          id={`${packagePage.slug}-related-stories`}
+        />
 
         <section className="related-pages section-pad" aria-labelledby="package-related-title">
           <div className="section-heading compact">

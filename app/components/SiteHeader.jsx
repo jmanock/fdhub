@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { nav } from "../lib/network";
 
+const planningNav = [
+  ["Vacation Packages", "/vacation-packages"],
+  ["Family Vacations", "/family-vacations"],
+  ["Cruise Packages", "/cruise-packages"],
+  ["Beach Vacations", "/beach-vacations"],
+  ["Weekend Getaways", "/weekend-getaways"],
+  ["Things To Do", "/things-to-do"],
+  ["Travel Guides", "/journal"]
+];
+
 export default function SiteHeader() {
   return (
     <header className="site-header">
@@ -24,6 +34,9 @@ export default function SiteHeader() {
       <a className="header-cta" href="#newsletter">
         Get Alerts
       </a>
+      <nav className="planning-nav" aria-label="Vacation planning">
+        {planningNav.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+      </nav>
     </header>
   );
 }

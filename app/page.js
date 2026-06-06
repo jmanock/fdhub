@@ -6,6 +6,7 @@ import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
 import { StoryModule, TravelTipsModule } from "./components/StoryModules";
 import { VacationPackageCards } from "./components/VacationPackagePage";
+import PackageFinder from "./components/PackageFinder";
 import {
   baseUrl,
   bestForLinks,
@@ -36,6 +37,7 @@ import {
   getTrendingStories
 } from "./lib/stories";
 import { vacationPackages } from "./lib/vacationPackages";
+import { getPackageDiscoveryFields } from "./lib/packageDiscovery";
 
 const trust = [
   ["Curated Florida Deals", "A focused network built around travel, savings, and things to do across the state."],
@@ -75,6 +77,16 @@ const homeFaqSchema = {
 };
 
 export default function Home() {
+  const finderPackages = vacationPackages.map((item) => ({
+    slug: item.slug,
+    h1: item.h1,
+    summary: item.summary,
+    image: item.image,
+    imageAlt: item.imageAlt,
+    destination: item.destination,
+    optionDestinations: [...new Set(item.options.map((option) => option.destination))],
+    ...getPackageDiscoveryFields(item)
+  }));
   const [featuredJournalStory] = getFeaturedStories(1);
   const journalStories = getTrendingStories(5);
   const latestJournalStories = getLatestStories(4);
@@ -117,14 +129,14 @@ export default function Home() {
             <p className="eyebrow">Updated: {lastUpdatedLabel}</p>
             <h1>Find the Best Deals Across Florida</h1>
             <p className="hero-subhead">
-              Flights, hotels, cruises, local events, restaurants, attractions, and weekend
-              getaways - all connected through Florida Deals Hub.
+              Discover complete Florida vacation packages, compare trip costs, and connect the
+              right flights, hotels, cruises, and activities.
             </p>
             <div className="hero-actions" aria-label="Explore Florida deals categories">
-              <a href={sites.flights}>Find Flight Deals</a>
-              <a href={sites.hotels}>Compare Hotel Deals</a>
-              <a href={sites.cruises}>Browse Cruise Deals</a>
-              <a href={sites.local}>Explore Local Deals</a>
+              <Link href="/vacation-packages">Find Vacation Packages</Link>
+              <Link href="/family-vacations">Family Vacations</Link>
+              <Link href="/cruise-packages">Cruise Packages</Link>
+              <Link href="/weekend-getaways">Weekend Getaways</Link>
             </div>
           </div>
 
@@ -202,6 +214,8 @@ export default function Home() {
           title="Build A Complete Florida Vacation"
           id="home-vacation-packages"
         />
+
+        <PackageFinder packages={finderPackages} />
 
         <MostViewedStories stories={popularJournalStories} title="Most Viewed Stories On This Device" />
 

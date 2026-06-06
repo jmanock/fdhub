@@ -14,11 +14,14 @@ Florida Deals Hub uses proven search demand to build planning pages that connect
 ## Live Registries
 
 - `app/lib/vacationPackages.js`: vacation package pages and search-demand map.
+- `app/lib/packageDiscovery.js`: package categories, filter attributes, and Things To Do collections.
 - `app/lib/destinationHubs.js`: destination discovery pages.
 - `data/journal/stories.json`: editorial and trend stories.
 - `app/lib/network.js`: statewide guides, comparisons, seasonal pages, and deal routers.
 
 The dynamic route at `app/[slug]/page.js` consumes vacation packages, destination hubs, and network landing pages. New registry entries are automatically included in static generation and the sitemap.
+
+The `/vacation-packages` route is the primary discovery experience. It filters the same package registry by budget, destination, travel style, and duration. Category hubs should curate existing useful packages rather than creating thin duplicates.
 
 ## Adding A Vacation Package
 
