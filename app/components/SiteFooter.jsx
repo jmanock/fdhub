@@ -2,12 +2,13 @@ import Link from "next/link";
 import { sites } from "../lib/network";
 
 const footerDestinations = [
-  ["Orlando Deals", "/orlando-deals"],
-  ["Miami Deals", "/miami-deals"],
-  ["Tampa Deals", "/tampa-deals"],
-  ["Fort Lauderdale Deals", "/fort-lauderdale-deals"],
-  ["Key West Travel Guide", "/key-west-travel-guide"],
-  ["Clearwater Travel Guide", "/clearwater-travel-guide"]
+  ["All Destinations", "/destinations"],
+  ["Orlando", "/destinations/orlando"],
+  ["Miami", "/destinations/miami"],
+  ["Clearwater Beach", "/destinations/clearwater-beach"],
+  ["Key West", "/destinations/key-west"],
+  ["Tampa", "/destinations/tampa"],
+  ["St. Augustine", "/destinations/st-augustine"]
 ];
 
 const footerGuides = [

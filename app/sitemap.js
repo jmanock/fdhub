@@ -6,6 +6,7 @@ import { vacationPackages } from "./lib/vacationPackages";
 import { packageCategories } from "./lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "./lib/familyVacations";
 import { cruisePlanningGuides, getCruisePlanningGuide } from "./lib/cruisePlanning";
+import { destinationAuthorities, destinationPageTypes, destinationPath } from "./lib/destinationAuthority";
 
 const lastModified = new Date();
 
@@ -16,6 +17,7 @@ const staticPages = [
   { path: "/editorial-policy", priority: 0.4, changeFrequency: "monthly" },
   { path: "/how-we-find-deals", priority: 0.4, changeFrequency: "monthly" },
   { path: "/vacation-packages", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/destinations", priority: 0.96, changeFrequency: "weekly" },
   { path: "/things-to-do", priority: 0.85, changeFrequency: "weekly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/terms", priority: 0.3, changeFrequency: "monthly" }
@@ -76,6 +78,10 @@ export default function sitemap() {
     changeFrequency: "weekly",
     priority: item.slug === "cruises" ? 0.96 : 0.9
   }));
+  const destinationAuthorityPages = destinationAuthorities.flatMap((destination) => [
+    { url: `${baseUrl}${destinationPath(destination)}`, lastModified, changeFrequency: "weekly", priority: 0.94 },
+    ...destinationPageTypes.map((type) => ({ url: `${baseUrl}${destinationPath(destination, type)}`, lastModified, changeFrequency: "weekly", priority: 0.86 }))
+  ]);
 
   return [
     ...staticPages.map((page) => ({
@@ -85,6 +91,7 @@ export default function sitemap() {
       priority: page.priority
     })),
     ...destinationHubPages,
+    ...destinationAuthorityPages,
     ...familyVacationPages,
     ...cruisePlanningPages,
     ...packageCategoryPages,
