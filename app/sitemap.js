@@ -7,6 +7,7 @@ import { packageCategories } from "./lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "./lib/familyVacations";
 import { cruisePlanningGuides, getCruisePlanningGuide } from "./lib/cruisePlanning";
 import { destinationAuthorities, destinationPageTypes, destinationPath } from "./lib/destinationAuthority";
+import { budgetVacationHubs } from "./lib/vacationBuilder";
 
 const lastModified = new Date();
 
@@ -17,6 +18,7 @@ const staticPages = [
   { path: "/editorial-policy", priority: 0.4, changeFrequency: "monthly" },
   { path: "/how-we-find-deals", priority: 0.4, changeFrequency: "monthly" },
   { path: "/vacation-packages", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/vacation-builder", priority: 0.98, changeFrequency: "weekly" },
   { path: "/destinations", priority: 0.96, changeFrequency: "weekly" },
   { path: "/things-to-do", priority: 0.85, changeFrequency: "weekly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "monthly" },
@@ -82,6 +84,12 @@ export default function sitemap() {
     { url: `${baseUrl}${destinationPath(destination)}`, lastModified, changeFrequency: "weekly", priority: 0.94 },
     ...destinationPageTypes.map((type) => ({ url: `${baseUrl}${destinationPath(destination, type)}`, lastModified, changeFrequency: "weekly", priority: 0.86 }))
   ]);
+  const budgetVacationHubPages = budgetVacationHubs.map((item) => ({
+    url: `${baseUrl}/${item.slug}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: 0.91
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -92,6 +100,7 @@ export default function sitemap() {
     })),
     ...destinationHubPages,
     ...destinationAuthorityPages,
+    ...budgetVacationHubPages,
     ...familyVacationPages,
     ...cruisePlanningPages,
     ...packageCategoryPages,

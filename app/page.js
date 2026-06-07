@@ -133,6 +133,7 @@ export default function Home() {
               right flights, hotels, cruises, and activities.
             </p>
             <div className="hero-actions" aria-label="Explore Florida deals categories">
+              <Link href="/vacation-builder">Build My Vacation</Link>
               <Link href="/vacation-packages">Find Vacation Packages</Link>
               <Link href="/family-vacations">Family Vacations</Link>
               <Link href="/cruise-packages">Cruise Packages</Link>

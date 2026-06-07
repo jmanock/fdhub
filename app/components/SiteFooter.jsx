@@ -12,7 +12,12 @@ const footerDestinations = [
 ];
 
 const footerGuides = [
+  ["Vacation Builder", "/vacation-builder"],
   ["Vacation Packages", "/vacation-packages"],
+  ["Vacations Under $1,000", "/vacations-under-1000"],
+  ["Vacations Under $2,000", "/vacations-under-2000"],
+  ["Vacations Under $3,000", "/vacations-under-3000"],
+  ["Vacations Under $5,000", "/vacations-under-5000"],
   ["Family Vacation Packages", "/family-vacations"],
   ["Best Family Vacations", "/best-florida-family-vacations"],
   ["Family Beach Vacations", "/family-beach-vacations-florida"],

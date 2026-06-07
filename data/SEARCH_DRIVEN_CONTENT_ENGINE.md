@@ -26,6 +26,8 @@ The dynamic route at `app/[slug]/page.js` consumes vacation packages, destinatio
 
 The `/vacation-packages` route is the primary discovery experience. It filters the same package registry by budget, destination, travel style, and duration. Category hubs should curate existing useful packages rather than creating thin duplicates.
 
+The `/vacation-builder` flagship experience and budget hubs are powered by `app/lib/vacationBuilder.js`. Add future automated package recommendations to that registry with transparent cost estimates, traveler fit, styles, departure regions, included components, and focused Florida Deals Network booking links.
+
 ## Adding A Vacation Package
 
 1. Confirm the query belongs to family vacations, cruises, hotels, activities, or another proven Search Console theme.

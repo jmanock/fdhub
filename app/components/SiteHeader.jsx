@@ -2,6 +2,7 @@ import Link from "next/link";
 import { nav } from "../lib/network";
 
 const planningNav = [
+  ["Vacation Builder", "/vacation-builder"],
   ["Vacation Packages", "/vacation-packages"],
   ["Destinations", "/destinations"],
   ["Family Vacations", "/family-vacations"],

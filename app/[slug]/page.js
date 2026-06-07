@@ -4,6 +4,7 @@ import NewsletterSection from "../components/NewsletterSection";
 import PackageCategoryPage from "../components/PackageCategoryPage";
 import FamilyVacationPage from "../components/FamilyVacationPage";
 import CruisePlanningPage from "../components/CruisePlanningPage";
+import BudgetVacationHubPage from "../components/BudgetVacationHubPage";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
@@ -28,6 +29,7 @@ import { getTravelNewsItems } from "../lib/travelNews";
 import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
 import { cruisePlanningGuides, getCruisePlanningGuide } from "../lib/cruisePlanning";
+import { budgetVacationHubs, getBudgetVacationHub } from "../lib/vacationBuilder";
 import {
   getVacationPackage,
   getVacationPackagesForDestination,
@@ -41,7 +43,8 @@ export function generateStaticParams() {
     ...vacationPackages.map((item) => ({ slug: item.slug })),
     ...packageCategories.map((item) => ({ slug: item.slug })),
     ...familyVacationGuides.map((item) => ({ slug: item.slug })),
-    ...cruisePlanningGuides.map((item) => ({ slug: item.slug }))
+    ...cruisePlanningGuides.map((item) => ({ slug: item.slug })),
+    ...budgetVacationHubs.map((item) => ({ slug: item.slug }))
   ];
 }
 
@@ -53,6 +56,18 @@ export async function generateMetadata({ params }) {
   const packageCategory = getPackageCategory(slug);
   const familyVacationGuide = getFamilyVacationGuide(slug);
   const cruisePlanningGuide = getCruisePlanningGuide(slug);
+  const budgetVacationHub = getBudgetVacationHub(slug);
+
+  if (budgetVacationHub) {
+    const url = `${baseUrl}/${budgetVacationHub.slug}`;
+    return {
+      title: `${budgetVacationHub.title} | Florida Vacation Budget Planner`,
+      description: budgetVacationHub.description,
+      alternates: { canonical: url },
+      openGraph: { title: budgetVacationHub.title, description: budgetVacationHub.description, url, siteName: "Florida Deals Hub", type: "website", images: [{ url: budgetVacationHub.image, width: 1200, height: 630, alt: `${budgetVacationHub.title} vacation planning` }] },
+      twitter: { card: "summary_large_image", title: budgetVacationHub.title, description: budgetVacationHub.description, images: [budgetVacationHub.image] }
+    };
+  }
 
   if (cruisePlanningGuide) {
     const url = `${baseUrl}/${cruisePlanningGuide.slug}`;
@@ -197,6 +212,11 @@ export default async function LandingPage({ params }) {
   const packageCategory = getPackageCategory(slug);
   const familyVacationGuide = getFamilyVacationGuide(slug);
   const cruisePlanningGuide = getCruisePlanningGuide(slug);
+  const budgetVacationHub = getBudgetVacationHub(slug);
+
+  if (budgetVacationHub) {
+    return <BudgetVacationHubPage hub={budgetVacationHub} />;
+  }
 
   if (cruisePlanningGuide) {
     return <CruisePlanningPage guide={cruisePlanningGuide} />;
