@@ -28,6 +28,8 @@ The `/vacation-packages` route is the primary discovery experience. It filters t
 
 The `/vacation-builder` flagship experience and budget hubs are powered by `app/lib/vacationBuilder.js`. Add future automated package recommendations to that registry with transparent cost estimates, traveler fit, styles, departure regions, included components, and focused Florida Deals Network booking links.
 
+The `/events` publishing system is powered by `app/lib/eventTravel.js`. New event and trend records should include an official-source verification state, travel window, planning timeline, package styles, destinations, and network links. Only add exact countdowns and Event schema after official dates are verified.
+
 ## Adding A Vacation Package
 
 1. Confirm the query belongs to family vacations, cruises, hotels, activities, or another proven Search Console theme.

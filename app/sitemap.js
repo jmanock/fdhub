@@ -8,6 +8,7 @@ import { familyVacationGuides, getFamilyVacationGuide } from "./lib/familyVacati
 import { cruisePlanningGuides, getCruisePlanningGuide } from "./lib/cruisePlanning";
 import { destinationAuthorities, destinationPageTypes, destinationPath } from "./lib/destinationAuthority";
 import { budgetVacationHubs } from "./lib/vacationBuilder";
+import { allEventTravelPages, eventTravelPath } from "./lib/eventTravel";
 
 const lastModified = new Date();
 
@@ -20,6 +21,7 @@ const staticPages = [
   { path: "/vacation-packages", priority: 0.95, changeFrequency: "weekly" },
   { path: "/vacation-builder", priority: 0.98, changeFrequency: "weekly" },
   { path: "/destinations", priority: 0.96, changeFrequency: "weekly" },
+  { path: "/events", priority: 0.97, changeFrequency: "weekly" },
   { path: "/things-to-do", priority: 0.85, changeFrequency: "weekly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/terms", priority: 0.3, changeFrequency: "monthly" }
@@ -90,6 +92,12 @@ export default function sitemap() {
     changeFrequency: "weekly",
     priority: 0.91
   }));
+  const eventTravelPages = allEventTravelPages.map((item) => ({
+    url: `${baseUrl}${eventTravelPath(item)}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: item.type === "event_hub" ? 0.92 : 0.84
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -101,6 +109,7 @@ export default function sitemap() {
     ...destinationHubPages,
     ...destinationAuthorityPages,
     ...budgetVacationHubPages,
+    ...eventTravelPages,
     ...familyVacationPages,
     ...cruisePlanningPages,
     ...packageCategoryPages,

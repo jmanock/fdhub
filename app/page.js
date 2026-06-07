@@ -134,6 +134,7 @@ export default function Home() {
             </p>
             <div className="hero-actions" aria-label="Explore Florida deals categories">
               <Link href="/vacation-builder">Build My Vacation</Link>
+              <Link href="/events">Event Travel</Link>
               <Link href="/vacation-packages">Find Vacation Packages</Link>
               <Link href="/family-vacations">Family Vacations</Link>
               <Link href="/cruise-packages">Cruise Packages</Link>

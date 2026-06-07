@@ -5,6 +5,7 @@ const planningNav = [
   ["Vacation Builder", "/vacation-builder"],
   ["Vacation Packages", "/vacation-packages"],
   ["Destinations", "/destinations"],
+  ["Events", "/events"],
   ["Family Vacations", "/family-vacations"],
   ["Cruises", "/cruises"],
   ["Beach Vacations", "/beach-vacations"],

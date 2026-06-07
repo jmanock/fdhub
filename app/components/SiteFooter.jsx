@@ -13,6 +13,10 @@ const footerDestinations = [
 
 const footerGuides = [
   ["Vacation Builder", "/vacation-builder"],
+  ["Event Travel", "/events"],
+  ["World Cup Travel", "/events/world-cup-travel"],
+  ["Spring Break Travel", "/events/spring-break-travel"],
+  ["Theme Park Events", "/events/disney-special-events"],
   ["Vacation Packages", "/vacation-packages"],
   ["Vacations Under $1,000", "/vacations-under-1000"],
   ["Vacations Under $2,000", "/vacations-under-2000"],
