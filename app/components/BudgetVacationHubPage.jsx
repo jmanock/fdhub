@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./AuthorityLinks";
 import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
@@ -61,6 +62,7 @@ export default function BudgetVacationHubPage({ hub }) {
         <VacationBuilder recommendations={vacationRecommendations} budgetOptions={budgetOptions} travelerOptions={travelerOptions} vacationTypeOptions={vacationTypeOptions} departureRegionOptions={departureRegionOptions} />
         <section className="related-pages section-pad" aria-labelledby={`${hub.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Continue planning</p><h2 id={`${hub.slug}-related-title`}>Related Budget And Vacation Guides</h2></div><div className="popular-link-grid"><Link href="/vacations-under-1000">Vacations Under $1,000</Link><Link href="/vacations-under-2000">Vacations Under $2,000</Link><Link href="/vacations-under-3000">Vacations Under $3,000</Link><Link href="/vacations-under-5000">Vacations Under $5,000</Link><Link href="/family-vacations">Family Vacations</Link><Link href="/cruises">Cruises From Florida</Link><Link href="/destinations">Florida Destinations</Link><Link href="/vacation-packages">Vacation Packages</Link></div></section>
         <section className="faq-section section-pad" aria-labelledby={`${hub.slug}-faq-title`}><div className="section-heading compact"><p className="eyebrow">Budget planning answers</p><h2 id={`${hub.slug}-faq-title`}>{hub.title} FAQ</h2></div><div className="faq-list">{faqItems.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+        <AuthorityLinks currentPath={`/${hub.slug}`} cluster="budget" />
         <NewsletterSection />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />

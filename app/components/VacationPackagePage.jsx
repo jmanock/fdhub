@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./AuthorityLinks";
 import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
@@ -265,6 +266,7 @@ export default function VacationPackagePage({ packagePage }) {
           </div>
         </section>
 
+        <AuthorityLinks currentPath={`/${packagePage.slug}`} cluster={discovery.styles.includes("Cruise") ? "cruises" : discovery.styles.includes("Family") ? "family" : "packages"} destination={packagePage.destination === "Florida" ? null : packagePage.destination} />
         <NewsletterSection
           eyebrow="Florida vacation planning"
           title="Get Florida Travel Deals & Vacation Ideas"

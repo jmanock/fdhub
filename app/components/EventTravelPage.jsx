@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./AuthorityLinks";
 import EventCountdown from "./EventCountdown";
 import EventTravelAnalytics from "./EventTravelAnalytics";
 import NewsletterSection from "./NewsletterSection";
@@ -59,6 +60,7 @@ export default function EventTravelPage({ page }) {
         <section className="related-pages section-pad" aria-labelledby={`${page.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Related events and planning</p><h2 id={`${page.slug}-related-title`}>Keep Planning The Trip</h2></div><div className="popular-link-grid">{relatedPages.slice(0, 8).map((item) => <Link href={eventTravelPath(item)} key={eventTravelPath(item)}>{item.title}</Link>)}<Link href="/vacation-builder">Vacation Builder</Link><Link href="/vacation-packages">Vacation Packages</Link><Link href="/family-vacations">Family Vacations</Link><Link href="/destinations">Destination Guides</Link><Link href="/cruises">Cruise Packages</Link></div></section>
 
         <section className="faq-section section-pad" aria-labelledby={`${page.slug}-faq-title`}><div className="section-heading compact"><p className="eyebrow">Event travel answers</p><h2 id={`${page.slug}-faq-title`}>{page.title} FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+        <AuthorityLinks currentPath={path} cluster="events" destination={page.destinations[0]} />
         <NewsletterSection title="Get Florida Event Travel Ideas" copy="Event travel guides, trending destinations, vacation packages, flights, hotels, cruises, and activities." />
       </main>
       <SiteFooter />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./AuthorityLinks";
 import NewsletterSection from "./NewsletterSection";
 import PackageFinder from "./PackageFinder";
 import SafeImage from "./SafeImage";
@@ -47,6 +48,7 @@ export default function CruisePlanningPage({ guide }) {
         <section className="related-pages section-pad" aria-labelledby={`${guide.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Cruise planning ecosystem</p><h2 id={`${guide.slug}-related-title`}>Related Florida Cruise Guides</h2></div><div className="popular-link-grid">{cruiseGuideLinks.filter(([, href]) => href !== `/${guide.slug}`).slice(0, 16).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</div></section>
 
         <section className="faq-section section-pad" aria-labelledby={`${guide.slug}-faq-title`}><div className="section-heading compact"><p className="eyebrow">Cruise planning answers</p><h2 id={`${guide.slug}-faq-title`}>{guide.h1} FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+        <AuthorityLinks currentPath={`/${guide.slug}`} cluster="cruises" destination={guide.destination === "Florida" ? null : guide.destination} />
         <NewsletterSection title="Get Florida Cruise Deals & Port Guides" copy="Cruise package ideas, Florida port planning, hotel guides, flight ideas, and pre-cruise activities." />
       </main>
       <SiteFooter />

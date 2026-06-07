@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AuthorityLinks from "../../components/AuthorityLinks";
 import MostViewedStories from "../../components/MostViewedStories";
 import NewsletterSection from "../../components/NewsletterSection";
 import SafeImage from "../../components/SafeImage";
@@ -464,6 +465,7 @@ export default async function StoryPage({ params }) {
           </section>
         ) : null}
 
+        <AuthorityLinks currentPath={story.path} cluster="stories" destination={story.destination} />
         <NewsletterSection
           eyebrow="Florida travel list"
           title="Get Florida Travel Ideas Every Week"
@@ -570,6 +572,7 @@ function StoryCategoryPage({ category }) {
           </div>
         </section>
 
+        <AuthorityLinks currentPath={`${storyBasePath}/${category.slug}`} cluster="stories" breadcrumbLabel={`${category.name} Stories`} />
         <NewsletterSection
           eyebrow="Florida travel list"
           title="Get Florida Travel Ideas Every Week"

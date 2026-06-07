@@ -30,6 +30,8 @@ The `/vacation-builder` flagship experience and budget hubs are powered by `app/
 
 The `/events` publishing system is powered by `app/lib/eventTravel.js`. New event and trend records should include an official-source verification state, travel window, planning timeline, package styles, destinations, and network links. Only add exact countdowns and Event schema after official dates are verified.
 
+The internal authority graph is defined in `app/lib/topicClusters.js` and rendered through `app/components/AuthorityLinks.jsx`. Every new registry-driven content template should include the component with its canonical `currentPath`, primary `cluster`, and destination when relevant. This preserves link-up, link-sideways, link-down, cross-cluster, story, package, and network-site pathways.
+
 ## Adding A Vacation Package
 
 1. Confirm the query belongs to family vacations, cruises, hotels, activities, or another proven Search Console theme.

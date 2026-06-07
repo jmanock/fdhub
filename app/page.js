@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./components/AuthorityLinks";
 import MostViewedStories from "./components/MostViewedStories";
 import NewsletterSection from "./components/NewsletterSection";
 import SafeImage from "./components/SafeImage";
@@ -652,6 +653,7 @@ export default function Home() {
           </div>
         </section>
 
+        <AuthorityLinks currentPath="/" cluster="packages" title="Explore The Florida Travel Authority Network" />
         <NewsletterSection />
       </main>
 

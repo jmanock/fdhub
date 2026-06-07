@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./AuthorityLinks";
 import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
@@ -74,6 +75,7 @@ export default function FamilyVacationPage({ guide }) {
         <section className="related-pages section-pad" aria-labelledby={`${guide.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Family vacation ecosystem</p><h2 id={`${guide.slug}-related-title`}>Related Family Vacations</h2></div><div className="popular-link-grid">{familyGuideLinks.filter(([, href]) => href !== `/${guide.slug}`).slice(0, 12).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</div></section>
 
         <section className="faq-section section-pad" aria-labelledby={`${guide.slug}-faq-title`}><div className="section-heading compact"><p className="eyebrow">Family planning answers</p><h2 id={`${guide.slug}-faq-title`}>{guide.h1} FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+        <AuthorityLinks currentPath={`/${guide.slug}`} cluster="family" destination={guide.destination === "Florida" ? null : guide.destination} />
         <NewsletterSection title="Get Florida Family Vacation Ideas" copy="Family packages, beach ideas, cruise planning, destination guides, and practical budget tips." />
       </main>
       <SiteFooter />

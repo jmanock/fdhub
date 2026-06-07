@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "../components/AuthorityLinks";
 import NewsletterSection from "../components/NewsletterSection";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
@@ -25,6 +26,7 @@ export default function VacationBuilderPage() {
         </section>
         <VacationBuilder recommendations={vacationRecommendations} budgetOptions={budgetOptions} travelerOptions={travelerOptions} vacationTypeOptions={vacationTypeOptions} departureRegionOptions={departureRegionOptions} />
         <section className="package-categories section-pad" aria-labelledby="builder-budget-title"><div className="section-heading"><p className="eyebrow">Browse by complete trip budget</p><h2 id="builder-budget-title">Know Your Budget Already?</h2><p>Open a budget hub to compare practical trip recommendations and estimated complete costs.</p></div><div className="guide-card-grid visual-card-grid">{budgetVacationHubs.map((hub) => <Link className="guide-card story-card" href={`/${hub.slug}`} key={hub.slug}><SafeImage src={hub.image} alt={`${hub.title} vacation ideas`} fallback="/images/fallbacks/florida-travel-placeholder.svg" width="720" height="430" loading="lazy" decoding="async" /><h3>{hub.title}</h3><p>{hub.description}</p></Link>)}</div></section>
+        <AuthorityLinks currentPath="/vacation-builder" cluster="budget" breadcrumbLabel="Vacation Builder" />
         <NewsletterSection />
       </main>
       <SiteFooter />

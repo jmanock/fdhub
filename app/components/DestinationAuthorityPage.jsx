@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./AuthorityLinks";
 import NewsletterSection from "./NewsletterSection";
 import PackageFinder from "./PackageFinder";
 import SafeImage from "./SafeImage";
@@ -56,6 +57,7 @@ export default function DestinationAuthorityPage({ destination, type = null }) {
         <section className="related-pages section-pad" aria-labelledby={`${destination.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Related destinations and sections</p><h2 id={`${destination.slug}-related-title`}>Keep Planning Florida</h2></div><div className="popular-link-grid">{relatedDestinations.map((item) => <Link href={destinationPath(item)} key={item.slug}>{item.name} Travel Guide</Link>)}<Link href="/family-vacations">Family Vacations</Link><Link href="/cruises">Cruises From Florida</Link><Link href="/journal">Travel Stories</Link><Link href="/vacation-packages">Vacation Packages</Link></div></section>
 
         <section className="faq-section section-pad" aria-labelledby={`${destination.slug}-faq-title`}><div className="section-heading compact"><p className="eyebrow">Destination planning answers</p><h2 id={`${destination.slug}-faq-title`}>{h1} FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+        <AuthorityLinks currentPath={pagePath} cluster="destinations" destination={destination.name} />
         <NewsletterSection title={`Get ${destination.name} Travel Ideas`} copy="Destination packages, hotels, flights, attractions, travel guides, and Florida trip ideas." />
       </main>
       <SiteFooter />

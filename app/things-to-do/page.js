@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "../components/AuthorityLinks";
 import NewsletterSection from "../components/NewsletterSection";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
@@ -19,6 +20,7 @@ export default function ThingsToDoPage() {
       <SiteHeader />
       <main>
         <section className="simple-page section-pad">
+          <nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span aria-current="page">Things To Do</span></nav>
           <p className="eyebrow">Complete the vacation</p>
           <h1>Things To Do In Florida</h1>
           <p className="hero-subhead">Connect Local Deals Florida activity ideas to the hotel, cruise, flight, budget, and destination choices that shape the rest of the trip.</p>
@@ -26,6 +28,7 @@ export default function ThingsToDoPage() {
         </section>
         <ThingsToDoSection title="Choose Activities By Trip Type" />
         <VacationPackageCards packages={vacationPackages.slice(0, 6)} title="Turn Activities Into Complete Trips" id="things-to-do-related-packages" />
+        <AuthorityLinks currentPath="/things-to-do" cluster="activities" breadcrumbLabel="Things To Do In Florida" />
         <NewsletterSection />
       </main>
       <SiteFooter />

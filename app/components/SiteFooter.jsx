@@ -13,6 +13,7 @@ const footerDestinations = [
 
 const footerGuides = [
   ["Vacation Builder", "/vacation-builder"],
+  ["Budget Travel", "/budget-travel"],
   ["Event Travel", "/events"],
   ["World Cup Travel", "/events/world-cup-travel"],
   ["Spring Break Travel", "/events/spring-break-travel"],

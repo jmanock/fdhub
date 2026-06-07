@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AuthorityLinks from "../../../components/AuthorityLinks";
 import NewsletterSection from "../../../components/NewsletterSection";
 import SafeImage from "../../../components/SafeImage";
 import SiteFooter from "../../../components/SiteFooter";
@@ -138,6 +139,7 @@ export default async function TravelNewsPage({ params }) {
           </section>
         </article>
 
+        <AuthorityLinks currentPath={item.path} cluster="events" destination={item.destination} breadcrumbLabel={item.title} />
         <NewsletterSection
           eyebrow="Florida travel list"
           title="Get Florida Travel Ideas Every Week"

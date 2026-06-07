@@ -20,6 +20,7 @@ const staticPages = [
   { path: "/how-we-find-deals", priority: 0.4, changeFrequency: "monthly" },
   { path: "/vacation-packages", priority: 0.95, changeFrequency: "weekly" },
   { path: "/vacation-builder", priority: 0.98, changeFrequency: "weekly" },
+  { path: "/budget-travel", priority: 0.96, changeFrequency: "weekly" },
   { path: "/destinations", priority: 0.96, changeFrequency: "weekly" },
   { path: "/events", priority: 0.97, changeFrequency: "weekly" },
   { path: "/things-to-do", priority: 0.85, changeFrequency: "weekly" },

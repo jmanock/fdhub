@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AuthorityLinks from "../components/AuthorityLinks";
 import NewsletterSection from "../components/NewsletterSection";
 import PackageCategoryPage from "../components/PackageCategoryPage";
 import FamilyVacationPage from "../components/FamilyVacationPage";
@@ -26,6 +27,7 @@ import {
 } from "../lib/network";
 import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
+import { inferTopicCluster } from "../lib/topicClusters";
 import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
 import { cruisePlanningGuides, getCruisePlanningGuide } from "../lib/cruisePlanning";
@@ -270,6 +272,7 @@ export default async function LandingPage({ params }) {
   ];
   const pageUrl = `${baseUrl}/${page.slug}`;
   const pageImageUrl = page.image || `${baseUrl}/og.svg`;
+  const topicCluster = inferTopicCluster(page.h1, page.eyebrow, page.summary, page.intro);
   const modifiedDate = new Date().toISOString().slice(0, 10);
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -626,6 +629,7 @@ export default async function LandingPage({ params }) {
           </div>
         </section>
 
+        <AuthorityLinks currentPath={`/${page.slug}`} cluster={topicCluster} />
         <NewsletterSection />
       </main>
       <SiteFooter />
@@ -811,6 +815,7 @@ function DestinationHubPage({ hub }) {
           id={`${hub.slug}-recent-stories`}
         />
 
+        <AuthorityLinks currentPath={`/${hub.slug}`} cluster="destinations" destination={hub.name} breadcrumbLabel={`${hub.name} Travel Hub`} />
         <NewsletterSection
           eyebrow="Florida travel list"
           title="Get Florida Travel Ideas Every Week"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "./AuthorityLinks";
 import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
@@ -25,6 +26,7 @@ export default function PackageCategoryPage({ category }) {
         </section>
         <VacationPackageCards packages={category.packages} title={`Compare ${category.title}`} id={`${category.slug}-packages`} />
         <ThingsToDoSection />
+        <AuthorityLinks currentPath={`/${category.slug}`} cluster="packages" breadcrumbLabel={category.title} />
         <NewsletterSection />
       </main>
       <SiteFooter />

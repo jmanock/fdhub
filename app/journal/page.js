@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthorityLinks from "../components/AuthorityLinks";
 import NewsletterSection from "../components/NewsletterSection";
 import MostViewedStories from "../components/MostViewedStories";
 import SafeImage from "../components/SafeImage";
@@ -266,6 +267,7 @@ export default function JournalPage() {
 
         <TravelTipsModule tips={travelTips} />
 
+        <AuthorityLinks currentPath="/journal" cluster="stories" breadcrumbLabel="Florida Travel Journal" />
         <NewsletterSection
           eyebrow="Florida travel list"
           title="Get Florida Travel Ideas Every Week"
