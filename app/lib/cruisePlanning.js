@@ -98,11 +98,76 @@ const intentGuides = [
   ["family-cruises-from-florida", "Family Cruises From Florida", "Compare Florida family cruises by port, cabin plan, sailing length, hotel night, flights, and kid-friendly activities.", "Family cruise vacations"],
   ["bahamas-cruises-from-florida", "Bahamas Cruises From Florida", "Plan Bahamas cruises from Miami, Port Canaveral, Fort Lauderdale, and other Florida ports with complete-trip logistics.", "Bahamas cruise planning"],
   ["3-day-cruises-from-florida", "3 Day Cruises From Florida", "Build a compact three-day cruise vacation with one port-night hotel and simple transportation.", "Three-day cruises"],
+  ["cruise-hotel-packages", "Cruise + Hotel Packages From Florida", "Compare Florida cruise trips with a practical pre-cruise hotel, airport plan, transportation, and time to explore the departure city.", "Cruise travelers building a complete port stay"],
   ["4-day-cruises-from-florida", "4 Day Cruises From Florida", "Compare four-day cruise trips that balance vacation time, port logistics, and itinerary variety.", "Four-day cruises"],
   ["5-day-cruises-from-florida", "5 Day Cruises From Florida", "Plan a five-day cruise with enough time for a fuller itinerary while controlling hotel, flight, and transfer costs.", "Five-day cruises"],
   ["last-minute-cruise-deals-florida", "Last Minute Cruise Deals From Florida", "Use flexible ports, drive-market options, and realistic documentation and transportation checks when departure is close.", "Flexible last-minute cruisers"],
   ["best-cruises-for-families", "Best Cruises For Families From Florida", "Compare family suitability, cabin needs, departure ports, schedules, and complete vacation costs.", "Families comparing cruise options"]
 ];
+
+const guideEnhancements = {
+  "weekend-cruises-from-florida": {
+    title: "Weekend Cruises From Florida (2026) | Ports, Packages & Planning",
+    metaDescription: "Compare weekend cruises from Florida, including Miami, Port Canaveral, Fort Lauderdale, and Tampa departures, short cruise lengths, hotels, flights, and Bahamas trip ideas.",
+    heroTitle: "Weekend Cruises From Florida: Miami, Port Canaveral & More",
+    intro: "Plan a short Florida cruise without treating the sailing as the whole trip. Compare ports, two-to-four-night cruise shapes, pre-cruise hotels, airport options, and Bahamas getaway ideas.",
+    rating: "Couples, families, first-time cruisers, and travelers with limited vacation time",
+    bestMonths: "November-April for milder port weather; short sailings operate throughout the year",
+    itineraries: ["Bahamas", "Private-island stops", "Short Caribbean itineraries"],
+    packages: ["Weekend cruise package", "Cruise + hotel package", "Bahamas cruise package"],
+    network: [
+      ["Compare Weekend Cruise Deals", `${sites.cruises}/weekend-cruises-from-florida`],
+      ["Find Hotels Near Florida Cruise Ports", `${sites.hotels}/hotels-near-florida-cruise-ports`],
+      ["Compare Florida Flights", sites.flights],
+      ["Plan Pre-Cruise Activities", sites.local]
+    ],
+    bestFor: [
+      ["Limited vacation time", "A short sailing can fit around one or two extra days away from work when port travel is planned carefully."],
+      ["First-time cruisers", "A weekend cruise offers a smaller commitment while still letting travelers test cabins, dining, sea days, and port routines."],
+      ["Couples and friend trips", "Short sailings work well for celebrations and quick resets, especially from South Florida ports."],
+      ["Families near Florida ports", "Drive-to departures can simplify airfare planning, but families should still compare parking, hotels, and cabin needs."]
+    ],
+    durationComparison: [
+      ["2-night cruise", "Fastest getaway", "Usually requires a very efficient port plan", "Travelers close to the departure port"],
+      ["3-night cruise", "Classic long-weekend shape", "Often pairs well with one pre-cruise hotel night", "First cruises, couples, and short family trips"],
+      ["4-night cruise", "More itinerary time", "Usually needs extra vacation days", "Travelers wanting a fuller short-cruise experience"]
+    ],
+    portComparison: [
+      ["Miami", "MIA or FLL", "Broad short-cruise choice and South Florida add-ons", "/miami-cruises"],
+      ["Port Canaveral", "MCO or SFB", "Orlando, Space Coast, and family trip combinations", "/port-canaveral-cruises"],
+      ["Fort Lauderdale", "FLL or MIA", "Compact airport, beach, hotel, and Port Everglades planning", "/fort-lauderdale-cruises"],
+      ["Tampa", "TPA", "Gulf Coast drive trips and city or beach add-ons", "/tampa-cruises"]
+    ],
+    planningSteps: [
+      ["Choose the port before the ship", "Compare the drive or flight, hotel area, transfer time, and available short sailings before narrowing the cruise line."],
+      ["Protect embarkation day", "When flying or driving a long distance, arrive the day before and use the hotel night as part of the getaway."],
+      ["Compare the complete cost", "Include taxes, gratuities, parking, transfers, hotel, meals ashore, and onboard extras alongside the cruise fare."],
+      ["Plan a useful port-day add-on", "Choose one nearby beach, neighborhood, attraction, or meal instead of overloading a short trip."]
+    ],
+    clusterLinks: [
+      ["Cruises From Florida", "/cruises"],
+      ["3 Day Cruises From Florida", "/3-day-cruises-from-florida"],
+      ["Cheap Cruises From Florida", "/cheap-cruises-from-florida"],
+      ["Bahamas Cruises From Florida", "/bahamas-cruises-from-florida"],
+      ["Cruise + Hotel Packages", "/cruise-hotel-packages"],
+      ["Weekend Cruise Vacation Packages", "/weekend-cruise-packages-from-florida"],
+      ["Miami Cruise Vacation Packages", "/miami-cruise-vacation-packages"],
+      ["Port Canaveral Vacation Packages", "/port-canaveral-vacation-packages"]
+    ],
+    faqs: [
+      ["Can a Florida cruise fit into a long weekend?", "A two- or three-night sailing can fit a long weekend, but travelers should include the trip to the port and strongly consider arriving before embarkation day."],
+      ["Which Florida port has the most weekend cruise options?", "Miami and Port Canaveral are strong starting points for short-cruise comparisons. Fort Lauderdale and Tampa can also be useful depending on the current sailing schedule and your travel route."],
+      ["Where do weekend cruises from Florida usually go?", "Many short Florida cruises focus on the Bahamas, private-island stops, or compact Caribbean itineraries. Routes and ports of call change, so confirm the live itinerary before booking."],
+      ["Is a cruise and hotel package worth comparing?", "Yes. Comparing the cruise with a pre-cruise hotel can make the total trip easier to evaluate and reduce the risk of missing embarkation because of travel delays."],
+      ["What should I budget beyond the cruise fare?", "Plan for taxes, gratuities, drinks, Wi-Fi, excursions, parking or transfers, a possible hotel night, meals ashore, and travel insurance where appropriate."]
+    ]
+  },
+  "cruise-hotel-packages": {
+    title: "Cruise + Hotel Packages From Florida | Port Stay Planning Guide",
+    metaDescription: "Plan a Florida cruise and hotel package with port-area stays, airport comparisons, transportation, activities, and links to Miami and Port Canaveral cruise trips.",
+    packages: ["Weekend cruise plus hotel", "Miami cruise plus hotel", "Port Canaveral cruise plus hotel"]
+  }
+};
 
 const cruiseLines = [
   ["royal-caribbean-cruises-from-florida", "Royal Caribbean Cruises From Florida", "Very strong for families, active ships, private-island itineraries, and multi-generational trips.", ["Miami", "Port Canaveral", "Fort Lauderdale", "Tampa"], ["Bahamas", "Eastern Caribbean", "Western Caribbean"]],
@@ -132,7 +197,7 @@ function commonGuide(slug, h1, intro, rating) {
 }
 
 export const cruisePlanningGuides = [
-  ...intentGuides.map(([slug, h1, intro, rating]) => commonGuide(slug, h1, intro, rating)),
+  ...intentGuides.map(([slug, h1, intro, rating]) => ({ ...commonGuide(slug, h1, intro, rating), ...(guideEnhancements[slug] || {}) })),
   ...Object.entries(portConfigs).map(([destination, config]) => ({
     ...commonGuide(config.slug, `${destination} Cruises`, config.intro, `Best for departures from ${destination}`),
     ...config,
