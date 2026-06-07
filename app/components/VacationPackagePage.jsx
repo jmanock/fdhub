@@ -10,6 +10,7 @@ import ThingsToDoSection from "./ThingsToDoSection";
 import { StoryModule } from "./StoryModules";
 import { getTrendingStories } from "../lib/stories";
 import { familyGuideLinks } from "../lib/familyVacations";
+import { cruiseGuideLinks } from "../lib/cruisePlanning";
 
 export function VacationPackageCards({ packages, title = "Vacation Packages Built Around Real Trip Decisions", id = "vacation-packages" }) {
   if (!packages.length) return null;
@@ -221,6 +222,18 @@ export default function VacationPackagePage({ packagePage }) {
             </div>
             <div className="popular-link-grid">
               {familyGuideLinks.slice(0, 12).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+            </div>
+          </section>
+        ) : null}
+
+        {discovery.styles.includes("Cruise") ? (
+          <section className="related-pages section-pad" aria-labelledby={`${packagePage.slug}-cruise-links-title`}>
+            <div className="section-heading compact">
+              <p className="eyebrow">Cruise command center</p>
+              <h2 id={`${packagePage.slug}-cruise-links-title`}>Compare Florida Cruise Ports And Guides</h2>
+            </div>
+            <div className="popular-link-grid">
+              {cruiseGuideLinks.slice(0, 16).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
             </div>
           </section>
         ) : null}

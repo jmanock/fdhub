@@ -774,6 +774,46 @@ h3 {
   border-top: 5px solid var(--gold);
 }
 
+.cruise-port-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cruise-port-map article {
+  position: relative;
+  min-height: 190px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--ocean);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 14px 38px rgba(8, 35, 63, 0.07);
+}
+
+.cruise-port-map article:not(:last-child)::after {
+  position: absolute;
+  top: 34px;
+  right: -18px;
+  z-index: 2;
+  content: ">";
+  color: var(--ocean-dark);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.cruise-port-map span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--ocean);
+  font-weight: 900;
+}
+
 .package-summary {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1487,6 +1527,14 @@ h3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .cruise-port-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cruise-port-map article::after {
+    display: none;
+  }
+
   .landing-hero {
     grid-template-columns: 1fr;
   }
@@ -1575,6 +1623,10 @@ h3 {
   .package-gallery-grid,
   .package-filter-bar,
   .package-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .cruise-port-map {
     grid-template-columns: 1fr;
   }
 

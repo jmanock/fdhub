@@ -4,7 +4,7 @@ import { nav } from "../lib/network";
 const planningNav = [
   ["Vacation Packages", "/vacation-packages"],
   ["Family Vacations", "/family-vacations"],
-  ["Cruise Packages", "/cruise-packages"],
+  ["Cruises", "/cruises"],
   ["Beach Vacations", "/beach-vacations"],
   ["Weekend Getaways", "/weekend-getaways"],
   ["Things To Do", "/things-to-do"],

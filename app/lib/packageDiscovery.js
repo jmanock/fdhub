@@ -24,13 +24,6 @@ const categoryDefinitions = [
     match: ["weekend", "short", "three-night", "three night"]
   },
   {
-    slug: "3-day-cruises-from-florida",
-    title: "3 Day Cruises From Florida Vacation Planner",
-    description: "Plan a short Florida cruise with a port hotel, airport strategy, transfers, and a simple pre-cruise activity.",
-    image: pageImages.cruisePort,
-    match: ["cruise", "three-night", "bahamas"]
-  },
-  {
     slug: "disney-vacation-packages",
     title: "Disney Vacation Packages From Florida",
     description: "Build an Orlando theme park vacation around hotel location, flight options, attraction days, and a realistic family budget.",

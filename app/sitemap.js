@@ -5,6 +5,7 @@ import { getTravelNewsItems } from "./lib/travelNews";
 import { vacationPackages } from "./lib/vacationPackages";
 import { packageCategories } from "./lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "./lib/familyVacations";
+import { cruisePlanningGuides, getCruisePlanningGuide } from "./lib/cruisePlanning";
 
 const lastModified = new Date();
 
@@ -21,7 +22,7 @@ const staticPages = [
 ];
 
 export default function sitemap() {
-  const hubPages = landingPages.filter((page) => !getFamilyVacationGuide(page.slug)).map((page) => ({
+  const hubPages = landingPages.filter((page) => !getFamilyVacationGuide(page.slug) && !getCruisePlanningGuide(page.slug)).map((page) => ({
     url: `${baseUrl}/${page.slug}`,
     lastModified,
     changeFrequency: "weekly",
@@ -69,6 +70,12 @@ export default function sitemap() {
     changeFrequency: "weekly",
     priority: item.slug === "family-vacations" ? 0.96 : 0.9
   }));
+  const cruisePlanningPages = cruisePlanningGuides.map((item) => ({
+    url: `${baseUrl}/${item.slug}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: item.slug === "cruises" ? 0.96 : 0.9
+  }));
 
   return [
     ...staticPages.map((page) => ({
@@ -79,6 +86,7 @@ export default function sitemap() {
     })),
     ...destinationHubPages,
     ...familyVacationPages,
+    ...cruisePlanningPages,
     ...packageCategoryPages,
     ...vacationPackagePages,
     ...hubPages,

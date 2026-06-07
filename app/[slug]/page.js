@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import NewsletterSection from "../components/NewsletterSection";
 import PackageCategoryPage from "../components/PackageCategoryPage";
 import FamilyVacationPage from "../components/FamilyVacationPage";
+import CruisePlanningPage from "../components/CruisePlanningPage";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
@@ -26,6 +27,7 @@ import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
 import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
+import { cruisePlanningGuides, getCruisePlanningGuide } from "../lib/cruisePlanning";
 import {
   getVacationPackage,
   getVacationPackagesForDestination,
@@ -34,11 +36,12 @@ import {
 
 export function generateStaticParams() {
   return [
-    ...landingPages.filter((page) => !getFamilyVacationGuide(page.slug)).map((page) => ({ slug: page.slug })),
+    ...landingPages.filter((page) => !getFamilyVacationGuide(page.slug) && !getCruisePlanningGuide(page.slug)).map((page) => ({ slug: page.slug })),
     ...destinationHubs.map((hub) => ({ slug: hub.slug })),
     ...vacationPackages.map((item) => ({ slug: item.slug })),
     ...packageCategories.map((item) => ({ slug: item.slug })),
-    ...familyVacationGuides.map((item) => ({ slug: item.slug }))
+    ...familyVacationGuides.map((item) => ({ slug: item.slug })),
+    ...cruisePlanningGuides.map((item) => ({ slug: item.slug }))
   ];
 }
 
@@ -49,6 +52,18 @@ export async function generateMetadata({ params }) {
   const vacationPackage = getVacationPackage(slug);
   const packageCategory = getPackageCategory(slug);
   const familyVacationGuide = getFamilyVacationGuide(slug);
+  const cruisePlanningGuide = getCruisePlanningGuide(slug);
+
+  if (cruisePlanningGuide) {
+    const url = `${baseUrl}/${cruisePlanningGuide.slug}`;
+    return {
+      title: cruisePlanningGuide.title,
+      description: cruisePlanningGuide.metaDescription,
+      alternates: { canonical: url },
+      openGraph: { title: cruisePlanningGuide.title, description: cruisePlanningGuide.metaDescription, url, siteName: "Florida Deals Hub", type: "article", images: [{ url: cruisePlanningGuide.image, width: 1200, height: 630, alt: cruisePlanningGuide.imageAlt }] },
+      twitter: { card: "summary_large_image", title: cruisePlanningGuide.title, description: cruisePlanningGuide.metaDescription, images: [cruisePlanningGuide.image] }
+    };
+  }
 
   if (familyVacationGuide) {
     const url = `${baseUrl}/${familyVacationGuide.slug}`;
@@ -181,6 +196,11 @@ export default async function LandingPage({ params }) {
   const vacationPackage = getVacationPackage(slug);
   const packageCategory = getPackageCategory(slug);
   const familyVacationGuide = getFamilyVacationGuide(slug);
+  const cruisePlanningGuide = getCruisePlanningGuide(slug);
+
+  if (cruisePlanningGuide) {
+    return <CruisePlanningPage guide={cruisePlanningGuide} />;
+  }
 
   if (familyVacationGuide) {
     return <FamilyVacationPage guide={familyVacationGuide} />;
