@@ -162,6 +162,73 @@ const guideEnhancements = {
       ["What should I budget beyond the cruise fare?", "Plan for taxes, gratuities, drinks, Wi-Fi, excursions, parking or transfers, a possible hotel night, meals ashore, and travel insurance where appropriate."]
     ]
   },
+  "3-day-cruises-from-florida": {
+    title: "3 Day Cruises From Florida (2026) | Ports, Bahamas Trips & Planning",
+    metaDescription: "Compare 3 day cruises from Florida with Miami, Port Canaveral, Fort Lauderdale, and Tampa departure planning, Bahamas itineraries, hotels, flights, and trip tips.",
+    heroTitle: "3 Day Cruises From Florida: Short Bahamas Trips & Port Guides",
+    intro: "Compare three-day cruises from Florida as complete trips, not isolated fares. Choose the right departure port, understand common short-cruise itineraries, protect embarkation day, and connect the sailing with hotels, flights, and port-city activities.",
+    rating: "First-time cruisers, couples, families testing a short sailing, and travelers with limited vacation time",
+    bestMonths: "November-April for milder Florida port weather; compare live three-day sailing schedules year-round",
+    itineraries: ["Bahamas", "Private-island stops", "Short cruises with a sea day"],
+    packages: ["Three-day cruise plus hotel", "Bahamas short-cruise package", "Weekend cruise package"],
+    network: [
+      ["Compare 3 Day Cruise Deals", `${sites.cruises}/3-day-cruises-from-florida`],
+      ["Find Hotels Near Cruise Ports", `${sites.hotels}/hotels-near-florida-cruise-ports`],
+      ["Compare Flights To Florida Ports", sites.flights],
+      ["Find Pre-Cruise Activities", sites.local]
+    ],
+    bestForTitle: "Who Should Choose A 3 Day Cruise?",
+    bestForIntro: "A three-day cruise is most useful when the sailing delivers the experience you want without making the journey to the port more complicated than the vacation.",
+    bestFor: [
+      ["First-time cruisers", "Three days is enough time to experience embarkation, a full ship day, dining, entertainment, and a port call without committing to a longer sailing."],
+      ["Couples and friend groups", "Short sailings can work well for celebrations or quick escapes when everyone can reach the same Florida port efficiently."],
+      ["Families testing cruise travel", "A compact itinerary lets families learn how cabins, meals, schedules, and kids programming fit their travel style."],
+      ["Travelers adding a Florida stay", "Pair the cruise with Miami, the Space Coast, Orlando, Fort Lauderdale, or Tampa to create a fuller vacation."]
+    ],
+    durationEyebrow: "Short cruise comparison",
+    durationTitle: "Is A 3 Day Cruise Long Enough?",
+    durationComparison: [
+      ["3-day cruise only", "Compact ship-first getaway", "Little time for the departure city", "Travelers already near the port"],
+      ["3-day cruise + 1 hotel night", "Safer arrival plan and a simple port stay", "Adds hotel and meal costs", "Most travelers flying to Florida"],
+      ["3-day cruise + 2 hotel nights", "Cruise plus a meaningful Florida add-on", "Requires more vacation time", "Families and travelers visiting the port city"]
+    ],
+    portComparison: [
+      ["Miami", "MIA or FLL", "Short Bahamas cruises plus Miami dining, beaches, and neighborhoods", "/miami-cruises"],
+      ["Port Canaveral", "MCO or SFB", "Short cruises paired with Cocoa Beach, the Space Coast, or Orlando", "/port-canaveral-cruises"],
+      ["Fort Lauderdale", "FLL or MIA", "A compact airport-to-port plan with beach hotel options", "/fort-lauderdale-cruises"],
+      ["Tampa", "TPA", "Gulf Coast cruise planning with downtown or beach add-ons", "/tampa-cruises"]
+    ],
+    planningEyebrow: "Three-day cruise checklist",
+    planningTitle: "Plan A Short Cruise Without Rushing It",
+    planningAriaLabel: "Three-day cruise planning steps",
+    planningSteps: [
+      ["Confirm what three days means", "Check the exact departure and return dates, embarkation window, itinerary, and port calls. Cruise listings may describe trip length differently."],
+      ["Choose the easiest Florida port", "Compare total flight or drive time, airport options, hotel cost, parking, and transfers before choosing a sailing."],
+      ["Arrive before embarkation day", "A pre-cruise hotel night creates a buffer for delays and gives you time to reach the terminal calmly."],
+      ["Budget beyond the fare", "Include taxes, gratuities, drinks, Wi-Fi, excursions, transportation, parking, hotel nights, and insurance where appropriate."]
+    ],
+    clusterEyebrow: "Three-day cruise planning path",
+    clusterTitle: "Compare Short Cruises, Bahamas Trips & Packages",
+    clusterIntro: "Continue from a three-day sailing idea into port guides, budget comparisons, and complete cruise vacation packages.",
+    clusterLinks: [
+      ["Cruises From Florida", "/cruises"],
+      ["Weekend Cruises From Florida", "/weekend-cruises-from-florida"],
+      ["Cheap Cruises From Florida", "/cheap-cruises-from-florida"],
+      ["Bahamas Cruises From Florida", "/bahamas-cruises-from-florida"],
+      ["Cruise + Hotel Packages", "/cruise-hotel-packages"],
+      ["Weekend Cruise Vacation Packages", "/weekend-cruise-packages-from-florida"],
+      ["Miami Cruise Vacation Packages", "/miami-cruise-vacation-packages"],
+      ["Port Canaveral Vacation Packages", "/port-canaveral-vacation-packages"]
+    ],
+    faqs: [
+      ["What is a 3 day cruise from Florida?", "A three-day cruise is a short sailing whose exact departure and return timing depends on the itinerary and cruise line. Always confirm the dates, terminal, and number of nights before booking."],
+      ["Where do 3 day cruises from Florida usually go?", "Many short Florida sailings visit the Bahamas or a cruise line private-island destination, while some include a sea day. Live itineraries change by port, ship, and season."],
+      ["Which Florida ports offer 3 day cruises?", "Miami and Port Canaveral are strong places to begin comparing short cruises. Fort Lauderdale and Tampa may also have useful options depending on current schedules."],
+      ["Should I book a hotel before a 3 day cruise?", "Travelers flying to Florida or driving a long distance should strongly consider arriving the day before. A port-area hotel can reduce embarkation-day risk."],
+      ["Are 3 day cruises good for families?", "They can be a practical first cruise for families, but compare cabin space, kids programming, dining schedules, travel time to the port, and the complete trip cost."],
+      ["How can I compare the true cost of a short cruise?", "Add the cruise fare, taxes, gratuities, drinks, Wi-Fi, excursions, parking or transfers, flights, hotel nights, meals ashore, and insurance where appropriate."]
+    ]
+  },
   "cruise-hotel-packages": {
     title: "Cruise + Hotel Packages From Florida | Port Stay Planning Guide",
     metaDescription: "Plan a Florida cruise and hotel package with port-area stays, airport comparisons, transportation, activities, and links to Miami and Port Canaveral cruise trips.",
