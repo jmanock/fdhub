@@ -97,7 +97,7 @@ export default function sitemap() {
     url: `${baseUrl}${eventTravelPath(item)}`,
     lastModified,
     changeFrequency: "weekly",
-    priority: item.type === "event_hub" ? 0.92 : 0.84
+    priority: item.type === "world_cup_hub" ? 0.96 : item.type === "event_hub" ? 0.92 : item.worldCup2026 ? 0.9 : 0.84
   }));
 
   return [

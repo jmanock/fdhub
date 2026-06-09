@@ -1,5 +1,6 @@
 import { pageImages, sites } from "./network";
 import { vacationRecommendations } from "./vacationBuilder";
+import { allWorldCup2026Pages, worldCup2026Hub, worldCup2026Path } from "./worldCup2026";
 
 const networkLinks = {
   general: [
@@ -137,9 +138,9 @@ const trends = [
   ["best-cruise-destinations-this-season", "Best Cruise Destinations To Compare This Season", "Compare cruise destination styles from Florida ports without relying on unsupported price or availability claims.", pageImages.cruisePort, "Cruise Destination Trend", ["Cruise", "Beach"]]
 ];
 
-export const eventTravelHubs = hubs.map((item) => ({ ...item, type: "event_hub", parentSlug: null, focus: item.description }));
+export const eventTravelHubs = [...hubs.map((item) => ({ ...item, type: "event_hub", parentSlug: null, focus: item.description })), worldCup2026Hub];
 
-export const eventTravelSubpages = eventTravelHubs.flatMap((hub) => hub.subpages.map(([slug, title, focus]) => ({
+export const eventTravelSubpages = eventTravelHubs.filter((hub) => !hub.worldCup2026).flatMap((hub) => hub.subpages.map(([slug, title, focus]) => ({
   ...hub,
   slug,
   title,
@@ -157,7 +158,7 @@ export const trendingDestinationPages = trends.map(([slug, title, description, i
   schedule: ["Trend review", "Destination comparison", "Budget and route planning", "Final provider verification"], links: networkLinks.general, type: "trend", parentSlug: "trending-destinations", subpages: []
 }));
 
-export const allEventTravelPages = [...eventTravelHubs, ...eventTravelSubpages, ...trendingDestinationPages];
+export const allEventTravelPages = [...eventTravelHubs, ...eventTravelSubpages, ...trendingDestinationPages, ...allWorldCup2026Pages.filter((page) => page.type !== "world_cup_hub")];
 export const eventTravelPageMap = Object.fromEntries(allEventTravelPages.map((item) => [`${item.parentSlug ? `${item.parentSlug}/` : ""}${item.slug}`, item]));
 
 export function getEventTravelPage(parts) {
@@ -165,6 +166,7 @@ export function getEventTravelPage(parts) {
 }
 
 export function eventTravelPath(page) {
+  if (page.worldCup2026) return worldCup2026Path(page);
   return `/events/${page.parentSlug ? `${page.parentSlug}/` : ""}${page.slug}`;
 }
 

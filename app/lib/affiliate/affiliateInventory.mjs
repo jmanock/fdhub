@@ -1,5 +1,6 @@
 export const SAMBOAT_AFFILIATE_URL = "https://www.awin1.com/awclick.php?gid=444366&mid=32679&awinaffid=2881665&linkid=4565586&clickref=";
 export const VIP_CARS_AFFILIATE_URL = "https://www.awin1.com/cread.php?awinmid=125318&awinaffid=2881665&ued=https%3A%2F%2Fwww.vipcars.com%2F";
+export const WORLD_CUP_EXPLORER_AFFILIATE_URL = "https://www.awin1.com/awclick.php?gid=605937&mid=126955&awinaffid=2881665&linkid=4788428&clickref=";
 
 export const affiliateInventory = {
   boatRentals: {
@@ -36,8 +37,14 @@ export const affiliateInventory = {
   },
   worldCupTravel: {
     advertiser: "world-cup-explorer",
-    category: "event travel",
-    status: "partner_mapping_only"
+    network: "awin",
+    category: "world_cup_travel",
+    affiliateUrl: WORLD_CUP_EXPLORER_AFFILIATE_URL,
+    title: "Planning Your World Cup Trip?",
+    description: "Find hotels, transportation, attractions, and fan experiences for your World Cup visit.",
+    cta: "Plan Your World Cup Trip",
+    disclosureRequired: true,
+    status: "active"
   }
 };
 
@@ -158,6 +165,18 @@ export function getCarRentalRecommendationForPage(pagePath, options = {}) {
   };
 }
 
+export function getWorldCupRecommendationForPage(pagePath) {
+  const normalizedPath = String(pagePath || "").replace(/^\/|\/$/g, "");
+  if (normalizedPath !== "world-cup-2026" && !normalizedPath.startsWith("world-cup-2026/")) {
+    return null;
+  }
+
+  return {
+    ...affiliateInventory.worldCupTravel,
+    itemTitle: "World Cup Explorer 2026 Florida trip planning"
+  };
+}
+
 export function getAffiliateRecommendationsForPage(pagePath) {
   const normalizedPath = String(pagePath || "").replace(/^\/|\/$/g, "");
   const pageConfig = samBoatPageMap[normalizedPath];
@@ -195,7 +214,7 @@ export function getSuggestedAffiliatePartners({ title = "", category = "", desti
     suggestions.push({ topic: "Hotels", partner: "Booking Partners", inventoryKey: "hotels", status: "partner_mapping_only" });
   }
   if (/(world cup|fifa)/.test(topicText)) {
-    suggestions.push({ topic: "World Cup Travel", partner: "World Cup Explorer", inventoryKey: "worldCupTravel", status: "partner_mapping_only" });
+    suggestions.push({ topic: "World Cup Travel", partner: "World Cup Explorer", inventoryKey: "worldCupTravel", status: "active" });
   }
 
   return suggestions;

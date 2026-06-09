@@ -4,7 +4,7 @@ import { baseUrl } from "../../lib/network";
 import { allEventTravelPages, eventTravelPath, getEventTravelPage } from "../../lib/eventTravel";
 
 export function generateStaticParams() {
-  return allEventTravelPages.map((page) => ({ slug: eventTravelPath(page).replace("/events/", "").split("/") }));
+  return allEventTravelPages.filter((page) => !page.worldCup2026).map((page) => ({ slug: eventTravelPath(page).replace("/events/", "").split("/") }));
 }
 
 export async function generateMetadata({ params }) {

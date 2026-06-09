@@ -217,6 +217,8 @@ SamBoat is active only on the explicit boating and water-intent page allowlist. 
 
 VIP Cars is active only on contextual road-trip, airport, destination, family, beach, weekend, package, and cruise-port pages selected by `getCarRentalRecommendationForPage()`. The reusable `CarRentalCTA` uses the approved AWIN URL, `rel="sponsored noopener noreferrer"`, affiliate disclosure, and `affiliate_click` tracking with `affiliate: "vipcars"` and `category: "car_rental"`. Do not add the CTA to the homepage hero, newsletter, footer, or unrelated pages.
 
+World Cup Explorer is active only under the `/world-cup-2026` content hub. The reusable `WorldCupCTA` uses the approved AWIN URL, sponsored attributes, disclosure, and shared affiliate-click analytics. World Cup pages must distinguish verified official details from planning guidance and must not mislabel Orlando as a host city.
+
 `npm run stories:generate -- --title="..." --category="..." --destination="..."` adds `affiliateSuggestions` based on the draft topic. Suggestions are editorial prompts only; they do not automatically publish affiliate links. Active SamBoat story links are checked by `npm run stories:review`.
 
 All Expedia hotel links should go through `getExpediaHotelLink(destination)`. When Expedia deep links are available, replace the destination values inside that helper only. Do not paste Expedia URLs directly into page components.

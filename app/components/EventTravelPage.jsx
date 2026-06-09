@@ -6,8 +6,10 @@ import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
+import WorldCupCTA from "./WorldCupCTA";
 import { baseUrl, lastUpdatedLabel, pageImages } from "../lib/network";
 import { eventTravelHubs, eventTravelPath, getEventRecommendations, trendingDestinationPages } from "../lib/eventTravel";
+import { getWorldCupRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 
 export default function EventTravelPage({ page }) {
   const recommendations = getEventRecommendations(page);
@@ -15,6 +17,7 @@ export default function EventTravelPage({ page }) {
   const parent = page.parentSlug ? eventTravelHubs.find((item) => item.slug === page.parentSlug) : null;
   const relatedPages = page.type === "trend" ? trendingDestinationPages.filter((item) => item.slug !== page.slug) : eventTravelHubs.filter((item) => item.slug !== (parent?.slug || page.slug));
   const childTrendPages = page.slug === "trending-destinations" ? trendingDestinationPages : [];
+  const worldCupRecommendation = getWorldCupRecommendationForPage(path);
   const faqs = [
     [`How should travelers plan for ${page.title}?`, "Start with verified official dates and locations, then compare the complete cost of hotels, flights, transportation, activities, tickets, and schedule changes."],
     [`When should travelers book ${page.title.toLowerCase()}?`, "Booking timing depends on confirmed dates, demand, cancellation terms, and transportation options. Compare flexible plans and verify current availability."],
@@ -42,6 +45,7 @@ export default function EventTravelPage({ page }) {
         </section>
 
         <section className="event-status-section section-pad"><EventCountdown startDate={page.startDate} dateVerified={page.dateVerified} /></section>
+        <WorldCupCTA recommendation={worldCupRecommendation} />
 
         <section className="package-summary section-pad"><div className="content-card package-summary-card"><p className="eyebrow">Event travel overview</p><h2>Build The Complete Trip Around The Event</h2><dl className="package-facts"><div><dt>Event type</dt><dd>{page.category}</dd></div><div><dt>Best for</dt><dd>{page.audience}</dd></div><div><dt>Travel window</dt><dd>{page.travelWindow}</dd></div><div><dt>Destination ideas</dt><dd>{page.destinations.join(", ")}</dd></div><div><dt>Package styles</dt><dd>{page.packageStyles.join(", ")}</dd></div></dl></div></section>
 
@@ -49,7 +53,15 @@ export default function EventTravelPage({ page }) {
 
         <section className="event-schedule-section section-pad" aria-labelledby={`${page.slug}-schedule-title`}><div className="section-heading"><p className="eyebrow">Event planning timeline</p><h2 id={`${page.slug}-schedule-title`}>From Announcement To Arrival</h2><p>This planning schedule avoids unsupported event dates. Verify official schedules before booking.</p></div><div className="event-schedule-grid">{page.schedule.map((item, index) => <article key={item}><span>{index + 1}</span><h3>{item}</h3><p>{page.planningSteps[index] || "Confirm the next planning step with an official or booking source."}</p></article>)}</div></section>
 
-        {page.subpages.length || childTrendPages.length ? <section className="travel-guides section-pad" aria-labelledby={`${page.slug}-guides-title`}><div className="section-heading"><p className="eyebrow">Focused event travel guides</p><h2 id={`${page.slug}-guides-title`}>Plan Every Part Of {page.title}</h2></div><div className="guide-card-grid">{page.subpages.map(([slug, title, description]) => <Link className="guide-card" href={`/events/${page.slug}/${slug}`} key={slug}><h3>{title}</h3><p>{description}</p></Link>)}{childTrendPages.map((item) => <Link className="guide-card" href={eventTravelPath(item)} key={item.slug}><h3>{item.title}</h3><p>{item.description}</p></Link>)}</div></section> : null}
+        {page.subpages.length || childTrendPages.length ? <section className="travel-guides section-pad" aria-labelledby={`${page.slug}-guides-title`}><div className="section-heading"><p className="eyebrow">Focused event travel guides</p><h2 id={`${page.slug}-guides-title`}>Plan Every Part Of {page.title}</h2></div><div className="guide-card-grid">{page.subpages.map(([slug, title, description]) => <Link className="guide-card" href={page.worldCup2026 ? `/world-cup-2026/${slug}` : `/events/${page.slug}/${slug}`} key={slug}><h3>{title}</h3><p>{description}</p></Link>)}{childTrendPages.map((item) => <Link className="guide-card" href={eventTravelPath(item)} key={item.slug}><h3>{item.title}</h3><p>{item.description}</p></Link>)}</div></section> : null}
+
+        {page.hotelAreas ? <section className="travel-guides section-pad" aria-labelledby={`${page.slug}-hotels-title`}><div className="section-heading"><p className="eyebrow">Where to stay</p><h2 id={`${page.slug}-hotels-title`}>Compare Hotel Areas Before Individual Properties</h2><p>Hotel location should support the verified event plan, airport choice, meals, and the rest of the Florida vacation.</p></div><div className="guide-card-grid">{page.hotelAreas.map((item, index) => <article className="guide-card" key={item}><p className="best-for-tag">Hotel area {index + 1}</p><h3>{item}</h3><p>Compare current rates, cancellation terms, transportation, parking, and neighborhood fit before booking.</p></article>)}</div></section> : null}
+
+        {page.transportation ? <section className="travel-guides section-pad" aria-labelledby={`${page.slug}-transport-title`}><div className="section-heading"><p className="eyebrow">Transportation planning</p><h2 id={`${page.slug}-transport-title`}>Build The Journey Around Fixed Event Timing</h2></div><div className="guide-card-grid">{page.transportation.map((item, index) => <article className="guide-card" key={item}><p className="best-for-tag">Transportation check {index + 1}</p><h3>{item}</h3><p>Confirm current routes, schedules, parking rules, pickup locations, and official event transportation guidance.</p></article>)}</div></section> : null}
+
+        {page.fanExperiences ? <section className="travel-guides section-pad" aria-labelledby={`${page.slug}-experiences-title`}><div className="section-heading"><p className="eyebrow">Fan experiences and attractions</p><h2 id={`${page.slug}-experiences-title`}>Make The Event Part Of A Florida Vacation</h2></div><div className="guide-card-grid">{page.fanExperiences.map((item, index) => <article className="guide-card" key={item}><p className="best-for-tag">Experience {index + 1}</p><h3>{item}</h3><p>Keep the plan flexible around weather, transportation, reservations, and verified event timing.</p></article>)}</div></section> : null}
+
+        {page.itinerary ? <section className="cruise-port-section section-pad" aria-labelledby={`${page.slug}-itinerary-title`}><div className="section-heading"><p className="eyebrow">Sample itinerary</p><h2 id={`${page.slug}-itinerary-title`}>A Practical Florida World Cup Trip</h2><p>Use this as a planning shape, then rebuild it around official dates and locations.</p></div><div className="cruise-port-map" aria-label={`${page.title} sample itinerary`}>{page.itinerary.map((item, index) => <article key={item}><span>{index + 1}</span><h3>{item}</h3><p>Keep enough buffer for traffic, weather, schedule changes, meals, and rest.</p></article>)}</div></section> : null}
 
         <section className="vacation-packages section-pad" aria-labelledby={`${page.slug}-packages-title`}><div className="section-heading"><p className="eyebrow">Event vacation recommendations</p><h2 id={`${page.slug}-packages-title`}>Turn The Event Into A Complete Trip</h2><p>Recommendations connect the event idea to practical Florida package plans and focused booking sites.</p></div><div className="guide-card-grid visual-card-grid">{recommendations.map((item) => <Link className="guide-card story-card package-card" href={item.packageHref} key={item.id}><SafeImage src={item.image} alt={item.imageAlt} fallback="/images/fallbacks/florida-travel-placeholder.svg" width="720" height="430" loading="lazy" decoding="async" /><span className="story-category-label">{item.destination} · {item.duration}</span><h3>{item.title}</h3><p>{item.summary}</p><p className="best-for-tag">Estimated planning range: {item.costLabel}</p></Link>)}</div></section>
 

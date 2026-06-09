@@ -15,7 +15,7 @@ const footerGuides = [
   ["Vacation Builder", "/vacation-builder"],
   ["Budget Travel", "/budget-travel"],
   ["Event Travel", "/events"],
-  ["World Cup Travel", "/events/world-cup-travel"],
+  ["World Cup 2026 Travel", "/world-cup-2026"],
   ["Spring Break Travel", "/events/spring-break-travel"],
   ["Theme Park Events", "/events/disney-special-events"],
   ["Vacation Packages", "/vacation-packages"],
