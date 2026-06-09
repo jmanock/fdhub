@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AffiliateBookingSection from "./AffiliateBookingSection";
 import AuthorityLinks from "./AuthorityLinks";
 import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
@@ -12,6 +13,7 @@ import { StoryModule } from "./StoryModules";
 import { getTrendingStories } from "../lib/stories";
 import { familyGuideLinks } from "../lib/familyVacations";
 import { cruiseGuideLinks } from "../lib/cruisePlanning";
+import { getAffiliateRecommendationsForPage } from "../lib/affiliate/affiliateInventory.mjs";
 
 export function VacationPackageCards({ packages, title = "Vacation Packages Built Around Real Trip Decisions", id = "vacation-packages" }) {
   if (!packages.length) return null;
@@ -53,6 +55,7 @@ export default function VacationPackagePage({ packagePage }) {
   const bestMonths = packagePage.destination === "Florida" ? "Varies by trip type" : packagePage.destination === "Miami" || packagePage.destination === "Key West" ? "November-April" : "October-May";
   const familyRating = discovery.styles.includes("Family") ? "Strong family fit" : "Best for adults or flexible families";
   const relatedStories = getTrendingStories(3);
+  const affiliateRecommendations = getAffiliateRecommendationsForPage(packagePage.slug);
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -214,6 +217,7 @@ export default function VacationPackagePage({ packagePage }) {
         </section>
 
         <ThingsToDoSection title={`Add Activities To This ${packagePage.destination} Vacation`} />
+        <AffiliateBookingSection recommendations={affiliateRecommendations} title={`Add A Boat Day To This ${packagePage.destination} Vacation`} />
 
         {discovery.styles.includes("Family") ? (
           <section className="related-pages section-pad" aria-labelledby={`${packagePage.slug}-family-links-title`}>

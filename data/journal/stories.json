@@ -138,16 +138,16 @@
     "trending": true,
     "affiliateLinks": [
       {
-        "advertiser": "sailo",
+        "advertiser": "samboat",
         "network": "awin",
         "title": "Miami boat rentals",
-        "description": "Tracked Sailo links are pending. Do not publish a non-affiliate outbound Sailo CTA until the AWIN URL is supplied.",
-        "affiliateUrl": null,
+        "description": "Compare available boats, yachts, catamarans, and day charters for a Miami waterfront day.",
+        "affiliateUrl": "https://www.awin1.com/awclick.php?gid=444366&mid=32679&awinaffid=2881665&linkid=4565586&clickref=",
         "category": "boat rentals",
         "destination": "Miami",
-        "cta": "Sailo AWIN Link Pending",
+        "cta": "View Available Boats",
         "disclosureRequired": true,
-        "status": "pending_tracked_url",
+        "status": "active",
         "imageUrl": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80",
         "imageAlt": "Miami boat rentals for Miami travel planning"
       }
@@ -2704,6 +2704,19 @@
         "cta": "Browse Piscifun Products",
         "imageUrl": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
         "imageAlt": "Browse water-day gear for Florida travel planning"
+      },
+      {
+        "advertiser": "samboat",
+        "network": "awin",
+        "affiliateUrl": "https://www.awin1.com/awclick.php?gid=444366&mid=32679&awinaffid=2881665&linkid=4565586&clickref=",
+        "disclosureRequired": true,
+        "title": "Compare Florida boat rentals",
+        "description": "Compare available boats, yachts, catamarans, and day charters for a Florida water day.",
+        "category": "boat rentals",
+        "destination": "Florida",
+        "cta": "Compare Florida Boat Rentals",
+        "imageUrl": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Florida boat rentals for a waterfront vacation day"
       }
     ],
     "content": [

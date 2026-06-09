@@ -71,7 +71,7 @@ Story requirements:
 - `status: "published"` before the story appears on `/journal`, category pages, or `/journal/[slug]`
 - optional `featured`, `trending`, `popular`, and `editorPick` flags for magazine modules
 - affiliate disclosure when affiliate links are present
-- tracked affiliate URLs only; do not publish Sailo outbound links without the supplied AWIN URL
+- tracked affiliate URLs only; SamBoat uses the approved AWIN link, while Sailo links remain unpublished unless a tracked URL is supplied
 
 Visual story fields:
 
@@ -202,6 +202,20 @@ Expedia links live in `app/lib/affiliateLinks.js`.
 ```js
 export const EXPEDIA_AFFILIATE_BASE = "https://expedia.com/affiliate/2Wbjdi2";
 ```
+
+## Affiliate Inventory And Topic Suggestions
+
+Approved affiliate partners and future topic mappings live in `app/lib/affiliate/affiliateInventory.mjs`.
+
+- Boat Rentals -> SamBoat
+- Car Rentals -> VIP Cars
+- Flights -> Trip.com / MyTrip
+- Hotels -> Booking Partners
+- World Cup Travel -> World Cup Explorer
+
+SamBoat is active only on the explicit boating and water-intent page allowlist. Its links must use the approved AWIN URL and `rel="sponsored"`. Do not add SamBoat sitewide or to unrelated content.
+
+`npm run stories:generate -- --title="..." --category="..." --destination="..."` adds `affiliateSuggestions` based on the draft topic. Suggestions are editorial prompts only; they do not automatically publish affiliate links. Active SamBoat story links are checked by `npm run stories:review`.
 
 All Expedia hotel links should go through `getExpediaHotelLink(destination)`. When Expedia deep links are available, replace the destination values inside that helper only. Do not paste Expedia URLs directly into page components.
 

@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { getSuggestedAffiliatePartners } from "../app/lib/affiliate/affiliateInventory.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const hubRoot = path.resolve(scriptDir, "..");
@@ -20,6 +21,7 @@ const slug = title
 const today = new Date().toISOString().slice(0, 10);
 const draftDir = path.join(hubRoot, "story-drafts");
 const draftPath = path.join(draftDir, `${slug || "untitled-florida-story"}.json`);
+const affiliateSuggestions = getSuggestedAffiliatePartners({ title, category, destination });
 
 const draft = {
   slug,
@@ -57,6 +59,7 @@ const draft = {
   popular: false,
   editorPick: false,
   affiliateLinks: [],
+  affiliateSuggestions,
   relatedDestinations: [destination],
   relatedGuides: [],
   relatedSites: [],

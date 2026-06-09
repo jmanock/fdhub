@@ -350,18 +350,7 @@ export default async function StoryPage({ params }) {
             </div>
             <div className="guide-card-grid">
               {affiliateLinks.map((link) => (
-                <a
-                  className="guide-card"
-                  href={link.affiliateUrl}
-                  key={`${story.slug}-${link.title}`}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  data-story-affiliate="true"
-                  data-affiliate-program={link.network}
-                  data-advertiser={link.advertiser}
-                  data-item-title={link.title}
-                  data-category={link.category}
-                >
+                <article className="guide-card" key={`${story.slug}-${link.title}`}>
                   <SafeImage
                     src={link.imageUrl || story.heroImage}
                     alt={link.imageAlt || link.title}
@@ -374,8 +363,20 @@ export default async function StoryPage({ params }) {
                   <span className="story-category-label">{link.advertiser}</span>
                   <h3>{link.title}</h3>
                   <p>{link.description}</p>
-                  <p className="value-line">{link.cta}</p>
-                </a>
+                  <a
+                    className="affiliate-cta"
+                    href={link.affiliateUrl}
+                    target="_blank"
+                    rel="sponsored noopener noreferrer"
+                    data-story-affiliate="true"
+                    data-affiliate-program={link.network}
+                    data-advertiser={link.advertiser}
+                    data-item-title={link.title}
+                    data-category={link.category}
+                  >
+                    {link.cta}
+                  </a>
+                </article>
               ))}
             </div>
           </section>

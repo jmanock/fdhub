@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AffiliateBookingSection from "../components/AffiliateBookingSection";
 import AuthorityLinks from "../components/AuthorityLinks";
 import NewsletterSection from "../components/NewsletterSection";
 import PackageCategoryPage from "../components/PackageCategoryPage";
@@ -11,6 +12,7 @@ import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
+import { getAffiliateRecommendationsForPage } from "../lib/affiliate/affiliateInventory.mjs";
 import { piscifunGearPicks } from "../lib/affiliate/piscifunLinks";
 import { destinationHubs, getDestinationHub, getDestinationHubStories, getDestinationHubUrl } from "../lib/destinationHubs";
 import {
@@ -249,6 +251,7 @@ export default async function LandingPage({ params }) {
   const introParagraphs = getIntroParagraphs(page);
   const relatedSearchLinks = getRelatedSearchLinks(page);
   const gearPicks = page.showPiscifunGear ? piscifunGearPicks : [];
+  const affiliateRecommendations = getAffiliateRecommendationsForPage(page.slug);
   const pageStories = getTrendingStories(6);
   const pageTravelTips = [
     {
@@ -597,6 +600,8 @@ export default async function LandingPage({ params }) {
             </div>
           </section>
         ) : null}
+
+        <AffiliateBookingSection recommendations={affiliateRecommendations} />
 
         <TravelTipsModule tips={pageTravelTips} />
 
