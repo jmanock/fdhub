@@ -30,6 +30,7 @@ export default function AnalyticsEvents() {
         window.gtag?.("event", "affiliate_click", {
           source_site: "floridadealshub.com",
           affiliate_program: affiliateProgram,
+          affiliate: link.dataset.affiliate || link.dataset.advertiser,
           advertiser: link.dataset.advertiser,
           item_title: link.dataset.itemTitle || linkText,
           category: link.dataset.category,
@@ -41,6 +42,7 @@ export default function AnalyticsEvents() {
           event: "affiliate_click",
           source_site: "floridadealshub.com",
           affiliate_program: affiliateProgram,
+          affiliate: link.dataset.affiliate || link.dataset.advertiser,
           advertiser: link.dataset.advertiser,
           item_title: link.dataset.itemTitle || linkText,
           category: link.dataset.category,

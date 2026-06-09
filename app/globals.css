@@ -1550,6 +1550,26 @@ h3 {
   color: var(--ink-muted);
 }
 
+.car-rental-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+}
+
+.car-rental-card h3 {
+  margin: 8px 0;
+  color: var(--navy);
+}
+
+.car-rental-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  padding-left: 20px;
+  color: var(--ink-muted);
+}
+
 .affiliate-cta {
   display: inline-flex;
   align-items: center;
@@ -1561,6 +1581,12 @@ h3 {
   background: var(--ocean);
   color: white;
   font-weight: 900;
+}
+
+@media (max-width: 720px) {
+  .car-rental-card {
+    grid-template-columns: 1fr;
+  }
 }
 
 .journal-home-grid {

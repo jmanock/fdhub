@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AuthorityLinks from "./AuthorityLinks";
+import CarRentalCTA from "./CarRentalCTA";
 import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
@@ -8,6 +9,7 @@ import PackageFinder from "./PackageFinder";
 import { baseUrl, lastUpdatedLabel } from "../lib/network";
 import { familyGuideLinks, getFamilyGallery, getFamilyPackages } from "../lib/familyVacations";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
+import { getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 
 export default function FamilyVacationPage({ guide }) {
   const packages = getFamilyPackages(guide);
@@ -23,6 +25,7 @@ export default function FamilyVacationPage({ guide }) {
   }));
   const gallery = getFamilyGallery(guide);
   const pageUrl = `${baseUrl}/${guide.slug}`;
+  const carRentalRecommendation = getCarRentalRecommendationForPage(guide.slug, { pageType: "family", destination: guide.destination });
   const faqs = [
     [`What is the best way to plan ${guide.h1.toLowerCase()}?`, "Choose the trip anchor first, then compare the complete cost of flights, hotels, cruises, transportation, food, and activities."],
     [`What budget should a family of four expect for ${guide.destination}?`, "A focused long weekend may fit near $2,000, while longer stays, flights, premium hotels, cruises, or theme parks can move the total toward $3,000-$5,000 or more."],
@@ -71,6 +74,7 @@ export default function FamilyVacationPage({ guide }) {
         <section className="family-activity-highlights section-pad" aria-labelledby={`${guide.slug}-activities-title`}><div className="section-heading"><p className="eyebrow">Family activity highlights</p><h2 id={`${guide.slug}-activities-title`}>Build Days Everyone Can Handle</h2></div><div className="guide-card-grid">{guide.activities.map((activity, index) => <article className="guide-card" key={activity}><p className="best-for-tag">Family activity {index + 1}</p><h3>{activity}</h3><p>Keep travel time, weather, rest breaks, and nearby food options in the plan.</p></article>)}</div></section>
 
         <PackageFinder packages={finderPackages} />
+        <CarRentalCTA recommendation={carRentalRecommendation} />
 
         <section className="related-pages section-pad" aria-labelledby={`${guide.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Family vacation ecosystem</p><h2 id={`${guide.slug}-related-title`}>Related Family Vacations</h2></div><div className="popular-link-grid">{familyGuideLinks.filter(([, href]) => href !== `/${guide.slug}`).slice(0, 12).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</div></section>
 

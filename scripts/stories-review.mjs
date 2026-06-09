@@ -1,7 +1,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { SAMBOAT_AFFILIATE_URL } from "../app/lib/affiliate/affiliateInventory.mjs";
+import { SAMBOAT_AFFILIATE_URL, VIP_CARS_AFFILIATE_URL } from "../app/lib/affiliate/affiliateInventory.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const hubRoot = path.resolve(scriptDir, "..");
@@ -53,6 +53,9 @@ for (const file of files) {
   const invalidSamBoat = activeAffiliateLinks.filter(
     (link) => link.advertiser === "samboat" && link.affiliateUrl !== SAMBOAT_AFFILIATE_URL
   );
+  const invalidVipCars = activeAffiliateLinks.filter(
+    (link) => link.advertiser === "vipcars" && link.affiliateUrl !== VIP_CARS_AFFILIATE_URL
+  );
   const warnings = [];
 
   if (missing.length) {
@@ -77,6 +80,10 @@ for (const file of files) {
 
   if (invalidSamBoat.length) {
     warnings.push("SamBoat links must use the approved tracked AWIN URL");
+  }
+
+  if (invalidVipCars.length) {
+    warnings.push("VIP Cars links must use the approved tracked AWIN URL");
   }
 
   if (!story.heroImageAlt || story.heroImageAlt.length < 20) {

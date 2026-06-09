@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AuthorityLinks from "./AuthorityLinks";
+import CarRentalCTA from "./CarRentalCTA";
 import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
@@ -7,8 +8,11 @@ import SiteHeader from "./SiteHeader";
 import ThingsToDoSection from "./ThingsToDoSection";
 import { VacationPackageCards } from "./VacationPackagePage";
 import { lastUpdatedLabel } from "../lib/network";
+import { getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 
 export default function PackageCategoryPage({ category }) {
+  const carRentalRecommendation = getCarRentalRecommendationForPage(category.slug);
+
   return (
     <>
       <SiteHeader />
@@ -26,6 +30,7 @@ export default function PackageCategoryPage({ category }) {
         </section>
         <VacationPackageCards packages={category.packages} title={`Compare ${category.title}`} id={`${category.slug}-packages`} />
         <ThingsToDoSection />
+        <CarRentalCTA recommendation={carRentalRecommendation} />
         <AuthorityLinks currentPath={`/${category.slug}`} cluster="packages" breadcrumbLabel={category.title} />
         <NewsletterSection />
       </main>

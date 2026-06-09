@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AffiliateBookingSection from "./AffiliateBookingSection";
 import AuthorityLinks from "./AuthorityLinks";
+import CarRentalCTA from "./CarRentalCTA";
 import NewsletterSection from "./NewsletterSection";
 import PackageFinder from "./PackageFinder";
 import SafeImage from "./SafeImage";
@@ -11,7 +12,7 @@ import { baseUrl, lastUpdatedLabel, pageImages } from "../lib/network";
 import { destinationAuthorities, destinationPageTypes, destinationPath, getDestinationPackages } from "../lib/destinationAuthority";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
 import { getAllStories } from "../lib/stories";
-import { getAffiliateRecommendationsForPage } from "../lib/affiliate/affiliateInventory.mjs";
+import { getAffiliateRecommendationsForPage, getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 
 export default function DestinationAuthorityPage({ destination, type = null }) {
   const focus = type?.focus || "the best time to visit, hotels, flights, attractions, transportation, budgets, packages, and nearby trip ideas";
@@ -22,6 +23,7 @@ export default function DestinationAuthorityPage({ destination, type = null }) {
   const relatedDestinations = destination.related.map((slug) => destinationAuthorities.find((item) => item.slug === slug)).filter(Boolean);
   const pagePath = destinationPath(destination, type);
   const affiliateRecommendations = getAffiliateRecommendationsForPage(pagePath);
+  const carRentalRecommendation = getCarRentalRecommendationForPage(pagePath);
   const faqs = [
     [`When is the best time to visit ${destination.name}?`, destination.bestMonths],
     [`What airport should travelers use for ${destination.name}?`, destination.airport],
@@ -56,6 +58,7 @@ export default function DestinationAuthorityPage({ destination, type = null }) {
 
         <PackageFinder packages={finderPackages} />
         <AffiliateBookingSection recommendations={affiliateRecommendations} title={`Planning Time On The Water In ${destination.name}?`} />
+        <CarRentalCTA recommendation={carRentalRecommendation} />
         <StoryModule eyebrow="Related travel stories" title={`${destination.name} Stories And Guides`} stories={stories} id={`${destination.slug}-stories`} />
 
         <section className="related-pages section-pad" aria-labelledby={`${destination.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Related destinations and sections</p><h2 id={`${destination.slug}-related-title`}>Keep Planning Florida</h2></div><div className="popular-link-grid">{relatedDestinations.map((item) => <Link href={destinationPath(item)} key={item.slug}>{item.name} Travel Guide</Link>)}<Link href="/family-vacations">Family Vacations</Link><Link href="/cruises">Cruises From Florida</Link><Link href="/journal">Travel Stories</Link><Link href="/vacation-packages">Vacation Packages</Link></div></section>

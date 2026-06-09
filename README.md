@@ -215,6 +215,8 @@ Approved affiliate partners and future topic mappings live in `app/lib/affiliate
 
 SamBoat is active only on the explicit boating and water-intent page allowlist. Its links must use the approved AWIN URL and `rel="sponsored"`. Do not add SamBoat sitewide or to unrelated content.
 
+VIP Cars is active only on contextual road-trip, airport, destination, family, beach, weekend, package, and cruise-port pages selected by `getCarRentalRecommendationForPage()`. The reusable `CarRentalCTA` uses the approved AWIN URL, `rel="sponsored noopener noreferrer"`, affiliate disclosure, and `affiliate_click` tracking with `affiliate: "vipcars"` and `category: "car_rental"`. Do not add the CTA to the homepage hero, newsletter, footer, or unrelated pages.
+
 `npm run stories:generate -- --title="..." --category="..." --destination="..."` adds `affiliateSuggestions` based on the draft topic. Suggestions are editorial prompts only; they do not automatically publish affiliate links. Active SamBoat story links are checked by `npm run stories:review`.
 
 All Expedia hotel links should go through `getExpediaHotelLink(destination)`. When Expedia deep links are available, replace the destination values inside that helper only. Do not paste Expedia URLs directly into page components.

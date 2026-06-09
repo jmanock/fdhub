@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AuthorityLinks from "./AuthorityLinks";
+import CarRentalCTA from "./CarRentalCTA";
 import NewsletterSection from "./NewsletterSection";
 import PackageFinder from "./PackageFinder";
 import SafeImage from "./SafeImage";
@@ -8,11 +9,13 @@ import SiteHeader from "./SiteHeader";
 import { baseUrl, lastUpdatedLabel, pageImages } from "../lib/network";
 import { cruiseGuideLinks, getCruisePackages } from "../lib/cruisePlanning";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
+import { getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 
 export default function CruisePlanningPage({ guide }) {
   const packages = getCruisePackages(guide);
   const finderPackages = packages.map((item) => ({ slug: item.slug, h1: item.h1, summary: item.summary, image: item.image, imageAlt: item.imageAlt, destination: item.destination, optionDestinations: [...new Set(item.options.map((option) => option.destination))], ...getPackageDiscoveryFields(item) }));
   const pageUrl = `${baseUrl}/${guide.slug}`;
+  const carRentalRecommendation = getCarRentalRecommendationForPage(guide.slug, { pageType: guide.port ? "cruise_port" : "cruise", destination: guide.destination });
   const defaultFaqs = [
     [`Which Florida port is best for ${guide.h1.toLowerCase()}?`, "The best port depends on sailing schedule, airfare, drive time, hotel cost, and the activities you want before or after the cruise."],
     ["Should cruise travelers arrive the day before sailing?", "Travelers flying or driving a long distance should strongly consider a pre-cruise hotel night to reduce embarkation-day risk."],
@@ -54,6 +57,7 @@ export default function CruisePlanningPage({ guide }) {
         <section className="travel-guides section-pad" aria-labelledby={`${guide.slug}-opportunities-title`}><div className="section-heading"><p className="eyebrow">Cruise package opportunities</p><h2 id={`${guide.slug}-opportunities-title`}>Build A Complete Cruise Vacation</h2></div><div className="guide-card-grid">{guide.packages.map((item) => <article className="guide-card" key={item}><p className="best-for-tag">Package opportunity</p><h3>{item}</h3><p>Combine the sailing with a port hotel, flight or drive plan, transportation, and a local activity.</p></article>)}</div></section>
 
         <PackageFinder packages={finderPackages} />
+        <CarRentalCTA recommendation={carRentalRecommendation} />
 
         {guide.clusterLinks ? <section className="related-pages section-pad" aria-labelledby={`${guide.slug}-cluster-title`}><div className="section-heading"><p className="eyebrow">{guide.clusterEyebrow || "Weekend cruise planning path"}</p><h2 id={`${guide.slug}-cluster-title`}>{guide.clusterTitle || "Compare Sailings, Ports & Complete Packages"}</h2><p>{guide.clusterIntro || "Use these focused guides to move from a short-cruise idea to a complete Florida departure plan."}</p></div><div className="popular-link-grid">{guide.clusterLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</div></section> : null}
 

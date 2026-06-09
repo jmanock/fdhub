@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import AffiliateBookingSection from "../components/AffiliateBookingSection";
 import AuthorityLinks from "../components/AuthorityLinks";
+import CarRentalCTA from "../components/CarRentalCTA";
 import NewsletterSection from "../components/NewsletterSection";
 import PackageCategoryPage from "../components/PackageCategoryPage";
 import FamilyVacationPage from "../components/FamilyVacationPage";
@@ -12,7 +13,7 @@ import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
-import { getAffiliateRecommendationsForPage } from "../lib/affiliate/affiliateInventory.mjs";
+import { getAffiliateRecommendationsForPage, getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 import { piscifunGearPicks } from "../lib/affiliate/piscifunLinks";
 import { destinationHubs, getDestinationHub, getDestinationHubStories, getDestinationHubUrl } from "../lib/destinationHubs";
 import {
@@ -252,6 +253,7 @@ export default async function LandingPage({ params }) {
   const relatedSearchLinks = getRelatedSearchLinks(page);
   const gearPicks = page.showPiscifunGear ? piscifunGearPicks : [];
   const affiliateRecommendations = getAffiliateRecommendationsForPage(page.slug);
+  const carRentalRecommendation = getCarRentalRecommendationForPage(page.slug);
   const pageStories = getTrendingStories(6);
   const pageTravelTips = [
     {
@@ -602,6 +604,7 @@ export default async function LandingPage({ params }) {
         ) : null}
 
         <AffiliateBookingSection recommendations={affiliateRecommendations} />
+        <CarRentalCTA recommendation={carRentalRecommendation} />
 
         <TravelTipsModule tips={pageTravelTips} />
 
