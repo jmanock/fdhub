@@ -581,7 +581,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-beaches",
-    title: "Best Florida Beaches | Coastal Vacation Ideas, Hotels & Things To Do",
+    title: "15 Best Florida Beaches for Family, Couples & Weekend Trips (2026)",
     metaDescription:
       "Explore the best Florida beaches for family trips, romantic getaways, weekend escapes, hotels, local attractions, and coastal vacation planning.",
     h1: "Best Florida Beaches",
@@ -602,7 +602,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-family-vacations",
-    title: "Best Florida Family Vacations | Beaches, Theme Parks & Trip Ideas",
+    title: "12 Best Florida Family Vacations for Beaches & Theme Parks (2026)",
     metaDescription:
       "Find Florida family vacation ideas with theme parks, beaches, hotels, attractions, cruises, road trips, and budget-friendly planning tips.",
     h1: "Best Florida Family Vacations",
@@ -686,7 +686,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-road-trips",
-    title: "Best Florida Road Trips | Scenic Drives, Beaches & Weekend Routes",
+    title: "10 Best Florida Road Trips for Beaches & Weekend Getaways (2026)",
     metaDescription:
       "Explore the best Florida road trips including beach routes, Key West drives, Gulf Coast weekends, family stops, hotels, attractions, and local deals.",
     h1: "Best Florida Road Trips",
@@ -1029,6 +1029,207 @@ const v2SeasonalPageConfigs = [
   }
 ];
 
+const v10SearchConsoleAuthorityConfigs = [
+  {
+    slug: "florida-family-vacation-budget-guide",
+    title: "Florida Family Vacation Budget Guide | Realistic 2026 Trip Costs",
+    metaDescription: "Build a Florida family vacation budget across flights, hotels, cruises, attractions, food, transportation, and flexible trip ideas.",
+    h1: "Florida Family Vacation Budget Guide",
+    eyebrow: "Family vacation planning",
+    intro: "A useful Florida family vacation budget connects transportation, lodging, attractions, food, rest days, and backup plans instead of relying on one headline package price.",
+    image: pageImages.familyTrip,
+    alt: "Florida family vacation budget planning with hotels flights and activities",
+    related: ["best-florida-family-vacations", "florida-family-vacations", "cheap-florida-family-vacations", "florida-vacation-planning-guide"],
+    destinations: "Orlando, Clearwater, Tampa Bay, Miami, St. Augustine, Destin, and Florida cruise ports",
+    advice: "Start with the largest fixed costs, then add daily food, parking, transportation, attraction tickets, resort fees, and a realistic buffer. Compare the full trip before choosing a lower base rate.",
+    recommendations: [
+      ["Compare family hotels", sites.hotels, "Review family resorts, room layouts, pools, breakfast, fees, and current rates."],
+      ["Compare family flights", sites.flights, "Check practical Florida airports, flight times, bags, and total airfare."],
+      ["Find family activities", sites.local, "Build the daily plan around age, weather, location, and current attraction details."]
+    ]
+  },
+  {
+    slug: "best-florida-family-resorts",
+    title: "Best Florida Family Resorts for Beaches, Pools & Easy Trips (2026)",
+    metaDescription: "Compare Florida family resort areas for beaches, pools, theme parks, family rooms, activities, fees, and current hotel planning.",
+    h1: "Best Florida Family Resorts",
+    eyebrow: "Family resort guide",
+    intro: "The best Florida family resorts make the daily trip easier through useful room layouts, pools, food options, transportation, and activities that fit the family's pace.",
+    image: pageImages.familyTrip,
+    alt: "Florida family resort pool and beach vacation planning",
+    related: ["best-florida-family-vacations", "best-beaches-for-families", "florida-family-vacation-budget-guide", "orlando-travel-guide"],
+    destinations: "Orlando, Clearwater, Destin, Naples, Miami Beach, the Florida Keys, and cruise-port resort areas",
+    advice: "Compare resort fees, room capacity, pool rules, transportation, dining, cancellation terms, and how much time the family will actually spend at the property.",
+    recommendations: [
+      ["Compare Florida family resorts", `${sites.hotels}/best-family-resorts-in-florida`, "Move into current family-resort and hotel planning pages."],
+      ["Plan family flights", sites.flights, "Compare airports, schedules, bags, and family-friendly arrival times."],
+      ["Build family activity days", sites.local, "Find attractions and local plans near the resort destination."]
+    ]
+  },
+  {
+    slug: "best-beaches-for-families",
+    title: "Best Florida Beaches for Families: Calm Water & Easy Trips (2026)",
+    metaDescription: "Compare the best Florida beaches for families by water, hotels, activities, parking, food, weather backups, and complete trip planning.",
+    h1: "Best Florida Beaches for Families",
+    eyebrow: "Family beach guide",
+    intro: "The best Florida beaches for families balance beach conditions, nearby food, practical hotels, easy activities, transportation, and flexible rainy-day options.",
+    image: pageImages.clearwater,
+    alt: "Family-friendly Florida beach with calm water and nearby hotels",
+    related: ["best-florida-beaches", "best-florida-family-vacations", "best-florida-family-resorts", "florida-beach-vacation-guide"],
+    destinations: "Clearwater Beach, Destin, St. Augustine, Naples, Sarasota, Daytona Beach, and family-friendly South Florida areas",
+    advice: "Choose the beach around the family's real needs, then confirm current water conditions, parking, lifeguard information, hotel location, and age-appropriate activities.",
+    recommendations: [
+      ["Compare beach hotels", sites.hotels, "Find family hotel and resort planning around Florida beach destinations."],
+      ["Find local beach activities", sites.local, "Add aquariums, parks, boat days, museums, and rainy-day options."],
+      ["Plan flights to Florida beaches", sites.flights, "Compare practical airports against the final beach destination."]
+    ]
+  },
+  {
+    slug: "best-beaches-for-couples",
+    title: "Best Florida Beaches for Couples: Romantic Coastal Trips (2026)",
+    metaDescription: "Compare Florida beaches for couples with romantic hotels, dining, sunsets, water activities, road trips, and weekend planning.",
+    h1: "Best Florida Beaches for Couples",
+    eyebrow: "Couples beach guide",
+    intro: "Florida beaches for couples range from walkable island towns and polished Gulf Coast stays to energetic South Florida weekends and quiet coastal escapes.",
+    image: pageImages.romance,
+    alt: "Romantic Florida beach sunset for couples vacation planning",
+    related: ["romantic-florida-getaways", "best-florida-beaches", "best-beaches-for-families", "key-west-travel-guide"],
+    destinations: "Key West, Naples, Sarasota, Miami Beach, Fort Lauderdale, St. Augustine, and quieter Gulf Coast towns",
+    advice: "Choose the destination around the desired pace, then compare hotel walkability, dining, beach access, driving, and the activities that will make the trip feel complete.",
+    recommendations: [
+      ["Compare romantic hotels", sites.hotels, "Review beach, boutique, and resort-style hotel planning."],
+      ["Find local experiences", sites.local, "Add waterfront dining, activities, attractions, and date-night ideas."],
+      ["Compare Florida flights", sites.flights, "Choose an airport and schedule that protect a short couples trip."]
+    ]
+  },
+  {
+    slug: "hidden-florida-beaches",
+    title: "Hidden Florida Beaches & Quieter Coastal Alternatives (2026)",
+    metaDescription: "Discover quieter Florida beach alternatives with hotel planning, road-trip tips, nearby towns, activities, and practical travel guidance.",
+    h1: "Hidden Florida Beaches And Quieter Coastal Alternatives",
+    eyebrow: "Coastal discovery guide",
+    intro: "Florida's quieter beach alternatives can reward travelers who value a slower pace, but smaller coastal areas often require more careful parking, hotel, food, and transportation planning.",
+    image: pageImages.floridaCoast,
+    alt: "Quiet Florida coastal beach for hidden beach trip planning",
+    related: ["best-florida-beaches", "florida-gulf-coast-beaches", "florida-atlantic-coast-beaches", "best-florida-road-trips"],
+    destinations: "Northeast Florida beach towns, Gulf Coast islands, Space Coast parks, Panhandle alternatives, and quieter beaches near major destinations",
+    advice: "Treat hidden as quieter rather than secret. Confirm public access, parking, facilities, current conditions, local rules, and nearby lodging before driving to a smaller beach.",
+    recommendations: [
+      ["Plan a Florida road trip", "/best-florida-road-trips", "Connect quieter beaches with realistic drive times and hotel stops."],
+      ["Compare coastal hotels", sites.hotels, "Check lodging and current rates near smaller beach destinations."],
+      ["Find nearby activities", sites.local, "Add parks, museums, food stops, and weather backups."]
+    ]
+  },
+  {
+    slug: "florida-gulf-coast-beaches",
+    title: "Florida Gulf Coast Beaches: Family, Couples & Hotel Guide (2026)",
+    metaDescription: "Compare Florida Gulf Coast beaches for families, couples, hotels, sunsets, road trips, activities, and complete vacation planning.",
+    h1: "Florida Gulf Coast Beaches",
+    eyebrow: "Gulf Coast authority guide",
+    intro: "Florida Gulf Coast beaches appeal to travelers planning sunsets, family trips, couples getaways, fishing, boating, and resort stays with a softer coastal pace.",
+    image: pageImages.clearwater,
+    alt: "Florida Gulf Coast beach sunset with family and resort travel planning",
+    related: ["best-florida-beaches", "best-beaches-for-families", "best-beaches-for-couples", "gulf-coast-road-trip"],
+    destinations: "Clearwater, St. Pete, Sarasota, Naples, Fort Myers, Destin, and connected Gulf Coast beach towns",
+    advice: "Compare the beach destination with the airport, hotel area, parking, seasonal demand, water conditions, and the inland or city activities that support the trip.",
+    recommendations: [
+      ["Compare Gulf Coast hotels", sites.hotels, "Review beach resorts, family hotels, and current stay planning."],
+      ["Plan Gulf Coast flights", sites.flights, "Compare Tampa, Sarasota, Fort Myers, and regional airport options."],
+      ["Find Gulf Coast activities", sites.local, "Add boating, fishing, attractions, restaurants, and family plans."]
+    ]
+  },
+  {
+    slug: "florida-atlantic-coast-beaches",
+    title: "Florida Atlantic Coast Beaches: City, Family & Road Trip Guide",
+    metaDescription: "Compare Florida Atlantic Coast beaches for city weekends, family trips, hotels, road trips, attractions, and current vacation planning.",
+    h1: "Florida Atlantic Coast Beaches",
+    eyebrow: "Atlantic Coast authority guide",
+    intro: "Florida Atlantic Coast beaches connect energetic South Florida stays, classic beach towns, Northeast Florida road trips, events, cruises, and family vacation options.",
+    image: pageImages.floridaCoast,
+    alt: "Florida Atlantic Coast beach with hotels and coastal travel planning",
+    related: ["best-florida-beaches", "hidden-florida-beaches", "best-florida-road-trips", "miami-travel-guide"],
+    destinations: "Miami Beach, Fort Lauderdale, Daytona Beach, Cocoa Beach, St. Augustine, Jacksonville Beach, and Amelia Island",
+    advice: "Choose the Atlantic destination by trip style, then compare airport access, hotel location, beach conditions, events, cruise timing, and the road-trip connections nearby.",
+    recommendations: [
+      ["Compare Atlantic beach hotels", sites.hotels, "Review oceanfront stays, family hotels, and current hotel planning."],
+      ["Compare Florida flights", sites.flights, "Choose among South, Central, and Northeast Florida airports."],
+      ["Find coastal activities", sites.local, "Add local attractions, restaurants, events, and rainy-day options."]
+    ]
+  },
+  {
+    slug: "weekend-road-trips-from-orlando",
+    title: "Weekend Road Trips From Orlando: Beaches, Cities & Easy Drives",
+    metaDescription: "Plan weekend road trips from Orlando to beaches, historic cities, local attractions, hotels, and practical short-trip routes.",
+    h1: "Weekend Road Trips From Orlando",
+    eyebrow: "Orlando road-trip guide",
+    intro: "Weekend road trips from Orlando work best when the destination is close enough to preserve useful trip time and different enough to feel like a real change of pace.",
+    image: pageImages.roadTrip,
+    alt: "Weekend road trip from Orlando to Florida beaches and destinations",
+    related: ["best-florida-road-trips", "orlando-travel-guide", "florida-weekend-getaways", "florida-atlantic-coast-beaches"],
+    destinations: "Cocoa Beach, Daytona Beach, St. Augustine, Tampa Bay, Clearwater, and focused Central Florida nature trips",
+    advice: "Choose one anchor destination, compare hotel and parking costs, and avoid turning a short weekend into a long list of highway stops.",
+    recommendations: [
+      ["Compare weekend hotels", sites.hotels, "Check current stays before committing to a road-trip destination."],
+      ["Find local activities", sites.local, "Build a focused itinerary around the destination."],
+      ["Compare Orlando flight alternatives", sites.flights, "Use flight ideas when the weekend destination is farther away."]
+    ]
+  },
+  {
+    slug: "weekend-road-trips-from-tampa",
+    title: "Weekend Road Trips From Tampa: Gulf Beaches & Florida Getaways",
+    metaDescription: "Plan weekend road trips from Tampa to Gulf beaches, Orlando, Sarasota, springs, hotels, attractions, and practical short trips.",
+    h1: "Weekend Road Trips From Tampa",
+    eyebrow: "Tampa road-trip guide",
+    intro: "Weekend road trips from Tampa can connect Gulf beaches, nearby cities, springs, family attractions, and short resort stays without giving up the whole weekend to driving.",
+    image: pageImages.roadTrip,
+    alt: "Weekend road trip from Tampa to Gulf Coast beaches and Florida getaways",
+    related: ["best-florida-road-trips", "tampa-travel-guide", "florida-gulf-coast-beaches", "gulf-coast-road-trip"],
+    destinations: "Clearwater, St. Pete, Sarasota, Orlando, Crystal River-area trips, and focused Gulf Coast weekends",
+    advice: "Compare traffic, parking, hotel location, weather, and the number of activities that realistically fit before choosing the route.",
+    recommendations: [
+      ["Compare Gulf Coast hotels", sites.hotels, "Review current hotel planning for beach and city weekends."],
+      ["Find weekend activities", sites.local, "Build the itinerary around local attractions and food."],
+      ["Compare Tampa flights", sites.flights, "Use airfare for longer weekends beyond practical driving range."]
+    ]
+  },
+  {
+    slug: "gulf-coast-road-trip",
+    title: "Florida Gulf Coast Road Trip: Beaches, Hotels & Scenic Stops",
+    metaDescription: "Plan a Florida Gulf Coast road trip with beaches, hotels, family stops, food, boating, realistic drive times, and travel tips.",
+    h1: "Florida Gulf Coast Road Trip",
+    eyebrow: "Gulf Coast road trip",
+    intro: "A Florida Gulf Coast road trip should connect a small number of complementary beach towns and city stops while leaving enough time for sunsets, food, and local activities.",
+    image: pageImages.roadTrip,
+    alt: "Florida Gulf Coast road trip with beaches hotels and scenic stops",
+    related: ["best-florida-road-trips", "florida-gulf-coast-beaches", "weekend-road-trips-from-tampa", "florida-vacation-planning-guide"],
+    destinations: "Tampa Bay, Clearwater, Sarasota, Fort Myers, Naples, and focused Gulf Coast beach stops",
+    advice: "Keep hotel changes limited, plan around traffic and weather, compare one-way rental terms, and give each destination enough time to justify the stop.",
+    recommendations: [
+      ["Compare Gulf Coast hotels", sites.hotels, "Plan current beach and city stays along the route."],
+      ["Find Gulf Coast activities", sites.local, "Add boating, restaurants, attractions, and family stops."],
+      ["Compare Florida flights", sites.flights, "Choose arrival and departure airports that support the route."]
+    ]
+  },
+  {
+    slug: "florida-winter-vacations",
+    title: "Florida Winter Vacations: Beaches, Cruises & Warm Getaways (2026)",
+    metaDescription: "Plan Florida winter vacations with beaches, cruises, family trips, hotels, flights, events, weather, and warm getaway ideas.",
+    h1: "Florida Winter Vacations",
+    eyebrow: "Seasonal travel guide",
+    intro: "Florida winter vacations can combine warm-weather beach time, cruises, family attractions, city weekends, and seasonal events, but demand varies widely by region and dates.",
+    image: pageImages.floridaCoast,
+    alt: "Florida winter vacation with warm beach hotels cruises and travel planning",
+    related: ["best-time-to-visit-florida", "best-florida-beaches", "florida-holiday-travel-guide", "best-florida-family-vacations"],
+    destinations: "South Florida, the Keys, Naples, Gulf Coast beaches, Orlando, and Florida cruise ports",
+    advice: "Compare regional weather, holiday and snowbird demand, hotel rates, cruise schedules, flight timing, and flexible indoor or outdoor activities before booking.",
+    recommendations: [
+      ["Compare winter flights", sites.flights, "Review Florida airport routes and seasonal airfare planning."],
+      ["Compare winter hotels", sites.hotels, "Check current beach, family, and resort stays."],
+      ["Compare cruises from Florida", sites.cruises, "Explore winter Bahamas and Caribbean cruise planning."]
+    ]
+  }
+];
+
 function createAuthorityPage(config) {
   return {
     ...config,
@@ -1269,7 +1470,7 @@ function createComparisonPage(config) {
   };
 }
 
-const generatedAuthorityPages = authorityPageConfigs.map(createAuthorityPage);
+const generatedAuthorityPages = [...authorityPageConfigs, ...v10SearchConsoleAuthorityConfigs].map(createAuthorityPage);
 const generatedV2SeasonalPages = v2SeasonalPageConfigs.map(createAuthorityPage);
 const generatedDestinationPages = destinationPageConfigs.map(createDestinationPage);
 const generatedPlanningPages = planningPageConfigs.map(createPlanningPage);
