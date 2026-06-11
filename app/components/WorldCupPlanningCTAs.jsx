@@ -4,8 +4,9 @@ import { sites } from "../lib/network";
 const planningOptions = [
   ["Find Hotels", sites.hotels, "Compare Florida hotel areas, cruise-port stays, beach hotels, and family-friendly options."],
   ["Find Flights", sites.flights, "Compare Miami, Fort Lauderdale, and Orlando airport guides and route-planning ideas."],
-  ["Find Activities", sites.local, "Explore Florida attractions, boat tours, family activities, and free things to do."],
-  ["Find Attractions", `${sites.local}/things-to-do-in-orlando`, "Plan Orlando theme parks, Kennedy Space Center, and family vacation add-ons."],
+  ["Find Activities", `${sites.local}/florida-vacation-activities`, "Explore Florida attractions, boat tours, family activities, and free things to do."],
+  ["Find Attractions", `${sites.local}/orlando-attractions`, "Plan Orlando theme parks, Kennedy Space Center, and family vacation add-ons."],
+  ["Compare Vacation Packages", "/family-vacation-packages", "Connect hotels, attractions, transportation, estimated budgets, and trip length."],
   ["Find Transportation", "/florida-transportation-during-world-cup", "Compare airport transfers, local transit, driving, rail, tolls, and regional trip timing."]
 ];
 
