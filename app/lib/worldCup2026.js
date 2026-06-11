@@ -7,12 +7,15 @@ const commonLinks = [
   ["Florida Road Trips", "/best-florida-road-trips"],
   ["Weekend Getaways", "/weekend-getaways"],
   ["Compare Florida Hotels", sites.hotels],
-  ["Compare Florida Flights", sites.flights]
+  ["Compare Florida Flights", sites.flights],
+  ["Florida Attractions & Activities", sites.local],
+  ["Florida Cruise Deals", sites.cruises]
 ];
 
 const guides = [
   {
     slug: "miami-world-cup-travel-guide",
+    preferredPath: "/world-cup-miami-travel-guide",
     title: "Miami World Cup 2026 Travel Guide",
     description: "Plan a Miami World Cup 2026 trip with hotel-area comparisons, airport choices, transportation, attractions, food, beaches, and flexible match-day planning.",
     focus: "Use Miami as Florida's World Cup host-city anchor, then build the trip around verified match details, the right hotel area, practical transportation, and time to enjoy South Florida.",
@@ -25,6 +28,7 @@ const guides = [
   },
   {
     slug: "orlando-world-cup-travel-guide",
+    preferredPath: "/world-cup-orlando-guide",
     title: "Orlando World Cup 2026 Travel Guide",
     description: "Use Orlando as a Florida World Cup trip gateway with flight comparisons, theme park add-ons, hotels, family planning, and transportation to South Florida.",
     focus: "Orlando is not a World Cup host city, but it can work as a major Florida flight gateway and family-vacation add-on before or after verified Miami event plans.",
@@ -37,6 +41,7 @@ const guides = [
   },
   {
     slug: "florida-world-cup-fan-guide",
+    preferredPath: "/world-cup-fan-guide-to-florida",
     title: "Florida World Cup 2026 Fan Guide",
     description: "Build a Florida World Cup fan trip around Miami, flights, hotels, transportation, beaches, attractions, family plans, and Florida vacation add-ons.",
     focus: "Turn a verified World Cup event plan into a complete Florida vacation without overloading the schedule or relying on unsupported match details.",
@@ -97,6 +102,7 @@ const guides = [
   },
   {
     slug: "transportation-between-florida-host-cities",
+    preferredPath: "/florida-transportation-during-world-cup",
     title: "Florida World Cup Transportation Guide",
     description: "Plan transportation for a Florida World Cup trip across Miami, airports, hotels, Orlando add-ons, beaches, and regional destinations.",
     focus: "Miami is Florida's host-city anchor. Use this guide to compare airport transfers, city transportation, and optional travel to other Florida destinations.",
@@ -133,6 +139,7 @@ const guides = [
   },
   {
     slug: "best-beaches-world-cup-florida",
+    preferredPath: "/best-beaches-to-visit-during-world-cup-florida",
     title: "Best Florida Beaches To Visit During World Cup 2026",
     description: "Compare Florida beach add-ons for a World Cup trip, including Miami Beach, Fort Lauderdale, the Keys, and Gulf Coast vacation ideas.",
     focus: "Add a beach stay only when it fits the verified event schedule and transportation plan. South Florida beaches are simplest around Miami; other coasts need more time.",
@@ -145,6 +152,7 @@ const guides = [
   },
   {
     slug: "family-friendly-world-cup-trips",
+    preferredPath: "/world-cup-family-vacation",
     title: "Family-Friendly Florida World Cup 2026 Trips",
     description: "Plan a family-friendly Florida World Cup trip with Miami event days, Orlando add-ons, hotels, transportation, beaches, and rest time.",
     focus: "Family event travel works best with fewer hotel changes, realistic transportation, flexible meals, and recovery time around verified event plans.",
@@ -157,6 +165,7 @@ const guides = [
   },
   {
     slug: "world-cup-weekend-getaways-florida",
+    preferredPath: "/world-cup-weekend-itinerary-florida",
     title: "World Cup Weekend Getaways In Florida",
     description: "Build a focused Florida World Cup weekend around Miami, flights, hotels, transportation, beaches, dining, and one verified event.",
     focus: "A World Cup weekend should prioritize one verified event, an easy hotel area, and a small number of nearby activities.",
@@ -214,13 +223,91 @@ const guides = [
     transportation: ["Plan toll roads and parking", "Avoid long drives before fixed events", "Compare one-way rental terms"],
     fanExperiences: ["Overseas Highway", "South Florida beaches", "Orlando family extension"],
     itinerary: ["Miami arrival", "Verified event", "Road-trip departure", "Two-night destination extension"]
+  },
+  {
+    slug: "world-cup-port-canaveral",
+    preferredPath: "/world-cup-port-canaveral",
+    title: "World Cup Port Canaveral Vacation Extension",
+    description: "Plan a cruise before or after a Florida World Cup trip with Port Canaveral sailings, Kennedy Space Center, beach activities, hotels, and transportation.",
+    focus: "Use Port Canaveral as a separate vacation extension after the verified Miami event plan, with a protective hotel night and enough time for the Space Coast.",
+    destinations: ["Port Canaveral", "Orlando", "Miami"],
+    image: pageImages.cruisePort,
+    hotelAreas: ["Port Canaveral and Cape Canaveral", "Cocoa Beach", "Orlando airport or attraction areas"],
+    transportation: ["Allow a full transfer day from South Florida", "Book a protective pre-cruise hotel night", "Compare MCO flights, rental cars, shuttles, and cruise parking"],
+    fanExperiences: ["Port Canaveral cruise extension", "Kennedy Space Center", "Cocoa Beach and Space Coast activities"],
+    itinerary: ["Complete the verified Miami event plan", "Transfer to the Space Coast", "Kennedy Space Center or beach day", "Begin the Port Canaveral cruise"]
+  },
+  {
+    slug: "world-cup-things-to-do-in-florida",
+    preferredPath: "/world-cup-things-to-do-in-florida",
+    title: "Things To Do In Florida During World Cup 2026",
+    description: "Plan Florida activities between World Cup events with theme parks, beaches, museums, boat tours, airboat tours, Kennedy Space Center, and family ideas.",
+    focus: "Choose flexible Florida activities that fit the verified event schedule, weather, transportation, group energy, and the region where you are staying.",
+    destinations: ["Miami", "Orlando", "Port Canaveral"],
+    image: pageImages.floridaCoast,
+    hotelAreas: ["Miami for host-city activities", "Orlando for theme parks and family attractions", "Space Coast for Kennedy Space Center and beaches"],
+    transportation: ["Keep activity days in one region", "Avoid long transfers immediately before an event", "Use weather-friendly indoor backups"],
+    fanExperiences: ["Theme parks and family attractions", "Beaches, boat tours, and airboat tours", "Museums and Kennedy Space Center"],
+    itinerary: ["Choose one regional base", "Plan one anchor attraction", "Add a flexible beach, museum, or neighborhood activity", "Protect the next fixed event day"]
+  },
+  {
+    slug: "best-family-attractions-world-cup",
+    preferredPath: "/best-family-attractions-during-world-cup",
+    title: "Best Family Attractions During World Cup 2026 In Florida",
+    description: "Compare Florida family attractions during World Cup travel, including Disney, Universal, SeaWorld, Kennedy Space Center, beaches, museums, and aquariums.",
+    focus: "Family attraction days should add fun without exhausting the group before a fixed event. Choose one anchor experience and protect rest time.",
+    destinations: ["Orlando", "Miami", "Port Canaveral"],
+    image: pageImages.familyTrip,
+    hotelAreas: ["Orlando resort areas", "Family-friendly Miami areas", "Space Coast hotels"],
+    transportation: ["Avoid changing hotels on attraction days", "Compare car seats, parking, and luggage needs", "Leave a full buffer before regional transfers"],
+    fanExperiences: ["Disney and Universal Orlando", "SeaWorld and family attractions", "Kennedy Space Center, beaches, museums, and aquariums"],
+    itinerary: ["Arrival and pool time", "Family attraction day", "Flexible rest or beach day", "Verified event plan"]
+  },
+  {
+    slug: "three-day-orlando-world-cup-itinerary",
+    preferredPath: "/3-day-orlando-world-cup-itinerary",
+    title: "3 Day Orlando World Cup Vacation Itinerary",
+    description: "Plan a three-day Orlando World Cup vacation extension with theme parks, family activities, hotels, airport guidance, and realistic travel to Miami.",
+    focus: "A short Orlando extension works best as its own three-day block before or after Miami, not as a match-day side trip.",
+    destinations: ["Orlando", "Miami"],
+    image: pageImages.orlando,
+    hotelAreas: ["Theme park resort areas", "International Drive", "MCO airport area for the final night"],
+    transportation: ["Keep the three-day itinerary in one Orlando area", "Allow a full transfer buffer to Miami", "Compare MCO flights, rail, rental cars, and hotel parking"],
+    fanExperiences: ["One major theme park day", "Kennedy Space Center or family attraction day", "Pool, dining, and recovery time"],
+    itinerary: ["Arrive and settle into Orlando", "Anchor theme park day", "Family attraction or Kennedy Space Center", "Transfer with a full buffer"]
+  },
+  {
+    slug: "miami-world-cup-travel-tips",
+    preferredPath: "/miami-world-cup-travel-tips",
+    title: "Miami World Cup Travel Tips For Hotels, Transport & Activities",
+    description: "Use practical Miami World Cup travel tips for hotel areas, MIA and FLL airports, transportation, beaches, boat tours, dining, and family activities.",
+    focus: "Make the Miami trip easier by choosing the hotel area and event-day transportation plan before filling the schedule with beaches, dining, and attractions.",
+    destinations: ["Miami", "Fort Lauderdale"],
+    image: pageImages.miami,
+    hotelAreas: ["Downtown and Brickell", "Miami Beach", "Airport and Fort Lauderdale alternatives"],
+    transportation: ["Compare MIA and FLL as complete journeys", "Avoid relying on a car for every city day", "Leave substantial event-day buffer"],
+    fanExperiences: ["Beach morning", "Biscayne Bay or boat tour", "Wynwood, Little Havana, museums, and food"],
+    itinerary: ["Arrive before the fixed event day", "Learn the hotel neighborhood", "Use a flexible Miami activity day", "Follow the verified event transportation plan"]
+  },
+  {
+    slug: "best-airports-world-cup-visitors",
+    preferredPath: "/best-airports-for-world-cup-visitors",
+    title: "Best Florida Airports For World Cup Visitors",
+    description: "Compare MIA, FLL, and MCO for a Florida World Cup trip by hotel access, ground transportation, flight options, vacation add-ons, and total travel time.",
+    focus: "The best airport is the one that supports the complete itinerary. Compare arrival time, hotel access, transportation, baggage, and the Florida extension before choosing.",
+    destinations: ["Miami", "Fort Lauderdale", "Orlando"],
+    image: pageImages.planning,
+    hotelAreas: ["MIA airport and central Miami", "FLL airport and Fort Lauderdale", "MCO airport and Orlando resort areas"],
+    transportation: ["Use MIA or FLL for the Miami host-city anchor", "Use MCO only for a deliberate Orlando extension", "Protect arrival time before fixed events"],
+    fanExperiences: ["Miami host-city stay", "Fort Lauderdale beach alternative", "Orlando family vacation extension"],
+    itinerary: ["Compare airports and arrival windows", "Choose the hotel area", "Build ground transportation", "Add only a realistic Florida extension"]
   }
 ];
 
 export const worldCup2026Hub = {
   slug: "world-cup-2026",
-  title: "Florida World Cup 2026 Travel Hub",
-  description: "Plan a Florida World Cup 2026 trip with Miami host-city guidance, hotels, flights, transportation, attractions, fan experiences, and Florida vacation add-ons.",
+  title: "World Cup 2026 Florida Travel Guide",
+  description: "Travel, hotels, attractions, transportation, activities, and fan experiences for visitors coming to Florida during the FIFA World Cup.",
   focus: "Plan the complete Florida World Cup trip around verified official details, Miami host-city logistics, strong hotel areas, practical transportation, and useful Florida vacation extensions.",
   image: pageImages.miami,
   imageAlt: "Florida World Cup 2026 travel planning with Miami hotels flights and fan experiences",
@@ -229,6 +316,10 @@ export const worldCup2026Hub = {
   travelWindow: "Confirm official match, venue, and fan-event details before booking",
   packageStyles: ["Family Vacation", "Weekend Getaway", "Luxury Vacation"],
   destinations: ["Miami", "Orlando", "Fort Lauderdale"],
+  hotelAreas: ["Miami host-city hotel areas", "Fort Lauderdale airport and beach alternatives", "Orlando and Port Canaveral vacation extensions"],
+  transportation: ["Compare MIA and FLL for the Miami host-city anchor", "Treat Orlando and Port Canaveral as separate vacation extensions", "Follow verified event transportation and fan-zone guidance"],
+  fanExperiences: ["Miami host-city neighborhoods and fan zones", "Florida beaches, museums, boat tours, and family attractions", "Orlando theme parks and Port Canaveral cruise extensions"],
+  itinerary: ["Verify official match and fan-zone details", "Choose the hotel, airport, and transportation plan", "Add flexible Florida activities between events", "Extend the vacation to Orlando, Port Canaveral, or the beach"],
   planningSteps: ["Verify official event details", "Choose the Miami hotel and transportation plan", "Compare flights and arrival buffers", "Add one realistic Florida vacation extension"],
   schedule: ["Official event verification", "Flight and hotel comparison", "Transportation and activity planning", "Final ticket and itinerary review"],
   links: commonLinks,
@@ -258,10 +349,15 @@ export const worldCup2026Guides = guides.map((page) => ({
 export const allWorldCup2026Pages = [worldCup2026Hub, ...worldCup2026Guides];
 
 export function worldCup2026Path(page) {
-  return page.type === "world_cup_hub" ? "/world-cup-2026" : `/world-cup-2026/${page.slug}`;
+  return page.type === "world_cup_hub" ? "/world-cup-2026" : page.preferredPath || `/world-cup-2026/${page.slug}`;
 }
 
 export function getWorldCup2026Page(parts = []) {
   if (!parts.length) return worldCup2026Hub;
   return worldCup2026Guides.find((page) => page.slug === parts.join("/")) || null;
+}
+
+export function getWorldCup2026PageByPath(path) {
+  const normalizedPath = `/${String(path || "").replace(/^\/|\/$/g, "")}`;
+  return allWorldCup2026Pages.find((page) => worldCup2026Path(page) === normalizedPath) || null;
 }

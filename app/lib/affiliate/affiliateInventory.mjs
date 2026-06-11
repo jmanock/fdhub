@@ -167,7 +167,7 @@ export function getCarRentalRecommendationForPage(pagePath, options = {}) {
 
 export function getWorldCupRecommendationForPage(pagePath) {
   const normalizedPath = String(pagePath || "").replace(/^\/|\/$/g, "");
-  if (normalizedPath !== "world-cup-2026" && !normalizedPath.startsWith("world-cup-2026/")) {
+  if (normalizedPath !== "world-cup-2026" && !normalizedPath.startsWith("world-cup-2026/") && !normalizedPath.includes("world-cup")) {
     return null;
   }
 

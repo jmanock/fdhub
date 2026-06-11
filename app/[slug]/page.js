@@ -7,6 +7,7 @@ import NewsletterSection from "../components/NewsletterSection";
 import PackageCategoryPage from "../components/PackageCategoryPage";
 import FamilyVacationPage from "../components/FamilyVacationPage";
 import CruisePlanningPage from "../components/CruisePlanningPage";
+import EventTravelPage from "../components/EventTravelPage";
 import BudgetVacationHubPage from "../components/BudgetVacationHubPage";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
@@ -35,6 +36,7 @@ import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
 import { cruisePlanningGuides, getCruisePlanningGuide } from "../lib/cruisePlanning";
 import { budgetVacationHubs, getBudgetVacationHub } from "../lib/vacationBuilder";
+import { getWorldCup2026PageByPath, worldCup2026Guides, worldCup2026Path } from "../lib/worldCup2026";
 import {
   getVacationPackage,
   getVacationPackagesForDestination,
@@ -49,7 +51,10 @@ export function generateStaticParams() {
     ...packageCategories.map((item) => ({ slug: item.slug })),
     ...familyVacationGuides.map((item) => ({ slug: item.slug })),
     ...cruisePlanningGuides.map((item) => ({ slug: item.slug })),
-    ...budgetVacationHubs.map((item) => ({ slug: item.slug }))
+    ...budgetVacationHubs.map((item) => ({ slug: item.slug })),
+    ...worldCup2026Guides
+      .filter((item) => worldCup2026Path(item).split("/").filter(Boolean).length === 1)
+      .map((item) => ({ slug: worldCup2026Path(item).slice(1) }))
   ];
 }
 
@@ -62,6 +67,18 @@ export async function generateMetadata({ params }) {
   const familyVacationGuide = getFamilyVacationGuide(slug);
   const cruisePlanningGuide = getCruisePlanningGuide(slug);
   const budgetVacationHub = getBudgetVacationHub(slug);
+  const worldCupPage = getWorldCup2026PageByPath(slug);
+
+  if (worldCupPage) {
+    const url = `${baseUrl}${worldCup2026Path(worldCupPage)}`;
+    return {
+      title: `${worldCupPage.title} | Florida Travel Planning`,
+      description: worldCupPage.description,
+      alternates: { canonical: url },
+      openGraph: { title: worldCupPage.title, description: worldCupPage.description, url, siteName: "Florida Deals Hub", type: "article", images: [{ url: worldCupPage.image, width: 1200, height: 630, alt: worldCupPage.imageAlt }] },
+      twitter: { card: "summary_large_image", title: worldCupPage.title, description: worldCupPage.description, images: [worldCupPage.image] }
+    };
+  }
 
   if (budgetVacationHub) {
     const url = `${baseUrl}/${budgetVacationHub.slug}`;
@@ -218,6 +235,11 @@ export default async function LandingPage({ params }) {
   const familyVacationGuide = getFamilyVacationGuide(slug);
   const cruisePlanningGuide = getCruisePlanningGuide(slug);
   const budgetVacationHub = getBudgetVacationHub(slug);
+  const worldCupPage = getWorldCup2026PageByPath(slug);
+
+  if (worldCupPage) {
+    return <EventTravelPage page={worldCupPage} />;
+  }
 
   if (budgetVacationHub) {
     return <BudgetVacationHubPage hub={budgetVacationHub} />;
