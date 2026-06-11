@@ -3,6 +3,41 @@ import { vacationPackages } from "./vacationPackages";
 
 const categoryDefinitions = [
   {
+    slug: "family-vacation-packages",
+    title: "Florida Family Vacation Packages",
+    description: "Compare Florida family vacation packages with hotels, attractions, transportation, beaches, cruises, and realistic planning budgets.",
+    image: pageImages.familyTrip,
+    match: ["family", "orlando", "attraction"]
+  },
+  {
+    slug: "weekend-vacation-packages",
+    title: "Florida Weekend Vacation Packages",
+    description: "Build short Florida vacation packages around practical hotels, transportation, activities, beaches, and cruise options.",
+    image: pageImages.weekendBeach,
+    match: ["weekend", "short", "three-night", "three night"]
+  },
+  {
+    slug: "beach-vacation-packages",
+    title: "Florida Beach Vacation Packages",
+    description: "Compare Florida beach package ideas with coastal hotels, flights, water activities, transportation, and complete trip costs.",
+    image: pageImages.clearwater,
+    match: ["beach", "island", "water"]
+  },
+  {
+    slug: "orlando-vacation-packages",
+    title: "Orlando Vacation Packages",
+    description: "Build Orlando vacation packages around family hotels, Disney and Universal attractions, flights, transportation, and realistic park-day planning.",
+    image: pageImages.orlando,
+    match: ["orlando", "family", "park"]
+  },
+  {
+    slug: "florida-resort-packages",
+    title: "Florida Resort Vacation Packages",
+    description: "Compare Florida resort package ideas with beach stays, family resorts, activities, transportation, and flexible vacation budgets.",
+    image: pageImages.romance,
+    match: ["resort", "beach", "family", "luxury"]
+  },
+  {
     slug: "cruise-packages",
     title: "Florida Cruise Vacation Packages",
     description: "Build a Florida cruise vacation with sailings, port hotels, flights, transfers, and pre-cruise activities.",
