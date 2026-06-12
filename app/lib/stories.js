@@ -5,6 +5,10 @@ import { baseUrl, sites } from "./network";
 export const storyBasePath = "/journal";
 const storyCategoriesPath = path.join(process.cwd(), "data", "journal", "storyCategories.json");
 const storiesPath = path.join(process.cwd(), "data", "journal", "stories.json");
+const destinationGuidePaths = {
+  "Florida Keys": "/florida-keys-road-trip-guide",
+  "St. Augustine": "/st-augustine-travel-guide"
+};
 
 function warnJournalData(message) {
   console.warn(`[journal-data] ${message}`);
@@ -143,6 +147,9 @@ export function getRelatedStories(currentStory, limit = 3) {
 
 export function getStoryPlanLinks(story) {
   const destination = story.destination === "Florida" ? "Florida" : story.destination;
+  const destinationGuidePath =
+    destinationGuidePaths[story.destination] ||
+    `/${story.destination.toLowerCase().replaceAll(".", "").replaceAll(" ", "-")}-travel-guide`;
   const relatedSites = story.relatedSites || [];
   const siteLinks = relatedSites.map((siteLink) => ({
     label: siteLink.label,
@@ -154,7 +161,7 @@ export function getStoryPlanLinks(story) {
     ...siteLinks,
     {
       label: `${destination} travel ideas on Florida Deals Hub`,
-      href: story.destination === "Florida" ? "/florida-travel-guide" : `/${story.destination.toLowerCase().replaceAll(" ", "-")}-travel-guide`,
+      href: story.destination === "Florida" ? "/florida-travel-guide" : destinationGuidePath,
       site: "hub"
     }
   ].slice(0, 5);

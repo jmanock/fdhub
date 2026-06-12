@@ -246,7 +246,7 @@ export const vacationPackages = [
         estimatedCost: "$1,400-$2,800 for two",
         costRows: [["Cruise fare and taxes", "$700-$1,500"], ["Hotel", "$200-$400"], ["Flights/transfers", "$350-$650"], ["Activities/extras", "$150-$250"]],
         links: [
-          ["Browse Bahamas cruises", cruises("bahamas-cruises-from-florida"), "cruises"],
+          ["Browse Bahamas cruises", cruises("best-bahamas-cruises-from-florida"), "cruises"],
           ["Compare Miami hotels", hotels("hotels-near-miami-cruise-port"), "hotels"],
           ["Search South Florida flights", flights("miami-airport-vs-fort-lauderdale-airport"), "flights"]
         ]
