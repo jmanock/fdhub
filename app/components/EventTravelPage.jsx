@@ -8,6 +8,8 @@ import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import WorldCupCTA from "./WorldCupCTA";
 import WorldCupPlanningCTAs from "./WorldCupPlanningCTAs";
+import TransferBookingCard from "./TransferBookingCard";
+import TravelBookingCard from "./TravelBookingCard";
 import WorldCupUpdates from "./WorldCupUpdates";
 import { baseUrl, lastUpdatedLabel, pageImages } from "../lib/network";
 import { eventTravelHubs, eventTravelPath, getEventRecommendations, trendingDestinationPages } from "../lib/eventTravel";
@@ -57,6 +59,7 @@ export default function EventTravelPage({ page }) {
         <section className="event-status-section section-pad"><EventCountdown startDate={page.startDate} dateVerified={page.dateVerified} /></section>
         <WorldCupCTA recommendation={worldCupRecommendation} />
         {page.worldCup2026 ? <WorldCupPlanningCTAs /> : null}
+        {page.worldCup2026 ? <section className="section-pad"><div className="guide-card-grid"><TransferBookingCard slug={page.slug} title="Plan World Cup Airport Transportation" /><TravelBookingCard title="Compare World Cup Travel Options" /></div></section> : null}
 
         <section className="package-summary section-pad"><div className="content-card package-summary-card"><p className="eyebrow">Event travel overview</p><h2>Build The Complete Trip Around The Event</h2><dl className="package-facts"><div><dt>Event type</dt><dd>{page.category}</dd></div><div><dt>Best for</dt><dd>{page.audience}</dd></div><div><dt>Travel window</dt><dd>{page.travelWindow}</dd></div><div><dt>Destination ideas</dt><dd>{page.destinations.join(", ")}</dd></div><div><dt>Package styles</dt><dd>{page.packageStyles.join(", ")}</dd></div></dl></div></section>
 

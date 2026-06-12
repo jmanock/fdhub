@@ -12,6 +12,8 @@ import BudgetVacationHubPage from "../components/BudgetVacationHubPage";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import TransferBookingCard from "../components/TransferBookingCard";
+import TravelBookingCard from "../components/TravelBookingCard";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
 import { getAffiliateRecommendationsForPage, getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
@@ -31,6 +33,7 @@ import {
 } from "../lib/network";
 import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
+import { transferAndTravelSlugs } from "../lib/revenuePartners";
 import { inferTopicCluster } from "../lib/topicClusters";
 import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
@@ -276,6 +279,7 @@ export default async function LandingPage({ params }) {
   const gearPicks = page.showPiscifunGear ? piscifunGearPicks : [];
   const affiliateRecommendations = getAffiliateRecommendationsForPage(page.slug);
   const carRentalRecommendation = getCarRentalRecommendationForPage(page.slug);
+  const showTransferAndTravel = transferAndTravelSlugs.has(page.slug);
   const pageStories = getTrendingStories(6);
   const pageTravelTips = [
     {
@@ -627,6 +631,7 @@ export default async function LandingPage({ params }) {
 
         <AffiliateBookingSection recommendations={affiliateRecommendations} />
         <CarRentalCTA recommendation={carRentalRecommendation} />
+        {showTransferAndTravel ? <section className="section-pad"><div className="guide-card-grid"><TransferBookingCard slug={page.slug} /><TravelBookingCard /></div></section> : null}
 
         <TravelTipsModule tips={pageTravelTips} />
 
