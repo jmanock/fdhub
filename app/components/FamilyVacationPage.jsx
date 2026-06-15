@@ -6,6 +6,7 @@ import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import PackageFinder from "./PackageFinder";
+import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "./ConversionCards";
 import { baseUrl, lastUpdatedLabel } from "../lib/network";
 import { familyGuideLinks, getFamilyGallery, getFamilyPackages } from "../lib/familyVacations";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
@@ -51,6 +52,7 @@ export default function FamilyVacationPage({ guide }) {
     <>
       <SiteHeader />
       <main>
+        {guide.slug === "best-florida-family-vacations" ? <ConversionScrollAnalytics /> : null}
         <section className="landing-hero section-pad">
           <div className="landing-copy">
             <nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/family-vacations">Family Vacations</Link></span><span aria-hidden="true">/</span><span aria-current="page">{guide.h1}</span></nav>
@@ -75,6 +77,7 @@ export default function FamilyVacationPage({ guide }) {
 
         <PackageFinder packages={finderPackages} />
         <CarRentalCTA recommendation={carRentalRecommendation} />
+        {guide.slug === "best-florida-family-vacations" ? <section className="section-pad"><div className="guide-card-grid"><QuickDealCard /><RecommendedPartnerCard /></div></section> : null}
 
         <section className="related-pages section-pad" aria-labelledby={`${guide.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Family vacation ecosystem</p><h2 id={`${guide.slug}-related-title`}>Related Family Vacations</h2></div><div className="popular-link-grid">{familyGuideLinks.filter(([, href]) => href !== `/${guide.slug}`).slice(0, 12).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</div></section>
 

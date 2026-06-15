@@ -14,6 +14,7 @@ import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import TransferBookingCard from "../components/TransferBookingCard";
 import TravelBookingCard from "../components/TravelBookingCard";
+import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "../components/ConversionCards";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
 import { getAffiliateRecommendationsForPage, getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
@@ -33,7 +34,7 @@ import {
 } from "../lib/network";
 import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
-import { transferAndTravelSlugs } from "../lib/revenuePartners";
+import { conversionSlugs, transferAndTravelSlugs } from "../lib/revenuePartners";
 import { inferTopicCluster } from "../lib/topicClusters";
 import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
@@ -280,6 +281,7 @@ export default async function LandingPage({ params }) {
   const affiliateRecommendations = getAffiliateRecommendationsForPage(page.slug);
   const carRentalRecommendation = getCarRentalRecommendationForPage(page.slug);
   const showTransferAndTravel = transferAndTravelSlugs.has(page.slug);
+  const showConversionCards = conversionSlugs.has(page.slug);
   const pageStories = getTrendingStories(6);
   const pageTravelTips = [
     {
@@ -374,6 +376,7 @@ export default async function LandingPage({ params }) {
     <>
       <SiteHeader />
       <main>
+        {showConversionCards ? <ConversionScrollAnalytics /> : null}
         <section className="landing-hero section-pad">
           <div className="landing-copy">
             <nav className="breadcrumbs" aria-label="Breadcrumb">
@@ -631,6 +634,7 @@ export default async function LandingPage({ params }) {
 
         <AffiliateBookingSection recommendations={affiliateRecommendations} />
         <CarRentalCTA recommendation={carRentalRecommendation} />
+        {showConversionCards ? <section className="section-pad"><div className="guide-card-grid"><QuickDealCard /><RecommendedPartnerCard /></div></section> : null}
         {showTransferAndTravel ? <section className="section-pad"><div className="guide-card-grid"><TransferBookingCard slug={page.slug} /><TravelBookingCard /></div></section> : null}
 
         <TravelTipsModule tips={pageTravelTips} />
