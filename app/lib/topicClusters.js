@@ -109,10 +109,17 @@ export function getAuthorityLinkGroups({ currentPath, cluster = "packages", dest
   const stories = withoutCurrent(storyLinks(destination), currentPath, 5);
   const crossCluster = withoutCurrent(authorityHubs.map(([label, href]) => [label, href]), currentPath, 8);
   const network = [
-    ["Compare Florida Flights", destination ? `${sites.flights}` : sites.flights],
-    ["Compare Florida Hotels", destination ? `${sites.hotels}` : sites.hotels],
-    ["Browse Florida Cruises", sites.cruises],
-    ["Find Local Activities", sites.local]
+    ["Google Flights Florida Guide", `${sites.flights}/google-flights-florida`],
+    ["Google Flights Orlando", `${sites.flights}/google-flights-orlando`],
+    ["Google Flights Miami", `${sites.flights}/google-flights-miami`],
+    ["Florida Road Trip Hotels", `${sites.hotels}/florida-road-trip-hotels`],
+    ["Florida Budget Hotels", `${sites.hotels}/florida-budget-hotels`],
+    ["Florida Oceanfront Hotels", `${sites.hotels}/florida-oceanfront-hotels`],
+    ["Weekend Cruises From Florida", `${sites.cruises}/weekend-cruises-from-florida`],
+    ["Best 3-Day Cruises From Florida", `${sites.cruises}/best-3-day-cruises-from-florida`],
+    ["Orlando Weekend Activities", `${sites.local}/things-to-do-in-orlando-this-weekend`],
+    ["Tampa Weekend Activities", `${sites.local}/things-to-do-in-tampa-this-weekend`],
+    ["Miami Weekend Activities", `${sites.local}/things-to-do-in-miami-this-weekend`]
   ];
 
   return {

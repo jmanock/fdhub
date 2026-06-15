@@ -617,8 +617,9 @@ const authorityPageConfigs = [
       "Families should plan around travel time as much as price. A hotel close to attractions can save energy, while a beach rental or resort-style hotel may work better when the goal is a slower trip with fewer daily moves.",
     recommendations: [
       ["Orlando family trips", "/orlando-travel-guide", "Use Orlando as the anchor for theme parks, hotels, attractions, and flexible flights."],
-      ["Cheap family vacations", "/cheap-florida-family-vacations", "Compare lower-cost Florida family trip ideas across beaches, hotels, and local activities."],
-      ["Theme park planning", "/florida-theme-park-guide", "Plan park days, hotel areas, attraction timing, and local restaurant options."]
+      ["Florida budget hotels", "https://hoteldealsflorida.org/florida-budget-hotels", "Compare affordable stays near beaches, attractions, airports, and road-trip routes."],
+      ["Orlando weekend activities", "https://localdealsflorida.org/things-to-do-in-orlando-this-weekend", "Add family attractions, free ideas, and flexible weekend activities."],
+      ["Weekend cruises from Florida", "https://cruisedealsflorida.org/weekend-cruises-from-florida", "Compare short sailings that can fit a family getaway."]
     ]
   },
   {
@@ -638,8 +639,9 @@ const authorityPageConfigs = [
       "Look for value by comparing nearby airports, avoiding peak holiday dates, choosing hotel areas with easy parking or walkability, and mixing paid attractions with beaches, parks, free events, and local dining.",
     recommendations: [
       ["Budget travel guide", "/florida-budget-travel-guide", "Learn how to compare Florida costs across flights, hotels, cruises, and activities."],
-      ["Weekend trips", "/best-florida-weekend-trips", "Find shorter Florida trips that are easier to fit around work and school schedules."],
-      ["Fall travel", "/florida-fall-travel-guide", "Use shoulder-season timing for beach towns, city stays, and local events."]
+      ["Florida road trip hotels", "https://hoteldealsflorida.org/florida-road-trip-hotels", "Compare practical hotel stops, parking, routes, and total stay costs."],
+      ["Weekend cruises from Florida", "https://cruisedealsflorida.org/weekend-cruises-from-florida", "Compare short cruise options from major Florida ports."],
+      ["Free things to do in Florida", "https://localdealsflorida.org/florida-free-things-to-do", "Mix beaches, parks, events, and low-cost local ideas into the trip."]
     ]
   },
   {
@@ -701,8 +703,9 @@ const authorityPageConfigs = [
       "Keep drive days realistic. A strong Florida road trip leaves time for beach stops, local restaurants, attractions, and hotel check-ins instead of turning every day into a long highway push.",
     recommendations: [
       ["7-day itinerary", "/7-day-florida-itinerary", "Use a weeklong structure to connect cities, beaches, and local activities."],
-      ["Key West drive", "/key-west-travel-guide", "Plan the Overseas Highway, hotel areas, restaurants, and island activities."],
-      ["Beach vacation guide", "/florida-beach-vacation-guide", "Compare coastal areas before choosing hotels and local stops."]
+      ["Florida road trip hotels", "https://hoteldealsflorida.org/florida-road-trip-hotels", "Compare route-friendly hotels, parking, breakfast, and realistic overnight stops."],
+      ["Affordable attraction hotels", "https://hoteldealsflorida.org/affordable-hotels-near-florida-attractions", "Compare value stays near the attractions anchoring the drive."],
+      ["Jacksonville weekend activities", "https://localdealsflorida.org/things-to-do-in-jacksonville-this-weekend", "Add beaches, markets, family activities, and Northeast Florida stops."]
     ]
   },
   {
