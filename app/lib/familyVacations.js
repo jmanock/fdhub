@@ -90,7 +90,7 @@ const destinationConfigs = {
 
 const familyThemes = [
   ["family-vacations", "Florida Family Vacations", "Build a complete Florida family vacation around the destination, budget, travel time, lodging, and activities that fit your family.", pageImages.familyTrip, "Florida", "All family trip styles"],
-  ["best-florida-family-vacations", "Best Family Vacations In Florida", "Compare Florida's strongest family destinations for theme parks, beaches, cruises, history, and easy weekend trips.", pageImages.familyTrip, "Florida", "Families comparing destinations"],
+  ["best-florida-family-vacations", "Best Family Vacations In Florida", "Compare the best Florida family vacations for beaches, theme parks, short cruises, historic cities, budgets, and easy trip planning in 2026.", pageImages.familyTrip, "Florida", "Families comparing destinations"],
   ["family-vacations-under-5000", "Florida Family Vacations Under $5,000", "Compare complete family trips with room for stronger hotels, flights, theme parks, beach time, or a short cruise.", pageImages.familyTrip, "Florida", "Families planning a fuller vacation"],
   ["affordable-florida-family-vacations", "Affordable Florida Family Vacations", "Find practical family trips that control the largest costs while keeping beaches, activities, and memorable experiences in the plan.", pageImages.planning, "Florida", "Value-focused families"],
   ["luxury-florida-family-vacations", "Luxury Florida Family Vacations", "Compare higher-comfort Florida family trips built around resorts, premium locations, cruise cabins, and easier logistics.", pageImages.romance, "Florida", "Families prioritizing comfort"],
@@ -108,10 +108,12 @@ function budgetCards(destination) {
 }
 
 function makeTheme([slug, h1, intro, image, destination, rating]) {
+  const isBestFamilyVacations = slug === "best-florida-family-vacations";
+
   return {
     slug,
     h1,
-    title: `${h1} | Packages, Costs & Family Trip Ideas`,
+    title: isBestFamilyVacations ? "Best Florida Family Vacations: Beaches, Theme Parks & Cruises (2026)" : `${h1} | Packages, Costs & Family Trip Ideas`,
     metaDescription: `${intro} Compare flights, hotels, cruises, activities, budgets, and family package ideas.`,
     intro,
     image,

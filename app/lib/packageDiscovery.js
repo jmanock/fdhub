@@ -31,6 +31,34 @@ const categoryDefinitions = [
     match: ["orlando", "family", "park"]
   },
   {
+    slug: "florida-vacation-packages-guide",
+    title: "Florida Vacation Packages Guide",
+    description: "Compare complete Florida vacation package ideas with flights, hotels, cruises, attractions, transportation, and realistic planning budgets.",
+    image: pageImages.planning,
+    match: ["florida", "family", "weekend", "beach", "cruise"]
+  },
+  {
+    slug: "miami-vacation-packages",
+    title: "Miami Vacation Packages",
+    description: "Build Miami vacation packages around beach hotels, flights, cruises, local activities, transportation, and practical weekend budgets.",
+    image: pageImages.miami,
+    match: ["miami", "cruise", "beach", "island"]
+  },
+  {
+    slug: "family-vacation-packages-florida",
+    title: "Family Vacation Packages Florida",
+    description: "Compare Florida family vacation packages with flights, hotels, attractions, beaches, cruises, transportation, and realistic trip budgets.",
+    image: pageImages.familyTrip,
+    match: ["family", "orlando", "attraction", "beach"]
+  },
+  {
+    slug: "weekend-vacation-packages-florida",
+    title: "Weekend Vacation Packages Florida",
+    description: "Compare Florida weekend vacation packages with short stays, flights, activities, beach trips, cruises, and manageable three-night plans.",
+    image: pageImages.weekendBeach,
+    match: ["weekend", "short", "three-night", "three night"]
+  },
+  {
     slug: "florida-resort-packages",
     title: "Florida Resort Vacation Packages",
     description: "Compare Florida resort package ideas with beach stays, family resorts, activities, transportation, and flexible vacation budgets.",
