@@ -1583,6 +1583,39 @@ h3 {
   font-weight: 900;
 }
 
+.exit-newsletter-capture {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 60;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  border: 1px solid rgba(14, 165, 233, 0.28);
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+}
+
+.exit-newsletter-capture button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.exit-newsletter-capture h2 {
+  max-width: 25rem;
+  margin: 0.35rem 0 1rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
 @media (max-width: 720px) {
   .car-rental-card {
     grid-template-columns: 1fr;

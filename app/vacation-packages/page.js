@@ -6,6 +6,7 @@ import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import ThingsToDoSection from "../components/ThingsToDoSection";
+import { ExitNewsletterCapture, HubContinuePlanningGuides, VacationPackageBookingStack } from "../components/HubConversionBoosters";
 import { baseUrl, pageImages } from "../lib/network";
 import { getPackageDiscoveryFields, packageCategories } from "../lib/packageDiscovery";
 import { vacationPackages } from "../lib/vacationPackages";
@@ -27,15 +28,18 @@ export default function VacationPackagesPage() {
     <>
       <SiteHeader />
       <main>
+        <ExitNewsletterCapture />
         <section className="landing-hero section-pad">
           <div className="landing-copy"><nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span aria-current="page">Vacation Packages</span></nav><p className="eyebrow">Florida vacation discovery</p><h1>Build A Complete Florida Vacation</h1><p className="hero-subhead">Compare complete trip ideas across cruises, hotels, flights, local activities, destinations, budgets, and travel styles.</p><div className="hero-actions"><Link href="/vacation-builder">Use Vacation Builder</Link><a href="#package-finder-title">Search vacation packages</a><Link href="/florida-vacation-planning-guide">Plan a Florida trip</Link></div></div>
           <div className="landing-visual"><SafeImage src={pageImages.floridaCoast} alt="Florida vacation package discovery with beaches hotels cruises and activities" fallback="/images/fallbacks/florida-travel-placeholder.svg" width="900" height="720" loading="eager" decoding="async" fetchPriority="high" /></div>
         </section>
         <section className="package-categories section-pad" aria-labelledby="package-category-title"><div className="section-heading"><p className="eyebrow">Browse by vacation type</p><h2 id="package-category-title">Start With The Trip You Want</h2></div><div className="guide-card-grid visual-card-grid"><Link className="guide-card story-card" href="/family-vacations"><SafeImage src={pageImages.familyTrip} alt="Florida family vacation packages" fallback="/images/fallbacks/florida-travel-placeholder.svg" width="720" height="430" loading="lazy" decoding="async" /><h3>Florida Family Vacations</h3><p>Compare family destinations, budgets, beaches, cruises, weekends, and complete family-of-four package ideas.</p></Link>{packageCategories.map((category) => <Link className="guide-card story-card" href={`/${category.slug}`} key={category.slug}><SafeImage src={category.image} alt={category.title} fallback="/images/fallbacks/florida-travel-placeholder.svg" width="720" height="430" loading="lazy" decoding="async" /><h3>{category.title}</h3><p>{category.description}</p></Link>)}</div></section>
         <PackageFinder packages={finderPackages} />
+        <VacationPackageBookingStack />
         <ThingsToDoSection />
+        <HubContinuePlanningGuides />
         <AuthorityLinks currentPath="/vacation-packages" cluster="packages" breadcrumbLabel="Vacation Packages" />
-        <NewsletterSection />
+        <div id="newsletter"><NewsletterSection /></div>
       </main>
       <SiteFooter />
     </>

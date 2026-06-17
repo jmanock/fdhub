@@ -42,6 +42,10 @@ export function trackNewsletterSignupSuccess() {
     site: siteName,
     source: siteName
   });
+  trackEvent("newsletter_signup", {
+    site: siteName,
+    source: siteName
+  });
 }
 
 export function getNetworkDestination(url) {

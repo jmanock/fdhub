@@ -6,6 +6,7 @@ import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import PackageFinder from "./PackageFinder";
+import { ExitNewsletterCapture, HubContinuePlanningGuides, VacationPackageBookingStack } from "./HubConversionBoosters";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "./ConversionCards";
 import { baseUrl, lastUpdatedLabel } from "../lib/network";
 import { familyGuideLinks, getFamilyGallery, getFamilyPackages } from "../lib/familyVacations";
@@ -53,6 +54,7 @@ export default function FamilyVacationPage({ guide }) {
       <SiteHeader />
       <main>
         {guide.slug === "best-florida-family-vacations" ? <ConversionScrollAnalytics /> : null}
+        {guide.slug === "best-florida-family-vacations" ? <ExitNewsletterCapture /> : null}
         <section className="landing-hero section-pad">
           <div className="landing-copy">
             <nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/family-vacations">Family Vacations</Link></span><span aria-hidden="true">/</span><span aria-current="page">{guide.h1}</span></nav>
@@ -76,14 +78,16 @@ export default function FamilyVacationPage({ guide }) {
         <section className="family-activity-highlights section-pad" aria-labelledby={`${guide.slug}-activities-title`}><div className="section-heading"><p className="eyebrow">Family activity highlights</p><h2 id={`${guide.slug}-activities-title`}>Build Days Everyone Can Handle</h2></div><div className="guide-card-grid">{guide.activities.map((activity, index) => <article className="guide-card" key={activity}><p className="best-for-tag">Family activity {index + 1}</p><h3>{activity}</h3><p>Keep travel time, weather, rest breaks, and nearby food options in the plan.</p></article>)}</div></section>
 
         <PackageFinder packages={finderPackages} />
+        {guide.slug === "best-florida-family-vacations" ? <VacationPackageBookingStack /> : null}
         <CarRentalCTA recommendation={carRentalRecommendation} />
         {guide.slug === "best-florida-family-vacations" ? <section className="section-pad"><div className="guide-card-grid"><QuickDealCard /><RecommendedPartnerCard /></div></section> : null}
+        {guide.slug === "best-florida-family-vacations" ? <HubContinuePlanningGuides /> : null}
 
         <section className="related-pages section-pad" aria-labelledby={`${guide.slug}-related-title`}><div className="section-heading compact"><p className="eyebrow">Family vacation ecosystem</p><h2 id={`${guide.slug}-related-title`}>Related Family Vacations</h2></div><div className="popular-link-grid">{familyGuideLinks.filter(([, href]) => href !== `/${guide.slug}`).slice(0, 12).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</div></section>
 
         <section className="faq-section section-pad" aria-labelledby={`${guide.slug}-faq-title`}><div className="section-heading compact"><p className="eyebrow">Family planning answers</p><h2 id={`${guide.slug}-faq-title`}>{guide.h1} FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details className="faq-item" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
         <AuthorityLinks currentPath={`/${guide.slug}`} cluster="family" destination={guide.destination === "Florida" ? null : guide.destination} />
-        <NewsletterSection title="Get Florida Family Vacation Ideas" copy="Family packages, beach ideas, cruise planning, destination guides, and practical budget tips." />
+        <div id="newsletter"><NewsletterSection title="Get Florida Family Vacation Ideas" copy="Family packages, beach ideas, cruise planning, destination guides, and practical budget tips." /></div>
       </main>
       <SiteFooter />
       <script id={`${guide.slug}-faq-schema`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
