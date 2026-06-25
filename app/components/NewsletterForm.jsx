@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { trackNewsletterSignupStarted, trackNewsletterSignupSuccess } from "../lib/analytics";
+import { trackEvent, trackNewsletterSignupStarted, trackNewsletterSignupSuccess } from "../lib/analytics";
 
 export default function NewsletterForm({ buttonLabel = "Send Me Deals" }) {
   const [email, setEmail] = useState("");
@@ -70,7 +70,7 @@ export default function NewsletterForm({ buttonLabel = "Send Me Deals" }) {
         placeholder="you@example.com"
         required
       />
-      <button type="submit" disabled={status === "loading"}>
+      <button type="submit" disabled={status === "loading"} onClick={() => trackEvent("newsletter_cta_click", { site: "floridadealshub.com", source: "hub", page_path: window.location.pathname })}>
         {status === "loading" ? "Sending..." : buttonLabel}
       </button>
       {message ? (

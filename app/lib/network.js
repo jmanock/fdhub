@@ -624,9 +624,9 @@ const authorityPageConfigs = [
   },
   {
     slug: "cheap-florida-vacation-ideas",
-    title: "Cheap Florida Vacation Ideas | Affordable Beaches, Hotels & Trips",
+    title: "Cheap Florida Vacation Ideas (2026): Beaches, Hotels & Family Trips",
     metaDescription:
-      "Explore cheap Florida vacation ideas including affordable beach towns, flexible flights, hotel areas, road trips, cruises, and local things to do.",
+      "Explore cheap Florida vacation ideas for 2026, including affordable beach towns, flexible flights, hotel areas, road trips, cruises and local things to do.",
     h1: "Cheap Florida Vacation Ideas",
     eyebrow: "Budget ideas",
     intro:
@@ -646,9 +646,9 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-places-to-visit-in-florida",
-    title: "Best Places To Visit In Florida | Cities, Beaches & Vacation Ideas",
+    title: "Best Places To Visit In Florida (2026): Cities, Beaches & Trip Ideas",
     metaDescription:
-      "Discover the best places to visit in Florida including Orlando, Miami, Tampa, Key West, Clearwater, Destin, Naples, Jacksonville, and coastal getaways.",
+      "Discover the best places to visit in Florida for 2026, including Orlando, Miami, Tampa, Key West, Clearwater, Destin, Naples and coastal getaways.",
     h1: "Best Places To Visit In Florida",
     eyebrow: "Destination guide",
     intro:
@@ -885,9 +885,9 @@ const authorityPageConfigs = [
 const v2SeasonalPageConfigs = [
   {
     slug: "summer-florida-vacations",
-    title: "Summer Florida Vacations | Beaches, Hotels & Family Trip Ideas",
+    title: "Summer Florida Vacations (2026): Beaches, Hotels & Family Trip Ideas",
     metaDescription:
-      "Plan summer Florida vacations with beach ideas, family hotels, flights, cruises, attractions, weather tips, and local things to do.",
+      "Plan summer Florida vacations for 2026 with beach ideas, family hotels, flights, cruises, attractions, weather tips and local things to do.",
     h1: "Summer Florida Vacations",
     eyebrow: "Seasonal travel",
     intro:

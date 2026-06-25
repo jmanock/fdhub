@@ -77,7 +77,12 @@ export function HubContinuePlanningGuides() {
     <section className="related-pages section-pad" aria-labelledby="continue-florida-trip-title">
       <div className="section-heading compact"><p className="eyebrow">Continue planning your Florida trip</p><h2 id="continue-florida-trip-title">Keep Moving Through The Trip Plan</h2></div>
       <div className="guide-card-grid">
-        {guides.map(([title, href, copy]) => <a className="guide-card" href={href} key={href} onClick={() => trackEvent("related_guide_click", { item_title: title, outbound_url: href, page_path: window.location.pathname })}><h3>{title}</h3><p>{copy}</p><span className="affiliate-cta">Continue Planning</span></a>)}
+        {guides.map(([title, href, copy]) => <a className="guide-card" href={href} key={href} onClick={() => {
+          const params = { item_title: title, outbound_url: href, page_path: window.location.pathname };
+          trackEvent("related_guide_click", params);
+          trackEvent("continue_planning_click", params);
+          if (href.startsWith("https://")) trackEvent("cross_site_click", params);
+        }}><h3>{title}</h3><p>{copy}</p><span className="affiliate-cta">Continue Planning</span></a>)}
       </div>
     </section>
   );

@@ -62,6 +62,39 @@ export function generateStaticParams() {
   ];
 }
 
+function HubQuickAnswer({ page, introParagraphs, relatedSearchLinks }) {
+  const takeaways = [
+    `Start with ${page.h1} when you want a faster way to compare Florida trip options without opening every network site first.`,
+    "Use the flight, hotel, cruise, and local links together so the trip plan stays connected instead of becoming four separate searches.",
+    "Compare destinations before booking, especially when airport choice, beach access, cruise ports, or family activities could change the full trip cost.",
+    "Check official booking sources before committing because prices, schedules, availability, and attraction details can change.",
+    "Save the most relevant related guide below as the next step once you know whether this trip is about budget, family travel, beaches, cruises, or activities."
+  ];
+  const nextLinks = relatedSearchLinks.slice(0, 4);
+
+  return (
+    <section className="landing-intro section-pad" aria-labelledby={`${page.slug}-quick-answer-title`}>
+      <div className="content-card">
+        <p className="eyebrow">Quick answer</p>
+        <h2 id={`${page.slug}-quick-answer-title`}>What should you do next?</h2>
+        <p>{introParagraphs[0]}</p>
+        <ul className="planning-checklist">
+          {takeaways.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <div className="popular-link-grid" aria-label={`${page.h1} next planning links`}>
+          {nextLinks.map((link) => (
+            <a href={link.href} key={`${page.slug}-quick-${link.href}`}>
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const page = landingPageMap[slug];
@@ -423,6 +456,8 @@ export default async function LandingPage({ params }) {
             </div>
           </div>
         </section>
+
+        <HubQuickAnswer page={page} introParagraphs={introParagraphs} relatedSearchLinks={relatedSearchLinks} />
 
         <section className="page-trust section-pad" aria-label="Florida Deals Hub trust notes">
           <div className="trust-notes page-trust-notes">
