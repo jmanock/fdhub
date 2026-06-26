@@ -13,6 +13,7 @@ import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import TransferBookingCard from "../components/TransferBookingCard";
+import TravelEssentialsBlock from "../components/TravelEssentialsBlock";
 import TravelBookingCard from "../components/TravelBookingCard";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "../components/ConversionCards";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
@@ -669,6 +670,7 @@ export default async function LandingPage({ params }) {
 
         <AffiliateBookingSection recommendations={affiliateRecommendations} />
         <CarRentalCTA recommendation={carRentalRecommendation} />
+        <TravelEssentialsBlock pageType={topicCluster || "hub"} />
         {showConversionCards ? <section className="section-pad"><div className="guide-card-grid"><QuickDealCard /><RecommendedPartnerCard /></div></section> : null}
         {showTransferAndTravel ? <section className="section-pad"><div className="guide-card-grid"><TransferBookingCard slug={page.slug} /><TravelBookingCard /></div></section> : null}
 

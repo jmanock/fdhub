@@ -8,6 +8,7 @@ import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import StoryAnalytics from "../../components/StoryAnalytics";
 import { StoryModule, TravelTipsModule } from "../../components/StoryModules";
+import TravelEssentialsBlock from "../../components/TravelEssentialsBlock";
 import {
   getAllStories,
   getPlanThisTripLinks,
@@ -381,6 +382,13 @@ export default async function StoryPage({ params }) {
             </div>
           </section>
         ) : null}
+
+        <TravelEssentialsBlock
+          pageType="journal"
+          title="Don’t forget the practical trip gear."
+          description="If this story turns into a real Florida plan, make sure the day bag, luggage, comfort items, and memory-keeping gear are handled before the last-minute packing scramble."
+          maxItems={3}
+        />
 
         <section className="comparison-guides section-pad" aria-labelledby="story-related-title">
           <div className="section-heading">

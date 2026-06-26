@@ -6,6 +6,7 @@ import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import PackageFinder from "./PackageFinder";
+import TravelEssentialsBlock from "./TravelEssentialsBlock";
 import { ExitNewsletterCapture, HubContinuePlanningGuides, VacationPackageBookingStack } from "./HubConversionBoosters";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "./ConversionCards";
 import { baseUrl, lastUpdatedLabel } from "../lib/network";
@@ -80,6 +81,12 @@ export default function FamilyVacationPage({ guide }) {
         <PackageFinder packages={finderPackages} />
         {guide.slug === "best-florida-family-vacations" ? <VacationPackageBookingStack /> : null}
         <CarRentalCTA recommendation={carRentalRecommendation} />
+        <TravelEssentialsBlock
+          pageType="family_vacation"
+          title="Don’t forget the family trip-prep basics."
+          description="If you’re planning a Florida family trip, packing smarter can save the day: luggage, a day bag, comfort items, and memory gear all matter more once kids are involved."
+          maxItems={4}
+        />
         {guide.slug === "best-florida-family-vacations" ? <section className="section-pad"><div className="guide-card-grid"><QuickDealCard /><RecommendedPartnerCard /></div></section> : null}
         {guide.slug === "best-florida-family-vacations" ? <HubContinuePlanningGuides /> : null}
 

@@ -10,6 +10,7 @@ import { baseUrl, lastUpdatedLabel } from "../lib/network";
 import { getVacationPackageGallery } from "../lib/vacationPackages";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
 import ThingsToDoSection from "./ThingsToDoSection";
+import TravelEssentialsBlock from "./TravelEssentialsBlock";
 import { StoryModule } from "./StoryModules";
 import { getTrendingStories } from "../lib/stories";
 import { familyGuideLinks } from "../lib/familyVacations";
@@ -221,6 +222,12 @@ export default function VacationPackagePage({ packagePage }) {
         <ThingsToDoSection title={`Add Activities To This ${packagePage.destination} Vacation`} />
         <AffiliateBookingSection recommendations={affiliateRecommendations} title={`Add A Boat Day To This ${packagePage.destination} Vacation`} />
         <CarRentalCTA recommendation={carRentalRecommendation} />
+        <TravelEssentialsBlock
+          pageType="vacation_package"
+          title="Don’t forget the gear around this package."
+          description="Before the trip becomes real, make sure luggage, day bags, and comfort items match the destination, travel days, and activities in the package."
+          maxItems={4}
+        />
 
         {discovery.styles.includes("Family") ? (
           <section className="related-pages section-pad" aria-labelledby={`${packagePage.slug}-family-links-title`}>

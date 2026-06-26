@@ -5,6 +5,7 @@ import NewsletterSection from "./components/NewsletterSection";
 import SafeImage from "./components/SafeImage";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
+import TravelEssentialsBlock from "./components/TravelEssentialsBlock";
 import { StoryModule, TravelTipsModule } from "./components/StoryModules";
 import { VacationPackageCards } from "./components/VacationPackagePage";
 import PackageFinder from "./components/PackageFinder";
@@ -652,6 +653,13 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <TravelEssentialsBlock
+          pageType="hub_home"
+          title="Complete your Florida trip before the last-minute scramble."
+          description="Vacation packages, hotels, cruises, flights, and activities are the big decisions. A good bag, comfort item, and day-trip setup keep the little things from becoming travel-day friction."
+          maxItems={4}
+        />
 
         <AuthorityLinks currentPath="/" cluster="packages" title="Explore The Florida Travel Authority Network" />
         <NewsletterSection />
