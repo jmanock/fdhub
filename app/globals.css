@@ -45,6 +45,34 @@ img {
   max-width: 100%;
 }
 
+.reading-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  height: 4px;
+  background: transparent;
+}
+
+.reading-progress > div {
+  height: 100%;
+  background: var(--ocean);
+  transition: width 150ms ease;
+}
+
+.compact-toolkit-grid {
+  margin-top: 18px;
+  margin-bottom: 22px;
+}
+
+.compact-toolkit-grid span {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  padding: 12px 14px;
+  font-weight: 900;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

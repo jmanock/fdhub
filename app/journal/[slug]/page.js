@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import AuthorityLinks from "../../components/AuthorityLinks";
 import MostViewedStories from "../../components/MostViewedStories";
 import NewsletterSection from "../../components/NewsletterSection";
+import ReadingProgressBar from "../../components/ReadingProgressBar";
 import SafeImage from "../../components/SafeImage";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
@@ -124,7 +125,7 @@ export default async function StoryPage({ params }) {
     notFound();
   }
 
-  const relatedStories = getRelatedStories(story, 3);
+  const relatedStories = getRelatedStories(story, 6);
   const popularStories = getAllStories().filter((candidate) => candidate.slug !== story.slug);
   const affiliateLinks = getStoryAffiliateLinks(story);
   const planLinks = getPlanThisTripLinks(story);
@@ -218,6 +219,7 @@ export default async function StoryPage({ params }) {
   return (
     <>
       <StoryAnalytics story={story} />
+      <ReadingProgressBar />
       <SiteHeader />
       <main>
         <article>
@@ -414,7 +416,7 @@ export default async function StoryPage({ params }) {
         <StoryModule
           eyebrow="Keep reading"
           title="Popular Florida Travel Stories"
-          stories={popularStories.slice(0, 3)}
+          stories={popularStories.slice(0, 6)}
           id="story-popular-stories"
         />
 
@@ -525,6 +527,7 @@ function StoryCategoryPage({ category }) {
 
   return (
     <>
+      <ReadingProgressBar />
       <SiteHeader />
       <main>
         <section className="landing-hero section-pad">

@@ -4,6 +4,7 @@ import AffiliateBookingSection from "../components/AffiliateBookingSection";
 import AuthorityLinks from "../components/AuthorityLinks";
 import CarRentalCTA from "../components/CarRentalCTA";
 import NewsletterSection from "../components/NewsletterSection";
+import ReadingProgressBar from "../components/ReadingProgressBar";
 import PackageCategoryPage from "../components/PackageCategoryPage";
 import FamilyVacationPage from "../components/FamilyVacationPage";
 import CruisePlanningPage from "../components/CruisePlanningPage";
@@ -408,6 +409,7 @@ export default async function LandingPage({ params }) {
 
   return (
     <>
+      <ReadingProgressBar />
       <SiteHeader />
       <main>
         {showConversionCards ? <ConversionScrollAnalytics /> : null}
@@ -690,6 +692,21 @@ export default async function LandingPage({ params }) {
           </div>
         </section>
 
+        <section className="related-pages section-pad" aria-labelledby="readers-planned-title">
+          <div className="section-heading compact">
+            <p className="eyebrow">Readers also planned</p>
+            <h2 id="readers-planned-title">Build The Rest Of The Florida Trip</h2>
+          </div>
+          <div className="popular-link-grid">
+            <a href="https://flightdealsflorida.org/google-flights-florida">Compare Florida flights</a>
+            <a href="https://hoteldealsflorida.org/florida-budget-hotels">Compare Florida hotels</a>
+            <a href="https://cruisedealsflorida.org/weekend-cruises-from-florida">Check weekend cruises</a>
+            <a href="https://localdealsflorida.org/best-things-to-do-in-florida">Find things to do</a>
+            <Link href="/vacation-packages">Build a vacation package</Link>
+            <Link href="/best-places-to-visit-in-florida">Compare destinations</Link>
+          </div>
+        </section>
+
         <section className="faq-section section-pad" aria-labelledby="faq-title">
           <div className="section-heading compact">
             <p className="eyebrow">Helpful answers</p>
@@ -761,6 +778,7 @@ function DestinationHubPage({ hub }) {
 
   return (
     <>
+      <ReadingProgressBar />
       <SiteHeader />
       <main>
         <section className="landing-hero section-pad">

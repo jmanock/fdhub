@@ -13,7 +13,7 @@ function eventForAdvertiser(advertiser) {
   return "travel_essentials_click";
 }
 
-export default function TravelEssentialsBlock({ pageType = "hub", title = "Don’t forget the trip-prep basics.", description = "Flights, hotels, cruises, and activities are easier when luggage, day bags, and comfort items are handled before the last minute.", maxItems = 4 }) {
+export default function TravelEssentialsBlock({ pageType = "hub", title = "Before you go, check the trip-prep basics.", description = "Flights, hotels, cruises, and activities are easier when luggage, day bags, comfort items, and arrival plans are handled before the last minute.", maxItems = 4 }) {
   const items = generalTravelEssentials.slice(0, maxItems);
 
   useEffect(() => {
@@ -45,9 +45,14 @@ export default function TravelEssentialsBlock({ pageType = "hub", title = "Don�
   return (
     <section className="travel-essentials section-pad" aria-labelledby="travel-essentials-title">
       <div className="content-card">
-        <p className="eyebrow">Travel essentials</p>
+        <p className="eyebrow">Travel Toolkit</p>
         <h2 id="travel-essentials-title">{title}</h2>
         <p>{description}</p>
+        <div className="popular-link-grid compact-toolkit-grid">
+          {["Hotel booked?", "Flight planned?", "Transfer or rental car considered?", "Day bag and luggage ready?"].map((item) => (
+            <span key={item}>✓ {item}</span>
+          ))}
+        </div>
         <div className="guide-card-grid">
           {items.map((item) => (
             <a className="guide-card affiliate-gear-card" href={item.affiliateUrl} target="_blank" rel={rel} key={`${item.advertiser}-${item.title}`} onClick={() => trackClick(item)}>
