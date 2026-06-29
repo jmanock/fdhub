@@ -581,7 +581,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-beaches",
-    title: "15 Best Florida Beaches for Family, Couples & Weekend Trips (2026)",
+    title: "Best Florida Beaches: Family, Couples & Weekend Trip Ideas",
     metaDescription:
       "Explore the best Florida beaches for family trips, romantic getaways, weekend escapes, hotels, local attractions, and coastal vacation planning.",
     h1: "Best Florida Beaches",
@@ -602,7 +602,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-family-vacations",
-    title: "12 Best Florida Family Vacations for Beaches & Theme Parks (2026)",
+    title: "Florida Family Vacations: Beaches, Theme Parks, Cruises & Budget Tips",
     metaDescription:
       "Find Florida family vacation ideas with theme parks, beaches, hotels, attractions, cruises, road trips, and budget-friendly planning tips.",
     h1: "Best Florida Family Vacations",
@@ -624,7 +624,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "cheap-florida-vacation-ideas",
-    title: "Cheap Florida Vacation Ideas (2026): Beaches, Hotels & Family Trips",
+    title: "Cheap Florida Vacation Ideas: Beaches, Hotels & Family Trips",
     metaDescription:
       "Explore cheap Florida vacation ideas for 2026, including affordable beach towns, flexible flights, hotel areas, road trips, cruises and local things to do.",
     h1: "Cheap Florida Vacation Ideas",
@@ -646,7 +646,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-places-to-visit-in-florida",
-    title: "Best Places To Visit In Florida (2026): Cities, Beaches & Trip Ideas",
+    title: "Best Places To Visit In Florida: Cities, Beaches & Trip Ideas",
     metaDescription:
       "Discover the best places to visit in Florida for 2026, including Orlando, Miami, Tampa, Key West, Clearwater, Destin, Naples and coastal getaways.",
     h1: "Best Places To Visit In Florida",
@@ -885,7 +885,7 @@ const authorityPageConfigs = [
 const v2SeasonalPageConfigs = [
   {
     slug: "summer-florida-vacations",
-    title: "Summer Florida Vacations (2026): Beaches, Hotels & Family Trip Ideas",
+    title: "Summer Florida Vacations: Beaches, Hotels & Family Trip Ideas",
     metaDescription:
       "Plan summer Florida vacations for 2026 with beach ideas, family hotels, flights, cruises, attractions, weather tips and local things to do.",
     h1: "Summer Florida Vacations",

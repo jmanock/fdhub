@@ -102,8 +102,8 @@ const categoryDefinitions = [
   },
   {
     slug: "last-minute-vacations",
-    title: "Last Minute Florida Vacation Ideas",
-    description: "Use flexible, lower-complexity Florida package frameworks when dates are close and availability matters more than a perfect itinerary.",
+    title: "Last Minute Florida Vacations: Flexible Trips, Hotels & Activities",
+    description: "Compare last minute Florida vacation ideas with flexible destinations, simple hotel plans, drive-friendly weekends, activities and booking reminders.",
     image: pageImages.weekendBeach,
     match: ["weekend", "short", "drive"]
   },

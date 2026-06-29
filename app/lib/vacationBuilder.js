@@ -243,7 +243,7 @@ export const vacationRecommendations = [
 ];
 
 const hubDefinitions = [
-  ["vacations-under-1000", "Vacations Under $1,000", "Compare practical Florida vacations under $1,000, including drive-friendly weekends, stays, and activity ideas.", 1000, null],
+  ["vacations-under-1000", "Vacations Under $1,000: Florida Weekend Trips, Stays & Activities", "Compare practical Florida vacations under $1,000, including drive-friendly weekends, stays, free activities and simple trip ideas.", 1000, null],
   ["vacations-under-2000", "Vacations Under $2,000", "Discover Florida beach breaks, family weekends, and short vacations with estimated totals under $2,000.", 2000, null],
   ["vacations-under-3000", "Vacations Under $3,000", "Compare Florida cruise, beach, family, and weekend vacation recommendations with estimated totals under $3,000.", 3000, null],
   ["vacations-under-5000", "Vacations Under $5,000", "Plan fuller Florida vacations with room for cruises, resorts, flights, activities, and longer stays under $5,000.", 5000, null],

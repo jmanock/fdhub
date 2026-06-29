@@ -13,8 +13,8 @@ import { getPackageDiscoveryFields, packageCategories } from "../lib/packageDisc
 import { vacationPackages } from "../lib/vacationPackages";
 
 export const metadata = {
-  title: "Florida Vacation Packages | Compare Complete Trip Ideas",
-  description: "Search Florida vacation packages by budget, destination, travel style, and duration. Compare cruises, hotels, flights, activities, and estimated trip costs.",
+  title: "Florida Vacation Packages: Compare Flights, Hotels, Cruises & Activities",
+  description: "Compare Florida vacation packages by budget, destination, travel style and duration with flights, hotels, cruises, activities and estimated trip costs.",
   alternates: { canonical: `${baseUrl}/vacation-packages` }
 };
 
