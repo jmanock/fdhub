@@ -10,6 +10,10 @@ export const OUTFITR_MAIN_URL =
   "https://www.awin1.com/awclick.php?gid=582217&mid=117613&awinaffid=2881665&linkid=4523197";
 export const BEDSURE_URL =
   "https://www.awin1.com/awclick.php?gid=532727&mid=40882&awinaffid=2881665&linkid=4064760";
+export const ESIMSHOP_URL =
+  "https://www.awin1.com/awclick.php?gid=600694&mid=124780&awinaffid=2881665&linkid=4730960&clickref=";
+export const BOOKAFLY_VIP_HOTELS_URL =
+  "https://www.awin1.com/awclick.php?gid=604783&mid=125562&awinaffid=2881665&linkid=4775552&clickref=";
 
 export const generalTravelEssentials = [
   {
@@ -37,11 +41,19 @@ export const generalTravelEssentials = [
     category: "travel_comfort"
   },
   {
-    title: "Camera-ready pack",
-    description: "Useful for beach sunsets, cruise ports, theme parks, and Florida travel stories worth remembering.",
-    cta: "See Camera Pack",
-    affiliateUrl: NOMATIC_CAMERA_PACK_URL,
-    advertiser: "nomatic",
-    category: "camera_pack"
+    title: "International eSIM setup",
+    description: "Going international or cruising outside the U.S.? Set up an eSIM before you leave so you are not stuck hunting for Wi-Fi.",
+    cta: "Compare eSIM Options",
+    affiliateUrl: ESIMSHOP_URL,
+    advertiser: "esimshop",
+    category: "esim"
+  },
+  {
+    title: "Hotel backup rates",
+    description: "Before you book the trip, compare a backup hotel path in case the first stay changes price or availability.",
+    cta: "Check VIP Hotel Rates",
+    affiliateUrl: BOOKAFLY_VIP_HOTELS_URL,
+    advertiser: "bookafly",
+    category: "hotel_booking"
   }
 ];

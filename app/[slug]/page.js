@@ -16,6 +16,7 @@ import SiteHeader from "../components/SiteHeader";
 import TransferBookingCard from "../components/TransferBookingCard";
 import TravelEssentialsBlock from "../components/TravelEssentialsBlock";
 import TravelBookingCard from "../components/TravelBookingCard";
+import TrackedRelatedLink from "../components/TrackedRelatedLink";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "../components/ConversionCards";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
@@ -698,12 +699,12 @@ export default async function LandingPage({ params }) {
             <h2 id="readers-planned-title">Build The Rest Of The Florida Trip</h2>
           </div>
           <div className="popular-link-grid">
-            <a href="https://flightdealsflorida.org/google-flights-florida">Compare Florida flights</a>
-            <a href="https://hoteldealsflorida.org/florida-budget-hotels">Compare Florida hotels</a>
-            <a href="https://cruisedealsflorida.org/weekend-cruises-from-florida">Check weekend cruises</a>
-            <a href="https://localdealsflorida.org/best-things-to-do-in-florida">Find things to do</a>
-            <Link href="/vacation-packages">Build a vacation package</Link>
-            <Link href="/best-places-to-visit-in-florida">Compare destinations</Link>
+            <TrackedRelatedLink href="https://flightdealsflorida.org/google-flights-florida">Compare Florida flights</TrackedRelatedLink>
+            <TrackedRelatedLink href="https://hoteldealsflorida.org/florida-budget-hotels">Compare Florida hotels</TrackedRelatedLink>
+            <TrackedRelatedLink href="https://cruisedealsflorida.org/weekend-cruises-from-florida">Check weekend cruises</TrackedRelatedLink>
+            <TrackedRelatedLink href="https://localdealsflorida.org/best-things-to-do-in-florida">Find things to do</TrackedRelatedLink>
+            <TrackedRelatedLink href="/vacation-packages">Build a vacation package</TrackedRelatedLink>
+            <TrackedRelatedLink href="/best-places-to-visit-in-florida">Compare destinations</TrackedRelatedLink>
           </div>
         </section>
 

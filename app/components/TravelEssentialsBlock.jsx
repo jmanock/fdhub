@@ -10,11 +10,16 @@ function eventForAdvertiser(advertiser) {
   if (advertiser === "nomatic") return "affiliate_click_nomatic";
   if (advertiser === "outfitr") return "affiliate_click_outfitr";
   if (advertiser === "bedsure") return "affiliate_click_bedsure";
+  if (advertiser === "esimshop") return "affiliate_click_esim";
+  if (advertiser === "bookafly") return "affiliate_click_bookafly";
   return "travel_essentials_click";
 }
 
 export default function TravelEssentialsBlock({ pageType = "hub", title = "Before you go, check the trip-prep basics.", description = "Flights, hotels, cruises, and activities are easier when luggage, day bags, comfort items, and arrival plans are handled before the last minute.", maxItems = 4 }) {
-  const items = generalTravelEssentials.slice(0, maxItems);
+  const isInternationalTopic = /cruise|international|world-cup|event|flight/.test(pageType);
+  const items = generalTravelEssentials
+    .filter((item) => item.category !== "esim" || isInternationalTopic)
+    .slice(0, maxItems);
 
   useEffect(() => {
     trackEvent("travel_essentials_view", {
@@ -30,14 +35,19 @@ export default function TravelEssentialsBlock({ pageType = "hub", title = "Befor
       source_site: "floridadealshub.com",
       affiliate_program: "awin",
       advertiser: item.advertiser,
+      affiliate_partner: item.advertiser,
       category: item.category,
       cta_text: item.cta,
       item_title: item.title,
       outbound_url: item.affiliateUrl,
+      page_topic: pageType,
       page_type: pageType,
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
+      placement_type: "travel_toolkit",
+      tool_type: item.category
     };
     trackEvent("travel_essentials_click", params);
+    trackEvent("toolkit_click", params);
     trackEvent(eventForAdvertiser(item.advertiser), params);
     trackEvent("affiliate_click", params);
   }

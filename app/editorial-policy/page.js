@@ -28,8 +28,8 @@ export default function EditorialPolicyPage() {
           details with the booking provider or official source.
         </p>
         <p>
-          Some links may be affiliate links. Florida Deals Hub may earn a commission when visitors
-          book through those links, which helps keep the network and deal alerts free. Affiliate
+          Some links may be sponsored or affiliate links. Florida Deals Hub may earn a commission when visitors
+          book or buy through those links, at no extra cost to them. Affiliate
           relationships do not change the goal of the Hub: helping travelers and locals find the
           most relevant Florida category or guide page.
         </p>

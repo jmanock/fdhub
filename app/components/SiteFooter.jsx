@@ -90,7 +90,7 @@ export default function SiteFooter() {
           </nav>
         </div>
         <p className="affiliate-disclosure">
-          Some links on this site may earn us a commission at no extra cost to you. This helps keep our deal alerts free.
+          Some links may be sponsored or affiliate links. We may earn a commission if you book or buy through them, at no extra cost to you.
         </p>
       </div>
     </footer>
