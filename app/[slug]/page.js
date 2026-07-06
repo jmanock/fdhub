@@ -17,6 +17,7 @@ import TransferBookingCard from "../components/TransferBookingCard";
 import TravelEssentialsBlock from "../components/TravelEssentialsBlock";
 import TravelBookingCard from "../components/TravelBookingCard";
 import TrackedRelatedLink from "../components/TrackedRelatedLink";
+import V14HubDiscovery from "../components/V14HubDiscovery";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "../components/ConversionCards";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
@@ -462,6 +463,7 @@ export default async function LandingPage({ params }) {
         </section>
 
         <HubQuickAnswer page={page} introParagraphs={introParagraphs} relatedSearchLinks={relatedSearchLinks} />
+        <V14HubDiscovery topic={topicCluster || page.slug} />
 
         <section className="page-trust section-pad" aria-label="Florida Deals Hub trust notes">
           <div className="trust-notes page-trust-notes">

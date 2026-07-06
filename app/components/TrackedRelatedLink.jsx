@@ -5,14 +5,17 @@ import { trackEvent } from "../lib/analytics";
 
 export default function TrackedRelatedLink({ href, children }) {
   function handleClick() {
-    trackEvent("related_guide_click", {
+    const payload = {
       source_site: "floridadealshub.com",
       source_page: window.location.pathname,
       target_page: href,
       placement_type: "related_discovery",
       cta_text: typeof children === "string" ? children : "Related guide",
       page_path: window.location.pathname
-    });
+    };
+
+    trackEvent("related_guide_click", payload);
+    trackEvent("internal_related_click", payload);
   }
 
   if (href.startsWith("http")) {

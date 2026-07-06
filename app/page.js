@@ -6,6 +6,7 @@ import SafeImage from "./components/SafeImage";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
 import TravelEssentialsBlock from "./components/TravelEssentialsBlock";
+import V14HubDiscovery from "./components/V14HubDiscovery";
 import { StoryModule, TravelTipsModule } from "./components/StoryModules";
 import { VacationPackageCards } from "./components/VacationPackagePage";
 import PackageFinder from "./components/PackageFinder";
@@ -178,6 +179,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <V14HubDiscovery topic="homepage" />
 
         {featuredJournalStory ? (
           <section className="featured-story-section section-pad" aria-labelledby="featured-story-title">

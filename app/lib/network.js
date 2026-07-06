@@ -581,7 +581,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-beaches",
-    title: "Best Florida Beaches: Family, Couples & Weekend Trip Ideas",
+    title: "Best Florida Beaches (2026): Family, Couples & Weekend Trip Ideas",
     metaDescription:
       "Explore the best Florida beaches for family trips, romantic getaways, weekend escapes, hotels, local attractions, and coastal vacation planning.",
     h1: "Best Florida Beaches",
@@ -602,7 +602,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-family-vacations",
-    title: "Florida Family Vacations: Beaches, Theme Parks, Cruises & Budget Tips",
+    title: "Florida Family Vacations (2026): Beaches, Theme Parks, Cruises & Budget Tips",
     metaDescription:
       "Find Florida family vacation ideas with theme parks, beaches, hotels, attractions, cruises, road trips, and budget-friendly planning tips.",
     h1: "Best Florida Family Vacations",
@@ -624,7 +624,7 @@ const authorityPageConfigs = [
   },
   {
     slug: "cheap-florida-vacation-ideas",
-    title: "Cheap Florida Vacation Ideas: Beaches, Hotels & Family Trips",
+    title: "Cheap Florida Vacation Ideas (2026): Beaches, Hotels & Family Trips",
     metaDescription:
       "Explore cheap Florida vacation ideas for 2026, including affordable beach towns, flexible flights, hotel areas, road trips, cruises and local things to do.",
     h1: "Cheap Florida Vacation Ideas",

@@ -90,7 +90,7 @@ const destinationConfigs = {
 
 const familyThemes = [
   ["family-vacations", "Florida Family Vacations", "Build a complete Florida family vacation around the destination, budget, travel time, lodging, and activities that fit your family.", pageImages.familyTrip, "Florida", "All family trip styles"],
-  ["best-florida-family-vacations", "Florida Family Vacations: Beaches, Theme Parks, Cruises & Budget Tips", "Compare the best Florida family vacations for beaches, theme parks, short cruises, historic cities, budgets, hotels and easy trip planning.", pageImages.familyTrip, "Florida", "Families comparing destinations"],
+  ["best-florida-family-vacations", "Florida Family Vacations (2026): Beaches, Theme Parks, Cruises & Budget Tips", "Compare the best Florida family vacations for 2026, including beaches, theme parks, short cruises, historic cities, budgets, hotels and easy trip planning.", pageImages.familyTrip, "Florida", "Families comparing destinations"],
   ["family-vacations-under-5000", "Florida Family Vacations Under $5,000", "Compare complete family trips with room for stronger hotels, flights, theme parks, beach time, or a short cruise.", pageImages.familyTrip, "Florida", "Families planning a fuller vacation"],
   ["affordable-florida-family-vacations", "Affordable Florida Family Vacations", "Find practical family trips that control the largest costs while keeping beaches, activities, and memorable experiences in the plan.", pageImages.planning, "Florida", "Value-focused families"],
   ["luxury-florida-family-vacations", "Luxury Florida Family Vacations", "Compare higher-comfort Florida family trips built around resorts, premium locations, cruise cabins, and easier logistics.", pageImages.romance, "Florida", "Families prioritizing comfort"],
