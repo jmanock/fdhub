@@ -10,6 +10,7 @@ import FamilyVacationPage from "../components/FamilyVacationPage";
 import CruisePlanningPage from "../components/CruisePlanningPage";
 import EventTravelPage from "../components/EventTravelPage";
 import BudgetVacationHubPage from "../components/BudgetVacationHubPage";
+import FloridaIntelligenceEngine from "../components/FloridaIntelligenceEngine";
 import SafeImage from "../components/SafeImage";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
@@ -464,6 +465,7 @@ export default async function LandingPage({ params }) {
 
         <HubQuickAnswer page={page} introParagraphs={introParagraphs} relatedSearchLinks={relatedSearchLinks} />
         <V14HubDiscovery topic={topicCluster || page.slug} />
+        <FloridaIntelligenceEngine topic={topicCluster || page.slug} />
 
         <section className="page-trust section-pad" aria-label="Florida Deals Hub trust notes">
           <div className="trust-notes page-trust-notes">
@@ -844,6 +846,7 @@ function DestinationHubPage({ hub }) {
           title={`${hub.name} Vacation Packages And Cost Planners`}
           id={`${hub.slug}-vacation-packages`}
         />
+        <FloridaIntelligenceEngine topic={`destination-${hub.slug}`} />
 
         <section className="popular-searches section-pad" aria-labelledby={`${hub.slug}-package-styles-title`}>
           <div className="section-heading compact">

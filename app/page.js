@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AuthorityLinks from "./components/AuthorityLinks";
+import FloridaIntelligenceEngine from "./components/FloridaIntelligenceEngine";
 import MostViewedStories from "./components/MostViewedStories";
 import NewsletterSection from "./components/NewsletterSection";
 import SafeImage from "./components/SafeImage";
@@ -181,6 +182,7 @@ export default function Home() {
         </section>
 
         <V14HubDiscovery topic="homepage" />
+        <FloridaIntelligenceEngine topic="homepage" />
 
         {featuredJournalStory ? (
           <section className="featured-story-section section-pad" aria-labelledby="featured-story-title">
