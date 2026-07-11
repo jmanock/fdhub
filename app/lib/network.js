@@ -602,24 +602,25 @@ const authorityPageConfigs = [
   },
   {
     slug: "best-florida-family-vacations",
-    title: "Florida Family Vacations (2026): Beaches, Theme Parks, Cruises & Budget Tips",
+    title: "10 Best Florida Family Vacations (2026)",
     metaDescription:
-      "Find Florida family vacation ideas with theme parks, beaches, hotels, attractions, cruises, road trips, and budget-friendly planning tips.",
-    h1: "Best Florida Family Vacations",
-    eyebrow: "Family travel",
+      "Compare Florida family vacation ideas for 2026 with beaches, theme parks, hotels, cruises, road trips, budgets and weather backups.",
+    h1: "10 Best Florida Family Vacations",
+    eyebrow: "Updated 2026 family travel guide",
     intro:
-      "The best Florida family vacations balance easy logistics, flexible hotels, weather backup plans, kid-friendly attractions, and realistic daily schedules.",
+      "The best Florida family vacations balance easy logistics, kid-friendly hotels, weather backup plans, attraction timing, beach access, and realistic daily schedules.",
     image: pageImages.familyTrip,
     alt: "Florida family vacation planning with beaches attractions hotels and flights",
     related: ["florida-family-vacations", "orlando-travel-guide", "cheap-florida-family-vacations", "florida-theme-park-guide"],
-    destinations: "Orlando, Tampa Bay, Clearwater, Miami, Jacksonville, Destin, Naples, and cruise ports near family-friendly sailings",
+    destinations: "Orlando, Tampa Bay, Clearwater, Miami, Jacksonville, Destin, Naples, St. Augustine, the Florida Keys, and cruise ports near family-friendly sailings",
     advice:
-      "Families should plan around travel time as much as price. A hotel close to attractions can save energy, while a beach rental or resort-style hotel may work better when the goal is a slower trip with fewer daily moves.",
+      "Families should plan around travel time as much as price. A hotel close to attractions can save energy, while a beach rental, resort-style hotel, or short cruise may work better when the goal is a slower trip with fewer daily moves. Build one weather backup and one low-cost day into the plan before booking nonrefundable pieces.",
     recommendations: [
-      ["Orlando family trips", "/orlando-travel-guide", "Use Orlando as the anchor for theme parks, hotels, attractions, and flexible flights."],
-      ["Florida budget hotels", "https://hoteldealsflorida.org/florida-budget-hotels", "Compare affordable stays near beaches, attractions, airports, and road-trip routes."],
-      ["Orlando weekend activities", "https://localdealsflorida.org/things-to-do-in-orlando-this-weekend", "Add family attractions, free ideas, and flexible weekend activities."],
-      ["Weekend cruises from Florida", "https://cruisedealsflorida.org/weekend-cruises-from-florida", "Compare short sailings that can fit a family getaway."]
+      ["1. Orlando family trips", "/orlando-travel-guide", "Use Orlando as the anchor for theme parks, hotels, attractions, and flexible flights."],
+      ["2. Clearwater and Gulf beaches", "/clearwater-travel-guide", "Use calmer Gulf beach days, sunset activities, and Tampa-area flights for easier family pacing."],
+      ["3. Florida budget hotels", "https://hoteldealsflorida.org/florida-budget-hotels", "Compare affordable stays near beaches, attractions, airports, and road-trip routes."],
+      ["4. Orlando local activities", "https://localdealsflorida.org/orlando-local-deals", "Add family attractions, free ideas, rainy-day backups, and flexible weekend activities."],
+      ["5. Weekend cruises from Florida", "https://cruisedealsflorida.org/weekend-cruises-from-florida", "Compare short sailings that can fit a family getaway."]
     ]
   },
   {
