@@ -19,6 +19,7 @@ import TravelEssentialsBlock from "../components/TravelEssentialsBlock";
 import TravelBookingCard from "../components/TravelBookingCard";
 import TrackedRelatedLink from "../components/TrackedRelatedLink";
 import V14HubDiscovery from "../components/V14HubDiscovery";
+import V22AffiliateResources from "../components/V22AffiliateResources";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "../components/ConversionCards";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
@@ -680,6 +681,7 @@ export default async function LandingPage({ params }) {
         <TravelEssentialsBlock pageType={topicCluster || "hub"} />
         {showConversionCards ? <section className="section-pad"><div className="guide-card-grid"><QuickDealCard /><RecommendedPartnerCard /></div></section> : null}
         {showTransferAndTravel ? <section className="section-pad"><div className="guide-card-grid"><TransferBookingCard slug={page.slug} /><TravelBookingCard /></div></section> : null}
+        {showTransferAndTravel ? <V22AffiliateResources slug={page.slug} /> : null}
 
         <TravelTipsModule tips={pageTravelTips} />
 
