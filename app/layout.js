@@ -71,7 +71,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="fdn-site">
+        <div className="fdn-network-bar" role="note" aria-label="Florida Deals Network family">
+          <strong>Florida Deals Network</strong>
+          <span>Flights · Hotels · Cruises · Things to do</span>
+        </div>
         {children}
         <AnalyticsEvents />
         <script
