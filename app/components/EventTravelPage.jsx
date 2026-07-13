@@ -11,7 +11,7 @@ import WorldCupPlanningCTAs from "./WorldCupPlanningCTAs";
 import TransferBookingCard from "./TransferBookingCard";
 import TravelBookingCard from "./TravelBookingCard";
 import WorldCupUpdates from "./WorldCupUpdates";
-import { baseUrl, lastUpdatedLabel, pageImages } from "../lib/network";
+import { baseUrl, pageImages } from "../lib/network";
 import { eventTravelHubs, eventTravelPath, getEventRecommendations, trendingDestinationPages } from "../lib/eventTravel";
 import { getWorldCupRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 import { getWorldCup2026Page, worldCup2026Path } from "../lib/worldCup2026";
@@ -50,7 +50,7 @@ export default function EventTravelPage({ page }) {
         <section className="landing-hero section-pad">
           <div className="landing-copy">
             <nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/events">Events</Link></span><span aria-hidden="true">/</span>{parent ? <><span><Link href={eventTravelPath(parent)}>{parent.title}</Link></span><span aria-hidden="true">/</span></> : null}<span aria-current="page">{page.title}</span></nav>
-            <p className="eyebrow">{page.category} travel planning</p><h1>{page.title}</h1><p className="updated-label">Updated: {lastUpdatedLabel}</p><p className="hero-subhead">{page.focus}</p>
+            <p className="eyebrow">{page.category} travel planning</p><h1>{page.title}</h1><p className="hero-subhead">{page.focus}</p>
             <div className="hero-actions">{page.links.map(([label, href]) => href.startsWith("/") ? <Link href={href} key={label}>{label}</Link> : <a href={href} key={label}>{label}</a>)}</div>
           </div>
           <figure className="landing-visual story-hero-figure"><SafeImage src={page.image} alt={page.imageAlt} fallback="/images/fallbacks/florida-travel-placeholder.svg" width="900" height="720" loading="eager" decoding="async" fetchPriority="high" /><figcaption>{page.imageAlt}</figcaption></figure>

@@ -114,10 +114,9 @@ img {
 .planning-nav {
   grid-column: 1 / -1;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
   padding-top: 2px;
-  scrollbar-width: thin;
 }
 
 .planning-nav a {
@@ -2224,4 +2223,135 @@ h3 {
   .footer-nav-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* V29.1 functional cross-network navigation. */
+.fdn-network-navigation {
+  position: relative;
+  z-index: 60;
+  color: var(--fdn-ink);
+  background: var(--fdn-sky);
+  border-bottom: 1px solid var(--fdn-line);
+}
+.fdn-network-navigation__inner {
+  width: min(1180px, calc(100% - 2rem));
+  min-height: 2.75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fdn-network-navigation strong {
+  flex: 0 0 auto;
+  color: var(--fdn-teal-deep);
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+.fdn-network-navigation__desktop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .2rem;
+}
+.fdn-network-navigation a,
+.fdn-network-navigation summary {
+  color: var(--fdn-ink-muted);
+  font-size: .76rem;
+  font-weight: 800;
+}
+.fdn-network-navigation__desktop a {
+  min-height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--fdn-radius-sm);
+  padding: .45rem .65rem;
+}
+.fdn-network-navigation a:hover,
+.fdn-network-navigation a[aria-current="page"] {
+  color: var(--fdn-teal-deep);
+  background: var(--fdn-white);
+}
+.fdn-network-navigation a:focus-visible,
+.fdn-network-navigation summary:focus-visible {
+  outline: 3px solid var(--fdn-sun);
+  outline-offset: 2px;
+}
+.fdn-network-navigation__mobile { display: none; }
+@media (max-width: 860px) {
+  .fdn-network-navigation__desktop { display: none; }
+  .fdn-network-navigation__mobile { display: block; position: relative; }
+  .fdn-network-navigation__mobile summary {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    border-radius: var(--fdn-radius-sm);
+    padding: .5rem .75rem;
+    background: var(--fdn-white);
+  }
+  .fdn-network-navigation__mobile summary::-webkit-details-marker { display: none; }
+  .fdn-network-navigation__mobile nav {
+    position: absolute;
+    top: calc(100% + .35rem);
+    right: 0;
+    width: min(17rem, calc(100vw - 2rem));
+    display: grid;
+    gap: .2rem;
+    border: 1px solid var(--fdn-line);
+    border-radius: var(--fdn-radius-md);
+    padding: .5rem;
+    background: var(--fdn-white);
+    box-shadow: var(--fdn-shadow-soft);
+  }
+  .fdn-network-navigation__mobile a {
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    border-radius: var(--fdn-radius-sm);
+    padding: .65rem .75rem;
+  }
+}
+@media (max-width: 430px) {
+  .fdn-network-navigation__inner { width: min(100% - 1rem, 1180px); }
+  .fdn-network-navigation strong { font-size: .7rem; }
+}
+/* V29.1 Florida Right Now homepage preview. */
+.florida-now-preview {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 1.25rem auto 2rem;
+  overflow: hidden;
+  border: 1px solid var(--fdn-line);
+  border-radius: var(--fdn-radius-lg);
+  padding: 0;
+  background: var(--fdn-white);
+  box-shadow: var(--fdn-shadow-soft);
+}
+.florida-now-preview__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: var(--fdn-sky);
+  border-bottom: 1px solid var(--fdn-line);
+}
+.florida-now-preview__header h2 { margin: .35rem 0 .5rem; }
+.florida-now-preview__header p:last-child { max-width: 48rem; margin: 0; color: var(--fdn-ink-muted); }
+.florida-now-preview__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: var(--fdn-line); }
+.florida-now-preview__grid article { min-width: 0; display: grid; align-content: start; gap: .45rem; padding: 1.15rem; background: var(--fdn-white); }
+.florida-now-preview__grid span { color: var(--fdn-teal-deep); font-size: .72rem; font-weight: 900; text-transform: uppercase; }
+.florida-now-preview__grid strong { color: var(--fdn-ink); font-size: 1rem; line-height: 1.35; }
+.florida-now-preview__grid small { color: var(--fdn-ink-muted); font-size: .75rem; line-height: 1.45; }
+.florida-now-preview__footer { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 1.5rem; color: var(--fdn-ink-muted); font-size: .75rem; font-weight: 750; }
+@media (max-width: 980px) { .florida-now-preview__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .florida-now-preview__header, .florida-now-preview__footer { align-items: stretch; flex-direction: column; }
+  .florida-now-preview__header .affiliate-cta { width: 100%; }
+  .florida-now-preview__grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 721px) and (max-width: 900px) {
+  .journal-home-list { grid-template-columns: 1fr; }
 }

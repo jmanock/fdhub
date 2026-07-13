@@ -23,6 +23,8 @@ const staticPages = [
   { path: "/budget-travel", priority: 0.96, changeFrequency: "weekly" },
   { path: "/destinations", priority: 0.96, changeFrequency: "weekly" },
   { path: "/events", priority: 0.97, changeFrequency: "weekly" },
+  { path: "/florida-right-now", priority: 0.98, changeFrequency: "daily" },
+  { path: "/how-florida-live-data-works", priority: 0.72, changeFrequency: "monthly" },
   { path: "/things-to-do", priority: 0.85, changeFrequency: "weekly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/terms", priority: 0.3, changeFrequency: "monthly" }

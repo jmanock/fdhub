@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AuthorityLinks from "./components/AuthorityLinks";
 import FloridaIntelligenceEngine from "./components/FloridaIntelligenceEngine";
+import FloridaRightNow from "./components/FloridaRightNow";
 import MostViewedStories from "./components/MostViewedStories";
 import NewsletterSection from "./components/NewsletterSection";
 import SafeImage from "./components/SafeImage";
@@ -20,7 +21,6 @@ import {
   expediaHotelCards,
   homepageFaqs,
   homepageSeoParagraphs,
-  lastUpdatedLabel,
   pillars,
   planTripCards,
   popularSearchLinks,
@@ -130,7 +130,7 @@ export default function Home() {
       <main>
         <section className="hero section-pad">
           <div className="hero-copy">
-            <p className="eyebrow">Updated: {lastUpdatedLabel}</p>
+            <p className="eyebrow">Florida travel intelligence network</p>
             <h1>Find the Best Deals Across Florida</h1>
             <p className="hero-subhead">
               Discover complete Florida vacation packages, compare trip costs, and connect the
@@ -164,6 +164,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <FloridaRightNow />
 
         <section className="popular-this-week section-pad" aria-labelledby="popular-week-title">
           <div className="section-heading">

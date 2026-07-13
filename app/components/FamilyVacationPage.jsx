@@ -9,7 +9,7 @@ import PackageFinder from "./PackageFinder";
 import TravelEssentialsBlock from "./TravelEssentialsBlock";
 import { ExitNewsletterCapture, HubContinuePlanningGuides, VacationPackageBookingStack } from "./HubConversionBoosters";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "./ConversionCards";
-import { baseUrl, lastUpdatedLabel } from "../lib/network";
+import { baseUrl } from "../lib/network";
 import { familyGuideLinks, getFamilyGallery, getFamilyPackages } from "../lib/familyVacations";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
 import { getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
@@ -61,7 +61,6 @@ export default function FamilyVacationPage({ guide }) {
             <nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/family-vacations">Family Vacations</Link></span><span aria-hidden="true">/</span><span aria-current="page">{guide.h1}</span></nav>
             <p className="eyebrow">Florida family vacation authority</p>
             <h1>{guide.h1}</h1>
-            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
             <p className="hero-subhead">{guide.intro}</p>
             <div className="hero-actions">{guide.network.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</div>
           </div>

@@ -5,7 +5,7 @@ import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import VacationBuilder from "./VacationBuilder";
-import { baseUrl, lastUpdatedLabel } from "../lib/network";
+import { baseUrl } from "../lib/network";
 import { budgetOptions, departureRegionOptions, getRecommendationsForHub, travelerOptions, vacationRecommendations, vacationTypeOptions } from "../lib/vacationBuilder";
 
 export default function BudgetVacationHubPage({ hub }) {
@@ -45,7 +45,6 @@ export default function BudgetVacationHubPage({ hub }) {
             <nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/vacation-builder">Vacation Builder</Link></span><span aria-hidden="true">/</span><span aria-current="page">{hub.title}</span></nav>
             <p className="eyebrow">Budget-first vacation discovery</p>
             <h1>{hub.title}</h1>
-            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
             <p className="hero-subhead">{hub.description}</p>
             <div className="hero-actions"><Link href="/vacation-builder">Build My Vacation</Link><Link href="/vacation-packages">Compare All Packages</Link></div>
           </div>

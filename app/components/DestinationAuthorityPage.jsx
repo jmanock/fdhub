@@ -8,7 +8,7 @@ import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import { StoryModule } from "./StoryModules";
-import { baseUrl, lastUpdatedLabel, pageImages } from "../lib/network";
+import { baseUrl, pageImages } from "../lib/network";
 import { destinationAuthorities, destinationPageTypes, destinationPath, getDestinationPackages } from "../lib/destinationAuthority";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
 import { getAllStories } from "../lib/stories";
@@ -38,7 +38,7 @@ export default function DestinationAuthorityPage({ destination, type = null }) {
       <SiteHeader />
       <main>
         <section className="landing-hero section-pad">
-          <div className="landing-copy"><nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/destinations">Destinations</Link></span><span aria-hidden="true">/</span>{type ? <><span><Link href={destinationPath(destination)}>{destination.name}</Link></span><span aria-hidden="true">/</span></> : null}<span aria-current="page">{type?.label || destination.name}</span></nav><p className="eyebrow">{destination.region} destination authority</p><h1>{h1}</h1><p className="updated-label">Updated: {lastUpdatedLabel}</p><p className="hero-subhead">{destination.overview} This guide focuses on {focus}.</p><div className="hero-actions"><a href={destination.links[0]}>Book Flights</a><a href={destination.links[1]}>Book Hotels</a><a href={destination.links[2]}>Book Cruises</a><a href={destination.links[3]}>Find Activities</a><Link href={destinationPath(destination, destinationPageTypeMapSafe("vacation-packages"))}>View Vacation Packages</Link></div></div>
+          <div className="landing-copy"><nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/destinations">Destinations</Link></span><span aria-hidden="true">/</span>{type ? <><span><Link href={destinationPath(destination)}>{destination.name}</Link></span><span aria-hidden="true">/</span></> : null}<span aria-current="page">{type?.label || destination.name}</span></nav><p className="eyebrow">{destination.region} destination authority</p><h1>{h1}</h1><p className="hero-subhead">{destination.overview} This guide focuses on {focus}.</p><div className="hero-actions"><a href={destination.links[0]}>Book Flights</a><a href={destination.links[1]}>Book Hotels</a><a href={destination.links[2]}>Book Cruises</a><a href={destination.links[3]}>Find Activities</a><Link href={destinationPath(destination, destinationPageTypeMapSafe("vacation-packages"))}>View Vacation Packages</Link></div></div>
           <figure className="landing-visual story-hero-figure"><SafeImage src={destination.image} alt={destination.imageAlt} fallback="/images/fallbacks/florida-travel-placeholder.svg" width="900" height="720" loading="eager" decoding="async" fetchPriority="high" /><figcaption>{destination.imageAlt}</figcaption></figure>
         </section>
 

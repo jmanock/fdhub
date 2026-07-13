@@ -511,11 +511,6 @@ export const planTripLinks = [
   ["Florida Local Deals", sites.local]
 ];
 
-export const lastUpdatedLabel = new Intl.DateTimeFormat("en-US", {
-  month: "long",
-  year: "numeric"
-}).format(new Date());
-
 export const pageImages = {
   floridaCoast:
     "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",

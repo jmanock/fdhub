@@ -38,7 +38,9 @@ const footerGuides = [
   ["Best Time To Visit Florida", "/best-time-to-visit-florida"],
   ["Florida Family Vacations", "/florida-family-vacations"],
   ["Family Vacations Under $2,000", "/florida-family-vacations-under-2000"],
-  ["Florida Vacation Planning Guide", "/florida-vacation-planning-guide"]
+  ["Florida Vacation Planning Guide", "/florida-vacation-planning-guide"],
+  ["Florida Right Now", "/florida-right-now"],
+  ["How Live Data Works", "/how-florida-live-data-works"]
 ];
 
 export default function SiteFooter() {

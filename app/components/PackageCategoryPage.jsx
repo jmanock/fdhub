@@ -8,7 +8,6 @@ import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import ThingsToDoSection from "./ThingsToDoSection";
 import { VacationPackageCards } from "./VacationPackagePage";
-import { lastUpdatedLabel } from "../lib/network";
 import { getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
 
 export default function PackageCategoryPage({ category }) {
@@ -30,7 +29,6 @@ export default function PackageCategoryPage({ category }) {
             <nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/vacation-packages">Vacation Packages</Link></span><span aria-hidden="true">/</span><span aria-current="page">{category.title}</span></nav>
             <p className="eyebrow">Vacation package category</p>
             <h1>{category.title}</h1>
-            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
             <p className="hero-subhead">{category.description}</p>
             <div className="hero-actions"><Link href="/vacation-packages">Search all packages</Link><Link href="/florida-vacation-planning-guide">Use the planning guide</Link></div>
           </div>

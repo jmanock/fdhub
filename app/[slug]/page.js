@@ -34,7 +34,6 @@ import {
   getRelatedSearchLinks,
   landingPageMap,
   landingPages,
-  lastUpdatedLabel,
   pillars,
   stayWithTripCards
 } from "../lib/network";
@@ -433,7 +432,7 @@ export default async function LandingPage({ params }) {
             </nav>
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.h1}</h1>
-            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
+            <p className="updated-label">Current Florida planning guide</p>
             <p className="hero-subhead">{introParagraphs[0]}</p>
             <div className="hero-actions" aria-label={`${page.h1} network links`}>
               <a href={pillars[0].href}>{pillars[0].anchor}</a>
@@ -797,7 +796,7 @@ function DestinationHubPage({ hub }) {
             </nav>
             <p className="eyebrow">Destination hub</p>
             <h1>{hub.name} Florida Travel Hub</h1>
-            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
+            <p className="updated-label">Current Florida destination guide</p>
             <p className="hero-subhead">{hub.description}</p>
             <div className="hero-actions" aria-label={`${hub.name} planning links`}>
               {hub.networkLinks.slice(0, 4).map(([label, href]) => (

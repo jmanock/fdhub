@@ -6,7 +6,7 @@ import PackageFinder from "./PackageFinder";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
-import { baseUrl, lastUpdatedLabel, pageImages } from "../lib/network";
+import { baseUrl, pageImages } from "../lib/network";
 import { cruiseGuideLinks, getCruisePackages } from "../lib/cruisePlanning";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
 import { getCarRentalRecommendationForPage } from "../lib/affiliate/affiliateInventory.mjs";
@@ -32,7 +32,7 @@ export default function CruisePlanningPage({ guide }) {
       <SiteHeader />
       <main>
         <section className="landing-hero section-pad">
-          <div className="landing-copy"><nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/cruises">Cruises</Link></span><span aria-hidden="true">/</span><span aria-current="page">{guide.h1}</span></nav><p className="eyebrow">Florida cruise command center</p><h1>{guide.heroTitle || guide.h1}</h1><p className="updated-label">Updated: {lastUpdatedLabel}</p><p className="hero-subhead">{guide.intro}</p><div className="hero-actions">{guide.network.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</div></div>
+          <div className="landing-copy"><nav className="breadcrumbs" aria-label="Breadcrumb"><span><Link href="/">Home</Link></span><span aria-hidden="true">/</span><span><Link href="/cruises">Cruises</Link></span><span aria-hidden="true">/</span><span aria-current="page">{guide.h1}</span></nav><p className="eyebrow">Florida cruise command center</p><h1>{guide.heroTitle || guide.h1}</h1><p className="hero-subhead">{guide.intro}</p><div className="hero-actions">{guide.network.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</div></div>
           <figure className="landing-visual story-hero-figure"><SafeImage src={guide.image} alt={guide.imageAlt} fallback="/images/fallbacks/florida-travel-placeholder.svg" width="900" height="720" loading="eager" decoding="async" fetchPriority="high" /><figcaption>{guide.imageAlt}</figcaption></figure>
         </section>
 

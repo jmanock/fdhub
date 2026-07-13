@@ -1,5 +1,6 @@
 import Script from "next/script";
 import AnalyticsEvents from "./components/AnalyticsEvents";
+import NetworkNavigation from "./components/NetworkNavigation";
 import { CLARITY_ID } from "./lib/clarity";
 import "./globals.css";
 
@@ -72,10 +73,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="fdn-site">
-        <div className="fdn-network-bar" role="note" aria-label="Florida Deals Network family">
-          <strong>Florida Deals Network</strong>
-          <span>Flights · Hotels · Cruises · Things to do</span>
-        </div>
+        <NetworkNavigation />
         {children}
         <AnalyticsEvents />
         <script

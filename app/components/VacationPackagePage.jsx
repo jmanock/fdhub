@@ -6,7 +6,7 @@ import NewsletterSection from "./NewsletterSection";
 import SafeImage from "./SafeImage";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
-import { baseUrl, lastUpdatedLabel } from "../lib/network";
+import { baseUrl } from "../lib/network";
 import { getVacationPackageGallery } from "../lib/vacationPackages";
 import { getPackageDiscoveryFields } from "../lib/packageDiscovery";
 import ThingsToDoSection from "./ThingsToDoSection";
@@ -104,7 +104,6 @@ export default function VacationPackagePage({ packagePage }) {
             </nav>
             <p className="eyebrow">{packagePage.eyebrow}</p>
             <h1>{packagePage.h1}</h1>
-            <p className="updated-label">Updated: {lastUpdatedLabel}</p>
             <p className="hero-subhead">{packagePage.summary}</p>
             <div className="story-tags" aria-label="Best for">
               {packagePage.bestFor.map((tag) => <span key={tag}>{tag}</span>)}
