@@ -83,7 +83,6 @@ export default function VacationPackagePage({ packagePage }) {
     headline: packagePage.h1,
     description: packagePage.metaDescription,
     image: packagePage.image,
-    dateModified: "2026-06-06",
     datePublished: "2026-06-06",
     mainEntityOfPage: pageUrl,
     author: { "@type": "Organization", name: "Florida Deals Hub", url: baseUrl },

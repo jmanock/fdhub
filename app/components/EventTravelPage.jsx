@@ -40,7 +40,7 @@ export default function EventTravelPage({ page }) {
   const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: breadcrumbItems };
   const itemListSchema = { "@context": "https://schema.org", "@type": "ItemList", name: `${page.title} vacation recommendations`, itemListElement: recommendations.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.title, url: `${baseUrl}${item.packageHref}` })) };
   const eventSchema = page.dateVerified && page.startDate ? { "@context": "https://schema.org", "@type": "Event", name: page.title, startDate: page.startDate, ...(page.endDate ? { endDate: page.endDate } : {}), eventStatus: "https://schema.org/EventScheduled", url: `${baseUrl}${path}`, image: page.image, description: page.description } : null;
-  const articleSchema = page.worldCup2026 ? { "@context": "https://schema.org", "@type": "Article", headline: page.title, description: page.description, image: page.image, mainEntityOfPage: `${baseUrl}${path}`, dateModified: "2026-06-11", author: { "@type": "Organization", name: "Florida Deals Hub" }, publisher: { "@type": "Organization", name: "Florida Deals Hub", url: baseUrl } } : null;
+  const articleSchema = page.worldCup2026 ? { "@context": "https://schema.org", "@type": "Article", headline: page.title, description: page.description, image: page.image, mainEntityOfPage: `${baseUrl}${path}`, author: { "@type": "Organization", name: "Florida Deals Hub" }, publisher: { "@type": "Organization", name: "Florida Deals Hub", url: baseUrl } } : null;
 
   return (
     <>
