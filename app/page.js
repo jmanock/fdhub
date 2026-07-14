@@ -163,6 +163,26 @@ export default function Home() {
 
         <FloridaRightNow />
 
+        <section className="popular-this-week section-pad" aria-labelledby="trip-reality-title">
+          <div className="section-heading">
+            <p className="eyebrow">Plan smarter</p>
+            <h2 id="trip-reality-title">Florida Trip Reality Guides</h2>
+            <p>Honest destination tradeoffs, practical preparation, and the details worth checking before you book.</p>
+          </div>
+          <div className="guide-card-grid">
+            {[
+              ["Is Clearwater Beach worth visiting?", "/clearwater-travel-guide", "The good, the drawbacks, and what to know"],
+              ["What visitors underestimate about Orlando", "/orlando-travel-guide", "Time, distance, weather, and daily pacing"],
+              ["Is Miami Beach worth visiting?", "/miami-travel-guide", "The good, the expensive, and who should skip it"],
+            ].map(([label, href, bestFor]) => (
+              <Link className="guide-card" href={href} key={href}>
+                <h3>{label}</h3>
+                <p className="best-for-tag">{bestFor}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="popular-this-week section-pad" aria-labelledby="popular-week-title">
           <div className="section-heading">
             <p className="eyebrow">Florida travel interest</p>

@@ -20,6 +20,7 @@ import TravelBookingCard from "../components/TravelBookingCard";
 import TrackedRelatedLink from "../components/TrackedRelatedLink";
 import V14HubDiscovery from "../components/V14HubDiscovery";
 import V22AffiliateResources from "../components/V22AffiliateResources";
+import TripRealityGuidePage from "../components/TripRealityGuidePage";
 import { ConversionScrollAnalytics, QuickDealCard, RecommendedPartnerCard } from "../components/ConversionCards";
 import { StoryModule, TravelTipsModule } from "../components/StoryModules";
 import VacationPackagePage, { VacationPackageCards } from "../components/VacationPackagePage";
@@ -41,6 +42,7 @@ import { getLatestStories, getTrendingStories } from "../lib/stories";
 import { getTravelNewsItems } from "../lib/travelNews";
 import { conversionSlugs, transferAndTravelSlugs } from "../lib/revenuePartners";
 import { inferTopicCluster } from "../lib/topicClusters";
+import { getTripRealityGuide } from "../lib/tripRealityGuides";
 import { getPackageCategory, packageCategories } from "../lib/packageDiscovery";
 import { familyVacationGuides, getFamilyVacationGuide } from "../lib/familyVacations";
 import { cruisePlanningGuides, getCruisePlanningGuide } from "../lib/cruisePlanning";
@@ -102,6 +104,7 @@ function HubQuickAnswer({ page, introParagraphs, relatedSearchLinks }) {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
+  const tripRealityGuide = getTripRealityGuide(slug);
   const page = landingPageMap[slug];
   const destinationHub = getDestinationHub(slug);
   const vacationPackage = getVacationPackage(slug);
@@ -110,6 +113,17 @@ export async function generateMetadata({ params }) {
   const cruisePlanningGuide = getCruisePlanningGuide(slug);
   const budgetVacationHub = getBudgetVacationHub(slug);
   const worldCupPage = getWorldCup2026PageByPath(slug);
+
+  if (tripRealityGuide) {
+    const url = `${baseUrl}/${tripRealityGuide.slug}`;
+    return {
+      title: tripRealityGuide.title,
+      description: tripRealityGuide.description,
+      alternates: { canonical: url },
+      openGraph: { title: tripRealityGuide.title, description: tripRealityGuide.description, url, siteName: "Florida Deals Hub", type: "article", images: [{ url: tripRealityGuide.heroImage, width: 1200, height: 630, alt: tripRealityGuide.heroAlt }] },
+      twitter: { card: "summary_large_image", title: tripRealityGuide.title, description: tripRealityGuide.description, images: [tripRealityGuide.heroImage] }
+    };
+  }
 
   if (worldCupPage) {
     const url = `${baseUrl}${worldCup2026Path(worldCupPage)}`;
@@ -270,6 +284,7 @@ export async function generateMetadata({ params }) {
 
 export default async function LandingPage({ params }) {
   const { slug } = await params;
+  const tripRealityGuide = getTripRealityGuide(slug);
   const page = landingPageMap[slug];
   const destinationHub = getDestinationHub(slug);
   const vacationPackage = getVacationPackage(slug);
@@ -278,6 +293,10 @@ export default async function LandingPage({ params }) {
   const cruisePlanningGuide = getCruisePlanningGuide(slug);
   const budgetVacationHub = getBudgetVacationHub(slug);
   const worldCupPage = getWorldCup2026PageByPath(slug);
+
+  if (tripRealityGuide) {
+    return <TripRealityGuidePage guide={tripRealityGuide} />;
+  }
 
   if (worldCupPage) {
     return <EventTravelPage page={worldCupPage} />;
@@ -344,7 +363,6 @@ export default async function LandingPage({ params }) {
   const pageUrl = `${baseUrl}/${page.slug}`;
   const pageImageUrl = page.image || `${baseUrl}/og.svg`;
   const topicCluster = inferTopicCluster(page.h1, page.eyebrow, page.summary, page.intro);
-  const modifiedDate = new Date().toISOString().slice(0, 10);
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -390,8 +408,6 @@ export default async function LandingPage({ params }) {
         headline: page.h1,
         description: page.metaDescription,
         image: pageImageUrl,
-        dateModified: modifiedDate,
-        datePublished: modifiedDate,
         mainEntityOfPage: pageUrl,
         author: {
           "@type": "Organization",

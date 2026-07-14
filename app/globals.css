@@ -35,6 +35,87 @@ body {
   line-height: 1.5;
 }
 
+/* V30 Florida Trip Reality Guides */
+.reality-page { background: #f8fafc; }
+.reality-hero,
+.reality-summary,
+.reality-two-column,
+.reality-surprises,
+.reality-three-column,
+.reality-live,
+.reality-checklist,
+.reality-next { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+.reality-hero { display: grid; grid-template-columns: 1.05fr .95fr; overflow: hidden; margin-top: 32px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); box-shadow: var(--shadow); }
+.reality-hero-copy { padding: clamp(28px, 5vw, 64px); }
+.reality-hero nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; color: var(--ink-muted); font-size: .82rem; font-weight: 800; }
+.reality-hero h1 { max-width: 760px; margin: 12px 0 0; font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: 1.02; letter-spacing: 0; }
+.reality-hero > img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; }
+.reality-lead { max-width: 680px; margin-top: 22px; color: var(--ink-muted); font-size: 1.08rem; font-weight: 700; line-height: 1.75; }
+.reality-editorial-note { margin-top: 24px; padding: 15px 16px; border-left: 4px solid var(--ocean); border-radius: 0 8px 8px 0; background: var(--aqua); color: var(--navy-soft); font-size: .88rem; font-weight: 700; line-height: 1.65; }
+.reality-summary { margin-top: 32px; padding: clamp(24px, 4vw, 42px); border-radius: 8px; color: var(--white); background: var(--navy); }
+.reality-summary .eyebrow { color: #bfeaf2; }
+.reality-summary h2 { margin: 8px 0 0; font-size: clamp(1.7rem, 3vw, 2.6rem); }
+.reality-summary > p:not(.eyebrow) { max-width: 900px; color: #dce8ef; font-weight: 700; line-height: 1.75; }
+.reality-summary dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 24px 0 0; }
+.reality-summary dl div { padding: 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 8px; background: rgba(255,255,255,.06); }
+.reality-summary dt { color: #bfeaf2; font-size: .7rem; font-weight: 900; text-transform: uppercase; }
+.reality-summary dd { margin: 8px 0 0; font-size: .9rem; font-weight: 800; line-height: 1.55; }
+.reality-two-column { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; margin-top: 32px; }
+.reality-two-column > div,
+.reality-surprises,
+.reality-three-column article,
+.reality-live,
+.reality-checklist,
+.reality-next > div { padding: clamp(22px, 3vw, 34px); border: 1px solid var(--line); border-radius: 8px; background: var(--white); }
+.reality-two-column h2,
+.reality-surprises h2,
+.reality-three-column h2,
+.reality-live h2,
+.reality-checklist h2,
+.reality-next h2 { margin: 8px 0 0; font-size: clamp(1.45rem, 2.3vw, 2.15rem); line-height: 1.15; }
+.reality-guidance-list { display: grid; gap: 12px; margin-top: 20px; }
+.reality-guidance-list article { padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: #fbfdfe; }
+.reality-guidance-list h3 { margin: 0; font-size: 1rem; }
+.reality-guidance-list p { margin: 8px 0 0; color: var(--ink-muted); font-size: .9rem; font-weight: 650; line-height: 1.65; }
+.reality-surprises { margin-top: 32px; background: #fff8e8; border-color: rgba(247,189,42,.5); }
+.reality-cost > div:first-child { background: #effaf5; border-color: rgba(45,138,111,.3); }
+.reality-cost > div:last-child { background: #f4f6f8; }
+.reality-three-column { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; margin-top: 32px; }
+.reality-three-column ul,
+.reality-source-list { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+.reality-three-column li { position: relative; padding-left: 22px; color: var(--ink-muted); font-size: .9rem; font-weight: 700; line-height: 1.6; }
+.reality-three-column li::before { content: "✓"; position: absolute; left: 0; color: var(--palm); font-weight: 900; }
+.reality-live { margin-top: 32px; background: var(--aqua); border-color: rgba(8,127,181,.3); }
+.reality-live > p:not(.eyebrow) { max-width: 820px; color: var(--navy-soft); font-weight: 700; line-height: 1.65; }
+.reality-live .fdn-button-primary { margin-top: 14px; }
+.reality-checklist { margin-top: 32px; background: var(--sand); }
+.reality-checklist > p:not(.eyebrow) { color: var(--ink-muted); font-weight: 700; }
+.reality-checklist-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-top: 20px; }
+.reality-checklist-grid label { display: flex; align-items: flex-start; gap: 10px; min-height: 52px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); font-size: .88rem; font-weight: 800; }
+.reality-checklist-grid input { width: 20px; height: 20px; margin: 0; accent-color: var(--ocean); }
+.reality-checklist-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; }
+.reality-checklist-actions button { min-height: 44px; padding: 10px 15px; border: 1px solid var(--line); border-radius: 8px; color: var(--navy); background: var(--white); font: inherit; font-size: .82rem; font-weight: 900; cursor: pointer; }
+.reality-checklist-actions span { padding: 8px; color: var(--palm); font-size: .86rem; font-weight: 900; }
+.reality-next { display: grid; grid-template-columns: 1.1fr .9fr; gap: 22px; padding-block: 32px 64px; }
+.reality-link-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-top: 20px; }
+.reality-link-grid a { display: flex; justify-content: space-between; gap: 14px; min-height: 52px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; font-size: .88rem; font-weight: 900; }
+.reality-source-list a { color: var(--ocean-dark); font-size: .88rem; font-weight: 850; }
+.reality-next details { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+.reality-next summary { cursor: pointer; font-weight: 900; }
+.reality-next p { color: var(--ink-muted); font-weight: 650; line-height: 1.65; }
+@media (max-width: 800px) {
+  .reality-hero, .reality-two-column, .reality-next { grid-template-columns: 1fr; }
+  .reality-hero > img { min-height: 280px; max-height: 380px; }
+  .reality-summary dl, .reality-three-column { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .reality-hero, .reality-summary, .reality-two-column, .reality-surprises, .reality-three-column, .reality-live, .reality-checklist, .reality-next { width: min(100% - 20px, 1180px); }
+  .reality-hero { margin-top: 14px; }
+  .reality-hero-copy { padding: 24px 18px; }
+  .reality-hero h1 { font-size: 2.25rem; }
+  .reality-summary dl, .reality-three-column, .reality-checklist-grid, .reality-link-grid { grid-template-columns: 1fr; }
+}
+
 a {
   color: inherit;
   text-decoration: none;
