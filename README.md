@@ -130,7 +130,7 @@ Core page themes include:
 - Florida family vacations
 - City and local deal pages
 
-Each major SEO page should include useful, unique copy, visible breadcrumbs, `Updated: Month Year`, a professional trust strip, FAQ content, related Hub links, guide cards, and clear routes to Florida Flight Deals, Florida Hotel Deals, Florida Cruise Deals, and Local Deals Florida. Pages should be informational routing pages, not duplicate deal feeds.
+Each major SEO page should include useful, unique copy, visible breadcrumbs, a verified review label only when the freshness registry supports it, a professional trust strip, FAQ content, related Hub links, guide cards, and clear routes to Florida Flight Deals, Florida Hotel Deals, Florida Cruise Deals, and Local Deals Florida. Pages should be informational routing pages, not duplicate deal feeds.
 
 ## Sitemap And Canonicals
 

@@ -470,7 +470,7 @@ export default async function LandingPage({ params }) {
         <section className="page-trust section-pad" aria-label="Florida Deals Hub trust notes">
           <div className="trust-notes page-trust-notes">
             <span>Curated Florida travel and local deal pages</span>
-            <span>Updated regularly</span>
+            <span>Source details included</span>
             <span>Prices and availability may change</span>
             <span>Confirm current details with the source</span>
           </div>

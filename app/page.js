@@ -137,12 +137,8 @@ export default function Home() {
               right flights, hotels, cruises, and activities.
             </p>
             <div className="hero-actions" aria-label="Explore Florida deals categories">
+              <Link href="/florida-right-now">See Florida Right Now</Link>
               <Link href="/vacation-builder">Build My Vacation</Link>
-              <Link href="/events">Event Travel</Link>
-              <Link href="/vacation-packages">Find Vacation Packages</Link>
-              <Link href="/family-vacations">Family Vacations</Link>
-              <Link href="/cruise-packages">Cruise Packages</Link>
-              <Link href="/weekend-getaways">Weekend Getaways</Link>
             </div>
           </div>
 
@@ -169,7 +165,7 @@ export default function Home() {
 
         <section className="popular-this-week section-pad" aria-labelledby="popular-week-title">
           <div className="section-heading">
-            <p className="eyebrow">Updated travel interest</p>
+            <p className="eyebrow">Florida travel interest</p>
             <h2 id="popular-week-title">Trending Florida Searches</h2>
             <p>Popular searches from Florida travelers this week.</p>
           </div>
@@ -247,7 +243,7 @@ export default function Home() {
           </div>
           <div className="trust-notes" aria-label="Florida Deals Hub trust notes">
             <span>Curated Florida travel deals</span>
-            <span>Updated regularly</span>
+            <span>Source details included</span>
             <span>Prices and availability may change</span>
             <span>Confirm current details with the source</span>
           </div>

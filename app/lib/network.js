@@ -1975,7 +1975,7 @@ export function getFaqs(page) {
         "Start by choosing the category that matches your plan: flights, hotels, cruises, or local experiences. Florida Deals Hub points you to focused pages where current deal sources are easier to review."
     },
     {
-      question: "Are Florida deals updated regularly?",
+      question: "How should I verify a current Florida deal?",
       answer:
         "The network is built to route visitors toward current deal sources and featured Florida savings. Offers can change quickly, so it is best to check the linked niche site before making plans."
     },

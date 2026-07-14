@@ -217,7 +217,7 @@ img {
   grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
   gap: clamp(40px, 5vw, 76px);
   align-items: center;
-  min-height: calc(100vh - 86px);
+  min-height: 640px;
 }
 
 .eyebrow {
@@ -239,7 +239,7 @@ p {
 h1 {
   max-width: 850px;
   margin-bottom: 22px;
-  font-size: clamp(3.35rem, 8vw, 7.4rem);
+  font-size: clamp(3.35rem, 6vw, 5.8rem);
   line-height: 0.92;
   letter-spacing: 0;
 }
@@ -283,7 +283,7 @@ h3 {
 
 .hero-visual {
   position: relative;
-  min-height: 570px;
+  min-height: 470px;
 }
 
 .hero-visual::before {
@@ -2080,6 +2080,23 @@ h3 {
   }
 }
 
+@media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .network-nav,
+  .planning-nav {
+    display: none;
+  }
+
+  .header-cta {
+    grid-column: 2;
+  }
+}
+
 @media (max-width: 720px) {
   .site-header {
     position: static;
@@ -2099,11 +2116,13 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(3rem, 17vw, 4.8rem);
+    font-size: clamp(2.75rem, 13vw, 3.8rem);
   }
 
   .hero {
     min-height: auto;
+    padding-top: 42px;
+    padding-bottom: 38px;
   }
 
   .hero-actions a {
@@ -2111,40 +2130,36 @@ h3 {
   }
 
   .hero-visual {
-    min-height: 720px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    min-height: 0;
   }
 
+  .hero-visual::before { display: none; }
+
   .stack-card {
-    width: min(86%, 350px);
-    min-height: 185px;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    min-height: 150px;
+    border-width: 4px;
+    transform: none;
   }
 
   .card-1,
   .card-2,
   .card-3,
   .card-4 {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%) rotate(0);
+    inset: auto;
+    transform: none;
   }
 
-  .card-1 {
-    top: 20px;
-  }
+  .card-2,
+  .card-3,
+  .card-4 { display: none; }
 
-  .card-2 {
-    top: 185px;
-  }
-
-  .card-3 {
-    top: 350px;
-    bottom: auto;
-  }
-
-  .card-4 {
-    top: 515px;
-    bottom: auto;
-  }
+  .hero-visual { grid-template-columns: 1fr; }
 
   .pillar-grid,
   .trust-grid,
@@ -2242,11 +2257,11 @@ h3 {
   justify-content: space-between;
   gap: 1rem;
 }
-.fdn-network-navigation strong {
+.fdn-network-navigation__brand {
   flex: 0 0 auto;
   color: var(--fdn-teal-deep);
   font-size: .76rem;
-  font-weight: 900;
+  font-weight: 900 !important;
   letter-spacing: .02em;
 }
 .fdn-network-navigation__desktop {
@@ -2316,7 +2331,7 @@ h3 {
 }
 @media (max-width: 430px) {
   .fdn-network-navigation__inner { width: min(100% - 1rem, 1180px); }
-  .fdn-network-navigation strong { font-size: .7rem; }
+  .fdn-network-navigation__brand { font-size: .7rem; }
 }
 /* V29.1 Florida Right Now homepage preview. */
 .florida-now-preview {
