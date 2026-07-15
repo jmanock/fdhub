@@ -3,6 +3,7 @@ import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import FloridaRightNow from "../components/FloridaRightNow";
 import data from "../../data/live-intelligence.json";
+import TripRetentionTools from "../components/TripRetentionTools";
 export const metadata = {
   title: "Florida Right Now: Travel Weather, Alerts & Airport Impacts",
   description:
@@ -106,6 +107,7 @@ export default function Page() {
             </a>
           </p>
         </section>
+        <TripRetentionTools pageType="live_condition_page" route="/florida-right-now" title="Florida Right Now" />
       </main>
       <SiteFooter />
     </>

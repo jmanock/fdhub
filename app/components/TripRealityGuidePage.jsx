@@ -5,6 +5,7 @@ import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import { GuideLink, TripChecklist } from "./TripGuideActions";
 import { ConversionScrollAnalytics } from "./ConversionCards";
+import TripRetentionTools from "./TripRetentionTools";
 
 function GuidanceList({ items }) {
   return <div className="reality-guidance-list">{items.map(([title, body]) => <article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div>;
@@ -55,6 +56,7 @@ export default function TripRealityGuidePage({ guide }) {
       <TripChecklist items={guide.checklist} route={route} storageKey={`fdn-${guide.slug}`} />
 
       <section className="reality-next"><div><p className="eyebrow">Continue planning</p><h2>Recommended next steps</h2><div className="reality-link-grid">{guide.nextSteps.map((link) => <GuideLink href={link.href} key={link.href} route={route}>{link.label}<span aria-hidden="true">→</span></GuideLink>)}</div></div><div><p className="eyebrow">Sources and methodology</p><h2>How this guide is supported</h2><p>Official sources support changeable facts. Editorial judgments are conditional and name the traveler who benefits. No first-person trip is implied.</p><ul className="reality-source-list">{guide.sources.map((source) => <li key={source.href}><a href={source.href} rel="noopener noreferrer" target={source.href.startsWith("http") ? "_blank" : undefined}>{source.label}</a></li>)}</ul><details><summary>Editorial freshness</summary><p>Published and editorially reviewed July 14, 2026. Live timestamps update separately. Recheck after material destination, transport, parking, weather-policy, or partner changes.</p></details></div></section>
+      <TripRetentionTools image={guide.heroImage} route={route} title={guide.title} />
     </main>
     <SiteFooter />
   </>;
