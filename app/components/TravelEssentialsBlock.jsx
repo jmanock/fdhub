@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { trackEvent } from "../lib/analytics";
 import { generalTravelEssentials } from "../lib/travelEssentials";
 
@@ -21,14 +20,6 @@ export default function TravelEssentialsBlock({ pageType = "hub", title = "Befor
     .filter((item) => item.category !== "esim" || isInternationalTopic)
     .slice(0, maxItems);
 
-  useEffect(() => {
-    trackEvent("travel_essentials_view", {
-      source_site: "floridadealshub.com",
-      page_type: pageType,
-      page_path: window.location.pathname,
-      item_count: items.length
-    });
-  }, [items.length, pageType]);
 
   function trackClick(item) {
     const params = {
@@ -49,6 +40,7 @@ export default function TravelEssentialsBlock({ pageType = "hub", title = "Befor
     trackEvent("travel_essentials_click", params);
     trackEvent("toolkit_click", params);
     trackEvent(eventForAdvertiser(item.advertiser), params);
+    trackEvent("affiliate_resource_view", params);
     trackEvent("affiliate_click", params);
   }
 

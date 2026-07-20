@@ -1,4 +1,5 @@
-import { trackClarityEvent } from "./clarity";
+import { trackEvent } from "./analyticsContract";
+export { analyticsDecision, decorateNetworkUrl, initializeAnalytics, resetAnalyticsDebug, subscribeAnalyticsDebug, trackEvent } from "./analyticsContract";
 
 export const siteName = "floridadealshub.com";
 
@@ -20,15 +21,6 @@ export const networkDomains = {
     destination: "local"
   }
 };
-
-export function trackEvent(eventName, parameters = {}) {
-  if (typeof window === "undefined") {
-    return;
-  }
-
-  window.gtag?.("event", eventName, parameters);
-  trackClarityEvent(eventName, parameters);
-}
 
 export function trackNewsletterSignupStarted() {
   trackEvent("newsletter_signup_started", {

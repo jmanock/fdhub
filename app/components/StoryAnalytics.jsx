@@ -30,9 +30,6 @@ export default function StoryAnalytics({ story }) {
       // Local view ranking is a fallback only; analytics events still fire below.
     }
 
-    trackEvent("story_view", baseParams);
-    trackEvent("story_views", baseParams);
-
     function handleScroll() {
       if (readCompleteTracked.current) {
         return;
@@ -43,7 +40,6 @@ export default function StoryAnalytics({ story }) {
 
       if (progress >= 0.72) {
         readCompleteTracked.current = true;
-        trackEvent("story_read_complete", baseParams);
       }
     }
 
@@ -71,8 +67,7 @@ export default function StoryAnalytics({ story }) {
           item_title: link.dataset.itemTitle || ctaText
         };
 
-        trackEvent("story_affiliate_click", affiliateParams);
-        trackEvent("story_affiliate_clicks", affiliateParams);
+        trackEvent("affiliate_click", { ...affiliateParams, placement: "story_module", component_type: "StoryAnalytics", link_type: "affiliate", affiliate_url_type: "awin" });
         return;
       }
 

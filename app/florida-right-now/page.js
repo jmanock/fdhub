@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import FloridaRightNow from "../components/FloridaRightNow";
 import data from "../../data/live-intelligence.json";
 import TripRetentionTools from "../components/TripRetentionTools";
+import TrackedStatusLink from "../components/TrackedStatusLink";
 export const metadata = {
   title: "Florida Right Now: Travel Weather, Alerts & Airport Impacts",
   description:
@@ -79,32 +79,32 @@ export default function Page() {
       <section className="landing-intro">
           <h2>Plan from the current context</h2>
         <div className="guide-card-grid">
-            <a
+            <TrackedStatusLink
             className="guide-card"
-              href="https://localdealsflorida.org/clearwater-beach-conditions"
+              href="https://localdealsflorida.org/clearwater-beach-conditions" external
             >
               <h3>Clearwater Beach conditions</h3>
               <p>Weather, tides, water observation and official alerts.</p>
-            </a>
-            <a
+            </TrackedStatusLink>
+            <TrackedStatusLink
             className="guide-card"
-              href="https://flightdealsflorida.org/florida-airport-status"
+              href="https://flightdealsflorida.org/florida-airport-status" external
             >
               <h3>Florida airport status</h3>
               <p>MCO, MIA, TPA and FLL weather-impact context.</p>
-            </a>
-            <a
+            </TrackedStatusLink>
+            <TrackedStatusLink
             className="guide-card"
-              href="https://cruisedealsflorida.org/florida-cruise-port-status"
+              href="https://cruisedealsflorida.org/florida-cruise-port-status" external
             >
               <h3>Florida cruise-port status</h3>
               <p>NOAA tide stations and official verification guidance.</p>
-            </a>
+            </TrackedStatusLink>
           </div>
           <p>
-            <a className="text-link" href="/how-florida-live-data-works">
+            <TrackedStatusLink className="text-link" href="/how-florida-live-data-works">
               How Florida Live Intelligence works
-            </a>
+            </TrackedStatusLink>
           </p>
         </section>
         <TripRetentionTools pageType="live_condition_page" route="/florida-right-now" title="Florida Right Now" />
