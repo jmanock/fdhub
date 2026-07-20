@@ -97,7 +97,7 @@ export default function Home() {
   const editorJournalStories = getEditorPickStories(3);
   const popularJournalStories = getTrendingStories(8);
   const featuredPlanLinks = featuredJournalStory ? getPlanThisTripLinks(featuredJournalStory) : [];
-  const travelNewsItems = getTravelNewsItems(3);
+  const travelNewsItems = getTravelNewsItems(4);
   const visualDestinationHubs = destinationHubs.slice(0, 6);
   const weekendHubs = destinationHubs.filter((hub) =>
     ["key-west", "clearwater", "destin", "st-augustine", "tampa"].includes(hub.slug)

@@ -2003,22 +2003,19 @@ export function getFaqs(page) {
 }
 
 export function getRelatedSearchLinks(page) {
-  const hubLinks = page.related
-    .map((slug) => landingPageMap[slug])
+  const pageIndex = landingPages.findIndex((candidate) => candidate.slug === page.slug);
+  const neighboringPages = [-1, 1, -8, 8]
+    .map((offset) => landingPages[(pageIndex + offset + landingPages.length) % landingPages.length])
+    .filter((candidate) => candidate.slug !== page.slug);
+  const hubLinks = [...page.related.map((slug) => landingPageMap[slug]), ...neighboringPages]
     .filter(Boolean)
-    .slice(0, 4)
     .map((related) => ({
       label: related.h1,
       href: `/${related.slug}`
-    }));
+    }))
+    .filter((link, index, links) => links.findIndex((candidate) => candidate.href === link.href) === index);
 
-  return [
-    ...hubLinks,
-    { label: "cheap flights from Florida", href: sites.flights },
-    { label: "Florida hotel deals", href: sites.hotels },
-    { label: "cruise deals from Florida", href: sites.cruises },
-    { label: "things to do in Florida", href: sites.local }
-  ];
+  return hubLinks.slice(0, 5);
 }
 
 export function getBreadcrumbs(page) {

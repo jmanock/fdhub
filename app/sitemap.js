@@ -10,7 +10,7 @@ import { destinationAuthorities, destinationPageTypes, destinationPath } from ".
 import { budgetVacationHubs } from "./lib/vacationBuilder";
 import { allEventTravelPages, eventTravelPath } from "./lib/eventTravel";
 
-const lastModified = new Date();
+const lastModified = new Date("2026-07-20");
 
 const staticPages = [
   { path: "", priority: 1, changeFrequency: "weekly" },

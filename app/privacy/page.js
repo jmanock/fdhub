@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Privacy Policy | Florida Deals Hub",
-  description: "Privacy policy for Florida Deals Hub."
+  description: "Privacy policy for Florida Deals Hub.",
+  alternates: { canonical: "https://floridadealshub.com/privacy" }
 };
 
 export default function PrivacyPage() {

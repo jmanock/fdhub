@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Terms | Florida Deals Hub",
-  description: "Terms of use for Florida Deals Hub."
+  description: "Terms of use for Florida Deals Hub.",
+  alternates: { canonical: "https://floridadealshub.com/terms" }
 };
 
 export default function TermsPage() {
