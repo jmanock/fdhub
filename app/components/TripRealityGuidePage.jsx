@@ -51,7 +51,7 @@ export default function TripRealityGuidePage({ guide }) {
         <article><p className="eyebrow">Better next time</p><h2>What experienced travelers do differently</h2><SimpleList items={guide.differently} /></article>
       </section>
 
-      <section className="reality-live"><p className="eyebrow">Current conditions</p><h2>{location?.name || "Florida"} live context</h2><p>{current ? `${location.weather.summary.value}. ${location.weather.temperature.value}°${location.weather.temperature.unit}.` : "Current values are unavailable. Use the official sources linked from the full status page."} Live data updates independently from editorial review dates.</p><GuideLink className="fdn-button-primary" eventName="live_condition_click" href={guide.liveHref} placement="trip_reality_live_context" route={route}>{guide.liveLabel}</GuideLink></section>
+      <section className="reality-live"><p className="eyebrow">Current conditions</p><h2>{location?.name || "Florida"} live context</h2><p>{current ? `${location.weather.summary.value}. ${location.weather.temperature.value}°${location.weather.temperature.unit}.` : "Current values are unavailable. Use the official sources linked from the full status page."} Live data updates independently from editorial review dates.</p><GuideLink className="fdn-button-primary" eventName="live_status_click" href={guide.liveHref} placement="trip_reality_live_context" route={route}>{guide.liveLabel}</GuideLink></section>
 
       <TripChecklist items={guide.checklist} route={route} storageKey={`fdn-${guide.slug}`} />
 
