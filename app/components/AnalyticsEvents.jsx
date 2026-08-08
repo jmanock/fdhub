@@ -10,6 +10,7 @@ import {
   trackNavigationClick,
   trackNetworkSiteClick
 } from "../lib/analytics";
+import { trackEvent } from "../lib/analyticsContract";
 
 export default function AnalyticsEvents() {
   useEffect(() => {
@@ -27,19 +28,7 @@ export default function AnalyticsEvents() {
       const affiliateProgram = link.dataset.affiliateProgram;
 
       if (affiliateProgram) {
-        window.gtag?.("event", "affiliate_click", {
-          source_site: "floridadealshub.com",
-          affiliate_program: affiliateProgram,
-          affiliate: link.dataset.affiliate || link.dataset.advertiser,
-          advertiser: link.dataset.advertiser,
-          item_title: link.dataset.itemTitle || linkText,
-          category: link.dataset.category,
-          cta_text: linkText,
-          outbound_url: link.href,
-          page_path: window.location.pathname
-        });
-        window.dataLayer?.push({
-          event: "affiliate_click",
+        trackEvent("affiliate_click", {
           source_site: "floridadealshub.com",
           affiliate_program: affiliateProgram,
           affiliate: link.dataset.affiliate || link.dataset.advertiser,

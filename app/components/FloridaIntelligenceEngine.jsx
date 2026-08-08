@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { SKYLARK_HOME_AFFILIATE_URL, ZENHOTELS_AFFILIATE_URL } from "../lib/revenuePartners";
 import { generalTravelEssentials } from "../lib/travelEssentials";
+import { trackEvent } from "../lib/analyticsContract";
 
 const rel = "sponsored noopener noreferrer";
 
@@ -13,8 +14,7 @@ function track(event, payload = {}) {
     page_path: typeof window !== "undefined" ? window.location.pathname : "",
     ...payload
   };
-  window.gtag?.("event", event, data);
-  window.dataLayer?.push({ event, ...data });
+  trackEvent(event, data);
 }
 
 function topicLabel(topic) {

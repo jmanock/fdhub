@@ -138,8 +138,11 @@ export default function Home() {
             </p>
             <div className="hero-actions" aria-label="Explore Florida deals categories">
               <Link href="/florida-right-now">Florida Right Now</Link>
-              <Link href="/vacation-builder">Plan a Florida trip</Link>
-              <Link href="#network-title">Explore the network</Link>
+              <Link href="/destinations">Where should I go?</Link>
+              <Link href="/things-to-do">What should I do?</Link>
+              <a href="https://flightdealsflorida.org">Flights</a>
+              <a href="https://hoteldealsflorida.org">Hotels</a>
+              <a href="https://cruisedealsflorida.org">Cruises</a>
             </div>
           </div>
 

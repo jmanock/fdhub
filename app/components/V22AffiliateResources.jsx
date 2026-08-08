@@ -2,6 +2,7 @@
 
 import { getTransferAffiliateUrl, ZENHOTELS_AFFILIATE_URL } from "../lib/revenuePartners";
 import { VIP_CARS_AFFILIATE_URL } from "../lib/affiliate/affiliateInventory.mjs";
+import { trackEvent } from "../lib/analyticsContract";
 
 function trackAffiliateClick(resource, slug, placement) {
   const payload = {
@@ -14,8 +15,7 @@ function trackAffiliateClick(resource, slug, placement) {
     cta_text: resource.cta
   };
 
-  window.gtag?.("event", "affiliate_click", payload);
-  window.dataLayer?.push({ event: "affiliate_click", ...payload });
+  trackEvent("affiliate_click", payload);
 }
 
 export default function V22AffiliateResources({ slug }) {
