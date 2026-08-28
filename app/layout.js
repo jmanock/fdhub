@@ -1,4 +1,5 @@
 import AnalyticsBootstrap from "./components/AnalyticsBootstrap";
+import { ANALYTICS_CONFIG } from "./lib/analyticsConfig";
 import NetworkNavigation from "./components/NetworkNavigation";
 import "./globals.css";
 
@@ -69,6 +70,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          id="fdn-ga-library"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_CONFIG.measurementId}`}
+        />
+      </head>
       <body className="fdn-site">
         <NetworkNavigation />
         {children}

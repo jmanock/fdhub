@@ -1,5 +1,5 @@
 import { trackEvent } from "./analyticsContract";
-export { analyticsDecision, decorateNetworkUrl, initializeAnalytics, resetAnalyticsDebug, subscribeAnalyticsDebug, trackEvent } from "./analyticsContract";
+export { analyticsDecision, decorateNetworkUrl, initializeAnalytics, resetAnalyticsDebug, subscribeAnalyticsDebug, trackEvent, trackPageView } from "./analyticsContract";
 
 export const siteName = "floridadealshub.com";
 
